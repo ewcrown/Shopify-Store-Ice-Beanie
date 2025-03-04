@@ -1,0 +1,46 @@
+<div class="login-section wf-section">
+  <div class="login-wrapper">
+    <div class="contact-form-block form-block-login">
+      {% form 'customer_login', class:"login-form" %}
+        <h1 class="login-heading" data-ix="slide-in-bottom-2-delay">Account Login</h1>
+        {{ form.errors | default_errors }}
+        <div class="login-form-inner">
+          <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="email" class="sign-in-text-field w-input" maxlength="256" name="customer[email]" data-name="Email" placeholder="Email" id="Email"></div>
+          <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="password" class="sign-in-text-field w-input" maxlength="256" name="customer[password]" data-name="Password" placeholder="Password" id="Password"></div>
+          <div class="login-links-wrapper">
+            <div class="shop-link-wrapper">
+              <a href="/account/register" class="login-link">Create Account</a>
+            </div>
+            <div class="shop-link-div"></div>
+            <div>
+              <a id="show-pw-form" href="#" class="login-link" data-ix="show-pw-form">Forgot Password?</a>
+            </div>
+          </div><input type="submit" value="SIGN IN" data-wait="" class="login-btn w-button">
+        </div>
+      {% endform %}
+    </div>
+
+  <div id="forgot-pw-box" class="login-form-outer form-block-reset-pw">
+    {% form 'recover_customer_password' %}
+    <div class="login-form-inner">
+      <h1 class="login-heading">Reset your password</h2>
+      <p class="text-field-heading">We will send you an email to reset your password.</p>
+      {{ form.errors | default_errors }}
+      <div class="sign-in-text-field-wrapper forgot-password"><input type="email" class="sign-in-text-field w-input" maxlength="256" name="email" placeholder="Email" id="RecoverEmail" required=""></div>
+      <div class="sign-in-text-field-wrapper"><input type="submit" value="SUBMIT" data-wait="" class="login-btn w-button"></div>
+      <div>
+        <a id="hide-pw-form" href="#" class="login-link" data-ix="hide-pw-form">
+          <div>Cancel</div>
+        </a>
+      </div>
+    </div>
+    {% endform %}
+  </div>
+
+
+
+
+
+
+  </div>
+</div>

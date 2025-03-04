@@ -1,0 +1,108 @@
+<div class="nav-background {% unless template == 'index' %}custom{% endunless %}">
+
+  {% unless template == 'index' %}
+    
+    <div class="logo-wrapper">
+      <a href="/">
+        <img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/icebeanie-logo-registered.png" alt="" class="store-logo">
+      </a>
+    </div>
+
+    <div style="" class="nav-menu-content-wrapper desktop">
+      <a href="https://icebeanie.com/"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Home</div>
+      </a>
+      <a href="https://icebeanie.com/collections/all-products" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Shop</div>
+      </a>
+      <a href="https://icebeanie.com/pages/the-science" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">The Science</div>
+      </a>
+      <a href="https://icebeanie.com/pages/reviews" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Reviews</div>
+      </a>
+      <a href="https://icebeanie.com/pages/about" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">About</div>
+      </a>
+      <a href="https://icebeanie.com/pages/contact" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Contact Us</div>
+      </a>
+    </div>
+  {% endunless %}
+  
+<div class="nav-menu-wrapper">
+
+  <div class="nav-icon-wrapper">
+    <a href="/account" class="navbar-link-block mobile-hide w-inline-block"><img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/icon.png?v=1731748601" loading="lazy" alt="" class="navbar-link-block-img"></a>
+    <a href="/cart" class="navbar-link-block cart-flyout-open last-link mobile-hide w-inline-block" data-ix="cart-flyout-open"><img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/cart_blue.png?v=1731748700" loading="lazy" alt="" class="navbar-link-block-img"></a>
+  </div>
+
+  <div class="nav-menu-inner">
+    <div data-w-id="91bf5cb3-72ed-9ce1-fb2c-34e57dc2ea08" class="nav-menu-top-wrapper">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
+    <div style="display: none" class="nav-menu-content-wrapper">
+      <a href="https://icebeanie.com/"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Home</div>
+      </a>
+      <a href="https://icebeanie.com/collections/all-products" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Shop</div>
+      </a>
+      <a href="https://icebeanie.com/pages/the-science" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">The Science</div>
+      </a>
+      <a href="https://icebeanie.com/pages/reviews" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Reviews</div>
+      </a>
+      <a href="https://icebeanie.com/pages/about" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">About</div>
+      </a>
+      <a href="https://icebeanie.com/pages/contact" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Contact Us</div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('.nav-menu-top-wrapper').click(function () {
+      var contentWrapper = $('.nav-menu-content-wrapper:not(.desktop)');
+
+      if (contentWrapper.css('display') == 'none') {
+        contentWrapper.css('display', 'flex').hide().slideDown('fast');
+      } else {
+        contentWrapper.slideUp('fast', function () {
+          contentWrapper.css('display', 'none');
+        });
+      }
+    });
+  });
+
+
+  $(document).ready(function() {
+    var nav = $('.nav-background');
+    var logo = $('.store-logo');
+  
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) { // adjust this value based on when you want the nav to change
+        nav.addClass('scrolled');
+        logo.addClass('logo-shrink');
+      } else {
+        nav.removeClass('scrolled');
+        logo.removeClass('logo-shrink');
+      }
+    });
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header"
+}
+{% endschema %}

@@ -1,0 +1,28 @@
+.pop-up-background{
+    position: absolute;
+    background-color: #00000024;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.pop-up-inner{
+    padding: 100px;
+position: relative;
+}
+.close-pop-up.btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.close-pop-up{
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.close-pop-up:hover{
+    transform: rotate(360);
+}

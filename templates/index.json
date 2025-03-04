@@ -1,0 +1,215 @@
+{
+  "sections": {
+    "ffa9b979-ac2a-471f-8d66-a871d74c4077": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16804811014377__ffa9b979-ac2a-471f-8d66-a871d74c4077-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-21_at_2.28.20_PM.png",
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16804811014377__ffa9b979-ac2a-471f-8d66-a871d74c4077-slide-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": ""
+      }
+    },
+    "cc14a02c-c794-41ff-ae7b-1dfc8ea531dc": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
+            "text_style": "subtitle"
+          }
+        },
+        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-text-1",
+        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-buttons-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-21_at_2.28.20_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "eddc41c4-f025-4510-9a41-becbcc67cc21": {
+      "type": "custom-home-hero-slider",
+      "settings": {}
+    },
+    "152ed47c-e168-4be7-affc-fa636e520535": {
+      "type": "custom-logos",
+      "blocks": {
+        "54bd4aef-e537-43f3-b322-aa688d0750a8": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-foxsports.png"
+          }
+        },
+        "61aba602-c63a-4e3d-846f-e98dc941386c": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-fs1.png"
+          }
+        },
+        "c78d0af2-736f-4a0f-ac9f-b4cd308b9482": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-tmz.png"
+          }
+        },
+        "136d67fc-ea6e-41fd-b564-a5c42465d229": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-espn.png"
+          }
+        },
+        "b1d44c6b-7011-4751-9d12-4c0b9dd8f30a": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-abc.png"
+          }
+        },
+        "79bffb2a-1c07-43b6-9657-9d55e8ad39b6": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-cnbc.png"
+          }
+        },
+        "2f52394e-3a64-4b15-9a19-1f48452a5c56": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-sharktank.png"
+          }
+        },
+        "3714c7ee-48d1-4624-a8ff-04fcb68f26b4": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/logo-urbanoutfitters.png"
+          }
+        }
+      },
+      "block_order": [
+        "54bd4aef-e537-43f3-b322-aa688d0750a8",
+        "61aba602-c63a-4e3d-846f-e98dc941386c",
+        "c78d0af2-736f-4a0f-ac9f-b4cd308b9482",
+        "136d67fc-ea6e-41fd-b564-a5c42465d229",
+        "b1d44c6b-7011-4751-9d12-4c0b9dd8f30a",
+        "79bffb2a-1c07-43b6-9657-9d55e8ad39b6",
+        "2f52394e-3a64-4b15-9a19-1f48452a5c56",
+        "3714c7ee-48d1-4624-a8ff-04fcb68f26b4"
+      ],
+      "settings": {
+        "heading_text": "As Seen On"
+      }
+    },
+    "73d008ff-4478-455b-ac41-9a793256c460": {
+      "type": "custom-testimonlials",
+      "settings": {}
+    },
+    "6739ff89-6795-4ee8-ae1a-16d904c93712": {
+      "type": "custom-science",
+      "settings": {}
+    },
+    "73910846-ebfb-4485-9bc0-6327b8d5bb21": {
+      "type": "custom-beanie",
+      "settings": {}
+    },
+    "c27e411b-1e2d-4f97-8ee2-f2fd8e59ac1c": {
+      "type": "custom-three-columns",
+      "settings": {}
+    },
+    "2baa5273-21e5-49bf-863e-3e471d0c9e11": {
+      "type": "rich-text",
+      "blocks": {
+        "cdb88716-9d92-45d8-8614-832651472cb5": {
+          "type": "caption",
+          "settings": {
+            "caption": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "cdb88716-9d92-45d8-8614-832651472cb5"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "f19422ae-4923-4f82-9c32-43ceb25bbe5d": {
+      "type": "shop-tabs",
+      "settings": {}
+    },
+    "b79dfc22-5515-4b90-9dd4-f1c8433a1617": {
+      "type": "amazon-review-slider",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ffa9b979-ac2a-471f-8d66-a871d74c4077",
+    "cc14a02c-c794-41ff-ae7b-1dfc8ea531dc",
+    "eddc41c4-f025-4510-9a41-becbcc67cc21",
+    "152ed47c-e168-4be7-affc-fa636e520535",
+    "73d008ff-4478-455b-ac41-9a793256c460",
+    "6739ff89-6795-4ee8-ae1a-16d904c93712",
+    "73910846-ebfb-4485-9bc0-6327b8d5bb21",
+    "c27e411b-1e2d-4f97-8ee2-f2fd8e59ac1c",
+    "2baa5273-21e5-49bf-863e-3e471d0c9e11",
+    "f19422ae-4923-4f82-9c32-43ceb25bbe5d",
+    "b79dfc22-5515-4b90-9dd4-f1c8433a1617"
+  ]
+}

@@ -1,0 +1,217 @@
+<div class="actor-review-section wf-section">
+  <div class="actor-review-text-left-mobile">
+    <div class="actor-name mobile" data-ix="slide-in-bottom-3-delay">Geena Davis</div>
+    <div class="actor-position mobile" data-ix="slide-in-bottom-3-delay">Oscar Winning Actor</div>
+  </div>
+  <div class="actor-review">
+    <div class="actor-review-wrapper">
+      <div class="actor-review-wrapper-inner">
+        <div class="actor-review-bg"></div>
+      </div>
+      <div class="actor-review-text-left">
+        <div class="actor-review-text-block desktop" data-ix="slide-in-bottom-2-delay">A big <span class="bold-blue-text">Thank You</span> to Geena Davis for trusting IceBeanie!</div>
+      </div><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/GeenaDavis-min-sk-update.jpg" loading="lazy" sizes="(max-width: 479px) 54vw, (max-width: 991px) 28vw, 20vw" srcset="//cdn.shopify.com/s/files/1/0254/3170/3629/files/GeenaDavis-min-p-500-sk-update.jpg 500w, //cdn.shopify.com/s/files/1/0254/3170/3629/files/GeenaDavis-min-sk-update.jpg 750w" alt="" class="actor-review-img">
+      <div class="actor-review-text-left">
+        <div class="actor-name desktop" data-ix="slide-in-bottom-3-delay">Geena Davis</div>
+        <div class="actor-position desktop" data-ix="slide-in-bottom-3-delay">Oscar Winning Actor</div>
+      </div>
+    </div>
+    <div class="mobile-actor-wrapper">
+      <div class="actor-review-text-left">
+        <div class="actor-review-text-block mobile" data-ix="slide-in-bottom-2-delay">A big <span class="bold-blue-text">Thank You</span> to Geena Davis for trusting the IceBeanie!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="written-reviews-section" wf-section id="written-reviews-section">
+
+  {%- comment -%}
+  
+  <div class="testimonial-container">
+    <div class="testimonial-left tablet">
+      <h1 class="large-heading" data-ix="slide-in-bottom-2-delay">{{section.settings.heading_text}}</h1>
+      <div class="testimonial-text-wrapper">
+        <div class="larger-text-block left-align center-mobile-landscape" data-ix="slide-in-bottom-2-delay">{{section.settings.main_text}}</div>
+      </div>
+      <div class="text-link-div"></div>
+      <a href="/collections/all-products" class="link" data-ix="slide-in-bottom-2-delay">Shop Now »</a>
+    </div>
+
+
+
+
+    <div class="testimonial-right">
+      <div data-animation="slide" data-duration="500" data-infinite="1" class="testimonial-slider w-slider">
+        <div class="testimonial-mask-reviews w-slider-mask">
+
+
+          {% for block in section.blocks %}
+            {% if forloop.index == 1 or 
+              forloop.index == 5 or 
+              forloop.index == 9 or
+              forloop.index == 13 or
+              forloop.index == 17 or
+              forloop.index == 21 or
+              forloop.index == 25 or
+              forloop.index == 29 
+
+              %}
+                <div class="testimonial-slide w-slide">
+                  <div class="testimonial-blocks-wrapper">
+              {% endif %}
+
+               <div class="testimonial-block">
+                <div class="testimonial-block-inner">
+                  <div class="testimonial-star-wrapper">
+                    <img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star">
+                  </div>
+                  <div class="testimonial-block-author-info">
+                    <div class="testimonial-block-name-info">
+                      {% if block.settings.headshot %}
+                        <div><img src="{{block.settings.headshot | img_url: '256x' }}" loading="lazy" alt="Reviewer Headshot" class="testimonial-block-img"></div>
+                      {% endif %}
+                      <div class="testimonial-name-social">
+                        <h3 class="testimonial-name">{{block.settings.title}}</h3>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="testimonial-content">
+                    <div class="testimonial-text">{{block.settings.review_content}}</div>
+                  </div>
+                  <div class="testimonial-text blue">{{block.settings.date}}</div>
+                </div>
+              </div>
+
+              {% if forloop.index == 4 or
+              forloop.index == 8 or
+              forloop.index == 12 or
+              forloop.index == 16 or
+              forloop.index == 20 or
+              forloop.index == 24 or
+              forloop.index == 28 or
+              forloop.index == 32 or
+              forloop.last == true  %}
+                  </div>
+                </div> <!-- w-slide" -->
+              {% endif %}
+          {% endfor %}
+
+          
+
+
+
+
+               
+
+
+            
+
+
+        </div>
+        <div class="testimonial-arrow-left w-slider-arrow-left"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow-left-sk-update.png" loading="lazy" alt="" class="arrow-img"></div>
+        <div class="testimonial-arrow-right w-slider-arrow-right"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow-right-sk-update.png" loading="lazy" alt="" class="arrow-img-right"></div>
+        <div class="slide-nav-testimonial w-slider-nav w-round"></div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  {%- endcomment -%}
+  <div id="written-reviews" class="section-link"></div>
+</div>
+
+
+<div class="reviews-cool-products-section wf-section">
+  <div class="cool-products-container">
+
+
+
+    <h2 class="cool-products-subheading" data-ix="slide-in-bottom-2-delay">Since You&#x27;ve Made It This Far</h2>
+    <div class="cool-products-main-heading-wrapper">
+      <h1 class="cool-products-main-heading-blue" data-ix="slide-in-bottom-2-delay">Check Out These <span class="cool-products-reviews-line-break">Cool Products</span></h1>
+    </div>
+    <div class="cool-products-div"></div>
+    <a href="#" class="link" data-ix="slide-in-bottom-2-delay">See All Products »</a>
+    <div class="cool-products-content">
+
+    {% for product in collections.all-products.products limit:4 %}
+      {% unless product.id == 8095938576617 %}
+        
+      
+      <div class="cool-products-block" data-ix="slide-in-bottom-2-delay">
+        <a href="{{ product.url }}" class="cool-products-link-block w-inline-block"><img src="{{ product.featured_image | img_url: '800x' }}" loading="lazy" alt="{{ product.title }}" class="cool-products-img">
+          <h3 class="cool-products-heading">{{ product.title }}</h3>
+          {% comment %}
+          <div class="cool-products-text-wrapper">
+            <div class="smaller-text-block" data-ix="slide-in-bottom-2-delay">{{ product.metafields.product_description.text }}</div>
+          </div>
+          {% endcomment %}
+        </a>
+      </div>
+    {% endunless %}
+    {% endfor %}
+
+
+    </div>
+
+
+
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Reviews Section" ,
+  "max_blocks": 32,
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "Written Reviews",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "main_text",
+         "default": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
+         "label": "Heading Paragraph"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Reviews",
+      "settings": [
+       {
+         "label": "Headshot",
+         "id": "headshot",
+         "type": "image_picker"
+       },
+       {
+          "type": "text",
+          "id": "title",
+          "label": "Author"
+       },
+       {
+          "type": "text",
+          "id": "date",
+          "label": "Date"
+       },
+       {
+          "type": "textarea",
+          "id": "review_content",
+          "label": "Review Content"
+       }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

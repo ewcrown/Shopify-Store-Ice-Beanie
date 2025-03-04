@@ -1,0 +1,55 @@
+
+<section class="as-seen-section wf-section">
+  <div class="as-seen-wrapper">
+    <div class="logos-section wf-section">
+      <h1 class="logos-heading">{{section.settings.heading_text}}</h1>
+      <div class="logos-wrapper">
+        {% for block in section.blocks %}
+          <div class="logo-wrapper"><img src="{{block.settings.logo_image | img_url: '512x' }}" loading="lazy" alt="{{block.settings.logo_image.alt}}" class="home-logo-img"></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Logos Section" ,
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "As Seen On",
+         "label": "Heading Text"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Logo",
+      "settings": [
+       {
+         "label": "Logo",
+         "id": "logo_image",
+         "info": "Add alt text for SEO and Accessibility",
+         "type": "image_picker"
+       }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logos Section"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

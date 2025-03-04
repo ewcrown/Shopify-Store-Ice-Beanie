@@ -1,0 +1,310 @@
+<style>
+  .s-product-radio-button-field.selected {
+    background-color: #41bbff;
+  }
+  .s-product-radio-button-field.selected .s-product-radio-price {
+    color: #fff;
+  }
+  .s-product-savings-text {
+    color: #000;
+    background-color: #ffd910;
+  }
+  .s-product-radio-button-field.selected .s-product-savings-text {
+    color: #000;
+  }
+  .tab-content:not(.active) {
+    display: none;
+  }
+</style>
+
+<!-- Tab controls -->
+<div class="tabs">
+  {% for product in collections['all-products'].products limit: 50 %}
+    {% unless product.id == 78069754104091 or product.id == 8797292462313 or product.id == 8798197252329 %}
+      <div
+        data-tab-target="#tab-content-{{forloop.index}}"
+        class="s-product-radio-button-field w-radio {% if forloop.first %}selected{%endif%}"
+      >
+        {% if forloop.index == 2 %}
+          <div class="rounded-tag yellow">Most Popular</div>
+        {% elsif forloop.index == 4 %}
+          <div class="rounded-tag yellow">Best Value</div>
+        {% endif %}
+
+        <div
+          class="w-form-formradioinput w-form-formradioinput--inputType-custom s-product-radio-button w-radio-input"
+        ></div>
+        <span class="radio-button-label w-form-label">
+          {{- forloop.index }}
+          {% if forloop.first %}IceBeanie{% else %}IceBeanies{% endif %}
+          {% if product.compare_at_price %}
+            <br>
+            {% unless forloop.first %}
+              <span class="s-product-savings-text">
+                {% comment %}
+                  {% if forloop.index == 2 %}
+                  Savings of $35.99
+                  {% elsif forloop.index == 3 %}
+                  Savings of $33.99
+                  {% elsif forloop.index == 4 %}
+                  Savings of $31.99
+                  {% endif %}
+                {% endcomment %}
+
+                Save {{ product.compare_at_price | minus: product.price | money -}}
+              </span>
+            {% endunless %}
+          {% endif %}
+        </span>
+        <div class="s-product-radio-price">
+          {% if product.compare_at_price %}
+            <span class="s-product-price-crossed">{{ product.compare_at_price | money }}</span><br>
+          {% endif %}
+          {{ product.price | money }}
+        </div>
+      </div>
+    {% endunless %}
+  {% endfor %}
+</div>
+
+<!-- Tab contents -->
+<div class="tab-contents">
+  {% for product in collections['all-products'].products limit: 50 %}
+    {% unless product.id == 78069754104091 or product.id == 8797292462313 or product.id == 8798197252329 %}
+      <div
+        id="tab-content-{{ forloop.index }}"
+        class="tab-content {% if forloop.first %}active{% endif %}"
+        data-tab-content
+      >
+        {% form 'product', product, class: 's-product-form' %}
+          <select
+            name="id"
+            id="product-select"
+            class="jc-product-select product-form__variants no-js"
+            style="display:none;"
+          >
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <option
+                  jc-price="{{variant.price | money}}"
+                  {% if variant == product.selected_or_first_available_variant %}
+                    selected="selected"
+                  {% endif %}
+                  value="{{ variant.id }}"
+                >
+                  {{ variant.title }}
+                </option>
+              {% else %}
+                <option jc-price="Sold Out" disabled="disabled">
+                  {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+          <input
+            type="submit"
+            value="ADD TO CART"
+            data-wait=""
+            class="add-to-cart-button w-button"
+            {{ cart_disabled }}
+          >
+
+          <div class="choosecolordiv">
+            <p>Choose color:</p>
+            <div class="choosecolor">
+              {% for variant in product.variants %}
+                <input
+                  {% if product.selected_or_first_available_variant.id == variant.id %}
+                    checked
+                  {% endif %}
+                  type="radio"
+                  name="choosecolor-{{ product.id}}"
+                  id="choosecolor-{{ variant.id}}-{{ forloop.index }}"
+                  value="{{ variant.title }}"
+                  data-id="{{ variant.id }}"
+                  style="display: none;"
+                  data-image="{{ variant.featured_image | img_url: 'master' }}"
+                >
+                <label
+                  class="color-{{ variant.title | handleize }}"
+                  for="choosecolor-{{ variant.id}}-{{ forloop.index }}"
+                  style="background-color: {{ variant.title }};"
+                ></label>
+              {% endfor %}
+            </div>
+          </div>
+        {% endform %}
+      </div>
+    {% endunless %}
+  {% endfor %}
+
+  <style>
+    .color-blue {
+      background-color: #00bdff !important;
+    }
+    .choosecolordiv {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 16px;
+    }
+
+    .choosecolordiv p {
+      margin-bottom: 0;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: #063d6b;
+    }
+
+    .choosecolor {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .choosecolor label {
+      min-width: 26px;
+      width: 26px;
+      min-height: 26px;
+      display: flex;
+      height: 26px;
+      border-radius: 50%;
+      margin: 0;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+      border: 1.5px solid #fff;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    .choosecolor input:checked + label {
+      border: 1.5px solid #0f1217;
+      opacity: 1;
+    }
+
+    .m-l-auto {
+      margin-left: auto;
+    }
+  </style>
+
+  <script>
+    window.color = 'Blue';
+    document.querySelectorAll('.choosecolor input').forEach(function (input) {
+      input.addEventListener('change', function () {
+        var val = this.value;
+        window.color = val;
+
+        this.parentElement.parentElement.parentElement.querySelector('[name=id]').value = this.getAttribute('data-id');
+        var image = this.getAttribute('data-image');
+        if (image != '') {
+          var largeImages = document.getElementsByClassName('s-product-image-large');
+          for (var j = 0; j < largeImages.length; j++) {
+            largeImages[j].style.display = 'none'; // Hide all large images
+            largeImages[j].style.opacity = 0.5; // Reset the opacity of all large images
+          }
+
+          document.querySelector('.variant_image_showcase').setAttribute('src', image);
+          document.querySelector('.variant_image_showcase').style.display = 'block';
+          document.querySelector('.variant_image_showcase').style.opacity = 1;
+        }
+      });
+
+      input.nextElementSibling.addEventListener('click', function () {
+        var val = this.previousElementSibling.value;
+
+        this.parentElement.parentElement.parentElement.querySelector('[name=id]').value =
+          this.previousElementSibling.getAttribute('data-id');
+        var image = this.previousElementSibling.getAttribute('data-image');
+        if (image != '') {
+          var largeImages = document.getElementsByClassName('s-product-image-large');
+          for (var j = 0; j < largeImages.length; j++) {
+            largeImages[j].style.display = 'none'; // Hide all large images
+            largeImages[j].style.opacity = 0.5; // Reset the opacity of all large images
+          }
+
+          var smallerImage = document.getElementsByClassName('s-product-thumbnail-image');
+
+          for (let k = 0; k < smallerImage.length; k++) {
+            smallerImage[k].style.display = 'none'; // Hide all large images
+            smallerImage[k].style.opacity = 0.5;
+          }
+
+          var showingimage = document.querySelectorAll('.s-product-thumbnail-image[data-color=' + val + ']');
+
+          for (let l = 0; l < showingimage.length; l++) {
+            showingimage[l].style.display = 'block'; // Hide all large images
+            showingimage[l].style.opacity = 1;
+          }
+
+          document.querySelector('.variant_image_showcase').setAttribute('src', image);
+          document.querySelector('.variant_image_showcase').style.display = 'block';
+          document.querySelector('.variant_image_showcase').style.opacity = 1;
+        }
+      });
+    });
+  </script>
+
+  <div class="cart-bottom-wrapper">
+    <div class="cart-text-wrapper">
+      <img
+        src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-shipping.svg"
+        loading="lazy"
+        alt=""
+        class="s-product-cart-icon"
+      >
+      <div class="s-product-cart-text">Fast Shipping</div>
+    </div>
+
+    <div class="cart-text-wrapper">
+      <img
+        src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-returns.svg"
+        loading="lazy"
+        alt=""
+        class="s-product-cart-icon"
+      >
+      <div class="s-product-cart-text">30 Day Satisfaction Guarantee</div>
+    </div>
+
+    <div class="cart-text-wrapper">
+      <img
+        src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-24-7.svg"
+        loading="lazy"
+        alt=""
+        class="s-product-cart-icon"
+      >
+      <div class="s-product-cart-text">24/7 Support</div>
+    </div>
+
+    <div class="cart-text-wrapper">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-inCA.svg?v=1689959620"
+        loading="lazy"
+        alt=""
+        class="s-product-cart-icon"
+      >
+      <div class="s-product-cart-text">Designed in California USA</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('.s-product-radio-button-field').click(function () {
+      // remove active class from all tabs and tab contents
+      $('.s-product-radio-button-field').removeClass('selected');
+      $('.tab-content').removeClass('active');
+
+      // add active class to the clicked tab and its corresponding content
+      var target = $(this).data('tab-target');
+      $(target).addClass('active');
+      $(this).addClass('selected');
+
+      document
+        .querySelector('.tab-content.active .choosecolordiv')
+        .querySelector('[value=' + window.color + '] + label')
+        .click();
+    });
+
+    document.querySelector('.tab-content.active .choosecolordiv input:checked+label').click();
+  });
+</script>

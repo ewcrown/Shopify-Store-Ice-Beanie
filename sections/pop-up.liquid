@@ -1,0 +1,154 @@
+{{ 'section-pop-up.css' | asset_url | stylesheet_tag }}
+
+<div class="pop-up-background">
+    <div class="pop-up-inner color-{{ section.settings.color_scheme }}">
+  
+        <div class="footer-block__newsletter">
+            {%- if section.settings.newsletter_heading != blank -%}
+              <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+            {%- endif -%}
+            {%- form 'customer', id: 'ContactPopUp', class: 'footer__newsletter newsletter-form' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ContactPopUp-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ContactPopUp-success"
+                    {% endif %}
+                    placeholder="{{ 'newsletter.label' | t }}"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button
+                    type="submit"
+                    class="newsletter-form__button field__button"
+                    name="commit"
+                    id="Subscribe"
+                    aria-label="{{ 'newsletter.button_label' | t }}"
+                  >
+                    {% render 'icon-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="ContactPopUp-error">
+                    {%- render 'icon-error' -%}
+                    {{- form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email -}}
+                  </small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3
+                  class="newsletter-form__message newsletter-form__message--success form__message"
+                  id="ContactPopUp-success"
+                  tabindex="-1"
+                  autofocus
+                >
+                  {% render 'icon-success' -%}
+                  {{- 'newsletter.success' | t }}
+                </h3>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+  
+  
+      <div class="close-pop-up btn">&#10006;</div>
+    </div>
+  </div>
+   
+  
+{%assign popup_delay = section.settings.show_after %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var popUp = document.querySelector('.pop-up-background');
+      var popUpInner = document.querySelector('.circle-inner');
+  
+  // Check if it's a new visitor
+      if (!sessionStorage.getItem('firstTime')) { // If it is a new visitor, set the sessionStorage item
+        sessionStorage.setItem('firstTime', '1');
+  
+  // Set a timeout for 3 seconds
+        setTimeout(function() {
+  
+  // After 3 seconds, change the display to flex
+          popUp.style.display = 'flex';
+        }, {{popup_delay}});
+      }
+  
+  // Close popup event
+      document.querySelector('.close-pop-up').addEventListener('click', function() {
+        popUp.style.display = 'none';
+      });
+      document.querySelector('.close-pop-up-2').addEventListener('click', function() {
+        popUp.style.display = 'none';
+      });
+  
+  // Close popup when background is clicked
+      popUp.addEventListener('click', function(event) {
+  
+  // Check if the click is not on the pop-up-inner
+        if (event.target !== popUpInner && ! popUpInner.contains(event.target)) {
+          popUp.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+
+
+{% schema %}
+{
+  "name": "Email Popup",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "inline_richtext",
+        "id": "newsletter_heading",
+        "default": "Subscribe to our emails",
+        "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "show_after",
+      "min": 0,
+      "max": 9000,
+      "step": 1000,
+      "unit": "mil",
+      "label": "Pop Up Delay (In Milliseconds)",
+      "default": 3000
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "Email Popup"
+    }
+  ]
+}
+{% endschema %}

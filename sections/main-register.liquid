@@ -1,0 +1,23 @@
+<div class="login-section wf-section">
+  <div class="create-account-wrapper">
+    <div class="contact-form-block form-block-login">
+      {% form 'create_customer', id: "RegisterForm" %}
+        <h1 class="login-heading" data-ix="slide-in-bottom-2-delay">Create Account</h1>
+        {{ form.errors | default_errors }}
+           <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="text" class="sign-in-text-field w-input" maxlength="256" name="customer[first_name]" data-name="First Name" placeholder="First Name" id="First-Name"></div>
+           <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="text" class="sign-in-text-field w-input" maxlength="256" name="customer[last_name]" data-name="Last Name" placeholder="Last Name" id="Last-Name"></div>
+           <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="email" class="sign-in-text-field w-input" maxlength="256" name="customer[email]" data-name="Email" placeholder="Email Address" id="email" required=""></div>
+           <div class="sign-in-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="password" class="sign-in-text-field w-input" maxlength="256" name="customer[password]"placeholder="Password" id="CustomerPassword"></div>
+          <div class="sign-in-text-field-wrapper"><input type="submit" value="CREATE" data-wait="" class="login-btn w-button"></div>
+          <div class="login-links-wrapper">
+            <div class="shop-link-wrapper">
+              <div class="login-link remove-hover">Already have an account?</a>
+            </div>
+            <div class="shop-link-div"></div>
+            <div>
+              <a id="show-pw-form" href="/account/login" class="login-link">Login Here</a>
+            </div>
+          </div>
+        </div>
+      {% endform %}
+    </div>

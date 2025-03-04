@@ -1,0 +1,858 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+{% assign is_available = current_variant.available %}
+{% assign short_description = product.metafields.product_info.short_description %}
+{% assign current_variant_img = current_variant.image | img_url: '800x' %}
+{% assign main_product_id = product.id %}
+
+{% if is_available == true %}
+  {% assign cart_btn_text = 'ADD TO CART' %}
+  {% assign cart_disabled = '' %}
+  {% else %}
+  {% assign cart_btn_text = 'SOLD OUT' %}
+  {% assign cart_disabled = 'disabled="disabled"' %}
+{% endif %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+
+
+
+  <div class="product-section wf-section">
+    
+    {% unless product.id == 7806975410409 %}
+      
+      <div class="breadcrumb-links-wrapper">
+        
+        <a href="/" class="breadcrumb-link">Home</a>
+        
+        <div class="breadcrumb-div">/</div>
+        {%- comment -%}
+          <a href="/collections/all-products" class="breadcrumb-link">All Products</a>
+          <div class="breadcrumb-div">/</div>
+        {%- endcomment -%}
+          
+        {% assign has_bundles = false %}
+        {% assign has_ice_beanie = false %}
+        {% for collection in product.collections %}
+          {% if  collection.id == 150310682701 %}
+            {% assign has_ice_beanie = true %}
+          {% endif %}
+          {% if  collection.id == 265339961421 %}
+            {% assign has_bundles = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if  has_ice_beanie == true and has_bundles == true %}
+            <a href="/collections/bundles" class="breadcrumb-link current">Bundles</a>
+        {% else %}
+          {% for collection in product.collections %}
+            {% unless collection.handle == 'all' %}
+                {% if forloop.last == true %}
+                      <a href="{{collection.url}}" class="breadcrumb-link current">{{collection.title}}</a>
+                {% else %}
+                  <a href="{{collection.url}}" class="breadcrumb-link">{{collection.title}}</a>
+                  <div class="breadcrumb-div"> / </div>
+                {% endif %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endunless %}
+
+    <div class="product-info-container">
+      <div class="product-name-wrapper-mobile">
+        {% if product.metafields.product_info.is_best_seller %}
+          <h3 class="product-subheading" data-ix="slide-in-bottom-2-delay">#1 Best Seller</h3>
+        {% endif %}
+   
+{% assign parts = product.title | split: 'Ice' %}
+
+ 
+        <h1 class="product-main-heading" data-ix="slide-in-bottom-2-delay">{% if parts[0] == '' %}<span>Ice</span>{% endif %}<span>{{ parts[1] }}</span> {% if product.tags contains 'new' %}
+          <span class="product-label new-release">New Release</span>
+        {% endif %}</h1>
+
+        <div class="product-price-wrapper">
+          {% if is_available == true %}
+            {% if compare_at_price > price  %}
+             <span class="limited-offer">LIMITED TIME OFFER{% if product.type == 'Pre-Order' %}: Exclusive Pre-Order!{% endif %}</span>
+             <div class="product-price">
+              <span id="compare-at-price" class="old-price" style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+             </div>
+             {% else %}
+            <div class="price-text-product">
+           {{current_variant.price | money }}
+            </div>
+            {% endif %}
+         {% else %}
+           <div class="product-page-price-text"><span style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+         {% endif %}
+       </div>
+
+       {%comment%}
+        <div class="product-price-wrapper">
+          {% if is_available == true %}
+           {% if compare_at_price > price  %}
+            <div class="product-price">
+             <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+            </div>
+            {% else %}
+           <div class="product-price" id="price">
+          {{current_variant.price | money }}
+           </div>
+           {% endif %}
+          {% else %}
+            <div class="product-price"><span id="price" style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+          {% endif %}
+
+        </div>
+       {%endcomment%}
+
+
+      </div>
+      <div class="images-wrapper">
+        <div data-duration-in="300" data-duration-out="100" data-easing="ease" class="swiper-tabs swiper images-tabs w-tabs">
+
+          <div class="images-large w-tab-content {%if product.id == 7806975410409%}gift-card{%endif%}">
+
+            {% for media in product.media %}
+
+              {% if media.media_type == 'image' %}
+                {% assign image = media %}
+                <div data-w-tab="Tab {{ forloop.index }}" class="tab-pane w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+                  <div class="product-img-wrapper">
+                    <div><img src="{{ image | img_url: '1000x' }}" loading="default" data-name="{{ image | name }}" alt="{{image.alt}}" class="large-product-img"></div>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if media.media_type == 'external_video' or media.media_type == 'video' %}
+                <div data-w-tab="Tab {{ forloop.index }}" class="tab-pane w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+                  <div class="product-vid-wrapper">
+                    {% comment %}
+                    {% if media.media_type == 'external_video' %}
+                      <div class="product-vid-wrapper-inner">
+                        {{ media | external_video_tag }}
+                      </div>
+                    {% endif %}
+                    {% endcomment %}
+                    {% if media.media_type == 'video' and product.tags contains '360 view' %}
+                      <div class="product-vid-wrapper-inner">
+                        <div style="width: 100%;height: 100%;">
+                          <iframe src="https://www.photospherix.com/icebeanie/icebeanie_600/" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" style="display: block; width: 100%; height: 90%;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="pp-embed-content"></iframe>
+                          <div class="product-vid-text">
+                            Click for 360° motion!
+                          </div>
+                      </div> 
+                      </div>
+                    {% endif %}
+
+
+                    {% if media.media_type == 'video' %}
+                      <div class="product-vid-wrapper-inner" style="-webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden;">
+                        {%if media.alt == "360-video"%}
+                          {{ media | video_tag: controls: false, playsinline: true, autoplay: true, loop: true, muted: true }}
+                          {%else%}
+                          {{ media | video_tag: controls: false, playsinline: true, autoplay: true, loop: true, muted: true }}
+                          {%- comment -%}
+                            {{ media | video_tag: controls: true, autoplay: true, muted: true }}
+                          {%- endcomment -%}
+                        {%endif%}
+                      </div>
+                    {% endif %}
+                    
+
+
+                  </div>
+                </div>
+              {% endif %}
+
+            {% endfor %}
+
+
+          </div>
+          
+          {% unless product.id == 7806975410409 %}
+            
+          <div class="images-tabs-menu w-tab-menu swiper-wrapper">
+            {% for media in product.media %}
+
+              {% if media.media_type == 'image' %}
+                {% assign image = media %}
+                <a data-w-tab="Tab {{ forloop.index }}" data-id="{{ media.id }}" class="swiper-slide w-inline-block w-tab-link {% if forloop.first == true %}w--current{% endif %}" jc-variant-id="{{ image | img_url: '800x' }}">
+                  <div class="tab-link-img-wrapper-product"><img src="{{ image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product"></div>
+                </a>
+              {% endif %}
+
+              {% if media.media_type == 'video' %}
+                <a data-w-tab="Tab {{ forloop.index }}" class="swiper-slide w-inline-block w-tab-link {% if forloop.first == true %}w--current{% endif %}" jc-variant-id="#" data-id="{{ media.id }}">
+                  <div class="tab-link-img-wrapper-product tab-link-img-wrapper-product-vid">
+                    <div class="tab-link-vid-overlay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/play-sk-update.png" class="tab-link-vid-overlay-img"></div>
+                    {% if media.alt == "demo-video" %}
+                      <img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/Screenshot_2023-08-29_at_4.09.28_PM.png?v=1693347225" loading="lazy" alt="{{product.title}}" class="tab-link-img-product tab-link-img-product-vid">
+                      {%elsif media.alt == "360-video"%}
+                      <img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/Icebeanie-thumbnail-rotate.png?v=1693349155" loading="lazy" alt="{{product.title}}" class="tab-link-img-product tab-link-img-product-vid">
+                      {%else%}
+                      <img src="{{ media.preview_image | img_url: '256x256' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product tab-link-img-product-vid">
+                    {% endif %}
+                  </div>
+                </a>
+              {% endif %}
+
+              {% if media.media_type == 'external_video' %}
+                <a data-w-tab="Tab {{ forloop.index }}" class="swiper-slide {%if product.id == 8095938576617 %} ice-2_0 {% endif %} w-inline-block product-tab-link-video w-tab-link {% if forloop.first == true %}w--current{% endif %}" jc-variant-id="#" sk-vid-id="{{media.id}}" data-id="{{ media.id }}">
+                  <div class="tab-link-img-wrapper-product tab-link-img-wrapper-product-vid">
+                    
+                    <img src="{{ media.preview_image | img_url: '256x256' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product tab-link-img-product-vid">
+                  </div>
+                </a>
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+          {%endunless%}
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+
+
+      </div>
+      <div class="product-info-text">
+        {% if product.metafields.product_info.is_best_seller %}
+          <h3 class="product-subheading hide-mobile" data-ix="slide-in-bottom-2-delay">#1 Best Seller</h3>
+        {% endif %}
+        <h1 class="product-main-heading hide-mobile" data-ix="slide-in-bottom-2-delay"> {% if parts[0] == '' %}<span>Ice</span>{% endif %}<span>{{ parts[1] }}</span> {% if product.tags contains 'new' %}
+          <span class="product-label new-release">New Release</span>
+        {% endif %}</h1>
+        {% if compare_at_price > price  %}<span class="limited-offer">LIMITED TIME OFFER{% if product.type == 'Pre-Order' %}: Exclusive Pre-Order!{% endif %}</span>{% endif %}
+        <div class="product-price-wrapper hide-mobile">
+
+          {% if is_available == true %}
+           {% if compare_at_price > price  %}
+            <div class="product-price">
+             <span class="old-price" style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+            </div>
+            {% else %}
+            
+           <div class="product-price" id="price">
+          {{current_variant.price | money }}
+           </div>
+           {% endif %}
+        {% else %}
+          <div class="product-price"><span id="price" style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+        {% endif %}
+        </div>
+        {% unless product.id == 8095938576617 %}
+        {% if product.type == 'Pre-Order' %}<p class="special-offer">Buy 2, get <span>15% off</span>; Buy 3, get <span>20% off</span></p>{% endif %}
+        {% endunless %}
+        <div style="display: none">
+          {% unless  short_description == blank %}
+             <div class="product-info-text-block" data-ix="slide-in-bottom-2-delay">{{ short_description }}</div>
+          {% endunless %}
+
+        </div>
+        <div>
+          <div>
+            <div>
+
+              {% form 'product', product, class:"add-cart-form" %}
+
+              {% unless product.has_only_default_variant %}
+              {% for product_option in product.options_with_values %}
+                <div class="amount-select">
+                    <label for="select-{{forloop.index}}" class="product-options-label">{{ product_option.name }}</label>
+                    <select id="select-{{forloop.index}}" class="form-text-field ib-{{ product_option.name | downcase }} w-select product-page-select single-option-selector">
+                    {% for value in product_option.values %}
+                      <option jc-option-id="{{option.id}}" {% if product_option.selected_value == value %}selected{% endif %}>{{value}}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+              {% endfor %}
+            {% endunless %} 
+
+            <div class="car-btn-and-select-wrapper">
+            
+                  <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;"
+                  data-available-text="{{- 'products.product.add_to_cart' | t -}}"
+                  data-solout-text="{{- 'products.product.sold_out' | t -}}"
+                  data-unavailable-text="{{- 'products.product.unavailable' | t -}}">
+                    {% for variant in product.variants %}
+                      {% if variant.available %}
+                        <option data-id="{{ variant.featured_media.id }}" data-index="{{ variant.title }}" jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                          {{ variant.title }}
+                        </option>
+                      {% else %}
+                        <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                      {% endif %}
+                    {% endfor %}
+                  </select>
+
+                <div class="quantity-wrap">
+                <a id="quantity-btn-down" href="#" class="w-inline-block">
+                  <div class="text-block-9">–</div>
+                </a><input type="number" class="w-input" value="1" maxlength="256" name="quantity" data-name="quantity" placeholder="" id="quantity">
+                <a id="quantity-btn-up" href="#" class="w-inline-block">
+                  <div class="text-block-9">+</div>
+                </a>
+                </div>
+              
+              <input type="submit" value="{% if product.type == 'Pre-Order' %}Pre-Order Now{% else %}{{ cart_btn_text }}{% endif %}" data-wait="" class="add-cart-submit-btn w-button" {{ cart_disabled }}>
+              </div>
+
+              </form>
+
+
+              {% endform %}
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="returns-money-back-wrapper">
+          <div class="returns-col"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/support-24-7.png?v=1731846691" loading="lazy" alt="" class="returns-img">
+            <div class="returns-text">24/7 Support</div>
+          </div>
+          <div class="returns-col"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/money-back-guarantee_1-sk-update.png" loading="lazy" alt="Money back guarantee" class="returns-img">
+            <div class="returns-text">30 Day Money Back Guarantee</div>
+          </div>
+          <div class="returns-col"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-inCA.png?v=1731846774" loading="lazy" alt="Money back guarantee" class="returns-img">
+            <div class="returns-text">Designed in California USA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% unless product.id == 7806975410409 %}
+
+  {%- comment -%}
+  Ice Beenie 2.0 = 8095938576617
+  {%- endcomment -%}
+    
+    <div class="wf-section ib-tabs-container">
+      <div data-duration-in="300" data-duration-out="100" data-current="Tab 1" data-easing="ease" class="w-tabs">
+        <div class="about-product-tabs-menu w-tab-menu">
+          <a data-w-tab="Tab 1" class="product-about-tab-link w-inline-block w-tab-link w--current">
+            <div class="about-product-header">Description</div>
+          </a>
+          <a data-w-tab="Tab 2" class="product-about-tab-link middle w-inline-block w-tab-link">
+            <div class="about-product-header">How To Use</div>
+          </a>
+          {% if product.metafields.product_info.sizing_chart %}
+          <a data-w-tab="Tab 4" class="product-about-tab-link w-inline-block w-tab-link">
+            <div class="about-product-header">Sizing Chart</div>
+          </a>
+          {% endif %}
+         
+          <a data-w-tab="Tab 3" class="product-about-tab-link w-inline-block w-tab-link">
+            <div class="about-product-header">FAQ&#x27;s</div>
+          </a>
+        
+        </div>
+        <div class="about-product-tabs-content w-tab-content">
+          <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+            <div class="about-tabs-content">
+              <div class="product-rte">
+                {{ product.description }}
+              </div>
+            </div>
+          </div>
+          <div data-w-tab="Tab 2" class="w-tab-pane">
+            <div class="about-tabs-content">
+              <div class="product-rte">
+              <p>{{ product.metafields.product_info.how_to_use }}</p>
+            </div>
+            </div>
+          </div>
+          <div data-w-tab="Tab 4" class="w-tab-pane">
+            <div class="about-tabs-content">
+              <div class="product-rte ib-table">
+              {{ product.metafields.product_info.sizing_chart }}
+            </div>
+            </div>
+          </div>
+         
+          <div data-w-tab="Tab 3" class="w-tab-pane">
+            <div class="about-tabs-content">
+              <div class="product-rte">
+              {{ product.metafields.product_info.faqs }}
+            </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div> 
+
+  <div class="bundle-section wf-section">
+    <div class="bundles-wrapper">
+      <div class="bundles-left"><img src="https://icebeanie.com/cdn/shop/files/IMAGE2.png?v=1705034789" loading="lazy" alt="" class="bundles-img"></div>
+      <div class="bundles-right">
+        <div class="bundles-content">
+          <div class="bundles-div-top">
+            <h1 class="bundle-heading">Bundle and Save!</h1>
+            <div class="bundle-subheading-wrapper">
+              <h2 class="bundle-subheading">Don&#x27;t Forget, We Sell Bundles!</h2>
+            </div>
+          </div>
+          <div class="bundles-div">
+            <div class="bundles-text-wrapper">
+              <div class="bundles-text">For the active athlete, the large family, or even for the individual who likes to keep their head cool all day, our bundles make it easy to keep the migraine pain away.</div>
+            </div>
+            <div class="bundles-btn-wrapper">
+              <a href="/collections/all-products#beanie-bundles" class="bundles-btn w-button">Shop Bundles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bundles-bg-wrapper">
+      <div class="grey-bg"></div>
+      <div class="blue-bg"></div>
+    </div>
+  </div>
+
+{% endunless %}
+
+
+  <div class="product-ind-reviews-section wf-section">
+    <div class="testimonial-container">
+      <div class="testimonial-left">
+        <h1 class="large-heading center-mobile-landscape" data-ix="slide-in-bottom-2-delay">Cool People <span class="text-span-9">Saying Cool Things!</span></h1>
+        <div class="testimonial-text-wrapper">
+          <div class="larger-text-block left-align center-mobile-landscape" data-ix="slide-in-bottom-2-delay">We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.</div>
+        </div>
+        <a href="/pages/reviews" class="link" data-ix="slide-in-bottom-2-delay">See All Reviews »</a>
+      </div>
+      <div class="testimonial-right">
+        <div data-animation="slide" data-duration="500" data-infinite="1" class="testimonial-slider w-slider">
+          <div class="testimonial-mask w-slider-mask">
+            <div class="testimonial-slide w-slide">
+              <div class="testimonial-blocks-wrapper">
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">Hailey</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">I’ve only had this for a few weeks and I use it all the time! I love that it covers all my pain points when I have a headache, ESPECIALLY the top, ! I also like to use it for daily use at the end of a busy day to help my forehead muscles relax.</div>
+                    </div>
+                    <div class="testimonial-text blue">August 25, 2019</div>
+                  </div>
+                </div>
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">S. Cotton</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">I wish I would have bought this sooner. When I get a migraine, I have been wrapping numerous ice pads around my head and neck. Now I can wear this and get complete coverage of my head. I still have to place a separate ice pack behind my neck, but this is a game changer. I highly recommend it if you suffer from migraines or headaches of any kind.</div>
+                    </div>
+                    <div class="testimonial-text blue">April 9, 2020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-slide">
+              <div class="testimonial-blocks-wrapper">
+                <div class="testimonial-block">
+                    <div class="testimonial-block-inner">
+                      <h3 class="testimonial-name">S. Weaver</h3>
+                      <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                      <div class="testimonial-content">
+                        <div class="testimonial-text">I initially bought this for my business partner who was experiencing migraines. There were days when he would experience migraines that would take him out of commission for 4, sometimes even 8 hours of the work day, which we just couldn't afford. With the Ice Beanie he get's instant relief and is able to stay at the office which is priceless in our start up business</div>
+                      </div>
+                      <div class="testimonial-text blue">October 5, 2019</div>
+                    </div>
+                  </div>
+                <div class="testimonial-block">
+                    <div class="testimonial-block-inner">
+                      <h3 class="testimonial-name">Renee D.</h3>
+                      <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                      <div class="testimonial-content">
+                        <div class="testimonial-text">This thing is amazing !!!! I am buying another one so I can switch out if I need a second icing .... soft comfortable ... ice on top , sides all around . No more struggling with keeping ice pack on while laying down , anyone that gets bad headaches needs this ..</div>
+                      </div>
+                      <div class="testimonial-text blue">May 23, 2020</div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="w-slide">
+              <div class="testimonial-blocks-wrapper">
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">Stephanie Hubbs</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">It is very helpful to reduce my headache pain. It is easy to use. It has Velcro at the back to fit well. It stays on well. You can wear it lay down wearing it. I would recommend this to anyone with headache pain or to keep cool working in the heat.</div>
+                    </div>
+                    <div class="testimonial-text blue">August 3, 2020</div>
+                  </div>
+                </div>
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">Erin</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">I get migraines pretty often, this covers my whole head and stays in place. I’m able to sleep with worrying about the ice packs moving or falling off. I can also move around the house freely. I would recommend.</div>
+                    </div>
+                    <div class="testimonial-text blue">August 29, 2020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-slide">
+              <div class="testimonial-blocks-wrapper">
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">Stephanie Thode</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">I love this hat! It fits my head so much better than the Migraine Hat and I love that it has a place to slip my ponytail through so I can more easily wear it while I'm taking care of my two young boys.</div>
+                    </div>
+                    <div class="testimonial-text blue">August 28, 2021</div>
+                  </div>
+                </div>
+                <div class="testimonial-block">
+                  <div class="testimonial-block-inner">
+                    <h3 class="testimonial-name">C. Hirsh</h3>
+                    <div class="testimonial-star-wrapper"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review-star-v2.png" loading="lazy" alt="Star" class="star"></div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-text">I have other ice "bands" I use for my migraines, so when I was offered this product to try, I figured "why not?" I was skeptical that it would be any different but WOW it's great! The ice packs encircle the head, from the forehead, to the sides and back and the top of the head all at the same time so it helps the blood flow all at the same time. Then add the compression and it truly knocks out my headaches in half the time.</div>
+                    </div>
+                    <div class="testimonial-text blue">April 14, 2020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-arrow-left w-slider-arrow-left"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow-blue.png?v=1731855767" loading="lazy" alt="" class="arrow-img"></div>
+          <div class="testimonial-arrow-right w-slider-arrow-right"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow-blue.png?v=1731855767" loading="lazy" alt="" class="arrow-img-right"></div>
+          <div class="slide-nav-testimonial w-slider-nav w-round"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="reviews-cool-products-section wf-section">
+    <div class="cool-products-container">
+      <div class="cool-products-main-heading-wrapper">
+        <h1 class="cool-products-main-heading-blue" data-ix="slide-in-bottom-2-delay">Related Products</h1>
+      </div>
+      <div class="cool-products-content">
+
+        {% assign jc_counter = 0 %}
+        {% for product in collections.all-products.products %}
+
+          {% if jc_counter > 2 %}
+            {% break %} 
+          {% endif %}
+          
+          {% unless product.id == main_product_id %}
+
+            <div class="cool-products-block product-card" data-ix="slide-in-bottom-2-delay">
+              <a href="{{ product.url }}" aria-current="page" class="cool-products-link-block w-inline-block w--current"><img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="cool-products-img">
+                <div class="bundle-savings">
+                  Save {{ product.compare_at_price | minus: product.price | money -}}
+                </div>
+                <h3 class="cool-products-heading">{{ product.title }}</h3>
+                <div class="shop-links-wrapper">
+                    {% if is_available == true %}
+                      {% if compare_at_price > price %}
+                        <div class="bundle-price">
+                          <span style="text-decoration: line-through">{{ compare_at_price | money }}</span>
+                          <span id="price">{{ current_variant.price | money }}</span>
+                        </div>
+                      {% else %}
+                        <div class="bundle-price" id="price">
+                          {{ current_variant.price | money }}
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      <div class="bundle-price">
+                        <span id="price" style="text-decoration: line-through;">{{ product.price | money }}</span>
+                        Sold Out</div>
+                    {% endif %}
+                    <div>
+                      {% form 'product', product %}
+  
+                        <select
+                          name="id"
+                          id="product-select"
+                          class="jc-product-select product-form__variants no-js"
+                          style="display:none;">
+                          {% for variant in product.variants %}
+                            {% if variant.available %}
+                              <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}value="{{ variant.id }}">
+                                {{ variant.title }}
+                              </option>
+                            {% else %}
+                              <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+  
+                        <input
+                          type="number"
+                          class="add-cart-text-field w-input"
+                          value="1"
+                          maxlength="256"
+                          name="quantity"
+                          data-name="quantity"
+                          placeholder=""
+                          id="quantity"
+                          style="display:none;">
+                        <input
+                          type="submit"
+                          value="{{ cart_btn_text }}"
+                          data-wait=""
+                          class="shop-link w-button"
+                          {{ cart_disabled }}>
+                      {% endform %}
+  
+                    </div>
+                  </div>
+                 {% comment %}
+                <div class="cool-products-text-wrapper">
+                  <div class="smaller-text-block" data-ix="slide-in-bottom-2-delay">{{ product.metafields.product_description.text }}</div>
+                </div>
+               {% endcomment %}
+              </a>
+            </div> 
+
+            {% assign jc_counter = jc_counter | plus: 1 %}
+          {% endunless %}
+               
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+  {% for media in product.media %}
+    {% if media.media_type == 'external_video' %}
+      <div class="product-vid-modal-wrapper" sk-modal-vid-id="{{media.id}}">
+          <div class="product-vid-modal-content-wrapper">
+
+            <div class="product-vid-modal-inner">
+              {{ media | external_video_tag }}
+            </div>
+
+              <div class="form-modal-close-btn"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/close-white.png" loading="lazy" alt="Close" class="form-modal-close-btn-img" /></div>
+          </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <script type="text/javascript">
+    const swiper = new Swiper('.swiper-tabs', {
+      slidesPerView: 5,
+      spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 15
+        },
+        768: {
+          slidesPerView: 3
+        },
+        992: {
+          slidesPerView: 5,
+          spaceBetween: 20
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    const colorElement = document.querySelector('.ib-color');
+    const sizeElement = document.querySelector('.ib-size');
+    if (sizeElement) {
+      const choicesSize = new Choices(sizeElement, {
+        searchEnabled: false,
+      });
+    }
+    const choicesColor = new Choices(colorElement, {
+      searchEnabled: false,
+      callbackOnCreateTemplates: function(strToEl, escapeForTemplate) {
+      var classNames = this.config.classNames;
+      var itemSelectText = this.config.itemSelectText;
+      var allowHTML = this.config.allowHTML;
+      return {
+        item: function({ classNames }, data) {
+          return strToEl(
+            '\
+        <div\
+          class="' +
+              String(classNames.item) +
+              ' ' +
+              String(
+                data.highlighted
+                  ? classNames.highlightedState
+                  : classNames.itemSelectable
+              ) +
+              '"\
+          data-item\
+          role="option"\
+          data-id="' +
+              String(data.id) +
+              '"\
+          data-value="' +
+              String(escapeForTemplate(allowHTML, data.value)) +
+              '"\
+          ' +
+              String(data.active ? 'aria-selected="true"' : '') +
+              '\
+          ' +
+              String(data.disabled ? 'aria-disabled="true"' : '') +
+              '\
+          >\
+          <span class="' + data.label.toLowerCase() + ' circle-color" style="margin-right:10px;"></span> ' +
+              String(escapeForTemplate(allowHTML, data.label)) +
+              '\
+        </div>\
+      '
+          );
+        },
+        choice: function({ classNames }, data) {
+          return strToEl(
+            '\
+        <div\
+          class="' +
+              String(classNames.item) +
+              ' ' +
+              String(classNames.itemChoice) +
+              ' ' +
+              String(
+                data.disabled
+                  ? classNames.itemDisabled
+                  : classNames.itemSelectable
+              ) +
+              '"\
+          data-select-text="' +
+              String(itemSelectText) +
+              '"\
+          data-choice \
+          ' +
+              String(
+                data.disabled
+                  ? 'data-choice-disabled aria-disabled="true"'
+                  : 'data-choice-selectable'
+              ) +
+              '\
+          data-id="' +
+              String(data.id) +
+              '"\
+          data-value="' +
+              String(escapeForTemplate(allowHTML, data.value)) +
+              '"\
+          ' +
+              String(
+                data.groupId > 0 ? 'role="treeitem"' : 'role="option"'
+              ) +
+              '\
+          >\
+          <span class="' + data.label.toLowerCase() + ' circle-color" style="margin-right:10px;"></span> ' +
+              String(escapeForTemplate(allowHTML, data.label)) +
+              '\
+        </div>\
+      '
+          );
+        },
+      };
+    },
+    });
+
+    $(document).ready(function(){
+
+        $('.product-tab-link-video').click(function(e) {
+          e.preventDefault();
+          $('body').css('overflow', 'hidden');
+          var vid_id = $(this).attr('sk-vid-id');
+          var id_string = '.product-vid-modal-wrapper[sk-modal-vid-id="'+ vid_id +'"';
+          var current_modal = $(id_string);
+          current_modal.css('display','block');
+          current_modal.fadeTo(500,1);
+      });
+
+        $('.form-modal-close-btn').click(function(e) {
+            e.preventDefault();
+            $('body').css('overflow', 'auto');
+
+            $('.product-vid-modal-wrapper').each(function(i, obj) {
+                    $(this).fadeTo(500,0,function(){
+                     $(this).hide();
+                });
+            });
+
+        });
+
+
+    });
+    
+  </script>
+
+<script>
+   
+   $(document).ready(function() { 
+       
+
+      $("#quantity-btn-down").click(function(){
+       
+        $('#quantity').val( function(i, oldval) {
+            if (oldval < 2) {
+              return 1;
+            } else {
+              return --oldval;
+            }
+        });
+      });
+      $("#quantity-btn-up").click(function(){
+        
+        $('#quantity').val( function(i, oldval) {
+            return ++oldval;
+        });
+
+      });
+
+    });
+
+
+
+
+
+   
+
+   </script>
+
+   
+
+
+
+{% schema %}
+{
+  "name": "Product Page" ,
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_swactches",
+        "label": "Use color swatches for variants?",
+        "default": false
+      }
+  ]
+}
+{% endschema %}

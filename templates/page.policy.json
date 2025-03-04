@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "custom-policy-page": {
+      "type": "custom-policy-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "custom-policy-page"
+  ]
+}

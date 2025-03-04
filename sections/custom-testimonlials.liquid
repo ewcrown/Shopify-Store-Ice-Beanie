@@ -1,0 +1,109 @@
+<section class="familiar-section wf-section">
+  <div class="container">
+    <div class="familiar-list-wrapper">
+      <div class="familiar-list-item">
+        <img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/markcuban-sharktank-min.jpg"
+          loading="lazy"
+          sizes="(max-width: 767px) 90vw, (max-width: 991px) 44vw, 22vw"
+          srcset="//cdn.shopify.com/s/files/1/0254/3170/3629/files/markcuban-sharktank-min-p-500.jpg 500w, //cdn.shopify.com/s/files/1/0254/3170/3629/files/markcuban-sharktank-min-p-800.jpg 800w, //cdn.shopify.com/s/files/1/0254/3170/3629/files/markcuban-sharktank-min-p-1080.jpg 1080w, //cdn.shopify.com/s/files/1/0254/3170/3629/files/markcuban-sharktank-min.jpg 1280w"
+          alt=""
+          class="familiar-image"
+        >
+        <div class="familiar-text-wrapper">
+          <div class="familiar-name">Mark Cuban <span class="familiar-title">Shark Tank Investor</span></div>
+        </div>
+      </div>
+      <div class="familiar-list-item">
+        <div class="video-container">
+          <video
+            id="videoElement"
+            loop
+            muted
+            playsinline
+            autoplay
+            poster="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/116207923_359329938382086_1159735255009451849_n-poster-00001.jpg?v=1689107616"
+          >
+            <source src="https://cdn.shopify.com/videos/c/o/v/5eb4757d35314ea68552bd4c7ab2d80a.mp4" type="video/mp4">
+            <source src="https://cdn.shopify.com/videos/c/o/v/2af2a769f5dd4691aee8e94b1cbbd271.webm" type="video/webm">
+          </video>
+          {%- comment -%}
+            <button id="playPauseBtn" class="video-control">
+              <img id="playImg" src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/628298b20ae0236682d4b87f_Play-24.svg?v=1689869810" alt="Play video">
+              <img id="pauseImg" src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/Pause.svg?v=1689869810" alt="Pause video" style="display: none;">
+            </button>
+          {%- endcomment -%}
+        </div>
+        <div class="familiar-text-wrapper">
+          <div class="familiar-name">Brooke Ence <span class="familiar-title">Actor | Athlete | Influencer</span></div>
+        </div>
+      </div>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var video = document.getElementById('videoElement');
+          var playButton = document.getElementById('playPauseBtn');
+          var playImg = document.getElementById('playImg');
+          var pauseImg = document.getElementById('pauseImg');
+        
+          playButton.addEventListener('click', function() {
+            if (video.paused) {
+              video.play();
+              playImg.style.display = 'none';
+              pauseImg.style.display = 'block';
+            } else {
+              video.pause();
+              playImg.style.display = 'block';
+              pauseImg.style.display = 'none';
+            }
+          });
+        });
+        
+      </script>
+
+      <div class="familiar-list-item">
+        <img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/pain-relief-from-chronic-headaches-ice-beanie-1-min_1.jpg"
+          loading="lazy"
+          alt=""
+          class="familiar-image"
+        >
+        <div class="familiar-text-wrapper">
+          <div class="familiar-name">
+            Dr McAllister <span class="familiar-title">of The New England Institute for Neurology and Headache</span>
+          </div>
+        </div>
+      </div>
+      <div class="familiar-list-item">
+        <img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/Gena-Davis.jpg"
+          loading="lazy"
+          alt=""
+          class="familiar-image"
+        >
+        <div class="familiar-text-wrapper">
+          <div class="familiar-name">Geena Davis <span class="familiar-title">Oscar Winning Actor</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Testimonial Section" ,
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Testimonial Section"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

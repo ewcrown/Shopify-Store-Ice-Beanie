@@ -1,0 +1,56 @@
+
+<div class="hero-section contact wf-section">
+    <div class="hero-heading-wrapper">
+      <h1 class="hero-heading" data-ix="slide-in-bottom-2-delay">Contact Us</h1>
+    </div>
+  </div>
+  <div class="feedback-section wf-section">
+    <div class="feedback-wrapper">
+      <h1 class="feedback-heading" data-ix="slide-in-bottom-2-delay">Have Some Feedback?</h1>
+      <div class="feedback-text-wrapper">
+        <div class="larger-text-block" data-ix="slide-in-bottom-2-delay">We’d love to hear from you!</div>
+      </div>
+      
+      <div class="contact-form-block">
+
+        {% form 'contact', id:"Contact-Form", class:"wholesale-form" %}
+          {% if form.posted_successfully? %}
+            <div class="success-message">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+          {% else %}
+          <input type="hidden" name="contact[form-name]" value="General Contact Form">
+          <div class="contact-form-inner">
+            <div class="contact-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="text" class="contact-text-field w-input" maxlength="256" name="contact[Name]" data-name="Name" placeholder="Your Name" id="Name"></div>
+            <div class="contact-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="email" class="contact-text-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="Email" id="Email"></div>
+            <div class="contact-text-field-wrapper" data-ix="slide-in-bottom-2-delay"><input type="tel" class="contact-text-field w-input" maxlength="256" name="contact[Phone-Number]" data-name="Phone Number" placeholder="Phone Number" id="Phone-Number"></div>
+            <div class="contact-message-block-wrapper" data-ix="slide-in-bottom-2-delay">
+              <div class="contact-text-field-heading">Your Message</div><textarea data-name="Message" maxlength="5000" id="Message" name="contact[Message]" class="wholesale-message-block w-input"></textarea>
+            </div>
+            <div class="email-wrapper" data-ix="slide-in-bottom-2-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/email-sk-update.png" loading="lazy" alt="" class="email-img">
+              <a href="mailto:support@icebeanie.com" class="email-link-block w-inline-block">
+                <div>support@icebeanie.com</div>
+              </a>
+            </div>
+          </div>
+          <div class="submit-wrapper">
+            <div class="submit-btn-div"></div><input type="submit" value="Submit »" data-wait="" class="submit-btn w-button">
+          </div>
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+
+  {% schema %}
+{
+  "name": "Contact Section" ,
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Contact Section"
+    }
+  ]
+}
+{% endschema %}

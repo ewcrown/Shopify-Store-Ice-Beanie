@@ -1,0 +1,131 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+
+
+<div class="login-section wf-section">
+  <div class="account-wrapper">
+    <h1 class="account-heading">Welcome, <span>{{customer.first_name}}!</span></h1>
+   
+
+    <div class="account-links-wrapper">
+      
+    <div>
+      <a href="/account/logout" class="account-btn w-button">Log out</a>
+    </div>
+    </div>
+
+{% paginate customer.orders by 20 %}
+
+{% if customer.orders.size != 0 %}
+
+<div class="heading-flex-row-account-page">
+<div class="flex-col-account-page-1">
+  <div class="order-history-heading">Order</div>
+</div>
+<div class="flex-col-account-page-2">
+  <div class="order-history-heading">Date</div>
+</div>
+<div class="flex-col-account-page-3">
+  <div class="order-history-heading">Payment Status</div>
+</div>
+<div class="flex-col-account-page-3">
+  <div class="order-history-heading">Tracking Number</div>
+</div>
+
+
+<div class="flex-col-account-page-4">
+  <div class="order-history-heading">Fulfillment Status</div>
+</div>
+<div class="flex-col-account-page-5">
+  <div class="order-history-heading">Total</div>
+</div>
+</div>
+
+{% for order in customer.orders %}
+  
+
+<div class="flex-row-account-page">
+  <div class="flex-col-account-page-1">
+    <a href="{{order.customer_url}}" class="flex-col-link-block-account-page w-inline-block">
+      <div class="text-block order-history">{{order.name}}</div>
+    </a>
+  </div>
+  <div class="flex-col-account-page-2">
+    <div class="text-block order-history">{{ order.created_at | date: format: 'date' }}</div>
+  </div>
+  <div class="flex-col-account-page-3">
+    <div class="text-block order-history">{{order.financial_status}}</div>
+  </div>
+
+  <div class="flex-col-account-page-3">
+    <div class="text-block order-history">
+        {%- if line_item.fulfillment.tracking_url -%}
+          {{ line_item.fulfillment.tracking_url }}
+        {% else %}
+        <div class="text-block order-history">Tracking number not yet available</div>
+      {%- endif -%}
+
+
+    </div>
+  </div>
+
+  <div class="flex-col-account-page-4">
+    <div class="text-block order-history">{{order.fulfillment_status}}</div>
+  </div>
+  <div class="flex-col-account-page-5">
+    <div class="text-block order-history">{{ order.total_price | money }}</div>
+  </div>
+</div>  
+
+{% endfor %}
+{% else %}   
+
+<div class="jc-account-page-empty-wrapper">
+<p class="larger-text-block">You haven't placed any orders yet</p>
+</div>
+
+<div class="account-detail-wrapper">
+  <h2>{{ 'customer.account.details' | t }}</h2>
+
+  {{ customer.default_address | format_address }}
+
+  <a class="link" href="{{ routes.account_addresses_url }}">
+    {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+  </a>
+</div>
+
+
+{% endif %}
+{% if paginate.pages > 1 %}
+{% include 'pagination' %}
+{% endif %}
+{% endpaginate %}
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+

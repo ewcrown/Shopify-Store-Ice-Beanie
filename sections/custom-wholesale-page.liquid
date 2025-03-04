@@ -1,0 +1,86 @@
+<div class="hero-section retailer wf-section">
+    <div class="hero-heading-wrapper">
+      <h1 class="hero-heading" data-ix="slide-in-bottom-2-delay">Become a Retailer</h1>
+    </div>
+  </div>
+  <div class="wholesale-section wf-section">
+    <div class="wholesale-container">
+      <div class="wholesale-intro-text-wrapper">
+        <div class="larger-text-block" data-ix="slide-in-bottom-2-delay">
+          If you're interested in carrying IceBeanie products in your store, please fill out the application below or contact us at <a href="mailto:support@icebeanie.com" class="wholesale-link">support@icebeanie.com</a>.
+        </div>
+      </div>
+      <div class="wholesale-features-wrapper">
+        <div class="wholesale-feature" data-ix="slide-in-bottom-2-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/order-online-sk-update.png" loading="lazy" alt="" class="wholesale-img">
+          <div class="wholesale-title">Easily Apply to Sell Wholesale Online</div>
+        </div>
+        <div class="wholesale-feature" data-ix="slide-in-bottom-3-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/minimum-order-sk-update.png" loading="lazy" alt="" class="wholesale-img">
+          <div class="wholesale-title">High Quality Products Your Customers Will Love</div>
+        </div>
+        <div class="wholesale-feature" data-ix="slide-in-bottom-4-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/money-back-guarantee-sk-update.png" loading="lazy" alt="" class="wholesale-img">
+          <div class="wholesale-title">Money Back Guarantee and Easy Returns</div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <div class="wholesale-form-section wf-section">
+    <div class="wholesale-form-container">
+      <div class="wholesale-form-wrapper">
+        <h1 class="registration-form-heading" data-ix="slide-in-bottom-2-delay">Wholesale <span class="text-span-13">Application Form</span></h1>
+        <div class="wholesale-form-text-wrapper">
+          <div class="larger-text-block mobile-padding" data-ix="slide-in-bottom-2-delay">Interested in carrying IceBeanie products? Please fill out the form below to get started.</div>
+        </div>
+        <div class="wholesale-form-block w-form">
+          {% form 'contact', id:"Wholesale-Form", class:"wholesale-form" %}
+            {% if form.posted_successfully? %}
+              <div class="success-message">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+            {% else %}
+            <input type="hidden" name="contact[form-name]" value="Wholesale Application Form">
+            <div class="wholesale-form-inner">
+              <div class="wholesale-text-field-wrapper"><input type="text" class="wholesale-text-field w-input" maxlength="256" name="contact[Name]" data-name="Name" placeholder="Your Name" id="Name"></div>
+              <div class="wholesale-text-field-wrapper"><input type="text" class="wholesale-text-field w-input" maxlength="256" name="contact[Business-Name]" data-name="Business Name" placeholder="Business Name" id="Business-Name"></div>
+              <div class="wholesale-text-field-wrapper"><input type="email" class="wholesale-text-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="Email" id="Email"></div>
+              <div class="wholesale-text-field-wrapper"><input type="text" class="wholesale-text-field w-input" maxlength="256" name="contact[Website]" data-name="Website" placeholder="Website" id="website"></div>
+              <div class="wholesale-text-field-wrapper"><input type="tel" class="wholesale-text-field w-input" maxlength="256" name="contact[Phone-Number]" data-name="Phone Number" placeholder="Phone Number" id="Phone-Number"></div>
+              <div class="wholesale-text-field-wrapper"><input type="text" class="wholesale-text-field w-input" maxlength="256" name="contact[EIN-Number]" data-name="EIN Number" placeholder="EIN Number" id="EIN-Number"></div>
+
+
+              <div class="wholesale-message-block-wrapper">
+                <div class="text-field-heading" data-ix="slide-in-bottom-2-delay">How did you hear about us?</div><textarea data-name="Message" maxlength="5000" id="Message" name="contact[How did you hear about us]" class="wholesale-message-block w-input"></textarea>
+              </div>
+              <div class="wholesale-message-block-wrapper">
+                <div class="text-field-heading" data-ix="slide-in-bottom-2-delay">Where will you sell our products?</div><textarea data-name="Message 2" maxlength="5000" id="Message-2" name="contact[Where will you sell our products]" class="wholesale-message-block w-input"></textarea>
+              </div>
+              <div class="wholesale-message-block-wrapper">
+                <div class="text-field-heading" data-ix="slide-in-bottom-2-delay">What product(s) and quantities are you interested in?</div><textarea data-name="Message 3" maxlength="5000" id="Message-3" name="contact[What products and quantitites interested in]" class="wholesale-message-block w-input"></textarea>
+              </div>
+
+
+            </div>
+            <div class="submit-wrapper">
+              <div class="submit-btn-div"></div><input type="submit" value="Submit »" data-wait="" class="submit-btn w-button">
+            </div>
+          {% endif %}
+          {% endform %}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% schema %}
+{
+  "name": "Wholesale Page" ,
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Wholesale Page"
+    }
+  ]
+}
+{% endschema %}

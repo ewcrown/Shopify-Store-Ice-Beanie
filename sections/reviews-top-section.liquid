@@ -1,0 +1,63 @@
+  <div class="reviews-section wf-section">
+    <h1 class="reviews-main-heading" data-ix="slide-in-bottom-2-delay">{{section.settings.heading_text}}</h1>
+    {%- comment -%}
+      <div class="reviews-links">
+        <a href="#video-reviews-section" class="reviews-link w-inline-block" data-ix="slide-in-bottom-2-delay">
+          <div class="reviews-text-block">Video Reviews</div>
+          <div class="reviews-link-underline"></div>
+        </a>
+        <a href="#written-reviews" class="reviews-link w-inline-block" data-ix="slide-in-bottom-3-delay">
+          <div class="reviews-text-block">Written Reviews</div>
+          <div class="reviews-link-underline"></div>
+        </a>
+      </div>
+    {%- endcomment -%}
+    <div class="video-wrapper">
+      <a href="#" class="video-lightbox w-inline-block w-lightbox">
+        {% if section.settings.thumbnail_image %}
+          <img src="{{section.settings.thumbnail_image | img_url: '1400x' }}" loading="lazy" alt="Video Thumbnail">
+          {% else %}
+          <img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/review1-min-sk-update.jpg" loading="lazy" alt="Video Thumbnail">
+        {% endif %}
+        
+        <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "video",
+      "originalUrl": "https://youtu.be/{{section.settings.vid_id}}",
+      "url": "https://youtube.com/watch?v={{section.settings.vid_id}}",
+      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F{{section.settings.vid_id}}%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{section.settings.vid_id}}&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F{{section.settings.vid_id}}%2Fhqdefault-sk-update.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Nd4De4iWGh4/hqdefault-sk-update.jpg",
+      "width": 940,
+      "height": 528
+    }
+  ]
+}</script>
+      </a>
+    </div>
+    <div class="bottom-bg"></div>
+  </div>
+
+  {% schema %}
+  {
+    "name": "Featured Review" ,
+    "settings": [
+        {
+           "type": "text",
+           "id": "heading_text",
+           "default": "IceBeanie Reviews",
+           "label": "Heading Text"
+        },
+        {
+          "label": "Thumbnail Image",
+          "id": "thumbnail_image",
+          "type": "image_picker"
+        },
+        {
+           "type": "text",
+           "id": "vid_id",
+           "label": "YouTube Video ID"
+        }
+    ]
+  }
+  {% endschema %}

@@ -1,0 +1,84 @@
+<section id="shop" class="s-product-section wf-section">
+  <div class="container">
+    <div class="s-product-wrapper">
+      <div class="s-product-left">
+        <div class="s-product-best-seller">#1 Best Seller</div>
+        <h3 class="s-product-heading">Migraine Relief Beanie</h3>
+        <div class="s-product-star-wrapper">
+          <img
+            src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/icon-stars.svg?v=1690580163"
+            loading="lazy"
+            alt=""
+            class="s-product-star-image"
+          >
+          <div class="s-product-reviews-text">1,015 Reviews</div>
+        </div>
+        <div id="bundle-price" class="s-product-price">$39.99</div>
+
+        <script>
+          $(document).ready(function () {
+            $('.s-product-radio-button-field').click(function () {
+              // remove active class from all tabs and tab contents
+              $('.s-product-radio-button-field').removeClass('selected');
+              $('.tab-content').removeClass('active');
+
+              // add active class to the clicked tab and its corresponding content
+              var target = $(this).data('tab-target');
+              $(target).addClass('active');
+              $(this).addClass('selected');
+
+              // update the bundle price
+              var price = $(this)
+                .find('.s-product-radio-price')
+                .clone() //clone the element
+                .children() //select all the children
+                .remove() //remove all the children
+                .end() //again go back to selected element
+                .text();
+              $('#bundle-price').text(price);
+            });
+          });
+        </script>
+      </div>
+
+      {% render 'sk-landing-image-tabs-new' %}
+      {%- comment -%}
+        {%section 'sk-landing-image-tabs-new'%}
+      {%- endcomment -%}
+
+      <div class="s-product-right">
+        <div class="s-product-form-block w-form">
+          {%- comment -%}
+          {%- endcomment -%}
+          {% render 'sk-bundle-tabs-new' %}
+
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Shop Tabs" ,
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Shop Tabs"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

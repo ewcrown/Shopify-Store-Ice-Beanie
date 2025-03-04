@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "6195106b-4e11-4ac9-a800-d874b06ba057": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "e912f55e-4226-48ff-8c3f-55c99da5d476": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16804810948841__e912f55e-4226-48ff-8c3f-55c99da5d476-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5><em>UNLOCK FREE U.S. SHIPPING WHEN YOU BUY 2 OR MORE ICEBEANIE'S<\/em><\/h5>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16804810948841__e912f55e-4226-48ff-8c3f-55c99da5d476-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {}
+    },
+    "1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Route_CarbonNeutral_medium_dark_version.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Carbon-Neutral Shipping",
+            "text": "<h3>Made available with every purchase to promote sustainability in consumption.<\/h3>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-1",
+        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053": {
+      "type": "custom-three-columns",
+      "settings": {}
+    }
+  },
+  "order": [
+    "6195106b-4e11-4ac9-a800-d874b06ba057",
+    "e912f55e-4226-48ff-8c3f-55c99da5d476",
+    "cart-items",
+    "cart-footer",
+    "1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f",
+    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053"
+  ]
+}

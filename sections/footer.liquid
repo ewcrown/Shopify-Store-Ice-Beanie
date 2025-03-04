@@ -1,0 +1,176 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+
+<div class="footer-section wf-section">
+  <div class="footer-wrapper">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="/" aria-current="page" class="footer-logo-link-block w-inline-block w--current"
+          ><img
+            src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/icebeanie-logo-white.png?v=1709828194"
+            loading="lazy"
+            alt=""
+            data-ix="slide-in-bottom-2-delay"
+        ></a>
+        <div class="footer-left-text-wrapper">
+          <div class="footer-left-text-block" data-ix="slide-in-bottom-2-delay">
+            Join our email list to know <span class="text-span-17">when new products launch</span>
+          </div>
+        </div>
+        <div class="footer-email-newsletter" data-ix="slide-in-bottom-2-delay">
+          {% form 'customer', class: 'footer-email-form' %}
+            {% if form.posted_successfully? %}
+              <div class="success-message">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+            {% else %}
+              <input type="hidden" name="contact[accepts_marketing]" value="true">
+              <input
+                type="email"
+                class="footer-text-field w-input"
+                maxlength="256"
+                name="contact[email]"
+                placeholder="Your email address"
+                id="Email-Address"
+                required=""
+              >
+              <input type="submit" value="Submit »" data-wait="" class="footer-email-submit-btn w-button">
+            {% endif %}
+          {% endform %}
+        </div>
+        <div class="footer-social-link-blocks mobile">
+          <a
+            href="https://www.facebook.com/icebeanie/"
+            target="_blank"
+            class="footer-social-block w-inline-block"
+            data-ix="slide-in-bottom-5-delay"
+            ><img
+              src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/facebook-w-sk-update.png"
+              loading="lazy"
+              alt=""
+              class="footer-social-img"
+          ></a>
+          <a
+            href="https://twitter.com/icebeanie"
+            target="_blank"
+            class="footer-social-block middle w-inline-block"
+            data-ix="slide-in-bottom-5-delay"
+            ><img
+              src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/twitter-w-sk-update_e6b209ae-36ef-4cd9-bdd8-3a84f5735362.png"
+              loading="lazy"
+              alt=""
+              class="footer-social-img"
+          ></a>
+          <a
+            href="https://www.tiktok.com/@icebeanie"
+            target="_blank"
+            class="footer-social-block w-inline-block"
+            data-ix="slide-in-bottom-5-delay"
+            ><img
+              src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/tiktok-w-sk-update.png"
+              loading="lazy"
+              alt=""
+              class="footer-social-img"
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCGrCGH4HZxD-8Du_Cxxhdbw"
+            target="_blank"
+            class="footer-social-block w-inline-block"
+            data-ix="slide-in-bottom-5-delay"
+            ><img
+              src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/youtube-a-w-sk-update.png"
+              loading="lazy"
+              alt=""
+              class="footer-social-img"
+          ></a>
+          <a
+            href="https://www.instagram.com/IceBeanie/"
+            target="_blank"
+            class="footer-social-block w-inline-block last-link"
+            data-ix="slide-in-bottom-5-delay"
+            ><img
+              src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/instagram-w-sk-update.png"
+              loading="lazy"
+              alt=""
+              class="footer-social-img"
+          ></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-navigation-col">
+          <h4 class="footer-heading" data-ix="slide-in-bottom-3-delay">Our Products</h4>
+          {%- comment -%}
+            <a href="/collections/all-products" class="footer-link" data-ix="slide-in-bottom-3-delay">All Products</a>
+          {%- endcomment -%}
+          <a href="/products/icebeanie-2-0" class="footer-link" data-ix="slide-in-bottom-2-delay">IceBeanie</a>
+          <a href="/products/icebeanie-gift-card" class="footer-link" data-ix="slide-in-bottom-2-delay">Gift Cards</a>
+          <a href="/collections/all-products#beanie-bundles" class="footer-link" data-ix="slide-in-bottom-3-delay"
+            >IceBeanie Bundles</a
+          >
+          <a href="/pages/the-science" class="footer-link" data-ix="slide-in-bottom-3-delay">The Science</a>
+        </div>
+        <div class="footer-navigation-col">
+          <h4 class="footer-heading" data-ix="slide-in-bottom-4-delay">Our Company</h4>
+          <a href="/pages/about" class="footer-link" data-ix="slide-in-bottom-4-delay">About Us</a>
+          <a href="/pages/wholesale" class="footer-link" data-ix="slide-in-bottom-4-delay">Become a Retailer</a>
+          {% comment %}
+            <a href="/blogs/news" class="footer-link" data-ix="slide-in-bottom-4-delay">News</a>
+          {% endcomment %}
+          <a href="/pages/reviews" class="footer-link" data-ix="slide-in-bottom-4-delay">Reviews</a>
+          <a href="/pages/faq" class="footer-link" data-ix="slide-in-bottom-4-delay">FAQS</a>
+          <a href="/blogs/news" class="footer-link" data-ix="slide-in-bottom-4-delay">News</a>
+        </div>
+        <div class="footer-navigation-col">
+          <h4 class="footer-heading" data-ix="slide-in-bottom-4-delay">Customer Care</h4>
+          <a href="/account" class="footer-link" data-ix="slide-in-bottom-4-delay">Account Login</a>
+          <a href="/account" class="footer-link" data-ix="slide-in-bottom-4-delay">Track My Order</a>
+          <a href="/pages/contact" class="footer-link" data-ix="slide-in-bottom-4-delay">Contact Us</a>
+        </div>
+        <div class="footer-navigation-col">
+          <h4 class="footer-heading" data-ix="slide-in-bottom-4-delay">Our Policies</h4>
+          <a href="/pages/privacy-policy" class="footer-link" data-ix="slide-in-bottom-4-delay">Privacy Policy</a>
+          <a href="/pages/refund-policy" class="footer-link" data-ix="slide-in-bottom-4-delay">Refund Policy</a>
+          <a href="/pages/shipping-policy" class="footer-link" data-ix="slide-in-bottom-4-delay">Shipping Policy</a>
+          <a href="/pages/terms-of-service" class="footer-link" data-ix="slide-in-bottom-4-delay">Terms of Service</a>
+        </div>
+        {% comment %}
+          <div class="footer-social-link-blocks desktop">
+            <a href="https://www.facebook.com/icebeanie/" target="_blank" class="footer-social-block w-inline-block" data-ix="slide-in-bottom-5-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/facebook-w-sk-update.png" loading="lazy" alt="" class="footer-social-img"></a>
+            <a href="https://twitter.com/icebeanie" target="_blank" class="footer-social-block w-inline-block" data-ix="slide-in-bottom-5-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/twitter-w-sk-update.png" loading="lazy" alt="" class="footer-social-img"></a>
+            <a href="https://www.instagram.com/IceBeanie/" target="_blank" class="footer-social-block w-inline-block" data-ix="slide-in-bottom-5-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/instagram-w-sk-update.png" loading="lazy" alt="" class="footer-social-img"></a>
+            <a href="https://www.tiktok.com/@icebeanie" target="_blank" class="footer-social-block last-link w-inline-block" data-ix="slide-in-bottom-5-delay"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/tiktok-w-sk-update.png" loading="lazy" alt="" class="footer-social-img"></a>
+          </div>
+        {% endcomment %}
+      </div>
+    </div>
+    <!-- footer-container -->
+
+    <div class="footer-disclaimer">
+      LEGAL DISCLAIMER: Statements regarding IceBeanie have not been evaluated by the FDA and are not intended to
+      diagnose, treat, cure, or prevent any disease or health condition.
+    </div>
+
+    <img
+      src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/footer-ice-1-sk-update.jpg"
+      loading="lazy"
+      alt=""
+      class="bg-ice"
+
+    ><img
+      src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/footer-ice-2-sk-update.jpg"
+      loading="lazy"
+      sizes="(max-width: 625px) 100vw, (max-width: 767px) 625px, (max-width: 991px) 76vw, 32vw"
+      srcset="//cdn.shopify.com/s/files/1/0254/3170/3629/files/footer-ice-2-p-500-sk-update.jpg 500w, //cdn.shopify.com/s/files/1/0254/3170/3629/files/footer-ice-2-sk-update.jpg 625w"
+      alt=""
+      class="bg-ice bottom"
+    >
+  </div>
+  <div class="sidekick-wrapper" style="display: none">
+    <div class="sidekick-text">© 2024 | <a href="https://icebeanie.com">Icebeanie.com</a></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name"
+}
+{% endschema %}

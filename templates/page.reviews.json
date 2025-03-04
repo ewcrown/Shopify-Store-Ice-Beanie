@@ -1,0 +1,256 @@
+{
+  "sections": {
+    "reviews-top-section": {
+      "type": "reviews-top-section",
+      "settings": {
+        "heading_text": "IceBeanie Reviews",
+        "vid_id": "Nd4De4iWGh4"
+      }
+    },
+    "reviews-vid-section": {
+      "type": "reviews-vid-section",
+      "blocks": {
+        "65f8d406-0689-428c-aa4a-44ec6321859d": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review_1.jpg",
+            "vid_id": "3lQ_buAKhaM"
+          }
+        },
+        "4ce32aad-a79c-4d0f-b75e-4da128815327": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review_2.jpg",
+            "vid_id": "y8VcTppKnkI"
+          }
+        },
+        "7ba670c3-6d39-43a2-8d29-02f16fdc409f": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review4-min.jpg",
+            "vid_id": "LuhQMI3xyCw"
+          }
+        },
+        "e3e5edfd-56cc-423e-bf03-01e2b8a86e2c": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review5-min.jpg",
+            "vid_id": "VXwbo5RSRhI"
+          }
+        },
+        "39c36353-4289-4bde-9383-e5db59be4005": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review6-min.jpg",
+            "vid_id": "tmieYcDseE4"
+          }
+        },
+        "2446026f-5182-44b2-93e4-239dadaa328a": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review7-min.jpg",
+            "vid_id": "FdaOF9Jfygg"
+          }
+        },
+        "4716474c-81cb-4f60-974a-bc768a84dd08": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review_7.png",
+            "vid_id": "g1G8K2IFKV4"
+          }
+        },
+        "396e209c-0c8d-4db9-9b6f-726a65417c26": {
+          "type": "text",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/review_8.png",
+            "vid_id": "Wv12bMV3Cu8"
+          }
+        }
+      },
+      "block_order": [
+        "65f8d406-0689-428c-aa4a-44ec6321859d",
+        "4ce32aad-a79c-4d0f-b75e-4da128815327",
+        "7ba670c3-6d39-43a2-8d29-02f16fdc409f",
+        "e3e5edfd-56cc-423e-bf03-01e2b8a86e2c",
+        "39c36353-4289-4bde-9383-e5db59be4005",
+        "2446026f-5182-44b2-93e4-239dadaa328a",
+        "4716474c-81cb-4f60-974a-bc768a84dd08",
+        "396e209c-0c8d-4db9-9b6f-726a65417c26"
+      ],
+      "settings": {
+        "top_quote": "\"Very stylish, very comfortable, and very cooling\"",
+        "top_name": "Brooke Ence",
+        "top_title": "Actor \/ Athlete \/ Influencer",
+        "main_heading": "Real Reviews From Real Customers"
+      }
+    },
+    "reviews-bot-section": {
+      "type": "reviews-bot-section",
+      "blocks": {
+        "6f429e55-ee8e-4fe1-b61a-bf3008dbdaec": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/review-debbie-g-min.jpg",
+            "title": "Debbie G.",
+            "date": "Oct 8, 2021",
+            "review_content": "This thing is amazing. I have to put a dish towel between it and my head but it does the trick. You don't have to hold it in place and it eases the pain. I have to let it sit for a few minutes before I can put it on fresh out of the freezer. But it stays cold for a long time. It can be pulled down over your eyes if needed. It's adjustable to put where you need it"
+          }
+        },
+        "f806ba1e-6523-4fb6-9018-00f2f2c5ddda": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/review-hannah-p-min.jpg",
+            "title": "Hannah P.",
+            "date": "Aug 14, 2020",
+            "review_content": "I cant believe it has taken me this long to buy something like this! I suffer from frequent migraines and usually had to use a headband to precariously balance an ice pack on my head. This is great. The cooling only lasts about an hour so what I do is switch the ice pack out with one of my small ones in the freezer so I get that continuous cooling on the temple that needs it."
+          }
+        },
+        "dd446401-e50f-48a4-9b0b-2d43ee7551ad": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/review-cheryl-c-min.jpg",
+            "title": "Cheryl C.",
+            "date": "Jul 4, 2021",
+            "review_content": "I am a migraine sufferer and this is my new buddy. The coverage of the ice packs is unlike any other product. The packs are pretty flexible, but if you froze it too long and they are too cold or too hard for your liking, just let it sit for a few minutes until it is the right softenss and temp for you. Stays cold a very long time. Is a little big for my head, but I don't care.Cant live without it now."
+          }
+        },
+        "8b202e28-2cac-4c78-8a01-f87f539542e8": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/The-Keto-Village-min-sk-update_05ad3c2f-9fe4-4045-a62b-8ebd0f71f2ed.jpg",
+            "title": "The Keto Village",
+            "date": "Oct 21, 2019",
+            "review_content": "Wow what a fantastic product! I suffer from migraines and this was fantastic to wear during my last one. It was the perfect amount of pressure and the cold lasted a long time. I was Able to also pull it down over my eyes and that felt amazing too."
+          }
+        },
+        "e8ffa0da-019e-4904-b5b6-2152f3694cdd": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/Steve-W-min-sk-update_844e995a-d5cc-4b78-a79c-66cecc17a73f.jpg",
+            "title": "Steve W.",
+            "date": "Oct 5, 2019",
+            "review_content": "I initially bought this for my business partner who was experiencing migraines. There were days when he would experience migraines that would take him out of commission for 4, sometimes even 8 hours of the work day, which we just couldn't afford. With the Ice Beanie he get's instant relief and is able to stay at the office which is priceless in our start up business."
+          }
+        },
+        "7bbb7238-9dda-4cc3-b78e-91813480a4a0": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/Amazon-Customer-min-sk-update_b05df206-3075-428b-a1ba-163c2439272b.jpg",
+            "title": "Amazon Customer",
+            "date": "Aug 21, 2019",
+            "review_content": "This product works amazing!!! I received my product quickly and immediately put it in the freezer. The next day I got a migraine. I used the IceBeanie and it worked great! Migraine was gone so fast and I was able to get back to work within hours. I would recommend the IceBeanie to everyone."
+          }
+        },
+        "425d6c55-f670-455f-9ac1-a2c50c250607": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/Mae-Lamb-min-sk-update_bd81c258-f041-47fb-9208-284cb88f77c3.jpg",
+            "title": "Mae L.",
+            "date": "Sep 30, 2019",
+            "review_content": "Ice Beanie is an amazing instant relief when your headache strikes! Being a Migraine sufferer my whole adult life and have tried all medications and remedies.. this is definitely my first go to right from the onset of pain. I highly recommend this product for instant relief! Happy Health!"
+          }
+        },
+        "3697b88f-90c4-44d6-a29e-b83cb379fd8b": {
+          "type": "text",
+          "settings": {
+            "headshot": "shopify:\/\/shop_images\/Jill-R.jpg",
+            "title": "Jill R.",
+            "date": "Aug 2, 2021",
+            "review_content": "I live with Vestibular and Complex Migraines and have mild tinnitus, and am open to new innovative ways to find relief. I was overjoyed to see the IceBeanie when it aired on SharkTank, and although I waited for quite a while to receive mine, it was well worth it. I ordered two and gave one to a friend who lives with neurosarcoidosis. She lives in chronic pain and I wanted to offer her help, as well. I will probably order a second one for myself in an effort to extend my treatment. Highly recommended."
+          }
+        },
+        "e039c703-48cf-4646-b858-f56cac948629": {
+          "type": "text",
+          "settings": {
+            "title": "Diane E.",
+            "date": "6\/23\/2021",
+            "review_content": "I suffer from chronic headaches and always used an icepack. The IceBeanie is great, the only thing I would change is I wish I could make it a little tighter on my head so it hits pressure points better. Other then that it does help headaches and sinus pain."
+          }
+        },
+        "ff354521-1dee-44bb-86f2-aaf1fa1a614e": {
+          "type": "text",
+          "settings": {
+            "title": "Tammy W.",
+            "date": "6\/17\/2021",
+            "review_content": "This is my 3rd purchase!! I love the beanie! It has made for a wonderful gift choice. It truly is refreshing when I get a migraine to be able to relax with an ice-cold beanie!!"
+          }
+        },
+        "71c0fbce-90d8-481c-be7c-9126634b35ef": {
+          "type": "text",
+          "settings": {
+            "title": "Amy N.",
+            "date": "6\/15\/2021",
+            "review_content": "Bought this for my daughter who has severe migraines and she said it is the best thing ever! It stays in place and you don't have to hold it. So Glad I got the Ice Beanie and see more purchases in the near future!"
+          }
+        },
+        "ccb846c1-5ffe-47ad-a747-c2282c5fa6e4": {
+          "type": "text",
+          "settings": {
+            "title": "Michelle P.",
+            "date": "6\/12\/2021",
+            "review_content": "I get migraines and this helps tremendously!! Thank you sooo much! Thank you \"Shark Tank\"!"
+          }
+        },
+        "2232b9d5-c8d3-4d41-b1d1-bc655fb7da00": {
+          "type": "text",
+          "settings": {
+            "title": "Princess M.",
+            "date": "5\/26\/2021",
+            "review_content": "A must buy product! Amazing to use especially in this heat! It really helps with easing my migraine and had so much relief after using it. I would definitely recommend this to friends and family."
+          }
+        },
+        "11c2cab6-7496-4b07-94c5-2ffdbf2584d3": {
+          "type": "text",
+          "settings": {
+            "title": "Mary Z.",
+            "date": "4\/21\/2021",
+            "review_content": "I suffer from bad migraines, and was taking around 12 Motrin a day. The IceBeanie has cut my pill use in quarter and it fits over my headset for work! Thanks, guys"
+          }
+        },
+        "8793193f-0165-4076-842c-7055d1050e69": {
+          "type": "text",
+          "settings": {
+            "title": "Rhonda C.",
+            "date": "4\/21\/2021",
+            "review_content": "My Ice Beanie arrived right in time to help me through my 2nd covid shot headache! Best part was wearing a hoodie and pulling it up over the ice beanie to old it in place. My daughter and son got the other 2 and both deal with migraines. They said so nice to have the ice beanie instead of balancing ice packs or wet washcloths on their heads."
+          }
+        },
+        "632fef94-09c1-4cd2-a461-cabee33622a4": {
+          "type": "text",
+          "settings": {
+            "title": "Betty B.",
+            "date": "4\/14\/2021",
+            "review_content": "I used this within days of receiving it. I just wish I bought more than one, so when one warmed up I could put on a new one."
+          }
+        }
+      },
+      "block_order": [
+        "6f429e55-ee8e-4fe1-b61a-bf3008dbdaec",
+        "f806ba1e-6523-4fb6-9018-00f2f2c5ddda",
+        "dd446401-e50f-48a4-9b0b-2d43ee7551ad",
+        "8b202e28-2cac-4c78-8a01-f87f539542e8",
+        "e8ffa0da-019e-4904-b5b6-2152f3694cdd",
+        "7bbb7238-9dda-4cc3-b78e-91813480a4a0",
+        "425d6c55-f670-455f-9ac1-a2c50c250607",
+        "3697b88f-90c4-44d6-a29e-b83cb379fd8b",
+        "e039c703-48cf-4646-b858-f56cac948629",
+        "ff354521-1dee-44bb-86f2-aaf1fa1a614e",
+        "71c0fbce-90d8-481c-be7c-9126634b35ef",
+        "ccb846c1-5ffe-47ad-a747-c2282c5fa6e4",
+        "2232b9d5-c8d3-4d41-b1d1-bc655fb7da00",
+        "11c2cab6-7496-4b07-94c5-2ffdbf2584d3",
+        "8793193f-0165-4076-842c-7055d1050e69",
+        "632fef94-09c1-4cd2-a461-cabee33622a4"
+      ],
+      "settings": {
+        "heading_text": "Written Reviews",
+        "main_text": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief."
+      }
+    }
+  },
+  "order": [
+    "reviews-top-section",
+    "reviews-vid-section",
+    "reviews-bot-section"
+  ]
+}

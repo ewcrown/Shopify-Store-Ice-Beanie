@@ -1,0 +1,295 @@
+<div class="hero-section collection wf-section">
+  <div class="hero-heading-wrapper">
+    <h2 class="hero-subheading" data-ix="slide-in-bottom-2-delay">{{ collection.title }}</h2>
+    <h1 class="hero-heading" data-ix="slide-in-bottom-2-delay">Shop IceBeanie</h1>
+  </div>
+</div>
+<div class="subhero-section wf-section">
+  <div class="subhero-heading">
+    <h2 class="subhero-section-heading" data-ix="slide-in-bottom-2-delay">Feel Your Migraine Pain Melt Away</h2>
+    <div class="subhero-text-wrapper">
+      <div class="larger-text-block centered" data-ix="slide-in-bottom-2-delay">Scientific studies show cold therapy soothes your head pain. In short, the cold “overrides” your pain signals. Instead of feeling pain you just feel the cold.</div>
+    </div>
+  </div>
+  <div class="features-wrapper">
+    <div class="feature-wrapper">
+      <div class="feature-wrapper-inner" data-ix="slide-in-bottom-2-delay"><img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/compression-cold-therapy-sk-update.png"
+          loading="lazy"
+          alt="Compression cold therapy"
+          class="feature-img">
+        <h3 class="feature-heading">Compression Cold Therapy</h3>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature-wrapper-inner" data-ix="slide-in-bottom-3-delay"><img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/form-fitting-design-sk-update.png"
+          loading="lazy"
+          alt="Form fitting design"
+          class="feature-img">
+        <h3 class="feature-heading">Form Fitting Design</h3>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature-wrapper-inner" data-ix="slide-in-bottom-4-delay"><img
+          src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/full-head-coverage-sk-update.png"
+          loading="lazy"
+          alt="Full head coverage"
+          class="feature-img">
+        <h3 class="feature-heading">Full Head Coverage</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-list">
+  {% for product in collection.products %}
+    {% assign is_featured = product.metafields.is_featured.value %}
+    {% if product.id == 8095938576617 or product.id == 8797292462313 or product.id == 8798197252329 %}
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      {%- assign compare_at_price = current_variant.compare_at_price -%}
+      {%- assign price = current_variant.price -%}
+      {% assign is_available = current_variant.available %}
+      {% if is_available == true %}
+        {% assign cart_btn_text = 'add to cart' %}
+        {% assign cart_disabled = '' %}
+      {% else %}
+        {% assign cart_btn_text = 'sold out' %}
+        {% assign cart_disabled = 'disabled="disabled"' %}
+      {% endif %}
+
+      <div class="product-card">
+        {% if product.tags contains 'new' %}
+          <span class="product-label new-release">New Release</span>
+        {% endif %}
+        <a href="{{ product.url }}">
+          <div class="product-card-top"><img
+              src="{{ product.featured_image.src | img_url: '500x500' }}"
+              loading="lazy"
+              alt="{{product.title}}"
+              class="product-img"></div>
+          <div class="product-card-bottom">
+            <div class="product-info-wrapper">
+              <div class="bundle-savings">
+                Save {{ product.compare_at_price | minus: product.price | money -}}
+              </div>
+              <h2 class="product-heading" data-ix="slide-in-bottom-2-delay">{{ product.title }}</h2>
+              <div class="product-description">
+                <div style="text-align: left" class="larger-text-block left-align center-mobile-portrait" data-ix="slide-in-bottom-2-delay">
+                  {% if product.tags contains 'new' %}
+                  {{ product.metafields.product_info.short_description }}
+                  {% else %}
+                  We’re thrilled to introduce IceBeanie 2.0 the next generation of Headache, Migraine and Hangover relief!
+                  {% endif %}
+                  {%- comment -%}
+                  {{ product.metafields.product_description.text }}
+                  {%- endcomment -%}
+                </div>
+              </div>
+              <div class="product-links">
+                {% if is_available == true %}
+                  {% if compare_at_price > price %}
+                    <div class="price-text">
+                      <span id="price">{{ current_variant.price | money }}</span>
+                      <span style="text-decoration: line-through">{{ compare_at_price | money }}</span>
+                    </div>
+                  {% else %}
+                    <div class="price-text" id="price">
+                      {{ current_variant.price | money }}
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <div class="price-text">
+                    Sold Out
+                  <span id="price" style="text-decoration: line-through;">{{ product.price | money }}</span></div>
+                {% endif %}
+                <div>
+  
+                  {% form 'product', product %}
+  
+                    <select
+                      name="id"
+                      id="product-select"
+                      class="jc-product-select product-form__variants no-js"
+                      style="display:none;">
+                      {% for variant in product.variants %}
+                        {% if variant.available %}
+                          <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}value="{{ variant.id }}">
+                            {{ variant.title }}
+                          </option>
+                        {% else %}
+                          <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                        {% endif %}
+                      {% endfor %}
+                    </select>
+  
+                    <input
+                      type="number"
+                      class="add-cart-text-field w-input"
+                      value="1"
+                      maxlength="256"
+                      name="quantity"
+                      data-name="quantity"
+                      placeholder=""
+                      id="quantity"
+                      style="display:none;">
+                    <input
+                      type="submit"
+                      value="{{ cart_btn_text }}"
+                      data-wait=""
+                      class="shop-link w-button"
+                      {{ cart_disabled }}>
+                  {% endform %}
+  
+  
+  
+                  {% comment %}
+                  <a href="#" class="shop-link">add to cart</a>
+                  {% endcomment %}
+  
+  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+<div class="bundles-section wf-section">
+  <div class="bundles-container">
+    {% paginate collection.products by 12 %}
+
+
+      <h2 id="beanie-bundles" class="subhero-section-heading">IceBeanie Bundles</h2>
+      <div class="bundles-content-wrapper">
+
+        {% for product in collection.products %}
+          {% unless product.id == 8095938576617 or product.id == 8797292462313 or product.id == 8798197252329 %}
+
+
+            {% assign is_featured = product.metafields.is_featured.value %}
+            {% unless is_featured == true %}
+              {%- assign current_variant = product.selected_or_first_available_variant -%}
+              {%- assign compare_at_price = current_variant.compare_at_price -%}
+              {%- assign price = current_variant.price -%}
+              {% assign savings = compare_at_price | minus: price %}
+              {% assign is_available = current_variant.available %}
+              {% if is_available == true %}
+                {% assign cart_btn_text = 'add to cart' %}
+                {% assign cart_disabled = '' %}
+              {% else %}
+                {% assign cart_btn_text = 'sold out' %}
+                {% assign cart_disabled = 'disabled="disabled"' %}
+              {% endif %}
+              {% assign is_available = current_variant.available %}
+              <div class="bundle-item-wrapper product-card" data-ix="slide-in-bottom-2-delay">
+                <a href="{{ product.url }}">
+                  <div class="bundle-item-wrapper-top">
+                    <div class="bundle-item-img-holder">
+                      <img
+                        src="{{ product.featured_image | img_url: '800x' }}"
+                        loading="lazy"
+                        alt="IceBeanie bundle"
+                        class="bundle-img">
+                    </div>
+  
+                    <div class="bundle-info-wrapper">
+                      {% if savings != 0 %}
+                        <div class="bundle-savings">
+                          Save {{ product.compare_at_price | minus: product.price | money -}}
+                          {% comment %}
+                          Savings of
+                          <span>{{ savings | money }}</span>
+                          {% endcomment %}
+                        </div>
+                      {% endif %}
+                      <div class="bundle-name">
+                        <h2 class="bundle-title">{{ product.title }}</h2>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <div class="shop-links-wrapper">
+                    {% if is_available == true %}
+                      {% if compare_at_price > price %}
+                        <div class="bundle-price">
+                          <span style="text-decoration: line-through">{{ compare_at_price | money }}</span>
+                          <span id="price">{{ current_variant.price | money }}</span>
+                        </div>
+                      {% else %}
+                        <div class="bundle-price" id="price">
+                          {{ current_variant.price | money }}
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      <div class="bundle-price">
+                        <span id="price" style="text-decoration: line-through;">{{ product.price | money }}</span>
+                        Sold Out</div>
+                    {% endif %}
+                    <div>
+                      {% form 'product', product %}
+  
+                        <select
+                          name="id"
+                          id="product-select"
+                          class="jc-product-select product-form__variants no-js"
+                          style="display:none;">
+                          {% for variant in product.variants %}
+                            {% if variant.available %}
+                              <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}value="{{ variant.id }}">
+                                {{ variant.title }}
+                              </option>
+                            {% else %}
+                              <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+  
+                        <input
+                          type="number"
+                          class="add-cart-text-field w-input"
+                          value="1"
+                          maxlength="256"
+                          name="quantity"
+                          data-name="quantity"
+                          placeholder=""
+                          id="quantity"
+                          style="display:none;">
+                        <input
+                          type="submit"
+                          value="{{ cart_btn_text }}"
+                          data-wait=""
+                          class="shop-link w-button"
+                          {{ cart_disabled }}>
+                      {% endform %}
+  
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {% endunless %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+      {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Collection",
+    "tag": "section",
+    "class": "section",
+    "presets": [
+      {
+        "name": "Custom Collection"
+      }
+    ]
+  }
+{% endschema %}

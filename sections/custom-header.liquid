@@ -1,0 +1,56 @@
+<div class="logo-wrapper">
+<img src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/icebeanie-logo-registered.png" alt="" class="store-logo">
+</div>
+
+<div class="nav-menu-wrapper">
+
+  <a href="/account" class="navbar-link-block mobile-hide w-inline-block"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/user-sk-update.png" loading="lazy" alt="" class="navbar-link-block-img"></a>
+  <a href="/cart" class="navbar-link-block cart-flyout-open last-link mobile-hide w-inline-block" data-ix="cart-flyout-open"><img src="//cdn.shopify.com/s/files/1/0254/3170/3629/files/cart-sk-update.png" loading="lazy" alt="" class="navbar-link-block-img"></a>
+
+    <div data-w-id="91bf5cb3-72ed-9ce1-fb2c-34e57dc2ea08" class="nav-menu-top-wrapper">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
+    <div style="" class="nav-menu-content-wrapper">
+      <a href="https://icebeanie.com/"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Home</div>
+      </a>
+      <a href="https://icebeanie.com/collections/all-products"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Shop</div>
+      </a>
+      <a href="https://icebeanie.com/pages/the-science"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">The Science</div>
+      </a>
+      <a href="https://icebeanie.com/pages/reviews"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Reviews</div>
+      </a>
+      <a href="https://icebeanie.com/pages/about"  class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">About</div>
+      </a>
+      <a href="https://icebeanie.com/pages/contact" class="nav-menu-link-block w-inline-block">
+        <div class="nav-menu-text">Contact Us</div>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    .nav-menu-content-wrapper {
+      display: none;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $('.nav-menu-top-wrapper').click(function () {
+        var contentWrapper = $('.nav-menu-content-wrapper');
+
+        if (contentWrapper.css('display') == 'none') {
+          contentWrapper.css('display', 'flex').hide().slideDown('fast');
+        } else {
+          contentWrapper.slideUp('fast', function () {
+            contentWrapper.css('display', 'none');
+          });
+        }
+      });
+    });
+  </script>

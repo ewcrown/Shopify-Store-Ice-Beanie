@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "custom-science-page": {
+      "type": "custom-science-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "custom-science-page"
+  ]
+}

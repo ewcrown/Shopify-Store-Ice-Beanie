@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "custom-wholesale-page": {
+      "type": "custom-wholesale-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "custom-wholesale-page"
+  ]
+}
