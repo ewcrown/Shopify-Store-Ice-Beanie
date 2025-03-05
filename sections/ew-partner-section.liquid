@@ -1,0 +1,52 @@
+{{ 'ew-partner-section.css' | asset_url | stylesheet_tag }}
+<section class="ice-logos" id="ice-logos">
+  <div class="ice-logos-row">
+      <div class="page-width">
+          <div class="ice-logos-col">
+            {% for block in section.blocks %}
+              <img 
+                class="ew-img-fluid"
+                src="{{ block.settings.image | image_url: width: 500 }}" 
+                loading="lazy" 
+                srcset="
+                  {{ block.settings.image | image_url: width: 400 }} 400w,
+                  {{ block.settings.image | image_url: width: 620 }} 620w,
+                  {{ block.settings.image | image_url: width: 800 }} 800w,
+                  {{ block.settings.image | image_url: width: 1100 }} 1100w,
+                  {{ block.settings.image | image_url: width: 1280 }} 1280w"
+                sizes="(max-width: 600px) 400px, 100vw"
+                alt="Logo {{ forloop.index }}">
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Partner Logos",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logos",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Partner Logos"
+    }
+  ],
+}
+{% endschema %}

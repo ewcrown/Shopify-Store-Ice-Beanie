@@ -1,0 +1,76 @@
+{{ 'ew-info-section.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-image-info" id="ice-image-info">
+  <div class="ice-image-info-row">
+      <div class="page-width">
+          <div class="ice-image-info-col">
+              <div class="ice-image-info-wrapper">
+                <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
+                  srcset="
+                      {{ s.image | image_url: width: 620 }} 620w,
+                      {{ s.image | image_url: width: 800 }} 800w,
+                      {{ s.image | image_url: width: 1100 }} 1100w,
+                      {{ s.image | image_url: width: 1280 }} 1280w"
+                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Cap Image"
+                  class="beanie"
+                >
+                  {% for block in section.blocks %}
+                  <div class="ice-icon ice-icon-{{ forloop.index }}">
+                    <div class="ice-icon-inner-wrap">
+                    <img class="ew-img-fluid" src="{{ block.settings.image | image_url: width: 500 }}" loading="lazy"
+                      srcset="
+                          {{ block.settings.image | image_url: width: 620 }} 620w,
+                          {{ block.settings.image | image_url: width: 800 }} 800w,
+                          {{ block.settings.image | image_url: width: 1100 }} 1100w,
+                          {{ block.settings.image | image_url: width: 1280 }} 1280w"
+                      sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ block.settings.title }}"
+                    >
+                    </div>
+                    <span>{{ block.settings.title }}</span>
+                  </div>  
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "<> Info Section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card Info",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title Here",
+          "default": "Headaches"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Info Section"
+    }
+  ],
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+{{ 'ew-testimonial-section.css' | asset_url | stylesheet_tag }}
+<section class="ice-worker-images" id="ice-worker-images">
+  <div class="ice-worker-images-row">
+      <div class="ice-worker-images-col">
+        {% for block in section.blocks %}
+          {% render 'ew-testimonial-card',
+            card_image: block.settings.image,
+            paragraph: block.settings.description,
+            name:  block.settings.author_name,
+            designation:  block.settings.designation,
+          %}
+        {% endfor %}
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "<> Testinomial",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonials",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description Here",
+          "default": "IceBeanie should not only be in every household freezer, but every sports locker room across the country."
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Mark Cuban"
+        },
+        {
+          "type": "text",
+          "id": "designation",
+          "label": "Designation Name",
+          "default": "Shark Tank Investor"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Testinomial"
+    }
+  ],
+}
+{% endschema %}

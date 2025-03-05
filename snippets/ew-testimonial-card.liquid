@@ -1,0 +1,17 @@
+<div class="ew-testimonial-card">
+  <div class="ew-testimonial-image">
+    <img class="ew-img-fluid" src="{{ card_image | image_url: width: 500 }}" loading="lazy"
+      srcset="
+          {{ card_image | image_url: width: 620 }} 620w,
+          {{ card_image | image_url: width: 800 }} 800w,
+          {{ card_image | image_url: width: 1100 }} 1100w,
+          {{ card_image | image_url: width: 1280 }} 1280w"
+      sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ name }}">
+  </div>
+  <div class="ew-testimonial-content">
+    {% render 'ew-icon-quotes' %}
+    <p>{{ paragraph }}</p>
+    <h5>{{ name }}</h5>
+    <h6>{{ designation }}</h6>
+  </div>
+</div>

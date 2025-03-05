@@ -89,7 +89,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-decoration-line: strikethrough;
     text-transform: capitalize;
 }
 
@@ -109,4 +108,35 @@
     gap: 8px;
     justify-content: flex-end;
     flex-wrap: wrap;
+}
+
+@media(max-width:767px) {
+    .ew-collection-products-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .ew-product-card {
+        padding: 20px;
+    }
+
+    .ew-product-card-inner-info {
+        gap: 20px;
+    }
+
+    .ew-product-card-button {
+        font-size: 16px;
+    }
+
+    .ew-product-card-inner-price .price__sale {
+        gap: 3px;
+    }
+
+    .ew-product-card-inner-price .price-item--sale,
+    .ew-product-card-inner-price .price-item--regular {
+        font-size: 16px;
+    }
+
+    .ew-product-card-title {
+        font-size: 22px;
+    }
 }

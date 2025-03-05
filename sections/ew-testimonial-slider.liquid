@@ -1,0 +1,69 @@
+{{ 'ew-testimonial-slider-section.css' | asset_url | stylesheet_tag }}
+<section class="ice-testimoinal" id="ice-testimoinal">
+  <div class="ice-testimoinal-row">
+
+          <div class="ice-testimoinal-col">
+              <div class="splide testimonial-slider" data-name="Testimonial Slider">
+                  <div class="splide__track">
+                      <div class="splide__list">
+                        {% for block in section.blocks %}
+                          <div class="splide__slide">
+                              {% render 'ew-testimonial-slider-card',
+                                card_image: block.settings.image,
+                                card_icon: block.settings.icon,
+                                name:  block.settings.author_name,
+                                paragraph: block.settings.description
+                              %}
+                          </div>
+                        {% endfor %}
+                      </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "<> Testinomial Slider",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonials",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Mark Cuban"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description Here",
+          "default": "IceBeanie should not only be in every household freezer, but every sports locker room across the country."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Testinomial Slider"
+    }
+  ],
+}
+{% endschema %}

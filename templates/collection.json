@@ -80,6 +80,34 @@
         "title": "IceBeanie Bundles",
         "collection": "all"
       }
+    },
+    "ew_reviews_section_LVUp6h": {
+      "type": "ew-reviews-section",
+      "settings": {}
+    },
+    "ew_testimonial_slider_9wyiAe": {
+      "type": "ew-testimonial-slider",
+      "blocks": {
+        "testimonial_RPXAaG": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png",
+            "icon": "shopify://shop_images/amazon-icon_1.png",
+            "author_name": "Hannah P",
+            "description": "I cant believe it has taken me this long to buy something like this! I suffer from frequent migraines. This is great."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_RPXAaG"
+      ],
+      "settings": {}
+    },
+    "ew_newsletter_ghxbiJ": {
+      "type": "ew-newsletter",
+      "settings": {
+        "title": "Subscribe to our newsletter"
+      }
     }
   },
   "order": [
@@ -88,6 +116,9 @@
     "ew_collection_products_TQiFC6",
     "banner",
     "product-grid",
-    "ew_featured_collection_j6T3Ax"
+    "ew_featured_collection_j6T3Ax",
+    "ew_reviews_section_LVUp6h",
+    "ew_testimonial_slider_9wyiAe",
+    "ew_newsletter_ghxbiJ"
   ]
 }

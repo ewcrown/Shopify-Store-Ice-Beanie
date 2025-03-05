@@ -1,0 +1,30 @@
+<div class="ice-testimoinal-wrap">
+  <img 
+    class="ew-img-fluid"
+    src="{{ card_image | image_url: width: 300 }}" 
+    loading="lazy" 
+    srcset="
+      {{ card_image | image_url: width: 620 }} 620w,
+      {{ card_image | image_url: width: 800 }} 800w,
+      {{ card_image | image_url: width: 1100 }} 1100w,
+      {{ card_image | image_url: width: 1280 }} 1280w"
+    sizes="(max-width: 600px) 600px, 100vw"
+    alt="{{ name }}">
+  <div class="ice-testimoinal-content justify-content-between">
+      <div class="ice-testimoinal-content-wrap">
+          <h5 class="ice-testimoinal-name">{{ name }}</h5>
+          <p class="ice-testimoinal-desc">
+              {{ paragraph }}
+          </p>
+      </div>
+      <span class="ice-testimoinal-footer">
+        {% if card_icon != blank %}
+        <img 
+          class="ew-img-fluid"
+          src="{{ card_icon | image_url: width: 30 }}" 
+          alt="{{ name }}" />
+        {% endif %}
+              Amazon Review
+      </span>
+  </div>
+</div>

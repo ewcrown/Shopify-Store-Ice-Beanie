@@ -2,7 +2,7 @@
 <section class="ew-collection-products ew-collection-products-{{ section.id }}" id="ew-collection-products">
   <div class="ew-collection-products-row">
     <div class="ew-collection-products-wrap">
-      {% for product in collection.products %}
+      {% for product in collection.products limit: 3 %}
         {% 
           render 'ew-product-card', 
           card_product: product,

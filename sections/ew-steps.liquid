@@ -1,0 +1,82 @@
+{{ 'ew-steps.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-num-cards" id="ice-num-cards">
+  <div class="ice-num-cards-row">
+      <div class="page-width">
+          <div class="ice-cards-col flex">
+              <div class="ice-num-cards-content">
+                {% if s.heading != blank %}
+                  <h2 class="ice-num-cards-heading">
+                      {{ s.heading }}
+                  </h2>
+                {% endif %}
+              </div>
+              <div class="ice-card-wrapper grid">
+                  {%  for block in section.blocks %}
+                    {% 
+                      render 'ew-steps-card',
+                      card_image: block.settings.image,
+                      card_title: block.settings.title,
+                      card_description: block.settings.description,
+                    %}
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "<> Cooling Steps",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Cooling Relief in Just 3 Easy Steps"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Card Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Metabolic System"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "The cold slows down oxygen demand which slows down pain signaling"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Cooling Steps"
+    }
+  ],
+}
+{% endschema %}

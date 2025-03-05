@@ -1,0 +1,147 @@
+{{ 'ew-hero-section.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-banner ice-banner-{{ section.id }}" id="ice-banner">
+  <div class="ice-banner-row">
+      
+      <div class="ice-banner-img">
+        {% if s.video != blank %}
+          <div class="ew-mobile-hide">
+            {{ s.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, width: 1920 }}
+          </div>
+          {% if s.mobile_video != blank %}
+            <div class="ew-desktop-hide">
+              {{ s.mobile_video | video_tag: autoplay: true, loop: true, muted: true, controls: false, width: 1920 }}
+            </div>
+          {% endif %}
+        {% else  %}
+          <picture>
+            <source media="(max-width: 600px)" srcset="{{ s.mobile_image | image_url: width: 600 }}">
+            <img 
+              class="ew-img-fluid"
+              src="{{ s.image | image_url: width: 1280 }}" 
+              loading="lazy" 
+              srcset="
+                {{ s.image | image_url: width: 620 }} 620w,
+                {{ s.image | image_url: width: 800 }} 800w,
+                {{ s.image | image_url: width: 1100 }} 1100w,
+                {{ s.image | image_url: width: 1280 }} 1280w"
+              sizes="(max-width: 600px) 600px, 100vw"
+              alt="{{ s.heading }}">
+          </picture>
+      {% endif %}
+      </div>
+      
+      <div class="page-width">
+          <div class="ice-banner-col">
+              <div class="ice-banner-content">
+                  <span class="ice-banner-subHEading">{{ s.subheading }}</span>
+                  <div class="ice-banner-rating flex align-items-center justify-content-center">
+                      {% render 'ew-star-icon' %}
+                      <span class="ice-banner-rating-txt">{{ s.reviews_text }}</span>
+                  </div>
+                  {% if s.heading != blank %}
+                  <h1 class="ice-banner-heading">
+                      {{ s.heading }}
+                  </h1>
+                  {% endif %}
+                  {% if s.description != blank %}
+                  <p class="ice-banner-desc">
+                      {{ s.description }}
+                  </p>
+                 {% endif %}
+                 {% if s.button_link != blank %}
+                  <a href="{{ s.button_link }}" class="ice-banner-btn primary-btn">{{ s.button_text }}</a>
+                 {% endif %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "<> Banner Text",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "#1 Best Seller"
+    },
+    {
+      "type": "text",
+      "id": "reviews_text",
+      "label": "Reviews Text",
+      "default": "100,000+ Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Feel Your Migraine Pain Melt Away"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "A Shopify-hosted desktop video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "A Shopify-hosted mobile video"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Relief Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Banner Text"
+    }
+  ],
+}
+{% endschema %}

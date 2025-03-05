@@ -13,6 +13,8 @@
                 <h3>{{ s.collection.title }}</h3>
             </div>
             {% endif %}
+
+            <div class="ew-featured-collection-inner-wrap">
             {% for product in section.settings.collection.products %}
                 {% 
                     render 'ew-product-card', 
@@ -20,6 +22,7 @@
                     border: true
                 %}
             {% endfor %}
+            </div>
         </div>
     </div>
   </div>

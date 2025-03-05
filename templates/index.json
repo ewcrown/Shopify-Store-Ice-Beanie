@@ -1,215 +1,409 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "ffa9b979-ac2a-471f-8d66-a871d74c4077": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16804811014377__ffa9b979-ac2a-471f-8d66-a871d74c4077-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-21_at_2.28.20_PM.png",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--16804811014377__ffa9b979-ac2a-471f-8d66-a871d74c4077-slide-1"
-      ],
-      "disabled": true,
+    "ew_hero_section_CJxTHG": {
+      "type": "ew-hero-section",
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": false,
-        "accessibility_info": ""
+        "subheading": "#1 Best Seller",
+        "reviews_text": "100,000+ Happy Customers",
+        "heading": "Feel Your Migraine Pain Melt Away",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "image": "shopify://shop_images/IceBeanieVideo-ezgif.com-video-to-gif-converter_1.png",
+        "video": "shopify://files/videos/ice-beanie-video-min-transcode.mp4",
+        "mobile_video": "shopify://files/videos/ice-beanie-video-min-transcode.mp4",
+        "button_link": "#",
+        "button_text": "Get Relief Now"
       }
     },
-    "cc14a02c-c794-41ff-ae7b-1dfc8ea531dc": {
-      "type": "image-banner",
+    "ew_partner_section_9YJyQH": {
+      "type": "ew-partner-section",
       "blocks": {
-        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-text-1": {
-          "type": "text",
+        "logo_Gd3VLc": {
+          "type": "logo",
           "settings": {
-            "text": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
-            "text_style": "subtitle"
+            "image": "shopify://shop_images/image_16.png"
           }
         },
-        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-buttons-1": {
-          "type": "buttons",
-          "disabled": true,
+        "logo_NKFQaT": {
+          "type": "logo",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/image_17.png"
+          }
+        },
+        "logo_xnB3PJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_33.png"
+          }
+        },
+        "logo_exCwPW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_b000803b-d049-4460-b2f9-8a52d7bb7615.png"
+          }
+        },
+        "logo_anmpNM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_13.png"
+          }
+        },
+        "logo_6RJXxx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_14.png"
+          }
+        },
+        "logo_XRcrD3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_12.png"
+          }
+        },
+        "logo_rxdmqW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_15.png"
+          }
+        },
+        "logo_iV4PtJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_19.png"
+          }
+        },
+        "logo_4BLa3m": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/stop-and-shop-logo-B2B4198BEC-seeklogo.com_1.png"
           }
         }
       },
       "block_order": [
-        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-text-1",
-        "template--16804811014377__cc14a02c-c794-41ff-ae7b-1dfc8ea531dc-buttons-1"
+        "logo_Gd3VLc",
+        "logo_NKFQaT",
+        "logo_xnB3PJ",
+        "logo_exCwPW",
+        "logo_anmpNM",
+        "logo_6RJXxx",
+        "logo_XRcrD3",
+        "logo_rxdmqW",
+        "logo_iV4PtJ",
+        "logo_4BLa3m"
       ],
-      "disabled": true,
+      "settings": {}
+    },
+    "ew_testimonial_section_ww9jhV": {
+      "type": "ew-testimonial-section",
+      "blocks": {
+        "testimonial_pUbw7D": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/3.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_zn7G46": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/1_4fd5f24d-ff49-4c8c-b7e8-baf2b9f78d1e.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_b38bUn": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/5.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_ppf4kd": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/2_b116cef5-ea4d-4aa3-906e-c0155f53038b.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_GGcpkn": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/7.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_eGWBkD": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/6.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        },
+        "testimonial_pWr6DU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Mark Cuban",
+            "designation": "Shark Tank Investor"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_pUbw7D",
+        "testimonial_zn7G46",
+        "testimonial_b38bUn",
+        "testimonial_ppf4kd",
+        "testimonial_GGcpkn",
+        "testimonial_eGWBkD",
+        "testimonial_pWr6DU"
+      ],
+      "settings": {}
+    },
+    "ew_about_us_8bcTFM": {
+      "type": "ew-about-us",
+      "blocks": {
+        "card_QCfrdm": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png",
+            "heading": "Metabolic System",
+            "description": "The cold slows down oxygen demand which slows down pain signaling"
+          }
+        },
+        "card_zxFde9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_1_2ef5de88-58bc-46bf-bc19-ac62d3e598c1.png",
+            "heading": "Circulatory System",
+            "description": "Restricts blood flow. Less blood to brain vessels prevents painful overextending"
+          }
+        },
+        "card_YpeifX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_2.png",
+            "heading": "Nervous System",
+            "description": "Cold slows down the speed at which nerves travel. So it’s harder for pain signals to reach your brain"
+          }
+        }
+      },
+      "block_order": [
+        "card_QCfrdm",
+        "card_zxFde9",
+        "card_YpeifX"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-21_at_2.28.20_PM.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "heading": "The Science is Simple",
+        "subheading": "Compression Cold Therapy Effects You In Three Different Ways:"
       }
     },
-    "eddc41c4-f025-4510-9a41-becbcc67cc21": {
-      "type": "custom-home-hero-slider",
-      "settings": {}
-    },
-    "152ed47c-e168-4be7-affc-fa636e520535": {
-      "type": "custom-logos",
+    "ew_info_section_ic7BUB": {
+      "type": "ew-info-section",
       "blocks": {
-        "54bd4aef-e537-43f3-b322-aa688d0750a8": {
-          "type": "text",
+        "card_yEYqtG": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-foxsports.png"
+            "image": "shopify://shop_images/image_21_1.png",
+            "title": "Migraines"
           }
         },
-        "61aba602-c63a-4e3d-846f-e98dc941386c": {
-          "type": "text",
+        "card_dQtPAq": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-fs1.png"
+            "image": "shopify://shop_images/image_8.png",
+            "title": "Fever"
           }
         },
-        "c78d0af2-736f-4a0f-ac9f-b4cd308b9482": {
-          "type": "text",
+        "card_tdgYiR": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-tmz.png"
+            "image": "shopify://shop_images/image_6.png",
+            "title": "Stress"
           }
         },
-        "136d67fc-ea6e-41fd-b564-a5c42465d229": {
-          "type": "text",
+        "card_XVpLhn": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-espn.png"
+            "image": "shopify://shop_images/image_9.png",
+            "title": "Tension"
           }
         },
-        "b1d44c6b-7011-4751-9d12-4c0b9dd8f30a": {
-          "type": "text",
+        "card_w3UU9T": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-abc.png"
+            "image": "shopify://shop_images/image_21.png",
+            "title": "Headaches"
           }
         },
-        "79bffb2a-1c07-43b6-9657-9d55e8ad39b6": {
-          "type": "text",
+        "card_TcBTMt": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-cnbc.png"
+            "image": "shopify://shop_images/image_7.png",
+            "title": "Concussions"
           }
         },
-        "2f52394e-3a64-4b15-9a19-1f48452a5c56": {
-          "type": "text",
+        "card_PHQBdq": {
+          "type": "card",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-sharktank.png"
-          }
-        },
-        "3714c7ee-48d1-4624-a8ff-04fcb68f26b4": {
-          "type": "text",
-          "settings": {
-            "logo_image": "shopify:\/\/shop_images\/logo-urbanoutfitters.png"
+            "image": "shopify://shop_images/image_5.png",
+            "title": "Injuries"
           }
         }
       },
       "block_order": [
-        "54bd4aef-e537-43f3-b322-aa688d0750a8",
-        "61aba602-c63a-4e3d-846f-e98dc941386c",
-        "c78d0af2-736f-4a0f-ac9f-b4cd308b9482",
-        "136d67fc-ea6e-41fd-b564-a5c42465d229",
-        "b1d44c6b-7011-4751-9d12-4c0b9dd8f30a",
-        "79bffb2a-1c07-43b6-9657-9d55e8ad39b6",
-        "2f52394e-3a64-4b15-9a19-1f48452a5c56",
-        "3714c7ee-48d1-4624-a8ff-04fcb68f26b4"
+        "card_yEYqtG",
+        "card_dQtPAq",
+        "card_tdgYiR",
+        "card_XVpLhn",
+        "card_w3UU9T",
+        "card_TcBTMt",
+        "card_PHQBdq"
       ],
       "settings": {
-        "heading_text": "As Seen On"
+        "image": "shopify://shop_images/image_32.png"
       }
     },
-    "73d008ff-4478-455b-ac41-9a793256c460": {
-      "type": "custom-testimonlials",
-      "settings": {}
-    },
-    "6739ff89-6795-4ee8-ae1a-16d904c93712": {
-      "type": "custom-science",
-      "settings": {}
-    },
-    "73910846-ebfb-4485-9bc0-6327b8d5bb21": {
-      "type": "custom-beanie",
-      "settings": {}
-    },
-    "c27e411b-1e2d-4f97-8ee2-f2fd8e59ac1c": {
-      "type": "custom-three-columns",
-      "settings": {}
-    },
-    "2baa5273-21e5-49bf-863e-3e471d0c9e11": {
-      "type": "rich-text",
+    "ew_steps_jVUdQV": {
+      "type": "ew-steps",
       "blocks": {
-        "cdb88716-9d92-45d8-8614-832651472cb5": {
-          "type": "caption",
+        "card_yf4CxL": {
+          "type": "card",
           "settings": {
-            "caption": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large"
+            "image": "shopify://shop_images/ib1_final_1.png",
+            "title": "Place In The Freezer",
+            "description": "Simply place your IceBeanie in the freezer"
+          }
+        },
+        "card_qggic9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ib2_semifinal-1_1.png",
+            "title": "Remove After 45min",
+            "description": "Allow 45-60 minutes in the freezer for the gel to reach the desired temperature. For best results leave in the freezer overnight."
+          }
+        },
+        "card_JTegr3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ib3_Final_1.png",
+            "title": "Put On The IceBeanie",
+            "description": "Place the IceBeanie on your head for instant migraine pain relief"
           }
         }
       },
       "block_order": [
-        "cdb88716-9d92-45d8-8614-832651472cb5"
+        "card_yf4CxL",
+        "card_qggic9",
+        "card_JTegr3"
       ],
-      "disabled": true,
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "heading": "Cooling Relief in Just 3 Easy Steps"
       }
     },
     "f19422ae-4923-4f82-9c32-43ceb25bbe5d": {
       "type": "shop-tabs",
       "settings": {}
     },
-    "b79dfc22-5515-4b90-9dd4-f1c8433a1617": {
-      "type": "amazon-review-slider",
+    "ew_icon_text_section_DBmhd8": {
+      "type": "ew-icon-text-section",
+      "blocks": {
+        "icon_text_QCJgBp": {
+          "type": "icon-text",
+          "settings": {
+            "image": "shopify://shop_images/Vector.png",
+            "title": "Fast Shipping"
+          }
+        },
+        "icon_text_ixB6Bj": {
+          "type": "icon-text",
+          "settings": {
+            "image": "shopify://shop_images/Group.png",
+            "title": "30 Day Satisfaction Guarantee"
+          }
+        },
+        "icon_text_zhMrCW": {
+          "type": "icon-text",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-03-05_at_7.52.58_PM.png",
+            "title": "24/7 Support"
+          }
+        },
+        "icon_text_tc4dXN": {
+          "type": "icon-text",
+          "settings": {
+            "image": "shopify://shop_images/icon-inCA_1.png",
+            "title": "Designed in California USA"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_QCJgBp",
+        "icon_text_ixB6Bj",
+        "icon_text_zhMrCW",
+        "icon_text_tc4dXN"
+      ],
       "settings": {}
+    },
+    "ew_reviews_section_LVUp6h": {
+      "type": "ew-reviews-section",
+      "settings": {}
+    },
+    "ew_testimonial_slider_9wyiAe": {
+      "type": "ew-testimonial-slider",
+      "blocks": {
+        "testimonial_RPXAaG": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png",
+            "icon": "shopify://shop_images/amazon-icon_1.png",
+            "author_name": "Hannah P",
+            "description": "I cant believe it has taken me this long to buy something like this! I suffer from frequent migraines. This is great."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_RPXAaG"
+      ],
+      "settings": {}
+    },
+    "ew_newsletter_ghxbiJ": {
+      "type": "ew-newsletter",
+      "settings": {
+        "title": "Subscribe to our newsletter"
+      }
     }
   },
   "order": [
-    "ffa9b979-ac2a-471f-8d66-a871d74c4077",
-    "cc14a02c-c794-41ff-ae7b-1dfc8ea531dc",
-    "eddc41c4-f025-4510-9a41-becbcc67cc21",
-    "152ed47c-e168-4be7-affc-fa636e520535",
-    "73d008ff-4478-455b-ac41-9a793256c460",
-    "6739ff89-6795-4ee8-ae1a-16d904c93712",
-    "73910846-ebfb-4485-9bc0-6327b8d5bb21",
-    "c27e411b-1e2d-4f97-8ee2-f2fd8e59ac1c",
-    "2baa5273-21e5-49bf-863e-3e471d0c9e11",
+    "ew_hero_section_CJxTHG",
+    "ew_partner_section_9YJyQH",
+    "ew_testimonial_section_ww9jhV",
+    "ew_about_us_8bcTFM",
+    "ew_info_section_ic7BUB",
+    "ew_steps_jVUdQV",
     "f19422ae-4923-4f82-9c32-43ceb25bbe5d",
-    "b79dfc22-5515-4b90-9dd4-f1c8433a1617"
+    "ew_icon_text_section_DBmhd8",
+    "ew_reviews_section_LVUp6h",
+    "ew_testimonial_slider_9wyiAe",
+    "ew_newsletter_ghxbiJ"
   ]
 }

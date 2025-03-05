@@ -1,0 +1,38 @@
+{{ 'ew-reviews-section.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-reviews" id="ice-reviews">
+  <div class="ice-reviews-row">
+      <div class="page-width">
+          <div class="ice-reviews-col">
+              <div class="ice-reviews-heading-img justify-content-between">
+                  <h2>Real Reviews From Real Customers</h2>
+                  <div class="ice-reviews-content flex align-items-center">
+                      {% render 'ew-star-icon' %}
+                      <span>5 / 5 1,438 Reviews</span>
+                  </div>
+              </div>
+              <div class="ice-reviews-desc-btn justify-content-between">
+                  <p>
+                      We believe in creating theraputic products that are better for your body. Every product we
+                      make is thoughtfully created to bring you fast relief and lasting relief.
+                  </p>
+                  <a href="#" class="primary-btn">5-star review</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "<> Reviews Section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "<> Reviews Section"
+    }
+  ],
+}
+{% endschema %}

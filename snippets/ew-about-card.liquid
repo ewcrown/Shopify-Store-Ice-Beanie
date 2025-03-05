@@ -1,0 +1,13 @@
+<div class="ice-card">
+  <img class="ew-img-fluid" src="{{ icon | image_url: width: 500 }}" loading="lazy"
+    srcset="
+        {{ icon | image_url: width: 620 }} 620w,
+        {{ icon | image_url: width: 800 }} 800w,
+        {{ icon | image_url: width: 1100 }} 1100w,
+        {{ icon | image_url: width: 1280 }} 1280w"
+    sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ title }}">
+  <h3 class="ice-card-title">{{ title }}</h3>
+  <p class="ice-card-desc">
+      {{ description }}
+  </p>
+</div>

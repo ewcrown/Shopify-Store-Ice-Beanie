@@ -1,0 +1,37 @@
+.ice-shipping-row {
+  padding: 40px 0;
+}
+
+.ice-shipping-wrap span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ice-shipping-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.ice-shipping-wrap img {
+  width: auto;
+}
+
+.ice-shipping-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media(max-width:767px) {
+  .ice-shipping-col {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}

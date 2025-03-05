@@ -1,0 +1,162 @@
+.ice-image-info-row {
+  background-color: #e8f6ff;
+}
+
+.ice-image-info-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 28rem;
+}
+
+.ice-image-info-wrapper {
+  position: relative;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+.beanie {
+  max-width: 700px;
+}
+
+.ice-icon-inner-wrap {
+  width: 180px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ice-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ice-icon span {
+  color: #003D6D;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ice-icon-1 {
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ice-icon-2 {
+  top: 30%;
+  left: -42%;
+  transform: translateY(-50%);
+}
+
+.ice-icon-3 {
+  top: 30%;
+  right: -42%;
+  transform: translateY(-50%);
+}
+
+.ice-icon-7 {
+  bottom: -5%;
+  right: -70%;
+  transform: translateY(-50%);
+}
+
+.ice-icon-4 {
+  bottom: 13%;
+  left: -55%;
+  transform: translateX(-50%);
+}
+
+.ice-icon-5 {
+  top: -5%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+}
+
+.ice-icon-6 {
+  top: -5%;
+  right: 7%;
+  transform: translate(50%, -50%);
+}
+
+@media(max-width: 767px) {
+
+  .ice-image-info-col {
+    padding-top: 0rem;
+    min-height: 500px;
+  }
+
+  .ice-image-info-wrapper {
+    width: 85%;
+  }
+
+  .beanie {
+    width: 200px;
+  }
+
+  .ice-icon img {
+    width: 60px;
+    padding: 10px;
+  }
+
+  .ice-icon span {
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 10px;
+  }
+
+  .ice-icon-1 {
+    top: -27%;
+  }
+
+  .ice-icon-2 {
+    top: 55%;
+    left: -9%;
+  }
+
+
+  .ice-icon-3 {
+    right: -9%;
+    top: 56%;
+  }
+
+  .ice-icon-4 {
+    bottom: -14%;
+    left: 27%;
+  }
+
+  .ice-icon-5 {
+    top: 5%;
+    left: 5%;
+  }
+
+  .ice-icon-6 {
+    top: 5%;
+    right: 5%;
+  }
+
+  .ice-icon-7 {
+    bottom: -30%;
+    right: 12%;
+  }
+
+  .ice-icon-inner-wrap {
+    width: 70px;
+    height: 70px;
+  }
+}

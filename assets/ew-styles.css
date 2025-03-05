@@ -6,3 +6,37 @@
 #MainContent {
     margin-top: 100px;
 }
+
+.primary-btn {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+    background: #4194E3;
+    border-radius: 10px;
+    padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.ew-desktop-hide {
+    display: none;
+}
+
+@media(max-width:767px) {
+    .primary-btn {
+        font-size: 18px;
+        padding: 15px 30px;
+        line-height: normal;
+    }
+
+    .ew-desktop-hide {
+        display: block;
+    }
+
+    .ew-mobile-hide {
+        display: none;
+    }
+}
