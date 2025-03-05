@@ -290,6 +290,7 @@
     {%- comment -%}--------------     Custom JS       ---------{%- endcomment -%}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"type="text/javascript"></script>
     <script src="{{ 'ice-beanie-custom.js' | asset_url }}" type="text/javascript" defer="defer"></script>
+    {{ 'ew-styles.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -367,9 +368,11 @@
     </style>
 
     {{ 'render.js' | asset_url | script_tag }}
-
+    
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    
+    {{ 'ew-cart.js' | asset_url | script_tag }}
   </body>
 </html>

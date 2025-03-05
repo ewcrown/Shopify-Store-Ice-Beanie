@@ -1,5 +1,50 @@
 {
   "sections": {
+    "ew_collection_banner_JyCymp": {
+      "type": "ew-collection-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/photo-collage.png_1.png"
+      }
+    },
+    "ew_collection_details_Fpntqj": {
+      "type": "ew-collection-details",
+      "blocks": {
+        "block_D4cFmG": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/image_35.png",
+            "title": "Compression Cold Therapy"
+          }
+        },
+        "block_FgD4cR": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/image.png",
+            "title": "Form Fitting Design"
+          }
+        },
+        "block_6TQzdi": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/image_1.png",
+            "title": "Full HeadCoverage"
+          }
+        }
+      },
+      "block_order": [
+        "block_D4cFmG",
+        "block_FgD4cR",
+        "block_6TQzdi"
+      ],
+      "settings": {
+        "title": "Feel Your Pain Melt Away",
+        "description": "Scientific studies show cold therapy soothes your head pain. In short, the cold “overrides” your pain signals. Instead of feeling pain you just feel the cold."
+      }
+    },
+    "ew_collection_products_TQiFC6": {
+      "type": "ew-collection-products",
+      "settings": {}
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -29,14 +74,20 @@
         "padding_bottom": 36
       }
     },
-    "5f4207fd-d936-420c-bc61-e7c17a8612cf": {
-      "type": "custom-collection",
-      "settings": {}
+    "ew_featured_collection_j6T3Ax": {
+      "type": "ew-featured-collection",
+      "settings": {
+        "title": "IceBeanie Bundles",
+        "collection": "all"
+      }
     }
   },
   "order": [
+    "ew_collection_banner_JyCymp",
+    "ew_collection_details_Fpntqj",
+    "ew_collection_products_TQiFC6",
     "banner",
     "product-grid",
-    "5f4207fd-d936-420c-bc61-e7c17a8612cf"
+    "ew_featured_collection_j6T3Ax"
   ]
 }

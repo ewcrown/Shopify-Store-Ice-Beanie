@@ -1,0 +1,65 @@
+{{ 'ew-collection-banner.css' |  asset_url |  stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ew-collection-banner ew-collection-banner-{{ section.id }}" id="ew-collection-banner">
+  <div class="ew-collection-banner-row">
+  {% if collection.featured_image != blank %}
+    <picture>
+      <img 
+        class="ew-img-fluid"
+        src="{{ collection.featured_image | image_url: width: 1280 }}" 
+        loading="lazy" 
+        srcset="
+          {{ s.image | image_url: width: 620 }} 620w,
+          {{ s.image | image_url: width: 800 }} 800w,
+          {{ s.image | image_url: width: 1100 }} 1100w,
+          {{ s.image | image_url: width: 1280 }} 1280w"
+        sizes="(max-width: 600px) 600px, 100vw"
+        alt="{{ s.heading }}">
+    </picture>
+    {% else  %}
+    <picture>
+    {% if s.mobile_image != blank %}
+      <source media="(max-width: 600px)" srcset="{{ s.mobile_image | image_url: width: 600 }}">
+    {% endif %}
+    <img 
+      class="ew-img-fluid"
+      src="{{ s.image | image_url: width: 1280 }}" 
+      loading="lazy" 
+      srcset="
+        {{ s.image | image_url: width: 620 }} 620w,
+        {{ s.image | image_url: width: 800 }} 800w,
+        {{ s.image | image_url: width: 1100 }} 1100w,
+        {{ s.image | image_url: width: 1280 }} 1280w"
+      sizes="(max-width: 600px) 600px, 100vw"
+      alt="{{ s.heading }}">
+    </picture>
+  {% endif %}
+  </div>
+</section>
+
+{%  schema  %}  
+{
+  "name":"<> Collection Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Banner"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Collection Banner"
+    }
+  ]
+}
+{% endschema %}

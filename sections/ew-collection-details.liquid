@@ -1,0 +1,92 @@
+{{ 'ew-collection-details.css' |  asset_url |  stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ew-collection-details ew-collection-details-{{ section.id }}" id="ew-collection-details">
+  <div class="ew-collection-details-row">
+    <div class="page-width">
+      <div class="ew-collection-details-wrap">
+        <div class="ew-collection-details-title-wrap">
+          {% if s.title != blank %}
+            <h3>
+              {{ s.title }}
+            </h3>
+            {% else %}
+            <h3>
+              {{ collection.title }} 
+            </h3>
+          {% endif %}
+          {% if s.description != blank %}
+            <p>
+              {{ s.description }}
+            </p>
+            {% else %}
+            <p>
+              {{ collection.description }} 
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="ew-collection-details-columns">
+          {% for block in section.blocks %}
+            {% render 'ew-collection-details-card',
+              icon: block.settings.icon,
+              title: block.settings.title
+            %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%  schema  %}  
+{
+  "name":"<> Collection Details",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Details"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title Here",
+      "default": "Feel Your Pain Melt Away"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description Here",
+      "default": "Scientific studies show cold therapy soothes your head pain. In short, the cold “overrides” your pain signals. Instead of feeling pain you just feel the cold."
+    }
+  ],
+  "blocks":[
+    {
+      "type":"block",
+      "name":"Block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Block Details"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title Here",
+          "default": "Compression Cold Therapy"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Collection Details"
+    }
+  ]
+}
+{% endschema %}

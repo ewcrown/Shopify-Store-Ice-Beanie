@@ -1,0 +1,20 @@
+<div class="ew-collection-details-card">
+    <div class="ew-collection-details-card-icon">
+        {% if  icon != blank %}
+        <img 
+            class="ew-img-fluid"
+            src="{{ icon | image_url: width: 110 }}" 
+            loading="lazy" 
+            srcset="
+                {{ icon | image_url: width: 620 }} 620w,
+                {{ icon | image_url: width: 800 }} 800w,
+                {{ icon | image_url: width: 1100 }} 1100w,
+                {{ icon | image_url: width: 1280 }} 1280w"
+            sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+            alt="{{ title }}">
+        {% endif %}
+    </div>
+    <div class="ew-collection-details-card-title">
+        <h5>{{ title }}</h5>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.ew-collection-details-title-wrap h3 {
+    color: #001C43;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.ew-collection-details-title-wrap p {
+    color: #001C43;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* 156.25% */
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    max-width: 1470px;
+}
+
+.ew-collection-details-columns {
+    margin-top: 70px;
+}
+
+.ew-collection-details-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ew-collection-details-card {
+    padding: 70px;
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+.ew-collection-details-card-icon {
+    flex-shrink: 0;
+}
+
+.ew-collection-details-card-icon img {
+    height: 85px;
+    width: 85px;
+    object-fit: contain;
+}
+
+.ew-collection-details-card-title h5 {
+    color: #001C43;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
