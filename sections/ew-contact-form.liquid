@@ -15,10 +15,10 @@
                         src="{{ s.handshake | image_url: width: 110 }}" 
                         loading="lazy" 
                         srcset="
-                            {{ icon | image_url: width: 620 }} 620w,
-                            {{ icon | image_url: width: 800 }} 800w,
-                            {{ icon | image_url: width: 1100 }} 1100w,
-                            {{ icon | image_url: width: 1280 }} 1280w"
+                            {{ s.handshake | image_url: width: 620 }} 620w,
+                            {{ s.handshake | image_url: width: 800 }} 800w,
+                            {{ s.handshake | image_url: width: 1100 }} 1100w,
+                            {{ s.handshake | image_url: width: 1280 }} 1280w"
                         sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
                         alt="{{ s.title }}">  
                     </span>

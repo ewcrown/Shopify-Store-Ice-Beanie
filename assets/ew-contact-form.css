@@ -15,7 +15,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
-  /* 145.833% */
   text-transform: capitalize;
 }
 
@@ -103,8 +102,16 @@
     width: 100%;
   }
 
+  .ice-contact-desc {
+    flex-direction: column;
+  }
+
   .ice-contact-form-btn {
     margin-top: 20px;
+  }
+
+  .ice-contact-row {
+    padding: 40px 0px;
   }
 
   .ice-contact-col {
@@ -121,10 +128,6 @@
     font-size: 16px;
     line-height: 24px;
     padding: 10px;
-  }
-
-  .ice-contact-content img {
-    display: none;
   }
 
   .ice-contact-title {

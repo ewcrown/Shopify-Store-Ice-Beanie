@@ -1,0 +1,71 @@
+{{ 'ew-abt-image-text.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-about-us-" id="ice-about-us">
+  <div class="ice-about-row">
+      <div class="page-width">
+          <div class="ice-about-col grid">
+              <div class="ice-about-content">
+                  <h2 class="ice-about-title">{{ s.heading }}</h2>
+                  <h4 class="ice-about-subHeading">{{s.sub_heading}}</h4>
+                  <div class="ice-about-desc">
+                    {{ s.description }}
+                  </div>
+              </div>
+
+              {% if s.user_image != blank %}
+              <div class="ice-about-img">
+                <img 
+                  class="ew-img-fluid"
+                  src="{{ s.user_image | image_url: width: 110 }}" 
+                  loading="lazy" 
+                  srcset="
+                      {{ s.user_image | image_url: width: 620 }} 620w,
+                      {{ s.user_image | image_url: width: 800 }} 800w,
+                      {{ s.user_image | image_url: width: 1100 }} 1100w,
+                      {{ s.user_image | image_url: width: 1280 }} 1280w"
+                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+                  alt="{{ s.title }}">
+              </div>
+            {% endif %}
+          </div>
+      </div>
+  </div>
+</section>
+{%  schema  %}  
+{
+  "name": "<> About Text Image",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Info"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Here",
+        "default": "About The Founder"
+    },
+    {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Subheading Here",
+        "default": "Nic Lamb is a Professional Big Wave Surfer, Entrepreneur, and founder of IceBeanie."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "user_image",
+      "label": "Image Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> About Text Image"
+    }
+  ]
+}
+{% endschema %}

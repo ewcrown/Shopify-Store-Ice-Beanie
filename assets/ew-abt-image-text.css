@@ -1,0 +1,70 @@
+.ice-about-row {
+  background: linear-gradient(180deg, #f9f9f9 100%, #fff 40%);
+  padding: 80px 0;
+}
+
+.ice-about-col {
+  grid-template-columns: repeat(2, 1fr);
+  color: #001C43;
+  gap: 50px;
+  display: grid;
+  align-items: flex-end;
+}
+
+.ice-about-title {
+  color: var(--Dark-Blue, #4194E3);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ice-about-subHeading {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ice-about-desc p {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* 166.667% */
+}
+
+@media (max-width: 768px) {
+  .ice-about-title {
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .ice-about-subHeading {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .ice-about-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ice-about-col.grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ice-about-row {
+    padding: 40px 0 0 0;
+  }
+}

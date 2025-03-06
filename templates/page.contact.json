@@ -20,8 +20,8 @@
     "ew_contact_form_MVh9DL": {
       "type": "ew-contact-form",
       "settings": {
-        "title": "<p>IceBeanie Bundles</p>",
-        "sub_heading": "<p>We'd love to hear from you!</p>",
+        "title": "<p>Have Some <strong>Feedback?</strong></p>",
+        "sub_heading": "We'd love to hear from you!",
         "handshake": "shopify://shop_images/handshake.gif"
       }
     }

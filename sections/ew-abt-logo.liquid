@@ -1,0 +1,58 @@
+{{ 'ew-abt-logo.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-about-us-logo" id="ice-about-us-logo">
+  <div class="ice-about-logo-row">
+      <div class="page-width">
+          <div class="ice-about-logo-col">
+              <div class="ice-about-logo-info">
+                {% if s.image != blank %}
+                  <img 
+                    class="ew-img-fluid"
+                    src="{{ s.image | image_url: width: 110 }}" 
+                    loading="lazy" 
+                    srcset="
+                        {{ s.image | image_url: width: 620 }} 620w,
+                        {{ s.image | image_url: width: 800 }} 800w,
+                        {{ s.image | image_url: width: 1100 }} 1100w,
+                        {{ s.image | image_url: width: 1280 }} 1280w"
+                    sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+                    alt="1 for the planet">
+                </div>
+                {% endif %}
+                {% if s.description  != blank %}
+                  <p>
+                    {{ s.description }}
+                  </p>
+                {% endif %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{%  schema  %}  
+{
+  "name": "<> About Logo",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Here"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description Here",
+      "default": "We are a health and wellness company committed to providing you the best eco friendly engineered products to help you live your optimal life! Our founder is a member of 1% For The Planet and we firmly believe in giving back so every product sold directly helps support the environment."
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> About Logo"
+    }
+  ]
+}
+{% endschema %}
