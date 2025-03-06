@@ -320,6 +320,17 @@
         "heading": "Cooling Relief in Just 3 Easy Steps"
       }
     },
+    "ew_featured_product_iTHzR8": {
+      "type": "ew-featured-product",
+      "settings": {
+        "product_list": [
+          "icebeanie-2-0",
+          "icebeanie-2-0-x2",
+          "icebeanie-2-0-x3",
+          "icebeanie-2-0-x4"
+        ]
+      }
+    },
     "f19422ae-4923-4f82-9c32-43ceb25bbe5d": {
       "type": "shop-tabs",
       "settings": {}
@@ -400,6 +411,7 @@
     "ew_about_us_8bcTFM",
     "ew_info_section_ic7BUB",
     "ew_steps_jVUdQV",
+    "ew_featured_product_iTHzR8",
     "f19422ae-4923-4f82-9c32-43ceb25bbe5d",
     "ew_icon_text_section_DBmhd8",
     "ew_reviews_section_LVUp6h",

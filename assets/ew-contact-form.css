@@ -1,0 +1,135 @@
+.ice-contact-row {
+  padding: 80px 0;
+}
+
+.ice-contact-content {
+  text-align: center;
+  color: #001C43;
+}
+
+.ice-contact-title {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  /* 145.833% */
+  text-transform: capitalize;
+}
+
+.ice-contact-title strong {
+  color: #41BAFF;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.ice-contact-desc {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.ice-contact-content img {
+  width: auto;
+}
+
+.form-input {
+  border: 1px solid #7F8387;
+  padding: 20px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #001C43;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  display: grid;
+}
+
+.ice-contact-col {
+  flex-direction: column;
+  gap: 43px;
+  display: flex;
+}
+
+.ice-contact-form {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.ice-contact-form-btn {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.ice-contact-form-btn .primary-btn {
+  width: 552px;
+}
+
+.form-field-message {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.form-field-message textarea {
+  height: 170px;
+}
+
+@media (max-width: 767px) {
+  .ice-contact-form-btn .primary-btn {
+    width: 100%;
+  }
+
+  .ice-contact-form-btn {
+    margin-top: 20px;
+  }
+
+  .ice-contact-col {
+    gap: 20px;
+  }
+
+  .form-field {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-input {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+  }
+
+  .ice-contact-content img {
+    display: none;
+  }
+
+  .ice-contact-title {
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+}

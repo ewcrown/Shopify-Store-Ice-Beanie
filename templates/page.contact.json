@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -8,13 +17,17 @@
         "padding_bottom": 36
       }
     },
-    "684acf51-da79-4272-bd88-05e9f11077c7": {
-      "type": "contact-section",
-      "settings": {}
+    "ew_contact_form_MVh9DL": {
+      "type": "ew-contact-form",
+      "settings": {
+        "title": "<p>IceBeanie Bundles</p>",
+        "sub_heading": "<p>We'd love to hear from you!</p>",
+        "handshake": "shopify://shop_images/handshake.gif"
+      }
     }
   },
   "order": [
     "main",
-    "684acf51-da79-4272-bd88-05e9f11077c7"
+    "ew_contact_form_MVh9DL"
   ]
 }

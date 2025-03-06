@@ -1,0 +1,103 @@
+{{ 'ew-contact-form.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-contact" id="ice-contact">
+  <div class="ice-contact-row">
+      <div class="page-width">
+          <div class="ice-contact-col">
+              <div class="ice-contact-content">
+                  <h1 class="ice-contact-title">{{ s.title }}</h1>
+                  <h5 class="ice-contact-desc align-items-center justify-content-center">
+                    {{ s.sub_heading }} 
+                    {% if s.handshake != blank %}
+                    <span>
+                      <img 
+                        class="ew-img-fluid"
+                        src="{{ s.handshake | image_url: width: 110 }}" 
+                        loading="lazy" 
+                        srcset="
+                            {{ icon | image_url: width: 620 }} 620w,
+                            {{ icon | image_url: width: 800 }} 800w,
+                            {{ icon | image_url: width: 1100 }} 1100w,
+                            {{ icon | image_url: width: 1280 }} 1280w"
+                        sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+                        alt="{{ s.title }}">  
+                    </span>
+                    {% endif %}
+                   </h5>
+              </div>
+              <div class="ice-contact-form">
+                {%- form 'contact' -%}
+                  {%- if form.posted_successfully? -%}
+                    <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                      {% render 'icon-success' %}
+                      {{ 'templates.contact.form.post_success' | t }}
+                    </h2>
+                  {%- elsif form.errors -%}
+                    <div class="form__message">
+                      <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                        {% render 'icon-error' %}
+                        {{ 'templates.contact.form.error_heading' | t }}
+                      </h2>
+                    </div>
+                    <ul class="form-status-list caption-large" role="list">
+                      <li>
+                        <a href="#ContactForm-email" class="link">
+                          {{ form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email }}
+                        </a>
+                      </li>
+                    </ul>
+                  {%- endif -%}
+                      <div class="form-field">
+                          <input class="form-input" name="contact[First Name]" type="text" placeholder="First Name" >
+                          <input class="form-input" name="contact[Last Name]" type="text" placeholder="Last Name">
+                      </div>
+                      <div class="form-field">
+                          <input class="form-input" name="contact[Email Address]" type="email" placeholder="Email Address">
+                          <input class="form-input" name="contact[Phone Number]" type="text" placeholder="Phone Number">
+                      </div>
+                      <div class="form-field form-field-message">
+                          <textarea class="form-input" name="contact[Your Message]"  placeholder="Your Message"></textarea>
+                      </div>
+                      <div class="ice-contact-form-btn">
+                          <button type="submit" class="primary-btn">Submit</button>
+                      </div>
+                  {% endform %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+{%  schema  %}  
+{
+  "name":"<> Contact Form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Info"
+    },
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title Here"
+    },
+    {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Subheading Here",
+        "default": "We'd love to hear from you!"
+    },
+    {
+      "type": "image_picker",
+      "id": "handshake",
+      "label": "Icon Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Contact Form"
+    }
+  ]
+}
+{% endschema %}

@@ -1,7 +1,43 @@
 {{ 'ew-featured-product.css' | asset_url | stylesheet_tag }}
 {% assign s = section.settings %}
-
+{% assign products = section.settings.product_list %}
 <section class="ew-featured-product-section ew-featured-product-section-{{ section.id }}" id="ew-featured-product-section">
+  <div class="ew-featured-product-row">
+    <div class="page-width">
+      <div class="ew-featured-product-wrap">
+        
+        {% comment %} <div class="ew-featured-product-single-tab ew-featured-product-single-tab={{ forloop.index }}">
+          <div class="ew-featured-product-image">
+            <img class="ew-img-fluid" src="" loading="lazy"  alt="{{ product.title }}">
+          </div>
+          <div class="ew-featured-product-content">
+            {% render 'ew-product-content', card_product: product %}
+          </div>
+        </div> {% endcomment %}
 
+      </div>
+    </div>
+  </div>
 </section>
 
+{%  schema  %}  
+{
+  "name":"<> Featured Products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Select Products"
+    },
+    {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Featured Product"
+    }
+  ]
+}
+{% endschema %}
