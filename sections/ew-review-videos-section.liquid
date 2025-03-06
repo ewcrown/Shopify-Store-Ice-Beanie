@@ -1,0 +1,99 @@
+{{ 'ew-review-videos-section.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-review-videos" id="ice-review-videos">
+  <div class="ice-review-videos-row">
+      <!-- <div class="page-width"> -->
+      <div class="ice-review-videos-col">
+
+          <div class="ice-review-video-content">
+              <div class="ice-review-video-rating flex align-items-center justify-content-center"> <img
+                      src="img/si_star-fill.png" alt=""> <span> 4.9 Star Rating</span></div>
+              <h3 class="ice-review-video-title"> <span> <img src="img/“.png" alt=""> Very Stylish, Very
+                      Comfortable, And Very
+                      Cooling <img src="img/“.png" alt=""> </span>
+              </h3>
+          </div>
+
+          <div class="splide review-sideo-slider">
+              <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <div class="slide-content">
+                              <div class="ice-video-container">
+                                  <video controls>
+                                      <source src="path/to/your/video1.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                  </video>
+                                  <button class="play-button">▶</button>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="slide-content">
+                              <div class="ice-video-container">
+                                  <video controls>
+                                      <source src="path/to/your/video2.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                  </video>
+                                  <button class="play-button">▶</button>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="slide-content">
+                              <div class="ice-video-container">
+                                  <video controls>
+                                      <source src="path/to/your/video3.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                  </video>
+                                  <button class="play-button">▶</button>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- </div> -->
+  </div>
+</section>
+
+
+{%  schema  %}  
+{
+  "name": "<> Review Videos",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Info"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Here",
+        "default": "About The Founder"
+    },
+    {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Subheading Here",
+        "default": "Nic Lamb is a Professional Big Wave Surfer, Entrepreneur, and founder of IceBeanie."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "user_image",
+      "label": "Image Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Review Videos"
+    }
+  ]
+}
+{% endschema %}

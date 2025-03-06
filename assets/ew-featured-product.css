@@ -1,0 +1,269 @@
+.ew-featured-product-single-tab {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+}
+
+.ew-featured-product-image img {
+  margin: auto;
+}
+
+.ew-featured-product-image {
+  border-radius: 10px;
+  border: 1px solid #001C43;
+}
+
+.ew-featured-product-row {
+  padding: 60px 0px;
+}
+
+.ew-product-content-review {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ew-product-content-review svg {
+  width: 150px;
+}
+
+.ew-product-content-review span {
+  color: #003D6D;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* 318.182% */
+  text-transform: capitalize;
+}
+
+.ew-product-content-title {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.ew-product-content-tags ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ew-product-content-tags li {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: inline-block;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background: #B7EFFF;
+  padding: 5px 10px;
+}
+
+.ew-product-content-price span {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  /* 194.444% */
+  text-transform: capitalize;
+}
+
+.ew-product-content-price s {
+  color: #708999;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.ew-product-content-price {
+  display: flex;
+  gap: 10px;
+}
+
+.ew-product-content-description {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: lowercase;
+}
+
+.ew-product-content-radios {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ew-product-content-radio-single input:checked+label {
+  background: #B7EFFF;
+}
+
+.ew-product-content-radio-single input {
+  display: none;
+}
+
+.ew-product-content-radio-single label {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #001C43;
+  padding: 17px;
+}
+
+.ew-product-radio-title {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  display: block;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-radio-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.ew-product-radio-price span:first-of-type {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: line-through;
+  text-transform: capitalize;
+}
+
+.ew-product-radio-price span:last-of-type {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-content-color-radios {
+  padding: 30px 0px;
+}
+
+.ew-product-content-color-radios {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.ew-product-content-color-radios>label {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 40px;
+  /* 269.231% */
+  text-transform: capitalize;
+}
+
+.ew-product-content-color-radio {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ew-product-content-color-radio-single label {
+  margin: 0;
+}
+
+.ew-product-content-color-radio-single-blue {
+  color: var(--Dark-Blue, #4194E3);
+}
+
+.ew-product-content-color-radio-single-black {
+  color: #0F0F10;
+}
+
+.ew-product-content-color-radio-single {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+@media(max-width:767px) {
+  .ew-featured-product-single-tab {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .ew-product-content-radios {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ew-product-content-title {
+    font-size: 26px;
+  }
+
+  .ew-product-content-review svg {
+    width: 100px;
+  }
+
+  .ew-product-content-review span {
+    font-size: 14px;
+  }
+
+  .ew-product-content-tags li {
+    font-size: 14px;
+  }
+
+  .ew-product-content-price span,
+  .ew-product-content-price s {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .ew-product-content-description {
+    font-size: 14px;
+    line-height: normal;
+    margin-top: 20px;
+  }
+
+  .ew-product-radio-title {
+    font-size: 18px;
+  }
+
+  .ew-product-content-color-radios>label {
+    font-size: 16px;
+    margin-right: 0;
+  }
+}
