@@ -1,11 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "ew_science_hero_XcwVit": {
+      "type": "ew-science-hero",
+      "settings": {
+        "heading": "Modern Cold Therapy Has Been Used To Relieve Pain For Over 150 Years!",
+        "description": "<p>It goes back to James Arnott MD, the pioneer of cryotherapy. He used a mixture of ice and salt to treat headaches in 1849. Ancient manuscripts even show cold water was used for the same purpose by the Ancient Egyptians.</p><p>Scientific studies show cold therapy soothes your head pain. The many studies you’re about to read will shock you (who knew ice worked so well?) and make you wonder why more people don’t use cold therapy.</p><p><em>In short: The cold “overrides” your pain signals. Instead of feeling pain you just feel the cold.</em></p>"
+      }
+    },
     "custom-science-page": {
       "type": "custom-science-page",
+      "disabled": true,
       "settings": {}
+    },
+    "ew_about_us_33rHrK": {
+      "type": "ew-about-us",
+      "blocks": {
+        "card_4RR3Jf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_1_2ef5de88-58bc-46bf-bc19-ac62d3e598c1.png",
+            "heading": "Circulatory System",
+            "description": "Restricts blood flow. Less blood to brain vessels prevents painful overextending"
+          }
+        },
+        "card_QcGmBg": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_2.png",
+            "heading": "Nervous System",
+            "description": "Cold slows down the speed at which nerves travel. So it’s harder for pain signals to reach your brain"
+          }
+        },
+        "card_YD7Kty": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png",
+            "heading": "Metabolic System",
+            "description": "The cold slows down oxygen demand which slows down pain signaling"
+          }
+        }
+      },
+      "block_order": [
+        "card_4RR3Jf",
+        "card_QcGmBg",
+        "card_YD7Kty"
+      ],
+      "settings": {
+        "heading": "Compression Cold Therapy Power Revealed",
+        "subheading": "Cold Therapy Effects You In Three Different Ways:"
+      }
+    },
+    "ew_reviews_slider_UC4dDm": {
+      "type": "ew-reviews-slider",
+      "blocks": {
+        "card_QXeUcW": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_10.png"
+          }
+        },
+        "card_BzgTJp": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_10.png"
+          }
+        },
+        "card_tkAYCb": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_10.png"
+          }
+        }
+      },
+      "block_order": [
+        "card_QXeUcW",
+        "card_BzgTJp",
+        "card_tkAYCb"
+      ],
+      "settings": {
+        "reviews_heading": "Reviews"
+      }
+    },
+    "ew_science_details_8W8aTD": {
+      "type": "ew-science-details",
+      "blocks": {
+        "card_YzeHAU": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_40.png",
+            "heading": "Sleep 8-9 Hours",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_t4m6fm": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_04a3da36-2140-4fed-99d5-5dab1a83828a.png",
+            "heading": "Direct Morning Sunlight",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_BT4ype": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_1_7629a6b4-9dc3-415e-ac10-73879bd96940.png",
+            "heading": "Hydrate",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_TRKkUK": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_2_bf689230-61b7-4389-a5ad-b3a6d89f7ba7.png",
+            "heading": "Meditation Mindfulness Practice",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_mcQb9R": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_3_4caae40c-c938-4f18-97c0-15a17fbdeb92.png",
+            "heading": "Grounding",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_QTUmY7": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_4.png",
+            "heading": "Get Up and Move!",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_cW3dKX": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_5_189112be-b55d-40dd-aec7-8e08c275331f.png",
+            "heading": "Eat Organic",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        },
+        "card_XQ9crw": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/image_6_8d0963f6-775e-4b4c-b682-d11138acb05e.png",
+            "heading": "Massages and Bodywork",
+            "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_YzeHAU",
+        "card_t4m6fm",
+        "card_BT4ype",
+        "card_TRKkUK",
+        "card_mcQb9R",
+        "card_QTUmY7",
+        "card_cW3dKX",
+        "card_XQ9crw"
+      ],
+      "settings": {
+        "title": "What Are Other Non Cold-Therapy Wa To Feel Better",
+        "image": "shopify://shop_images/IceBeanie_r2_04B_2111_1.png"
+      }
+    },
+    "ew_featured_collection_j6T3Ax": {
+      "type": "ew-featured-collection",
+      "settings": {
+        "title": "IceBeanie Bundles",
+        "collection": "all"
+      }
+    },
+    "ew_reviews_section_LVUp6h": {
+      "type": "ew-reviews-section",
+      "settings": {}
+    },
+    "ew_testimonial_slider_9wyiAe": {
+      "type": "ew-testimonial-slider",
+      "blocks": {
+        "testimonial_RPXAaG": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png",
+            "icon": "shopify://shop_images/amazon-icon_1.png",
+            "author_name": "Hannah P",
+            "description": "I cant believe it has taken me this long to buy something like this! I suffer from frequent migraines. This is great."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_RPXAaG"
+      ],
+      "settings": {}
+    },
+    "ew_newsletter_ghxbiJ": {
+      "type": "ew-newsletter",
+      "settings": {
+        "title": "Subscribe to our newsletter"
+      }
     }
   },
   "order": [
-    "custom-science-page"
+    "ew_science_hero_XcwVit",
+    "custom-science-page",
+    "ew_about_us_33rHrK",
+    "ew_reviews_slider_UC4dDm",
+    "ew_science_details_8W8aTD",
+    "ew_featured_collection_j6T3Ax",
+    "ew_reviews_section_LVUp6h",
+    "ew_testimonial_slider_9wyiAe",
+    "ew_newsletter_ghxbiJ"
   ]
 }

@@ -1,5 +1,21 @@
 {{ 'ew-about-us.css' | asset_url | stylesheet_tag }}
 {% assign s = section.settings %}
+
+{% if page.handle == 'the-science' %}
+<style>
+  .ice-cards-row {
+    background:#fff;
+  }
+  .ice-cards .ice-card {
+    box-shadow:none;
+  }
+  @media(max-width:767px){
+    .ice-card {
+      padding: 0px 30px;
+    }
+  }
+</style>
+{% endif %}
 <section class="ice-cards" id="ice-cards">
   <div class="ice-cards-row">
       <div class="page-width">

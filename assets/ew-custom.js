@@ -27,7 +27,15 @@ sliders.forEach(slider => {
         },
       },
     }).mount();
-  } else {
+  } else if (sliderName == "Reviews Slider") {
+    new Splide(slider, {
+      type: "loop",
+      perPage: 1,
+      pagination: false,
+      arrows: true,
+    }).mount();
+  }
+  else {
     new Splide(slider, {
       type: 'loop',
       perPage: 3,

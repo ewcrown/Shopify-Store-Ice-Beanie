@@ -1,0 +1,29 @@
+<div class="ice-science-review-wrap">
+  
+  {% if image != blank %}
+    <img 
+      class="ew-img-fluid"
+      src="{{ image | image_url: width: 500 }}" 
+      loading="lazy" 
+      srcset="
+        {{ image | image_url: width: 620 }} 620w,
+        {{ image | image_url: width: 800 }} 800w,
+        {{ image | image_url: width: 1100 }} 1100w,
+        {{ image | image_url: width: 1280 }} 1280w"
+      sizes="(max-width: 600px) 600px, 100vw"
+      alt="{{ name }}">
+      {% endif %}
+  <div class="ice-science-review-content">
+      <div class="ice-science-review-content-wrap">
+        {% render 'ew-quote-icon' %}
+        
+          <p class="ice-science-review-desc">
+              {{ description }}
+          </p>
+      </div>
+      <div class="ice-science-review-footer">
+          <span class="science-review-name">{{ name }}</span>
+          <span class="science-review-institute">{{ designation }}</span>
+      </div>
+  </div>
+</div>

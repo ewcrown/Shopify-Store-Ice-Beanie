@@ -1,0 +1,120 @@
+.ice-accordion-row {
+  padding: 40px 0;
+}
+
+.ice-accordion-col {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 75px;
+  display: grid;
+  color: #001C43;
+}
+
+.ice-accordion-content-wrap img {
+  width: 50px;
+
+}
+
+.ice-accordion-content-title {
+  gap: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.ice-accordion-title {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ice-accordion-icon svg {
+  transform: rotate(180deg);
+  width: 50px;
+}
+
+details[open] .ice-accordion-icon svg {
+  transform: rotate(0deg);
+}
+
+.ice-accordion-content-desc {
+  padding-bottom: 30px;
+}
+
+.ice-accordion-content-desc p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.ice-accordion-content summary {
+  margin-bottom: 20px;
+}
+
+.ice-accordion-content details {
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.ice-accordion-content details:last-child {
+  border-bottom: 1px solid transparent;
+  margin-bottom: 0px;
+}
+
+.ice-accordion-content-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.ice-accordion-heading {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  text-transform: capitalize;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .ice-accordion-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ice-accordion-content-wrap img {
+    width: 45px;
+  }
+
+  .ice-accordion-content-desc {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+
+  .ice-accordion-content details {
+    margin-bottom: 20px;
+  }
+
+  .ice-accordion-heading {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .ice-accordion-icon svg {
+    width: 32px;
+  }
+
+  .ice-accordion-title {
+    margin: 0;
+    font-size: 20px;
+  }
+}

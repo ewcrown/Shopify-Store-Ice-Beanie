@@ -1,0 +1,28 @@
+<details {% if index == 1 %}open{% endif %}>
+  <div class="ice-accordion-content-desc">
+     {{ description }}
+  </div>
+  <summary>
+      <div class="ice-accordion-content-wrap">
+          <div class="ice-accordion-content-title">
+            {% if icon != blank %}
+            <img 
+              class="ew-img-fluid"
+              src="{{ icon | image_url: width: 100 }}" 
+              loading="lazy" 
+              srcset="
+                {{ icon | image_url: width: 620 }} 620w,
+                {{ icon | image_url: width: 800 }} 800w,
+                {{ icon | image_url: width: 1100 }} 1100w,
+                {{ icon | image_url: width: 1280 }} 1280w"
+              sizes="(max-width: 600px) 600px, 100vw"
+              alt="{{ heading }}">
+              {% endif %}
+              <h5 class="ice-accordion-title">{{ heading }}</h5>
+          </div>
+          <div class="ice-accordion-icon">
+            {% render 'ew-caret-icon' %}
+          </div>
+      </div>
+  </summary>
+</details>

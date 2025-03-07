@@ -1,0 +1,43 @@
+{{ 'ew-science-hero.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="science-page-banner" id="science-page-banner">
+  <div class="science-page-banner-row">
+      <div class="page-width">
+          <div class="science-page-banner-col">
+              <h1 class="science-page-banner-title">{{ s.heading }}</h1>
+              <div class="science-page-banner-desc">
+                  {{ s.description }}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "<> Science Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Modern Cold Therapy Has Been Used To Relieve Pain For Over 150 Years!"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Science Hero"
+    }
+  ]
+}
+{% endschema %}

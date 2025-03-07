@@ -1,0 +1,215 @@
+.science-reviews-row {
+  padding: 80px 0;
+  background: #E3ECF2;
+}
+
+.science-reviews-col {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  padding-right: 50px;
+}
+
+.review-slider-inner-wrap {
+  padding-left: 150px;
+}
+
+.ice-science-review-content {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ice-science-review-wrap img {
+  max-width: 426px;
+}
+
+.science-page-reviews {
+  display: flex;
+  align-items: center;
+}
+
+.ice-science-review-wrap {
+  gap: 70px;
+  color: #001C43;
+  display: flex;
+  padding: 80px 0;
+}
+
+.review-quote-icon {
+  margin-bottom: 46px;
+}
+
+.ice-science-review-desc {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 638px;
+  margin-top: 46px;
+}
+
+.ice-science-review-footer span {
+  display: block;
+}
+
+.science-review-name {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 36px */
+}
+
+.science-review-institute {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.science-reviews-col .splide__arrow--next {
+  right: 70rem;
+  cursor: pointer;
+}
+
+.science-reviews-col .splide__arrow--prev {
+  left: 50rem;
+  cursor: pointer;
+}
+
+.science-reviews-col .splide__arrow {
+  bottom: 10%;
+  top: unset;
+  background: transparent;
+}
+
+.review-heading {
+  transform: rotate3d(0, 0, 2, -90deg);
+  margin-left: -60px;
+  position: absolute;
+  left: 0;
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.2;
+  line-height: normal;
+  text-transform: uppercase;
+  top: 50%;
+}
+
+.ice-science-review-footer {
+  transform: translateY(-50px);
+}
+
+/* Hide default arrow SVG */
+.science-reviews-col .splide__arrow--prev svg,
+.science-reviews-col .splide__arrow--next svg {
+  display: none;
+}
+
+.science-reviews-col .splide__arrow--prev::after {
+  content: "←";
+  font-size: 40px;
+  color: #000;
+}
+
+.science-reviews-col .splide__arrow--next::after {
+  content: "→";
+  font-size: 40px;
+  color: #000;
+}
+
+
+@media(max-width:600px) {
+  .review-slider-inner-wrap {
+    padding: 0;
+  }
+
+  .ice-science-review-content-wrap>svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ice-science-review-wrap {
+    gap: 20px;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .review-quote-icon {
+    margin-bottom: 16px;
+
+  }
+
+  .ice-science-review-desc {
+    margin: 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .science-review-name {
+
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  .science-review-institute {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+
+  .science-reviews-col .splide__arrow--next {
+    right: 4%;
+
+  }
+
+  .science-reviews-col .splide__arrow--prev {
+    left: 71%;
+  }
+
+  .review-heading {
+    transform: unset;
+    text-align: center;
+    margin-left: unset;
+    position: relative;
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .science-reviews-col .splide__list {
+    max-height: 750px;
+  }
+
+  .science-page-reviews {
+    display: block;
+  }
+
+  .ice-science-review-footer {
+    transform: translateY(0px);
+  }
+
+  .science-reviews-row {
+    padding: 40px 0;
+  }
+
+  .science-reviews-col {
+    padding: 30px 30px 70px;
+  }
+
+  .science-reviews-col .splide__arrow {
+    bottom: unset;
+    top: 105%;
+  }
+}

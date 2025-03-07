@@ -1,0 +1,94 @@
+{{ 'ew-science-details.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-accordion" id="ice-accordion">
+  <div class="ice-accordion-row">
+      <div class="page-width">
+          <div class="ice-accordion-col">
+              <div class="ice-accordion-heading-img">
+                  <h2 class="ice-accordion-heading">{{ s.title }}</h2>
+                  {% if s.image != blank %}
+                    <img 
+                      class="ew-img-fluid"
+                      src="{{ s.image | image_url: width: 500 }}" 
+                      loading="lazy" 
+                      srcset="
+                        {{ s.image | image_url: width: 620 }} 620w,
+                        {{ s.image | image_url: width: 800 }} 800w,
+                        {{ s.image | image_url: width: 1100 }} 1100w,
+                        {{ s.image | image_url: width: 1280 }} 1280w"
+                      sizes="(max-width: 600px) 600px, 100vw"
+                      alt="{{ s.title }}">
+                  {% endif %}
+              </div>
+
+              <div class="ice-accordion-content">
+                {% for block in section.blocks %}
+                  {% render 'ew-science-accordion-card'.
+                    index: forloop.index,
+                    icon: block.settings.icon,
+                    heading: block.settings.heading,
+                    description: block.settings.description
+                  %}
+                
+                {% endfor %}
+              </div>
+
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+{%  schema  %}  
+{
+  "name": "<> Science Details",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading Here",
+      "default":"What Are Other Non Cold-Therapy Wa To Feel Better"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Here",
+          "default":"Sleep 8-9 Hours"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly. If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Science Details"
+    }
+  ]
+}
+{% endschema %}

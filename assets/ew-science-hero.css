@@ -1,0 +1,55 @@
+.science-page-banner-row {
+  padding: 70px 0;
+}
+
+.science-page-banner-col {
+  text-align: center;
+  color: #001C43;
+}
+
+.science-page-banner-desc p em {
+  color: #4CC3E6;
+  font-style: normal;
+}
+
+.science-page-banner-desc p {
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.science-page-banner-desc span {
+  font-size: 28px;
+  font-weight: 500;
+  color: #4CC3E6;
+}
+
+.science-page-banner-title {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  text-transform: capitalize;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media(max-width:767px) {
+  .science-page-banner-desc p {
+    line-height: 24px;
+  }
+
+  .science-page-banner-row {
+    padding: 40px 0px;
+  }
+
+  .science-page-banner-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
