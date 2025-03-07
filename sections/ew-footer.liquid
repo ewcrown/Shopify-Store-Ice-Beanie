@@ -1,0 +1,110 @@
+{{ 'ew-footer.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<footer class="ice-footer" id="ice-footer">
+  <div class="ice-footer-row">
+      <div class="page-width">
+          <div class="ice-footer-col">
+              <div class="ice-footer-logo ice-footer-item">
+                {% if s.footer_logo != blank %}
+                <img class="ew-img-fluid" src="{{ s.footer_logo | image_url: width: 500 }}" loading="lazy"
+                  srcset="
+                      {{ s.footer_logo | image_url: width: 620 }} 620w,
+                      {{ s.footer_logo | image_url: width: 800 }} 800w,
+                      {{ s.footer_logo | image_url: width: 1100 }} 1100w,
+                      {{ s.footer_logo | image_url: width: 1280 }} 1280w"
+                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie">
+                {% endif %}
+                  <div class="ice-footer-socialIcons">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'social_icon' %}
+                        {%  if block.settings.social_image != blank %}
+                      <span>
+                        <a href="{{ block.settings.social_link }}"> 
+                          <img class="ew-img-fluid" src="{{ block.settings.social_image | image_url: width: 500 }}" loading="lazy"
+                            srcset="
+                                {{ block.settings.social_image | image_url: width: 620 }} 620w,
+                                {{ block.settings.social_image | image_url: width: 800 }} 800w,
+                                {{ block.settings.social_image | image_url: width: 1100 }} 1100w,
+                                {{ block.settings.social_image | image_url: width: 1280 }} 1280w"
+                            sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie {{ forloop.index }}">
+                        </a>
+                      </span>
+                    {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+              </div>
+
+              {% for block in section.blocks %}
+                {% if block.type == 'menu' %}
+                  <div class="ice-footer-item ice-footer-{{ forloop.index }}">
+                    <h6 class="ice-footer-item-title">{{ block.settings.menu_title }}</h6>
+                    <ul class="ice-footer-item-list">
+                      {% for link in block.settings.menu.links %}
+                        <li>
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+          </div>
+      </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "<> Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Logo Here"
+    },
+  ],
+  "blocks": [
+    {
+      "name":"Social icon",
+      "type": "social_icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "social_image",
+          "label": "Image Here"
+        },
+        {
+          "type": "url",
+          "id": "social_link",
+          "label": "Link Here"
+        }
+      ]
+    },
+    {
+      "name":"Menu",
+      "type": "menu",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu Title",
+          "default": "Quick links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Footer"
+    }
+  ]
+}
+{% endschema %}

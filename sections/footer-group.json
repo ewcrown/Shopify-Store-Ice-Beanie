@@ -1,13 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "ew_footer_pCkaxk": {
+      "type": "ew-footer",
+      "blocks": {
+        "social_icon_TFxAaF": {
+          "type": "social_icon",
+          "settings": {
+            "social_image": "shopify://shop_images/facebook_c9317660-71ea-4e34-9948-cc309c8e03bf.png",
+            "social_link": "#"
+          }
+        },
+        "social_icon_dzzeDC": {
+          "type": "social_icon",
+          "settings": {
+            "social_image": "shopify://shop_images/X_logo_2023_1.png",
+            "social_link": "#"
+          }
+        },
+        "social_icon_qqfAVB": {
+          "type": "social_icon",
+          "settings": {
+            "social_image": "shopify://shop_images/demo.png",
+            "social_link": "#"
+          }
+        },
+        "social_icon_deRzmn": {
+          "type": "social_icon",
+          "settings": {
+            "social_image": "shopify://shop_images/linkedin.png",
+            "social_link": "#"
+          }
+        },
+        "social_icon_tdmpPm": {
+          "type": "social_icon",
+          "settings": {
+            "social_image": "shopify://shop_images/line-md_youtube-filled.png",
+            "social_link": "#"
+          }
+        },
+        "menu_KEXQPz": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Our Products",
+            "menu": "customer-account-main-menu"
+          }
+        },
+        "menu_jUBzx8": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Our Company",
+            "menu": "customer-account-main-menu"
+          }
+        },
+        "menu_YPMjYk": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Customer Care",
+            "menu": "customer-account-main-menu"
+          }
+        },
+        "menu_7bPWTV": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Our Policies",
+            "menu": "customer-account-main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "social_icon_TFxAaF",
+        "social_icon_dzzeDC",
+        "social_icon_qqfAVB",
+        "social_icon_deRzmn",
+        "social_icon_tdmpPm",
+        "menu_KEXQPz",
+        "menu_jUBzx8",
+        "menu_YPMjYk",
+        "menu_7bPWTV"
+      ],
+      "settings": {
+        "footer_logo": "shopify://shop_images/IceBeanie_logo_2_1.png"
+      }
+    },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {}
     }
   },
   "order": [
+    "ew_footer_pCkaxk",
     "footer"
   ]
 }

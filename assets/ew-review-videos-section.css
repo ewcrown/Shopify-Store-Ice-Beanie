@@ -1,0 +1,246 @@
+.ice-review-video-title span svg:first-of-type {
+  position: relative;
+  top: -10px;
+}
+
+.ice-review-video-title span svg:last-of-type {
+  transform: rotate(180deg);
+  position: relative;
+  bottom: -30px;
+}
+
+.ice-review-videos-row {
+  padding: 40px 0;
+  background: #f5f9ff;
+}
+
+.ice-review-videos-col {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ice-review-videos-col .splide__track {
+  padding: 20px 0;
+}
+
+.ice-review-videos-col .splide__slide {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  opacity: 0.5;
+}
+
+.ice-review-videos-col .splide__slide.is-active {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.slide-content {
+  text-align: center;
+  color: #333;
+  width: 100%;
+}
+
+.ice-review-video-title span {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  /* 125% */
+  text-transform: capitalize;
+  display: inline-block;
+  max-width: 862px;
+}
+
+.ice-review-video-title {
+  width: 100%;
+  max-width: 862px;
+  margin: 0 auto;
+}
+
+
+.ice-review-video-content {
+  margin-bottom: 89px;
+}
+
+.ice-review-video-rating svg {
+  width: 130px;
+}
+
+.ice-review-video-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ice-review-video-title span img:last-child {
+  transform: rotate(180deg);
+  margin-bottom: -40px;
+}
+
+.ice-review-video-rating span {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* 190% */
+  text-transform: capitalize;
+}
+
+.ice-review-video-content img {
+  width: auto;
+}
+
+
+.ice-video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.ice-video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.ice-review-videos-col .splide__arrow {
+  background: #007bff;
+  opacity: 0.8;
+}
+
+.ice-review-videos-col .splide__arrow:hover {
+  background: #0056b3;
+}
+
+.ice-slider-pagination-btn button {
+  background-color: transparent;
+}
+
+.ice-content-container {
+  width: 50%;
+  padding: 20px;
+}
+
+.ice-slide-content {
+  display: none;
+}
+
+.ice-slide-content.active {
+  display: block;
+}
+
+
+.ice-science-review-footer.slider-footer {
+  transform: unset;
+}
+
+.ice-slider-pagination-btn .ice-prev-slide::after {
+  content: "←";
+  font-size: 40px;
+  color: #000;
+}
+
+.ice-slider-pagination-btn .ice-next-slide::after {
+  content: "→";
+  font-size: 40px;
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .ice-content-container {
+    width: 100%;
+  }
+
+  .ice-content-container {
+    width: 100%;
+  }
+
+  .ice-review-video-title span {
+    font-size: 32px;
+    line-height: normal;
+
+  }
+
+  .ice-review-video-title span svg {
+    display: none;
+  }
+
+  .ice-review-video-content {
+    margin-bottom: 10px;
+  }
+
+
+  .ice-review-video-rating svg {
+    width: 130px !important;
+  }
+
+  .ice-review-video-rating {
+    margin-bottom: 15px;
+  }
+
+
+  .ice-review-video-title span img:last-child {
+    margin-bottom: 0px;
+  }
+
+  .ice-review-video-rating span {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .ice-review-videos-col .splide__slide {
+    width: 33.33%;
+  }
+
+  .ice-review-videos-col .splide__slide {
+    width: 100%;
+  }
+
+  .ice-review-videos-col .splide__slide.is-active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .ice-review-video-title span svg {
+    width: 20px;
+  }
+
+  .ice-review-videos-row {
+    padding: 40px 20px;
+  }
+}

@@ -9,6 +9,85 @@
  */
 {
   "sections": {
+    "ew_review_videos_section_GeHMLL": {
+      "type": "ew-review-videos-section",
+      "blocks": {
+        "video_card_A9a7FJ": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+          }
+        },
+        "video_card_3HLAU3": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+          }
+        },
+        "video_card_afkWah": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+          }
+        },
+        "video_card_JeCcHz": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+          }
+        }
+      },
+      "block_order": [
+        "video_card_A9a7FJ",
+        "video_card_3HLAU3",
+        "video_card_afkWah",
+        "video_card_JeCcHz"
+      ],
+      "settings": {
+        "rating_text": "4.9 Star Rating",
+        "heading": "Very stylish, very comfortable, and very cooling"
+      }
+    },
+    "ew_reviews_slider_2_gzN6m7": {
+      "type": "ew-reviews-slider-2",
+      "blocks": {
+        "card_DjrEjg": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_10.png"
+          }
+        },
+        "card_YxPXFN": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_00da9780-37e9-46fd-8572-e45d6ff35a2c.png"
+          }
+        },
+        "card_a3NXzJ": {
+          "type": "card",
+          "settings": {
+            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "author_name": "Dr. Erlingsson MD MPH",
+            "designation": "Harvard Medical",
+            "author_image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png"
+          }
+        }
+      },
+      "block_order": [
+        "card_DjrEjg",
+        "card_YxPXFN",
+        "card_a3NXzJ"
+      ],
+      "settings": {
+        "reviews_heading": ""
+      }
+    },
     "reviews-top-section": {
       "type": "reviews-top-section",
       "disabled": true,
@@ -296,6 +375,8 @@
     }
   },
   "order": [
+    "ew_review_videos_section_GeHMLL",
+    "ew_reviews_slider_2_gzN6m7",
     "reviews-top-section",
     "reviews-vid-section",
     "reviews-bot-section",

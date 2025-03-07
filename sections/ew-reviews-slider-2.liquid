@@ -1,0 +1,98 @@
+{{ 'ew-reviews-slider-2.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<section class="ice-splide-container" id="ice-splide-container">
+  <div class="ice-splide-container-row">
+      <div class="page-width">
+          <div class="ice-splide-container-col">
+              <div class="ice-splide-container-images">
+                  <div class="splide" id="image-slider">
+                      <div class="splide__track">
+                          <div class="splide__list">
+                            {% for block in section.blocks %}
+                              <div class="splide__slide">
+                                <img class="ew-img-fluid beanie" src="{{ block.settings.author_image | image_url: width: 500 }}" loading="lazy"
+                                  srcset="
+                                      {{ block.settings.author_image | image_url: width: 620 }} 620w,
+                                      {{ block.settings.author_image | image_url: width: 800 }} 800w,
+                                      {{ block.settings.author_image | image_url: width: 1100 }} 1100w,
+                                      {{ block.settings.author_image | image_url: width: 1280 }} 1280w"
+                                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie {{ forloop.index }}">
+                              </div>
+                            {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="ice-content-container">
+                {% for block in section.blocks %}
+                  <div class="ice-slide-content {% if forloop.index == 1 %}active{% endif %}" data-slide="{{ forloop.index }}">
+                      <div class="ice-science-review-content">
+                          <div class="ice-science-review-content-wrap">
+                              {% render 'ew-icon-quotes' %}
+                              <p class="ice-science-review-desc">
+                                {{ block.settings.description }}
+                              </p>
+                          </div>
+                          <div class="ice-science-review-footer slider-footer">
+                              <span class="science-review-name">{{ block.settings.author_name }}</span>
+                              <span class="science-review-institute">{{ block.settings.designation }}</span>
+                              <div class="ice-slider-pagination-btn">
+                                  <button class="ice-prev-slide"></button>
+                                  <button class="ice-next-slide"></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{%  schema  %}  
+{
+  "name":"<> Reviews Slider 2",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Info"
+        },
+        {
+            "type": "text",
+            "id": "description",
+            "label": "Description Here",
+            "default":"IceBeanie should not only be in every household freezer, but every sports locker room across the country."
+        },
+        {
+            "type": "text",
+            "id": "author_name",
+            "label": "Author Name",
+            "default": "Dr. Erlingsson MD MPH"
+        },
+        {
+            "type": "text",
+            "id": "designation",
+            "label": "Designation",
+            "default": "Harvard Medical"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Reviews Slider 2"
+    }
+  ]
+}
+{% endschema %}
