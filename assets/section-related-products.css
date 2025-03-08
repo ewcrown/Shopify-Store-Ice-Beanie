@@ -3,5 +3,13 @@
 }
 
 .related-products__heading {
-  margin: 0 0 3rem;
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  margin-bottom: 70px;
+  text-transform: capitalize;
 }

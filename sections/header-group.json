@@ -11,33 +11,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "cca43d79-28a2-4c57-8588-9b84401b1e43": {
-          "type": "announcement",
-          "settings": {
-            "text": "BLACK FRIDAY 25% OFF ICEBEANIE | CODE: BLACKFRIDAY",
-            "link": "shopify://products/icebeanie-2-0"
-          }
-        }
-      },
-      "block_order": [
-        "cca43d79-28a2-4c57-8588-9b84401b1e43"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "accent-2",
-        "show_line_separator": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5
-      }
-    },
-    "header": {
-      "type": "header",
-      "disabled": true,
-      "settings": {}
-    },
     "ew_header_UQnhzX": {
       "type": "ew-header",
       "settings": {
@@ -49,8 +22,6 @@
     }
   },
   "order": [
-    "announcement-bar",
-    "header",
     "ew_header_UQnhzX"
   ]
 }

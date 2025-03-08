@@ -1,0 +1,103 @@
+{{ 'ew-product.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+
+<section class="ew-product-section" id="ew-product-section">
+  <div class="ew-product-row">
+    <div class="page-widith">
+      <div class="ew-product-wrap">
+        <div class="ew-product-gallery">
+          {% render 'ew-product-gallery-slider' %}
+          {% render 'ew-product-info' %}
+        </div>
+        {% render 'ew-product-details' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Product Page",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "#1 Best Seller"
+    },
+    {
+      "type": "text",
+      "id": "reviews_text",
+      "label": "Reviews Text",
+      "default": "100,000+ Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Feel Your Migraine Pain Melt Away"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "A Shopify-hosted desktop video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "A Shopify-hosted mobile video"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Relief Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Product Page"
+    }
+  ],
+}
+{% endschema %}

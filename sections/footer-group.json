@@ -92,15 +92,9 @@
       "settings": {
         "footer_logo": "shopify://shop_images/IceBeanie_logo_2_1.png"
       }
-    },
-    "footer": {
-      "type": "footer",
-      "disabled": true,
-      "settings": {}
     }
   },
   "order": [
-    "ew_footer_pCkaxk",
-    "footer"
+    "ew_footer_pCkaxk"
   ]
 }

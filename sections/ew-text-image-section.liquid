@@ -1,0 +1,99 @@
+{{ 'ew-text-image-section.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+
+<section class="ew-text-image-section ew-text-image-section-{{ section.id }}" id="ew-text-image-section">
+  <div class="ew-text-image-row">
+    <div class="page-width">
+      <div class="ew-text-image-wrap">
+        <div class="ew-text-image-left">
+          <h3>{{ s.heading }}</h3>
+          <p>{{ s.description }}</p>
+          <div class="ew-text-image-left-inner">
+            {% if s.button_link != blank %}
+              <a href="{{ s.button_link }}" class="primary-btn">
+                {{ s.button_text }}
+              </a>
+            {% endif %}
+            <div class="ew-text-image-review">
+              {% render 'ew-star-icon' %}
+              <p>{{ s.reviews_text }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ew-text-image-right">
+          {% if s.image != blank %}
+          <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
+            srcset="
+                {{ s.image | image_url: width: 620 }} 620w,
+                {{ s.image | image_url: width: 800 }} 800w,
+                {{ s.image | image_url: width: 1100 }} 1100w,
+                {{ s.image | image_url: width: 1280 }} 1280w"
+            sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ s.heading }}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Text Image",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Don't Forget, We Sell Bundles!"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "For the active athlete, the large family, or even for the individual who likes to keep their head cool all day, our bundles make it easy to keep the migraine pain away."
+    },
+    {
+      "type": "text",
+      "id": "reviews_text",
+      "label": "Reviews Text",
+      "default": "100,000+ Happy Customers"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Relief Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Text Image"
+    }
+  ],
+}
+{% endschema %}
