@@ -1,0 +1,96 @@
+{{ 'ew-header.css' | asset_url | stylesheet_tag }}
+{% assign s = section.settings %}
+<header class="ice-header" id="ice-header">
+  <div class="ice-header-row">
+      <div class="page-width">
+          <div class="ice-page-col">
+              <div class="ice-header-logo">
+                  <a href="/">
+                    {% if s.header_logo != blank %}
+                      <img class="ew-img-fluid" src="{{ s.header_logo | image_url: width: 500 }}" loading="lazy"
+                        srcset="
+                            {{ s.header_logo | image_url: width: 620 }} 620w,
+                            {{ s.header_logo | image_url: width: 800 }} 800w,
+                            {{ s.header_logo | image_url: width: 1100 }} 1100w,
+                            {{ s.header_logo | image_url: width: 1280 }} 1280w"
+                        sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie">
+                      {% endif %}
+                </a>
+              </div>
+
+              <div class="ice-header-menu-content">
+
+                  <nav class="ice-nav-links">
+                      <ul>
+                        {% for link in s.menu.links %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                  </nav>
+
+                  {% if s.button_link != blank  %}
+                  <a href="{{ s.button_link }}" class="primary-btn order-btn">{{ s.button_text }}</a>
+                  {% endif %}
+                  <div class="ice-header-icons">
+                      <span class="ice-header-user-icon ice-header-icon"
+                        ><a href="/cart"> 
+                        {% render 'ew-icon-bag' %}
+                      </a>
+                    </span>
+                      <span class="ice-header-cart-icon ice-header-icon">
+                        <a href="/account"> 
+                        {% render 'ew-icon-user' %}
+                      </a>
+                      </span>
+                  </div>
+              </div>
+              <div class="ice-hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+
+{% schema %}
+{
+  "name": "<> Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_logo",
+      "label": "Logo Here"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "Order Now Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "ORDER NOW"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Header"
+    }
+  ]
+}
+{% endschema %}
