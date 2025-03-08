@@ -1,6 +1,6 @@
 .science-reviews-row {
   padding: 80px 0;
-  background: #E3ECF2;
+  background: linear-gradient(0deg, #E3ECF2 -40.23%, #FFF 90.94%);
 }
 
 .science-reviews-col {
@@ -75,7 +75,7 @@
 }
 
 .science-reviews-col .splide__arrow--next {
-  right: 70rem;
+  right: 80rem;
   cursor: pointer;
 }
 
@@ -104,7 +104,7 @@
   opacity: 0.2;
   line-height: normal;
   text-transform: uppercase;
-  top: 50%;
+  top: 42%;
 }
 
 .ice-science-review-footer {

@@ -1,5 +1,7 @@
 .science-page-banner-row {
-  padding: 70px 0;
+  padding: 70px 0 0;
+  background: linear-gradient(180deg, #ECF3F5 0%, #FFF 69.43%);
+mix-blend-mode: multiply;
 }
 
 .science-page-banner-col {
@@ -10,14 +12,15 @@
 .science-page-banner-desc p em {
   color: #4CC3E6;
   font-style: normal;
+  font-size: 28px;
 }
 
 .science-page-banner-desc p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 32px;
-  max-width: 1240px;
+  max-width: 1340px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .science-page-banner-desc span {
@@ -30,12 +33,12 @@
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 64px;
+  font-size: 100px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 120px; /* 120% */
   text-transform: capitalize;
-  max-width: 1000px;
+  max-width: 1320px;
   margin: auto;
 }
 

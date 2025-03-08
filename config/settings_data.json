@@ -1,12 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo_width": 70,
-    "favicon": "shopify:\/\/shop_images\/favicon_c5ffcee9-9061-4483-ac55-d4032bc2fb20.png",
+    "favicon": "shopify://shop_images/favicon_c5ffcee9-9061-4483-ac55-d4032bc2fb20.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1600,
+    "page_width": 1700,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -98,7 +107,7 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -117,7 +126,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/icebeanie-logo-registered-p-800_5de3b7d2-b8c1-45a7-8460-810060a0d9df.png",
+    "checkout_logo_image": "shopify://shop_images/icebeanie-logo-registered-p-800_5de3b7d2-b8c1-45a7-8460-810060a0d9df.png",
     "checkout_body_background_color": "#ffffff",
     "checkout_sidebar_background_color": "#f5f5f5",
     "checkout_accent_color": "#4094e3",
@@ -139,17 +148,17 @@
     "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "9176918445405492557": {
-        "type": "shopify:\/\/apps\/one-tree-planted-at-checkout\/blocks\/index\/1cbac389-d687-4afb-9e8a-26b6535fa1c2",
+        "type": "shopify://apps/one-tree-planted-at-checkout/blocks/index/1cbac389-d687-4afb-9e8a-26b6535fa1c2",
         "disabled": false,
         "settings": {}
       },
       "11068332061543699368": {
-        "type": "shopify:\/\/apps\/booster-page-speed-optimizer\/blocks\/app-embed\/d920faf3-7c60-423a-9636-22618b5561b5",
+        "type": "shopify://apps/booster-page-speed-optimizer/blocks/app-embed/d920faf3-7c60-423a-9636-22618b5561b5",
         "disabled": false,
         "settings": {}
       }
@@ -368,7 +377,7 @@
       "sale_badge_color_scheme": "accent-2",
       "sold_out_badge_color_scheme": "inverse",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

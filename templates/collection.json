@@ -1,9 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ew_collection_banner_JyCymp": {
       "type": "ew-collection-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/photo-collage.png_1.png"
+        "image": "shopify://shop_images/photo-collage.png_1.png"
       }
     },
     "ew_collection_details_Fpntqj": {
@@ -12,21 +21,21 @@
         "block_D4cFmG": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/image_35.png",
+            "icon": "shopify://shop_images/image_35.png",
             "title": "Compression Cold Therapy"
           }
         },
         "block_FgD4cR": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/image.png",
+            "icon": "shopify://shop_images/image.png",
             "title": "Form Fitting Design"
           }
         },
         "block_6TQzdi": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/image_1.png",
+            "icon": "shopify://shop_images/image_1.png",
             "title": "Full HeadCoverage"
           }
         }
@@ -83,7 +92,13 @@
     },
     "ew_reviews_section_LVUp6h": {
       "type": "ew-reviews-section",
-      "settings": {}
+      "settings": {
+        "heading": "Real Reviews From Real Customers",
+        "reviews_text": "5 / 5 1,438 Reviews",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "button_link": "#",
+        "button_text": "5-star review"
+      }
     },
     "ew_testimonial_slider_9wyiAe": {
       "type": "ew-testimonial-slider",

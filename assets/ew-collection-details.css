@@ -2,10 +2,11 @@
     color: #001C43;
     text-align: center;
     font-family: Poppins;
-    font-size: 42px;
+    font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 80px;
+    /* 125% */
     text-transform: capitalize;
 }
 
@@ -13,12 +14,13 @@
     color: #001C43;
     text-align: center;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 50px;
     /* 156.25% */
     text-transform: capitalize;
+    opacity: 0.7;
     margin-top: 30px;
     margin-bottom: 0px;
     max-width: 1470px;
@@ -26,11 +28,16 @@
 
 .ew-collection-details-columns {
     margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .ew-collection-details-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.ew-collection-details-card:not(:last-of-type) {
+    border-right: 1px solid #AEB5BA;
 }
 
 .ew-collection-details-card {
@@ -80,6 +87,7 @@
     .ew-collection-details-title-wrap p {
         font-size: 16px;
         margin-top: 10px;
+        line-height: normal;
     }
 
     .ew-collection-details-card-icon img {
@@ -89,5 +97,10 @@
 
     .ew-collection-details-card-title h5 {
         font-size: 16px;
+    }
+
+    .ew-collection-details-card:not(:last-of-type) {
+        border-right: 0;
+        border-bottom: 1px solid #AEB5BA;
     }
 }

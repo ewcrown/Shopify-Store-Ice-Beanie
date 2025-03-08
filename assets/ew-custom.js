@@ -14,8 +14,9 @@ sliders.forEach(slider => {
           gap: "1.5rem",
         },
         992: {
-          padding: "5rem",
+          padding: "1rem",
           gap: "1rem",
+          perPage: 1
         }
       },
     }).mount();

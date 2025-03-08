@@ -1,5 +1,5 @@
 .ice-accordion-row {
-  padding: 40px 0;
+  padding: 90px 0;
 }
 
 .ice-accordion-col {
@@ -10,7 +10,7 @@
 }
 
 .ice-accordion-content-wrap img {
-  width: 50px;
+  width: 80px;
 
 }
 
@@ -23,10 +23,11 @@
 .ice-accordion-title {
   color: #001C43;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 38px;
+  margin: 0;
   text-transform: capitalize;
 }
 
@@ -44,9 +45,15 @@ details[open] .ice-accordion-icon svg {
 }
 
 .ice-accordion-content-desc p {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  line-height: 34px;
+  /* 154.545% */
+  text-transform: capitalize;
+  opacity: 0.8;
 }
 
 .ice-accordion-content summary {
@@ -74,13 +81,14 @@ details[open] .ice-accordion-icon svg {
 .ice-accordion-heading {
   color: #001C43;
   font-family: Poppins;
-  font-size: 52px;
+  font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 80px;
+  /* 125% */
   text-transform: capitalize;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
