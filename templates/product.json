@@ -11,8 +11,43 @@
   "sections": {
     "ew_product_YgKXdH": {
       "type": "ew-product",
+      "blocks": {
+        "satisfactors_GU9jbi": {
+          "type": "satisfactors",
+          "settings": {
+            "icon": "shopify://shop_images/Vector.png",
+            "heading": "Fast Shipping"
+          }
+        },
+        "satisfactors_QpYPGM": {
+          "type": "satisfactors",
+          "settings": {
+            "icon": "shopify://shop_images/Group.png",
+            "heading": "30 Day Satisfaction Guarantee"
+          }
+        },
+        "satisfactors_YT8kFJ": {
+          "type": "satisfactors",
+          "settings": {
+            "icon": "shopify://shop_images/Screenshot_2025-03-05_at_7.52.58_PM.png",
+            "heading": "24/7 Support"
+          }
+        },
+        "satisfactors_Fp7A8N": {
+          "type": "satisfactors",
+          "settings": {
+            "icon": "shopify://shop_images/icon-inCA_1.png",
+            "heading": "Designed inCalifornia USA"
+          }
+        }
+      },
+      "block_order": [
+        "satisfactors_GU9jbi",
+        "satisfactors_QpYPGM",
+        "satisfactors_YT8kFJ",
+        "satisfactors_Fp7A8N"
+      ],
       "settings": {
-        "subheading": "#1 Best Seller",
         "reviews_text": "100,000+ Happy Customers",
         "heading": "Feel Your Migraine Pain Melt Away",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",

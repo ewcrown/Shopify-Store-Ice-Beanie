@@ -7,8 +7,8 @@
 }
 
 .ice-testimoinal-col .splide__track {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .ice-testimoinal-content {
@@ -24,10 +24,10 @@
 .ice-testimoinal-wrap {
   display: flex;
   gap: 40px;
-  background: #fff;
-  border-radius: 16px;
   padding: 40px;
-  box-shadow: 5px 0px 30px 10px #00000014;
+  border-radius: 16px;
+background: #FFF;
+box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
 }
 
 .ice-testimoinal-footer {
@@ -53,8 +53,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px;
-  /* 93.75% */
+  line-height: 30px; /* 93.75% */
 }
 
 .ice-testimoinal-desc {
@@ -63,8 +62,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
-  /* 160% */
+  line-height: 32px; /* 160% */opacity: 0.8;
 }
 
 @media (max-width: 767px) {

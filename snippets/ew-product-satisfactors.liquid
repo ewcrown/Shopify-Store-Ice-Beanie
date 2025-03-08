@@ -1,0 +1,20 @@
+<div class="ew-product-satisfactors">
+  <ul>
+    {% for block in section.blocks %}
+      {% if block.type == 'satisfactors' %}
+        <li>
+      {% if block.settings.icon != blank %}
+      <img class="ew-img-fluid" src="{{ block.settings.icon | image_url: width: 500 }}" loading="lazy"
+        srcset="
+            {{ block.settings.icon | image_url: width: 620 }} 620w,
+            {{ block.settings.icon | image_url: width: 800 }} 800w,
+            {{ block.settings.icon | image_url: width: 1100 }} 1100w,
+            {{ block.settings.icon | image_url: width: 1280 }} 1280w"
+        sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ block.settings.heading }}">
+      {% endif %}
+        <span>{{ block.settings.heading }}</span>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

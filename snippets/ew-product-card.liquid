@@ -1,6 +1,7 @@
 <div class="ew-product-card {% if border != false %}ew-product-card-box{% endif %}">
     <a href="{{ card_product.url }}" class="ew-product-card-link">
         <div class="ew-product-card-featured-image">
+            {% if card_product.featured_image != blank %}
             <img class="ew-img-fluid" src="{{ card_product.featured_image | image_url: width: 500 }}" loading="lazy"
                 srcset="
                     {{ card_product.featured_image | image_url: width: 620 }} 620w,
@@ -8,10 +9,11 @@
                     {{ card_product.featured_image | image_url: width: 1100 }} 1100w,
                     {{ card_product.featured_image | image_url: width: 1280 }} 1280w"
                 sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ card_product.title }}">
+            {% endif %}
         </div>
         <div class="ew-product-card-info">
             <h3 class="ew-product-card-title">{{ card_product.title }}</h3>
-            <div class="ew-product-card-description">{{ card_product.metafields.product_info.short_description }}</div>
+            <div class="ew-product-card-description">{{ card_product.metafields.product_info.short_description | truncate: 200 | strip_html }}</div>
             <div class="ew-product-card-inner-info">
                 <div class="ew-product-card-inner-price">
                     {% render 'price', product: card_product %}

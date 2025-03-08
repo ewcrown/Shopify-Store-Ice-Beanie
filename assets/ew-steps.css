@@ -20,8 +20,8 @@
 }
 
 .ice-num-cards-row .ice-card img {
-width: 300px;
-margin: auto;
+  width: 300px;
+  margin: 0 auto 10px;
 }
 
 .ice-num-cards-row .ice-card-wrapper .ice-card:nth-child(2)::before {
@@ -34,7 +34,7 @@ margin: auto;
 }
 
 .ice-num-cards-row .ice-card-wrapper {
-margin: 0;
+  margin: 0;
 }
 
 .ice-num-cards-heading {
@@ -44,11 +44,13 @@ margin: 0;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px; /* 125% */
+  line-height: 80px;
+  /* 125% */
   text-transform: capitalize;
 }
 
 @media (max-width: 767px) {
+
   .ice-num-cards-row .ice-card-wrapper .ice-card:first-child::before,
   .ice-num-cards-row .ice-card-wrapper .ice-card:nth-child(2)::before {
     display: none;

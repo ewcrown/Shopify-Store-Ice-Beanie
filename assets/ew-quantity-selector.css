@@ -1,0 +1,38 @@
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 100px;
+}
+
+.quantity-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color 0.2s;
+}
+
+.quantity-btn:hover {
+  color: #34495e;
+}
+
+.quantity-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.minus:disabled {
+  color: #bdc3c7;
+  cursor: not-allowed;
+}

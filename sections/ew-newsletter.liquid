@@ -3,7 +3,7 @@
 <section class="ice-newsletter" id="ice-newsletter">
   <div class="ice-newsletter-row">
       <div class="page-width">
-          <div class="ice-newsletter-col flex align-items-center justify-content-center">
+          <div class="ice-newsletter-col">
               {% if s.title != blank %}
                 <div class="ice-newsletter-heading">
                     <h4>{{ s.title }}</h4>
@@ -29,7 +29,7 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
+                    placeholder="Enter your email"
                     required
                   >
                   <button type="submit" class="primary-btn">SIGN UP</button>

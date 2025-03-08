@@ -1,3 +1,50 @@
 <div class="ew-product-info">
-
+    <div class="ew-product-review">
+      {% render 'ew-star-icon' %}
+      <span>{{  s.reviews_text }}</span>
+    </div>
+    <h3 class="ew-product-title">
+      {{ product.title }}
+    </h3>
+    <div class="ew-product-tags">
+      <ul>
+          <li>
+            {{ s.badge_text }}
+          </li>
+      </ul>
+    </div>
+    <div class="ew-product-price">
+        {% render 'price', product: product %}
+    </div>
+    <div class="ew-product-description">
+      {{ product.description | truncate: 200 | strip_html }}
+    </div>
+  
+    <div class="ew-product-color-radios">
+      <div class="ew-product-color-radio">    
+        {% for option in product.options %}
+          <div class="ew-product-variant ew-product-variant-{{ option | handleize }}">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <div class="ew-product-color-radio-single ew-product-color-radio-single-{{ variant.title | handleize }}">    
+                  <input type="radio" id="{{ variant.title | handleize }}" name="{{ option | handleize }}" value="{{ variant.title }}" {% if forloop.index == 1 %}checked{% endif %} data-variant="{{ variant.id }}">
+                  <label for="{{ variant.title | handleize }}">
+                    <span class="active-ball" style="background:var(--{{ variant.title | handleize }})"></span>
+                    {{ variant.title }}
+                  </label>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+        {% comment %} {% for option in product.options %} {% endcomment %}
+          
+        {% comment %} {% endfor %} {% endcomment %}
+      </div>
+    </div>
+  
+    <div class="ew-product-add-to-cart-block">
+      {% render 'ew-quantity-selector' %}
+      <button type="submit" class="primary-btn" data-featured-add-to-cart data-id="{{  product.selected_or_first_available_variant.id }}">Add To Cart</button>
+    </div>
 </div>

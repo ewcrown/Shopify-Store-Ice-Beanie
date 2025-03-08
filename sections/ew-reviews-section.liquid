@@ -5,18 +5,19 @@
       <div class="page-width">
           <div class="ice-reviews-col">
               <div class="ice-reviews-heading-img justify-content-between">
-                  <h2>Real Reviews From Real Customers</h2>
+                  <h2>{{ s.heading }}</h2>
                   <div class="ice-reviews-content flex align-items-center">
                       {% render 'ew-star-icon' %}
-                      <span>5 / 5 1,438 Reviews</span>
+                      <span>{{ s.reviews_text }}</span>
                   </div>
               </div>
               <div class="ice-reviews-desc-btn justify-content-between">
                   <p>
-                      We believe in creating theraputic products that are better for your body. Every product we
-                      make is thoughtfully created to bring you fast relief and lasting relief.
+                      {{ s.description }}
                   </p>
-                  <a href="#" class="primary-btn">5-star review</a>
+                  {% if s.button_link != blank %}
+                    <a href="{{ s.button_link }}" class="primary-btn">{{ s.button_text }}</a>
+                  {% endif %}
               </div>
           </div>
       </div>
@@ -28,7 +29,45 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real Reviews From Real Customers"
+    },
+    {
+      "type": "text",
+      "id": "reviews_text",
+      "label": "Reviews Text",
+      "default": "5 / 5 1,438 Reviews"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "5-star review"
+    }
+  ],
   "presets": [
     {
       "name": "<> Reviews Section"

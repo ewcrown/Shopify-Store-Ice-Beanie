@@ -118,8 +118,63 @@ sliders.forEach(slider => {
         }
       });
     });
-  }
-  else {
+  } else if (sliderName == "Product Gallery") {
+    const main = new Splide('.ew-product-gallery-splide--main', {
+      type: 'fade',
+      height: '600px',
+      pagination: false,
+      arrows: true,
+      autoplay: true,
+      interval: 5000,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      keyboard: true,
+      mediaQuery: 'min',
+      breakpoints: {
+        768: {
+          height: '600px'
+        },
+        0: {
+          height: '300px'
+        }
+      }
+    });
+    const thumbnails = new Splide('.ew-product-gallery-splide--thumbnail', {
+      rewind: true,
+      direction: 'ttb',
+      height: '400px',
+      gap: 10,
+      pagination: false,
+      arrows: false,
+      isNavigation: true,
+      mediaQuery: 'min',
+      breakpoints: {
+        768: {
+          direction: 'ttb',
+          height: '400px'
+        },
+        0: {
+          direction: 'ltr',
+          height: 'auto'
+        }
+      }
+    });
+    main.mount();
+    thumbnails.mount();
+    main.sync(thumbnails);
+    const thumbnailSlides = document.querySelectorAll('.ew-product-gallery-thumbnail-slide');
+    thumbnailSlides.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        main.go(index);
+      });
+    });
+    main.on('move', (newIndex) => {
+      thumbnailSlides.forEach((thumbnail, index) => {
+        thumbnail.classList.toggle('is-active', index === newIndex);
+      });
+    });
+    thumbnailSlides[0].classList.add('is-active');
+  } else {
     new Splide(slider, {
       type: 'loop',
       perPage: 3,
@@ -138,11 +193,7 @@ sliders.forEach(slider => {
   }
 });
 
-
-
 // Header
-
-
 const hamburger = document.querySelector('.ice-hamburger');
 const navLinks = document.querySelector('.ice-nav-links');
 
@@ -157,3 +208,25 @@ document.querySelectorAll('.ice-nav-links a')?.forEach(link => {
     navLinks.classList.remove('active');
   });
 });
+
+// Quantity Selector
+const quantitySelector = document.querySelector('.quantity-selector')
+const minusBtn = document.querySelector('.minus');
+const plusBtn = document.querySelector('.plus');
+const quantityValue = document.querySelector('.quantity-value');
+if (quantitySelector) {
+  let quantity = parseInt(quantityValue.textContent);
+  minusBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityValue.textContent = quantity;
+    }
+    minusBtn.disabled = quantity <= 1;
+  });
+  plusBtn.addEventListener('click', () => {
+    quantity++;
+    quantityValue.textContent = quantity;
+    minusBtn.disabled = false;
+  });
+  minusBtn.disabled = quantity <= 1;
+}

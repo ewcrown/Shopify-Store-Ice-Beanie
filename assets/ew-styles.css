@@ -1,42 +1,55 @@
+* {
+  font-family: "Poppins";
+}
+
 .ew-img-fluid {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 #MainContent {
-    margin-top: 100px;
+  margin-top: 100px;
+}
+
+.primary-btn:hover {
+  background: #0088cc;
 }
 
 .primary-btn {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 40px;
-    color: #FFFFFF;
-    background: #4194E3;
-    border-radius: 10px;
-    padding: 15px 40px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  background: #4194E3;
+  border-radius: 10px;
+  padding: 15px 40px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 125% */
+  text-transform: uppercase;
 }
 
 .ew-desktop-hide {
-    display: none;
+  display: none;
 }
 
 @media(max-width:767px) {
-    .primary-btn {
-        font-size: 18px;
-        padding: 15px 30px;
-        line-height: normal;
-    }
+  .primary-btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    line-height: normal;
+  }
 
-    .ew-desktop-hide {
-        display: block;
-    }
+  .ew-desktop-hide {
+    display: block;
+  }
 
-    .ew-mobile-hide {
-        display: none;
-    }
+  .ew-mobile-hide {
+    display: none;
+  }
 }

@@ -1,3 +1,262 @@
+:root {
+  --blue: #4194E3;
+  --black: #000000;
+}
+
 .ew-product-row {
   padding: 60px 0;
+}
+
+.ew-product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  width: 100%;
+}
+
+.ew-product-content .ew-product-details-tab p {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.26px;
+  margin-bottom: 15px;
+}
+
+.ew-product-content .ew-product-details-tab h2 {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.ew-product-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-top: 70px;
+}
+
+.ew-product-content-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ew-product-satisfactors {
+  position: absolute;
+  right: 0;
+  width: 200px;
+}
+
+.ew-product-satisfactors ul li span {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 125% */
+}
+
+.ew-product-satisfactors ul li img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ew-product-satisfactors ul li:not(:first-of-type) {
+  border-top: 1px solid #C4D4D9;
+}
+
+.ew-product-satisfactors ul li {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.ew-product-satisfactors ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #C4D4D9;
+  background: #F3F9FB;
+}
+
+.ew-product-wrap {
+  padding-right: 100px;
+}
+
+.ew-product-review {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ew-product-review svg {
+  width: 130px;
+}
+
+.ew-product-review span {
+  color: #003D6D;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-title {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.ew-product-tags ul li {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: #B7EFFF;
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-tags {
+  margin-bottom: 20px;
+}
+
+.ew-product-tags ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ew-product-price .price-item--sale {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-info .ew-product-price .price-item--regular {
+  color: #708999;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: strikethrough;
+  text-transform: capitalize;
+}
+
+.ew-product-price {
+  margin-bottom: 20px;
+}
+
+.ew-product-description {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: lowercase;
+}
+
+.ew-product-variant {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ew-product-color-radio-single input:checked+label {
+  border: 1px solid #001C43;
+  background: #DFF3FF;
+  color: #001C43;
+  opacity: 1;
+}
+
+.ew-product-color-radio-single input {
+  display: none;
+}
+
+.ew-product-color-radio-single input:checked+label .active-ball {
+  display: inline-block !important;
+}
+
+.ew-product-color-radio-single label .active-ball {
+  display: none;
+  right: 17%;
+  top: 18px;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ew-product-color-radio-single label::after {
+  content: '';
+  background: #F6F6F6;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ew-product-color-radio-single label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 170px;
+  position: relative;
+  padding: 14px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #001C43;
+  opacity: 0.5;
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.ew-product-color-radios {
+  padding: 42px 0;
+}
+
+.ew-product-add-to-cart-block {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }

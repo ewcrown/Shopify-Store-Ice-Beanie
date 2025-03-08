@@ -22,12 +22,13 @@
 
 
 .ice-banner-img::before {
+  opacity: 0.7;
   content: "";
-  background: linear-gradient(to right, #054A64, #0076A9);
+  background: #002d45;
+  mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: .5;
 }
 
 .ice-banner-subHEading {
@@ -73,12 +74,13 @@
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 42px;
   text-transform: lowercase;
 }
 
 .ice-banner-btn {
   margin-top: 52px;
+  font-size: 26px;
 }
 
 .ice-banner-img {

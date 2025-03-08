@@ -7,14 +7,14 @@
   color: #001C43;
 }
 
-.ice-contact-title {
+.ice-contact-title p {
   color: #001C43;
   text-align: center;
   font-family: Poppins;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 70px; /* 145.833% */
   text-transform: capitalize;
 }
 
@@ -44,9 +44,13 @@
 }
 
 .ice-contact-content img {
-  width: auto;
+  width: 103px;
 }
 
+.form-input::placeholder {
+  color: #001C43;
+  opacity: 0.8;
+}
 .form-input {
   border: 1px solid #7F8387;
   padding: 20px;
@@ -87,6 +91,8 @@
 
 .ice-contact-form-btn .primary-btn {
   width: 552px;
+  text-transform: capitalize;
+  font-size: 28px;
 }
 
 .form-field-message {
@@ -100,6 +106,7 @@
 @media (max-width: 767px) {
   .ice-contact-form-btn .primary-btn {
     width: 100%;
+    font-size: 20px;
   }
 
   .ice-contact-desc {
@@ -130,7 +137,7 @@
     padding: 10px;
   }
 
-  .ice-contact-title {
+  .ice-contact-title p{
     font-size: 30px;
     line-height: 32px;
     margin-bottom: 10px;

@@ -28,9 +28,15 @@
 }
 
 .ice-reviews-desc-btn p {
-  font-weight: 400;
+  color: #001C43;
+  font-family: Poppins;
   font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 40px;
+  /* 166.667% */
+  text-transform: lowercase;
+  opacity: 0.8;
 }
 
 .ice-reviews-heading-img>h2 {
@@ -57,7 +63,8 @@
 }
 
 .ice-reviews-desc-btn a {
-  max-width: 300px;
+  max-width: 350px;
+  line-height: 42px;
 }
 
 @media screen and (max-width: 767px) {

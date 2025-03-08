@@ -3,13 +3,24 @@
 
 <section class="ew-product-section" id="ew-product-section">
   <div class="ew-product-row">
-    <div class="page-widith">
+    {% render 'ew-product-satisfactors' %}
+    <div class="page-width">
       <div class="ew-product-wrap">
         <div class="ew-product-gallery">
-          {% render 'ew-product-gallery-slider' %}
-          {% render 'ew-product-info' %}
+          {% 
+            render 'ew-product-gallery-slider'
+            product: product,
+          %}
+          {% 
+            render 'ew-product-info',
+            product: product,
+            s: section.settings
+          %}
         </div>
-        {% render 'ew-product-details' %}
+        {% 
+          render 'ew-product-details'
+          product: product
+        %}
       </div>
     </div>
   </div>
@@ -28,15 +39,15 @@
     },
     {
       "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "#1 Best Seller"
+      "id": "reviews_text",
+      "label": "Reviews Text",
+      "default": "1015 Reviews"
     },
     {
       "type": "text",
-      "id": "reviews_text",
-      "label": "Reviews Text",
-      "default": "100,000+ Happy Customers"
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "#1 Best Seller"
     },
     {
       "type": "text",
@@ -66,20 +77,6 @@
     },
     {
       "type": "header",
-      "content": "Video"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "A Shopify-hosted desktop video"
-    },
-    {
-      "type": "video",
-      "id": "mobile_video",
-      "label": "A Shopify-hosted mobile video"
-    },
-    {
-      "type": "header",
       "content": "Button"
     },
     {
@@ -92,6 +89,29 @@
       "id": "button_text",
       "label": "Button Text",
       "default": "Get Relief Now"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Satisfactors",
+      "type": "satisfactors",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Here"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading Here",
+          "default": "Fast Shipping"
+        }
+      ]
     }
   ],
   "presets": [

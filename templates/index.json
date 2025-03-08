@@ -373,7 +373,13 @@
     },
     "ew_reviews_section_LVUp6h": {
       "type": "ew-reviews-section",
-      "settings": {}
+      "settings": {
+        "heading": "Real Reviews From Real Customers",
+        "reviews_text": "5 / 5 1,438 Reviews",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "button_link": "#",
+        "button_text": "5-star review"
+      }
     },
     "ew_testimonial_slider_9wyiAe": {
       "type": "ew-testimonial-slider",
