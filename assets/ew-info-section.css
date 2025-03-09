@@ -96,6 +96,9 @@
   right: 7%;
   transform: translate(50%, -50%);
 }
+.ice-image-info-wrapper img {
+  margin: auto;
+}
 
 @media(max-width: 767px) {
 
@@ -167,4 +170,29 @@
     background-size: contain !important;
   }
 
+}
+
+@media(min-width:1200px) {
+
+
+  .ice-icon-0 {
+    top: -75%;
+  }
+
+  .ice-icon-4,
+  .ice-icon-5 {
+    top: -10%;
+  }
+
+  .ice-icon-6 {
+    bottom: -50%;
+  }
+
+  .ice-icon-3 {
+    bottom: -20%;
+  }
+
+  .ice-image-info-col {
+    margin-bottom: 60px;
+  }
 }
