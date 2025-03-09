@@ -5,7 +5,7 @@
       <div class="page-width">
           <div class="ice-splide-container-col">
               <div class="ice-splide-container-images">
-                  <div class="splide" id="image-slider">
+                  <div class="splide" id="image-slider" data-name="Reviews Slider">
                       <div class="splide__track">
                           <div class="splide__list">
                             {% for block in section.blocks %}
@@ -26,7 +26,7 @@
 
               <div class="ice-content-container">
                 {% for block in section.blocks %}
-                  <div class="ice-slide-content {% if forloop.index == 1 %}active{% endif %}" data-slide="{{ forloop.index }}">
+                  <div class="ice-slide-content {% if forloop.index == 1 %}active{% endif %}" data-slide="{{ forloop.index | minus: 1 }}">
                       <div class="ice-science-review-content">
                           <div class="ice-science-review-content-wrap">
                               {% render 'ew-icon-quotes' %}

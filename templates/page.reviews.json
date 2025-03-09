@@ -54,7 +54,7 @@
         "card_DjrEjg": {
           "type": "card",
           "settings": {
-            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "description": "1 IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
             "author_name": "Dr. Erlingsson MD MPH",
             "designation": "Harvard Medical",
             "author_image": "shopify://shop_images/image_10.png"
@@ -63,7 +63,7 @@
         "card_YxPXFN": {
           "type": "card",
           "settings": {
-            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "description": "2 IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
             "author_name": "Dr. Erlingsson MD MPH",
             "designation": "Harvard Medical",
             "author_image": "shopify://shop_images/image_00da9780-37e9-46fd-8572-e45d6ff35a2c.png"
@@ -72,7 +72,7 @@
         "card_a3NXzJ": {
           "type": "card",
           "settings": {
-            "description": "IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
+            "description": "3 IceBeanie should not only be in every household freezer, but every sports locker room across the country.",
             "author_name": "Dr. Erlingsson MD MPH",
             "designation": "Harvard Medical",
             "author_image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png"
@@ -84,9 +84,7 @@
         "card_YxPXFN",
         "card_a3NXzJ"
       ],
-      "settings": {
-        "reviews_heading": ""
-      }
+      "settings": {}
     },
     "reviews-top-section": {
       "type": "reviews-top-section",
@@ -347,7 +345,13 @@
     },
     "ew_reviews_section_LVUp6h": {
       "type": "ew-reviews-section",
-      "settings": {}
+      "settings": {
+        "heading": "Real Reviews From Real Customers",
+        "reviews_text": "5 / 5 1,438 Reviews",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "button_link": "",
+        "button_text": "5-star review"
+      }
     },
     "ew_testimonial_slider_9wyiAe": {
       "type": "ew-testimonial-slider",

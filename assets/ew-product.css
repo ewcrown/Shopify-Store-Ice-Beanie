@@ -204,6 +204,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .ew-product-color-radio-single input:checked+label {

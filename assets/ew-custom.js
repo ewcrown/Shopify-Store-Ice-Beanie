@@ -21,16 +21,11 @@ sliders.forEach(slider => {
       },
     }).mount();
   } else if (sliderName == "Reviews Slider") {
-    new Splide(slider, {
-      type: "loop",
-      perPage: 1,
-      pagination: false,
-      arrows: true,
-    }).mount();
-
+    
     const initialContent = document.querySelector('.ice-slide-content[data-slide="0"]');
     if (initialContent) {
       initialContent.classList.add('active');
+      initialContent.querySelector('.ice-prev-slide').classList.add('disabled')
     }
     const imageSlider = document.querySelector("#image-slider")
 
@@ -40,7 +35,7 @@ sliders.forEach(slider => {
         perPage: 2,
         focus: 'right',
         direction: 'rtl',
-        gap: '1rem',
+        gap: '2rem',
         pagination: false,
         breakpoints: {
           767: {
@@ -54,6 +49,8 @@ sliders.forEach(slider => {
       reviewCustomSlider.on('active', function (slide) {
         document.querySelectorAll('.ice-slide-content').forEach(content => {
           content.classList.remove('active');
+          content.querySelector('.ice-prev-slide').classList.remove('disabled');
+          content.querySelector('.ice-next-slide').classList.remove('disabled');
         });
 
         const currentIndex = slide.index;
@@ -75,6 +72,7 @@ sliders.forEach(slider => {
         const activeContent = document.querySelector('.ice-slide-content[data-slide="0"]');
         if (activeContent && !activeContent.classList.contains('active')) {
           activeContent.classList.add('active');
+          activeContent.querySelector('.ice-prev-slide').classList.add('disabled')
         }
       });
 
