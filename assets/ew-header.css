@@ -201,4 +201,7 @@
     width: 20px;
   }
 
+  #ice-header .ice-nav-links ul li a {
+    color: #000 !important;
+  }
 }
