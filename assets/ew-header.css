@@ -91,6 +91,22 @@
   transition: all 0.3s ease;
 }
 
+.ew-sticky-header {
+  background: #fff !important;
+}
+
+.ew-sticky-header .ice-nav-links ul li a {
+  color: #001C43 !important;
+}
+
+.ew-sticky-header .ew-white-logo {
+  display: none;
+}
+
+.ew-sticky-header .ew-colored-logo {
+  display: block;
+}
+
 
 @media (max-width: 768px) {
 

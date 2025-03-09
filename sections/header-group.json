@@ -15,6 +15,7 @@
       "type": "ew-header",
       "settings": {
         "header_logo": "shopify://shop_images/IceBeanie_logo_2_1_328778c5-fd53-435a-b449-fb897e5c1522.png",
+        "white_logo": "shopify://shop_images/icebeanie-logo-white_1.png",
         "menu": "main-menu",
         "button_link": "#",
         "button_text": "ORDER NOW"

@@ -21,13 +21,19 @@
 .ice-testimoinal-wrap img {
   object-fit: cover;
 }
+
+.ice-testimoinal-wrap>img {
+  height: 250px;
+  width: 210px;
+}
+
 .ice-testimoinal-wrap {
   display: flex;
   gap: 40px;
   padding: 40px;
   border-radius: 16px;
-background: #FFF;
-box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
+  background: #FFF;
+  box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
 }
 
 .ice-testimoinal-footer {
@@ -53,7 +59,8 @@ box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px; /* 93.75% */
+  line-height: 30px;
+  margin: 0 0 20px;
 }
 
 .ice-testimoinal-desc {
@@ -62,7 +69,8 @@ box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 160% */opacity: 0.8;
+  line-height: 32px; /* 160% */
+  opacity: 0.8;
 }
 
 @media (max-width: 767px) {
@@ -80,6 +88,7 @@ box-shadow: 20px 15px 40px 0px rgba(0, 0, 0, 0.08);
     gap: 20px;
     padding: 20px;
   }
+
   .ice-testimoinal-desc {
     font-size: 16px;
   }

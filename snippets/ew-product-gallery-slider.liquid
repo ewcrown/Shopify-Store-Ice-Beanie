@@ -1,51 +1,5 @@
 {{ 'ew-product-gallery-slider.css' | asset_url | stylesheet_tag }}
 
-{% comment %} <div class="ew-product-gallery-slider">
-
-
-  <div class="splide__container">
-
-
-    <div class="splide thumbnail-slider" id="thumbnail-slider">
-      <div class="splide__track">
-          <ul class="splide__list">
-            {% for media in product.media %}
-              <li class="splide__slide">
-                <img class="ew-img-fluid" src="{{ media.preview_image | image_url: width: 500 }}" loading="lazy"
-                  srcset="
-                      {{ media.preview_image | image_url: width: 620 }} 620w,
-                      {{ media.preview_image | image_url: width: 800 }} 800w,
-                      {{ media.preview_image | image_url: width: 1100 }} 1100w,
-                      {{ media.preview_image | image_url: width: 1280 }} 1280w"
-                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie {{ forloop.index }}">
-              </li>
-            {% endfor %}
-          </ul>
-      </div>
-  </div>
-
-    <div class="splide main-slider" data-name="Product Gallery" id="main-slider">
-        <div class="splide__track">
-            <ul class="splide__list">
-              {% for media in product.media %}
-                <li class="splide__slide">
-                  <img class="ew-img-fluid" src="{{ media.preview_image | image_url: width: 500 }}" loading="lazy"
-                    srcset="
-                        {{ media.preview_image | image_url: width: 620 }} 620w,
-                        {{ media.preview_image | image_url: width: 800 }} 800w,
-                        {{ media.preview_image | image_url: width: 1100 }} 1100w,
-                        {{ media.preview_image | image_url: width: 1280 }} 1280w"
-                    sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie {{ forloop.index }}">
-                </li>
-              {% endfor %}
-            </ul>
-        </div>
-    </div>
-  </div>
-</div> {% endcomment %}
-
-
-
 <div class="gallery-container">
   <!-- Thumbnail Slider -->
   <div class="splide ew-product-gallery-splide--thumbnail" role="region" aria-label="Thumbnail navigation">

@@ -1,5 +1,28 @@
 {{ 'ew-header.css' | asset_url | stylesheet_tag }}
 {% assign s = section.settings %}
+{% if template.name == 'index' %}
+    {% style %} 
+    .ice-header {
+      background:none;
+      box-shadow:none;
+    }
+    #MainContent {
+      margin-top:0;
+    }
+    .ice-nav-links ul li a {
+      color:#fff !important;
+    }
+    .ew-colored-logo {
+      display:none;
+    }
+    {% endstyle %}
+  {% else %}
+    {% style %} 
+      .ew-white-logo {
+        display:none
+      }
+    {% endstyle %}
+{% endif %}
 <header class="ice-header" id="ice-header">
   <div class="ice-header-row">
       <div class="page-width">
@@ -7,12 +30,21 @@
               <div class="ice-header-logo">
                   <a href="/">
                     {% if s.header_logo != blank %}
-                      <img class="ew-img-fluid" src="{{ s.header_logo | image_url: width: 500 }}" loading="lazy"
+                      <img class="ew-img-fluid ew-colored-logo" src="{{ s.header_logo | image_url: width: 500 }}" loading="lazy"
                         srcset="
                             {{ s.header_logo | image_url: width: 620 }} 620w,
                             {{ s.header_logo | image_url: width: 800 }} 800w,
                             {{ s.header_logo | image_url: width: 1100 }} 1100w,
                             {{ s.header_logo | image_url: width: 1280 }} 1280w"
+                        sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie">
+                      {% endif %}
+                    {% if s.white_logo != blank %}
+                      <img class="ew-img-fluid ew-white-logo" src="{{ s.white_logo | image_url: width: 500 }}" loading="lazy"
+                        srcset="
+                            {{ s.white_logo | image_url: width: 620 }} 620w,
+                            {{ s.white_logo | image_url: width: 800 }} 800w,
+                            {{ s.white_logo | image_url: width: 1100 }} 1100w,
+                            {{ s.white_logo | image_url: width: 1280 }} 1280w"
                         sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Ice Beanie">
                       {% endif %}
                 </a>
@@ -56,6 +88,18 @@
   </div>
 </header>
 
+{% if template.name == 'index' %}
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.ice-header');
+      if (window.scrollY > 100) {
+        header.classList.add('ew-sticky-header');
+      } else {
+        header.classList.remove('ew-sticky-header');
+      }
+    });    
+  </script>
+{% endif %}
 
 {% schema %}
 {
@@ -65,6 +109,11 @@
       "type": "image_picker",
       "id": "header_logo",
       "label": "Logo Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "white_logo",
+      "label": "White Here"
     },
     {
       "type": "link_list",

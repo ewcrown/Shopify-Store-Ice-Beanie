@@ -41,12 +41,13 @@
 
 .ew-product-content-title {
   color: #001C43;
-font-family: Poppins;
-font-size: 62px;
-font-style: normal;
-font-weight: 700;
-line-height: 78px; /* 125.806% */
-text-transform: capitalize;
+  font-family: Poppins;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  /* 125.806% */
+  text-transform: capitalize;
   margin-bottom: 20px;
 }
 
@@ -57,13 +58,14 @@ text-transform: capitalize;
 
 .ew-product-content-tags li {
   color: #001C43;
-text-align: center;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; /* 100% */
-text-transform: capitalize;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 100% */
+  text-transform: capitalize;
   display: inline-block;
   border-radius: 10px;
   background: #B7EFFF;
@@ -73,7 +75,7 @@ text-transform: capitalize;
 .ew-product-content-price span {
   color: #001C43;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
@@ -84,7 +86,7 @@ text-transform: capitalize;
 .ew-product-content-price s {
   color: #708999;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 70px;
@@ -99,10 +101,11 @@ text-transform: capitalize;
 .ew-product-content-description {
   color: #001C43;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 36px;
+  /* 150% */
   text-transform: lowercase;
 }
 
@@ -115,6 +118,7 @@ text-transform: capitalize;
 
 .ew-product-content-radio-single input:checked+label {
   background: #B7EFFF;
+  opacity: 1;
 }
 
 .ew-product-content-radio-single input {
@@ -126,16 +130,17 @@ text-transform: capitalize;
   border-radius: 10px;
   border: 2px solid #001C43;
   padding: 17px;
+  opacity: 0.5;
 }
 
 .ew-product-radio-title {
   color: #001C43;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
-  display: block;
   font-weight: 600;
-  line-height: normal;
+  line-height: 40px;
+  /* 125% */
   text-transform: capitalize;
 }
 
@@ -169,25 +174,32 @@ text-transform: capitalize;
 
 .ew-product-content-color-radios {
   padding: 30px 0px;
-}
-
-.ew-product-content-color-radios {
   display: flex;
   align-items: center;
-  gap: 20px;
-
+  gap: 100px;
 }
 
 .ew-product-content-color-radios>label {
   color: #001C43;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70px;
+  /* 269.231% */
+  text-transform: capitalize;
+}
+
+.ew-product-content-inner .primary-btn {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-right: 40px;
-  /* 269.231% */
-  text-transform: capitalize;
+  text-transform: uppercase;
+  min-width: 347px;
 }
 
 .ew-product-content-color-radio {
@@ -196,8 +208,59 @@ text-transform: capitalize;
   gap: 30px;
 }
 
+.ew-product-content-color-radio-single-blue label {
+  color: var(--Dark-Blue, #4194E3);
+}
+
+.ew-product-content-color-radio-single-black label {
+  fill: #0F0F10;
+  opacity: 0.5;
+}
+
+.ew-product-content-color-radio-single-blue label::before {
+  background: #4194E3;
+  outline: 1px solid #4194E3;
+}
+
+.ew-product-content-color-radio-single-black label::before {
+  background: #000;
+  outline: 1px solid #000;
+}
+
+.ew-product-content-color-radio-single label::before {
+  content: '';
+  border-radius: 50%;
+  outline-offset: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
 .ew-product-content-color-radio-single label {
+  position: relative;
   margin: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  /* 437.5% */
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ew-product-content-inner .primary-btn {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  min-width: 347px;
 }
 
 .ew-product-content-color-radio-single-blue {
@@ -206,6 +269,10 @@ text-transform: capitalize;
 
 .ew-product-content-color-radio-single-black {
   color: #0F0F10;
+}
+
+.ew-product-content-color-radio-single input {
+  display: none;
 }
 
 .ew-product-content-color-radio-single {
@@ -265,6 +332,16 @@ text-transform: capitalize;
 
   .ew-product-content-color-radios>label {
     font-size: 16px;
+    line-height: normal;
     margin-right: 0;
+  }
+
+  .ew-product-content-color-radios {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .ew-product-content-color-radio-single label {
+    line-height: normal;
   }
 }

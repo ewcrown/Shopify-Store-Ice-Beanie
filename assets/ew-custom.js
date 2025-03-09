@@ -4,8 +4,8 @@ sliders.forEach(slider => {
   if (sliderName == 'Testimonial Slider') {
     new Splide(slider, {
       type: "loop",
-      padding: "50rem",
-      gap: "7rem",
+      padding: "60rem",
+      gap: 34,
       pagination: false,
       arrows: false,
       breakpoints: {
@@ -124,7 +124,7 @@ sliders.forEach(slider => {
       type: 'fade',
       height: '600px',
       pagination: false,
-      arrows: true,
+      arrows: false,
       autoplay: true,
       interval: 5000,
       pauseOnHover: true,
@@ -141,18 +141,17 @@ sliders.forEach(slider => {
       }
     });
     const thumbnails = new Splide('.ew-product-gallery-splide--thumbnail', {
-      rewind: true,
       direction: 'ttb',
-      height: '400px',
-      gap: 10,
+      height: '600px',
+      gap: 20,
       pagination: false,
       arrows: false,
-      isNavigation: true,
+      isNavigation: false,
       mediaQuery: 'min',
       breakpoints: {
         768: {
           direction: 'ttb',
-          height: '400px'
+          height: '600px'
         },
         0: {
           direction: 'ltr',

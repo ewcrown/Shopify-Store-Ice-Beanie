@@ -14,10 +14,21 @@
   width: 100%;
 }
 
+.ew-product-content .ew-product-details-tab h4 {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+  /* 146.154% */
+  letter-spacing: -0.26px;
+}
+
 .ew-product-content .ew-product-details-tab p {
   color: #001C43;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.26px;
@@ -259,4 +270,88 @@
   display: flex;
   gap: 15px;
   align-items: center;
+}
+
+.ew-product-add-to-cart-block .primary-btn {
+  width: 100%;
+  height: 80px;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media(max-width:767px) {
+  .ew-product-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .ew-product-satisfactors {
+    display: none;
+  }
+
+  .ew-product-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .ew-product-wrap {
+    padding-right: 0px;
+  }
+
+  .ew-product-content .ew-product-details-tab p {
+    font-size: 16px;
+  }
+
+  .ew-product-content .ew-product-details-tab h2 {
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  .ew-product-add-to-cart-block {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .ew-product-variant {
+    flex-wrap: wrap;
+  }
+
+  .ew-product-color-radios {
+    padding: 24px 0;
+  }
+
+  .ew-product-color-radio-single label {
+    min-width: 100%;
+  }
+
+  .ew-product-color-radio-single label .active-ball {
+    right: 23%;
+  }
+
+  .ew-product-description {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .ew-product-info .ew-product-price .price-item--regular,
+  .ew-product-price .price-item--sale {
+    font-size: 28px;
+  }
+
+  .ew-product-title {
+    font-size: 42px;
+    line-height: 120%;
+  }
+
+  .ew-product-review {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

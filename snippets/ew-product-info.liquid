@@ -27,7 +27,7 @@
             {% for variant in product.variants %}
               {% if variant.available %}
                 <div class="ew-product-color-radio-single ew-product-color-radio-single-{{ variant.title | handleize }}">    
-                  <input type="radio" id="{{ variant.title | handleize }}" name="{{ option | handleize }}" value="{{ variant.title }}" {% if forloop.index == 1 %}checked{% endif %} data-variant="{{ variant.id }}">
+                  <input type="radio" data-cart-input id="{{ variant.title | handleize }}" name="{{ option | handleize }}" value="{{ variant.title }}" {% if forloop.index == 1 %}checked{% endif %} data-variant="{{ variant.id }}">
                   <label for="{{ variant.title | handleize }}">
                     <span class="active-ball" style="background:var(--{{ variant.title | handleize }})"></span>
                     {{ variant.title }}
@@ -45,6 +45,7 @@
   
     <div class="ew-product-add-to-cart-block">
       {% render 'ew-quantity-selector' %}
-      <button type="submit" class="primary-btn" data-featured-add-to-cart data-id="{{  product.selected_or_first_available_variant.id }}">Add To Cart</button>
+      
+      <button  type="submit" class="primary-btn" data-product-add-to-cart data-id="{{  product.selected_or_first_available_variant.id }}">Add To Cart</button>
     </div>
 </div>

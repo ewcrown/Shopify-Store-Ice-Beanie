@@ -1,19 +1,25 @@
 .quantity-selector {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: #EBEBEB;
   padding: 14px 10px;
-  width: 100px;
+  width: 200px;
+  height: 80px;
 }
 
 .quantity-btn {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  /* 100% */
+  text-transform: capitalize;
   background: none;
   border: none;
-  font-size: 18px;
-  font-weight: bold;
-  color: #2c3e50;
   cursor: pointer;
   padding: 0 8px;
   transition: color 0.2s;
@@ -24,15 +30,34 @@
 }
 
 .quantity-value {
-  font-size: 18px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin: 0 10px;
-  min-width: 20px;
-  text-align: center;
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 166.667% */
+  text-transform: capitalize;
 }
 
 .minus:disabled {
   color: #bdc3c7;
   cursor: not-allowed;
+}
+
+@media(max-width:767px) {
+  .quantity-btn {
+    font-size: 22px;
+  }
+
+  .quantity-selector {
+    padding: 14px 10px;
+    width: 145px;
+    height: 60px;
+  }
+
+  .quantity-value {
+    font-size: 17px;
+    line-height: normal;
+  }
 }

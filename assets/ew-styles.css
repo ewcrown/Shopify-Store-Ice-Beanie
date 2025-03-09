@@ -39,10 +39,15 @@
 }
 
 @media(max-width:767px) {
+
+  #MainContent {
+    margin-top: 64px;
+  }
+
   .primary-btn {
-    font-size: 18px;
+    font-size: 18px !important;
     padding: 15px 30px;
-    line-height: normal;
+    line-height: normal !important;
   }
 
   .ew-desktop-hide {
@@ -51,5 +56,20 @@
 
   .ew-mobile-hide {
     display: none;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-grid>.grid__item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .related-products__heading {
+    font-size: 32px !important;
+    line-height: 120% !important;
+    margin-bottom: 20px !important;
   }
 }

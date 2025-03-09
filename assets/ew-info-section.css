@@ -1,5 +1,8 @@
-.ice-image-info-row {
-  background-color: #e8f6ff;
+.ew-3-section-wrap {
+  background-image: url(https://cdn.shopify.com/s/files/1/0254/3170/3629/files/Background.png?v=1741477895);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .ice-image-info-col {
@@ -52,43 +55,43 @@
   text-transform: uppercase;
 }
 
-.ice-icon-1 {
+.ice-icon-0 {
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.ice-icon-2 {
+.ice-icon-1 {
   top: 30%;
   left: -42%;
   transform: translateY(-50%);
 }
 
-.ice-icon-3 {
+.ice-icon-2 {
   top: 30%;
   right: -42%;
   transform: translateY(-50%);
 }
 
-.ice-icon-7 {
+.ice-icon-6 {
   bottom: -5%;
   right: -70%;
   transform: translateY(-50%);
 }
 
-.ice-icon-4 {
+.ice-icon-3 {
   bottom: 13%;
   left: -55%;
   transform: translateX(-50%);
 }
 
-.ice-icon-5 {
+.ice-icon-4 {
   top: -5%;
   left: 7%;
   transform: translate(-50%, -50%);
 }
 
-.ice-icon-6 {
+.ice-icon-5 {
   top: -5%;
   right: 7%;
   transform: translate(50%, -50%);
@@ -120,37 +123,37 @@
     margin-top: 10px;
   }
 
-  .ice-icon-1 {
+  .ice-icon-0 {
     top: -27%;
   }
 
-  .ice-icon-2 {
+  .ice-icon-1 {
     top: 55%;
     left: -9%;
   }
 
 
-  .ice-icon-3 {
+  .ice-icon-2 {
     right: -9%;
     top: 56%;
   }
 
-  .ice-icon-4 {
+  .ice-icon-3 {
     bottom: -14%;
     left: 27%;
   }
 
-  .ice-icon-5 {
+  .ice-icon-4 {
     top: 5%;
     left: 5%;
   }
 
-  .ice-icon-6 {
+  .ice-icon-5 {
     top: 5%;
     right: 5%;
   }
 
-  .ice-icon-7 {
+  .ice-icon-6 {
     bottom: -30%;
     right: 12%;
   }
@@ -159,4 +162,9 @@
     width: 70px;
     height: 70px;
   }
+
+  .ew-3-section-wrap {
+    background-size: contain !important;
+  }
+
 }

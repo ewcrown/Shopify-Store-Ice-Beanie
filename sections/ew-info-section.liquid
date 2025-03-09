@@ -1,39 +1,99 @@
+{{ 'ew-steps.css' | asset_url | stylesheet_tag }}
+{{ 'ew-about-us.css' | asset_url | stylesheet_tag }}
 {{ 'ew-info-section.css' | asset_url | stylesheet_tag }}
 {% assign s = section.settings %}
-<section class="ice-image-info" id="ice-image-info">
-  <div class="ice-image-info-row">
-      <div class="page-width">
-          <div class="ice-image-info-col">
-              <div class="ice-image-info-wrapper">
-                <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
-                  srcset="
-                      {{ s.image | image_url: width: 620 }} 620w,
-                      {{ s.image | image_url: width: 800 }} 800w,
-                      {{ s.image | image_url: width: 1100 }} 1100w,
-                      {{ s.image | image_url: width: 1280 }} 1280w"
-                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Cap Image"
-                  class="beanie"
-                >
+<div class="ew-3-section-wrap">
+  <section class="ice-cards" id="ice-cards">
+    <div class="ice-cards-row">
+        <div class="page-width">
+            <div class="ice-cards-col">
+                <div class="ice-cards-content">
+                    <h2 class="ice-cards-heading">{{ s.heading }}</h2>
+                    <p class="ice-cards-desc">
+                        {{ s.subheading }}
+                    </p>
+                </div>
+                <div class="ice-card-wrapper">
                   {% for block in section.blocks %}
-                  <div class="ice-icon ice-icon-{{ forloop.index }}">
-                    <div class="ice-icon-inner-wrap">
-                    <img class="ew-img-fluid" src="{{ block.settings.image | image_url: width: 500 }}" loading="lazy"
-                      srcset="
-                          {{ block.settings.image | image_url: width: 620 }} 620w,
-                          {{ block.settings.image | image_url: width: 800 }} 800w,
-                          {{ block.settings.image | image_url: width: 1100 }} 1100w,
-                          {{ block.settings.image | image_url: width: 1280 }} 1280w"
-                      sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ block.settings.title }}"
-                    >
-                    </div>
-                    <span>{{ block.settings.title }}</span>
-                  </div>  
+                    {% if block.type == 'card-1' %}
+                      {% 
+                        render 'ew-about-card',
+                        icon: block.settings.image,
+                        title: block.settings.heading,
+                        description: block.settings.description
+                      %}
+                    {% endif %}
                   {% endfor %}
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="ice-image-info" id="ice-image-info">
+    <div class="ice-image-info-row">
+        <div class="page-width">
+            <div class="ice-image-info-col">
+                <div class="ice-image-info-wrapper">
+                  <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
+                    srcset="
+                        {{ s.image | image_url: width: 620 }} 620w,
+                        {{ s.image | image_url: width: 800 }} 800w,
+                        {{ s.image | image_url: width: 1100 }} 1100w,
+                        {{ s.image | image_url: width: 1280 }} 1280w"
+                    sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Cap Image"
+                    class="beanie"
+                  >
+                    {% for block in section.blocks %}
+                      {% if block.type == 'card-2' %}
+                        <div class="ice-icon ice-icon-{% increment 1 %}">
+                          <div class="ice-icon-inner-wrap">
+                          <img class="ew-img-fluid" src="{{ block.settings.image | image_url: width: 500 }}" loading="lazy"
+                            srcset="
+                                {{ block.settings.image | image_url: width: 620 }} 620w,
+                                {{ block.settings.image | image_url: width: 800 }} 800w,
+                                {{ block.settings.image | image_url: width: 1100 }} 1100w,
+                                {{ block.settings.image | image_url: width: 1280 }} 1280w"
+                            sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ block.settings.title }}"
+                          >
+                          </div>
+                          <span>{{ block.settings.title }}</span>
+                        </div>
+                        
+                      {% endif %}  
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="ice-num-cards" id="ice-num-cards">
+    <div class="ice-num-cards-row">
+        <div class="page-width">
+            <div class="ice-cards-col flex">
+                <div class="ice-num-cards-content">
+                  {% if s.heading3 != blank %}
+                    <h2 class="ice-num-cards-heading">
+                        {{ s.heading3 }}
+                    </h2>
+                  {% endif %}
+                </div>
+                <div class="ice-card-wrapper grid">
+                    {%  for block in section.blocks %}
+                      {% if block.type == 'card-3' %}
+                      {% 
+                        render 'ew-steps-card',
+                        card_image: block.settings.image,
+                        card_title: block.settings.title,
+                        card_description: block.settings.description,
+                      %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</div>
 {% schema %}
 {
   "name": "<> Info Section",
@@ -42,15 +102,77 @@
   },
   "settings": [
     {
+      "type": "header",
+      "content": "Section#1"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Science is Simple"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Compression Cold Therapy Effects You In Three Different Ways:"
+    },
+    {
+      "type": "header",
+      "content": "Section#2"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Image"
     },
+    {
+      "type": "header",
+      "content": "Section#3"
+    },
+    {
+      "type": "text",
+      "id": "heading3",
+      "label": "Heading",
+      "default": "Cooling Relief in Just 3 Easy Steps"
+    }
   ],
   "blocks": [
     {
-      "type": "card",
-      "name": "Card Info",
+      "type": "card-1",
+      "name": "Card#1",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Card Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Metabolic System"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "The cold slows down oxygen demand which slows down pain signaling"
+        }
+      ]
+    },
+    {
+      "type": "card-2",
+      "name": "Card#2",
       "limit": 7,
       "settings": [
         {
@@ -63,6 +185,34 @@
           "id": "title",
           "label": "Title Here",
           "default": "Headaches"
+        }
+      ]
+    },
+    {
+      "type": "card-3",
+      "name": "Card#3",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Card Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Metabolic System"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "The cold slows down oxygen demand which slows down pain signaling"
         }
       ]
     }

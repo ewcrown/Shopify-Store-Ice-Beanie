@@ -179,131 +179,100 @@
       ],
       "settings": {}
     },
-    "ew_about_us_8bcTFM": {
-      "type": "ew-about-us",
+    "ew_info_section_ic7BUB": {
+      "type": "ew-info-section",
       "blocks": {
-        "card_QCfrdm": {
-          "type": "card",
+        "card_1_gr8KBF": {
+          "type": "card-1",
           "settings": {
             "image": "shopify://shop_images/image_3.png",
             "heading": "Metabolic System",
             "description": "The cold slows down oxygen demand which slows down pain signaling"
           }
         },
-        "card_zxFde9": {
-          "type": "card",
+        "card_1_NbfeE8": {
+          "type": "card-1",
           "settings": {
             "image": "shopify://shop_images/image_1_2ef5de88-58bc-46bf-bc19-ac62d3e598c1.png",
             "heading": "Circulatory System",
             "description": "Restricts blood flow. Less blood to brain vessels prevents painful overextending"
           }
         },
-        "card_YpeifX": {
-          "type": "card",
+        "card_1_8FJUeX": {
+          "type": "card-1",
           "settings": {
             "image": "shopify://shop_images/image_2.png",
             "heading": "Nervous System",
             "description": "Cold slows down the speed at which nerves travel. So it’s harder for pain signals to reach your brain"
           }
-        }
-      },
-      "block_order": [
-        "card_QCfrdm",
-        "card_zxFde9",
-        "card_YpeifX"
-      ],
-      "settings": {
-        "heading": "The Science is Simple",
-        "subheading": "Compression Cold Therapy Effects You In Three Different Ways:"
-      }
-    },
-    "ew_info_section_ic7BUB": {
-      "type": "ew-info-section",
-      "blocks": {
-        "card_yEYqtG": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image_21_1.png",
-            "title": "Migraines"
-          }
         },
-        "card_dQtPAq": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image_8.png",
-            "title": "Fever"
-          }
-        },
-        "card_tdgYiR": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image_6.png",
-            "title": "Stress"
-          }
-        },
-        "card_XVpLhn": {
-          "type": "card",
+        "card_2_CP6AdH": {
+          "type": "card-2",
           "settings": {
             "image": "shopify://shop_images/image_9.png",
             "title": "Tension"
           }
         },
-        "card_w3UU9T": {
-          "type": "card",
+        "card_2_Lxf7be": {
+          "type": "card-2",
+          "settings": {
+            "image": "shopify://shop_images/image_8.png",
+            "title": "Fever"
+          }
+        },
+        "card_2_n8mWAf": {
+          "type": "card-2",
           "settings": {
             "image": "shopify://shop_images/image_21.png",
             "title": "Headaches"
           }
         },
-        "card_TcBTMt": {
-          "type": "card",
+        "card_2_Ab6YDi": {
+          "type": "card-2",
+          "settings": {
+            "image": "shopify://shop_images/image_21.png",
+            "title": "Migraines"
+          }
+        },
+        "card_2_DP3d3T": {
+          "type": "card-2",
           "settings": {
             "image": "shopify://shop_images/image_7.png",
             "title": "Concussions"
           }
         },
-        "card_PHQBdq": {
-          "type": "card",
+        "card_2_y7r68t": {
+          "type": "card-2",
+          "settings": {
+            "image": "shopify://shop_images/image_6.png",
+            "title": "Stress"
+          }
+        },
+        "card_2_zCjhyK": {
+          "type": "card-2",
           "settings": {
             "image": "shopify://shop_images/image_5.png",
             "title": "Injuries"
           }
-        }
-      },
-      "block_order": [
-        "card_yEYqtG",
-        "card_dQtPAq",
-        "card_tdgYiR",
-        "card_XVpLhn",
-        "card_w3UU9T",
-        "card_TcBTMt",
-        "card_PHQBdq"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/image_32.png"
-      }
-    },
-    "ew_steps_jVUdQV": {
-      "type": "ew-steps",
-      "blocks": {
-        "card_yf4CxL": {
-          "type": "card",
+        },
+        "card_3_UEqVJi": {
+          "type": "card-3",
           "settings": {
             "image": "shopify://shop_images/ib1_final_1.png",
             "title": "Place In The Freezer",
             "description": "Simply place your IceBeanie in the freezer"
           }
         },
-        "card_qggic9": {
-          "type": "card",
+        "card_3_VXzAkV": {
+          "type": "card-3",
           "settings": {
             "image": "shopify://shop_images/ib2_semifinal-1_1.png",
             "title": "Remove After 45min",
             "description": "Allow 45-60 minutes in the freezer for the gel to reach the desired temperature. For best results leave in the freezer overnight."
           }
         },
-        "card_JTegr3": {
-          "type": "card",
+        "card_3_M99EEa": {
+          "type": "card-3",
           "settings": {
             "image": "shopify://shop_images/ib3_Final_1.png",
             "title": "Put On The IceBeanie",
@@ -312,12 +281,25 @@
         }
       },
       "block_order": [
-        "card_yf4CxL",
-        "card_qggic9",
-        "card_JTegr3"
+        "card_1_gr8KBF",
+        "card_1_NbfeE8",
+        "card_1_8FJUeX",
+        "card_2_CP6AdH",
+        "card_2_Lxf7be",
+        "card_2_n8mWAf",
+        "card_2_Ab6YDi",
+        "card_2_DP3d3T",
+        "card_2_y7r68t",
+        "card_2_zCjhyK",
+        "card_3_UEqVJi",
+        "card_3_VXzAkV",
+        "card_3_M99EEa"
       ],
       "settings": {
-        "heading": "Cooling Relief in Just 3 Easy Steps"
+        "heading": "The Science is Simple",
+        "subheading": "Compression Cold Therapy Effects You In Three Different Ways:",
+        "image": "shopify://shop_images/image_32.png",
+        "heading3": "Cooling Relief in Just 3 Easy Steps"
       }
     },
     "ew_featured_product_iTHzR8": {
@@ -410,9 +392,7 @@
     "ew_hero_section_CJxTHG",
     "ew_partner_section_9YJyQH",
     "ew_testimonial_section_ww9jhV",
-    "ew_about_us_8bcTFM",
     "ew_info_section_ic7BUB",
-    "ew_steps_jVUdQV",
     "ew_featured_product_iTHzR8",
     "ew_icon_text_section_DBmhd8",
     "ew_reviews_section_LVUp6h",
