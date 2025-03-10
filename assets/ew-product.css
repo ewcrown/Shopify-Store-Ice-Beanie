@@ -10,7 +10,7 @@
 .ew-product-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
+  gap: 50px;
   width: 100%;
 }
 
@@ -288,8 +288,7 @@
 
 @media(max-width:767px) {
   .ew-product-gallery {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+    display: block;
   }
 
   .ew-product-satisfactors {
@@ -318,6 +317,7 @@
   .ew-product-add-to-cart-block {
     gap: 15px;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .ew-product-variant {

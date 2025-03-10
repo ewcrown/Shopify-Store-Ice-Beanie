@@ -39,3 +39,9 @@
 #ew-main-slider {
   height: 100%;
 }
+
+@media(max-width:767px) {
+  .slider-wrap {
+    flex-direction: column-reverse;
+  }
+}
