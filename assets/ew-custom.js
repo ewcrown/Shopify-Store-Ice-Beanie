@@ -4,7 +4,7 @@ sliders.forEach(slider => {
   if (sliderName == 'Testimonial Slider') {
     new Splide(slider, {
       type: "loop",
-      padding: "60rem",
+      padding: "48rem",
       gap: 34,
       pagination: false,
       arrows: false,
@@ -20,8 +20,7 @@ sliders.forEach(slider => {
         }
       },
     }).mount();
-  } else if (sliderName == "Reviews Slider") {
-    
+  } else if (sliderName == "Reviews Slider 2") {
     const initialContent = document.querySelector('.ice-slide-content[data-slide="0"]');
     if (initialContent) {
       initialContent.classList.add('active');
@@ -92,7 +91,7 @@ sliders.forEach(slider => {
     new Splide(slider, {
       type: 'loop',
       perPage: 1,
-      padding: "30rem",
+      padding: "50rem",
       focus: 'center',
       gap: '10rem',
       arrows: false,
@@ -118,60 +117,59 @@ sliders.forEach(slider => {
       });
     });
   } else if (sliderName == "Product Gallery") {
-    const main = new Splide('.ew-product-gallery-splide--main', {
-      type: 'fade',
-      height: '600px',
-      pagination: false,
-      arrows: false,
-      autoplay: true,
-      interval: 5000,
-      pauseOnHover: true,
-      pauseOnFocus: true,
-      keyboard: true,
-      mediaQuery: 'min',
-      breakpoints: {
-        768: {
-          height: '600px'
-        },
-        0: {
-          height: '300px'
+    document.addEventListener('DOMContentLoaded', () => {
+      const main = new Splide('.ew-product-gallery-splide--main', {
+        type: 'fade',
+        height: '600px',
+        pagination: false,
+        arrows: false,
+        autoplay: true,
+        interval: 5000,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        keyboard: true,
+        mediaQuery: 'min',
+        breakpoints: {
+          768: { height: '600px' },
+          0: { height: '300px' }
         }
-      }
-    });
-    const thumbnails = new Splide('.ew-product-gallery-splide--thumbnail', {
-      direction: 'ttb',
-      height: '600px',
-      gap: 20,
-      pagination: false,
-      arrows: false,
-      isNavigation: false,
-      mediaQuery: 'min',
-      breakpoints: {
-        768: {
-          direction: 'ttb',
-          height: '600px'
-        },
-        0: {
-          direction: 'ltr',
-          height: 'auto'
+      });
+      const thumbnails = new Splide('.ew-product-gallery-splide--thumbnail', {
+        direction: 'ttb',
+        height: '600px',
+        gap: 20,
+        pagination: false,
+        arrows: false,
+        isNavigation: true,
+        mediaQuery: 'min',
+        breakpoints: {
+          768: { direction: 'ttb', height: '600px' },
+          0: { direction: 'ltr', height: 'auto' }
         }
-      }
-    });
-    main.mount();
-    thumbnails.mount();
-    main.sync(thumbnails);
-    const thumbnailSlides = document.querySelectorAll('.ew-product-gallery-thumbnail-slide');
-    thumbnailSlides.forEach((thumbnail, index) => {
-      thumbnail.addEventListener('click', () => {
-        main.go(index);
       });
+      main.sync(thumbnails);
+      main.mount();
+      thumbnails.mount();
     });
-    main.on('move', (newIndex) => {
-      thumbnailSlides.forEach((thumbnail, index) => {
-        thumbnail.classList.toggle('is-active', index === newIndex);
-      });
-    });
-    thumbnailSlides[0].classList.add('is-active');
+    // const thumbnailSlides = document.querySelectorAll('.ew-product-gallery-thumbnail-slide');
+    // thumbnailSlides.forEach((thumbnail, index) => {
+    //   thumbnail.addEventListener('click', () => {
+    //     main.go(index);
+    //   });
+    // });
+    // main.on('move', (newIndex) => {
+    //   thumbnailSlides.forEach((thumbnail, index) => {
+    //     thumbnail.classList.toggle('is-active', index === newIndex);
+    //   });
+    // });
+    // thumbnailSlides[0].classList.add('is-active');
+  } else if (sliderName == "Reviews Slider") {
+    new Splide(slider, {
+      type: "loop",
+      perPage: 1,
+      pagination: false,
+      arrows: true,
+  }).mount();
   } else {
     new Splide(slider, {
       type: 'loop',

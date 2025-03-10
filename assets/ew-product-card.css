@@ -28,15 +28,18 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 50px; /* 200% */
+  line-height: 50px;
   text-transform: capitalize;
+  min-height: 100px;
 }
-
 .ew-product-card-link {
   text-decoration: none;
+  height: 100%;
+  display: block;
 }
 
 .ew-product-card-description {
+  min-height: 80px;
   margin-top: 20px;
 }
 

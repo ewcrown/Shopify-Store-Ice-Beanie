@@ -14,8 +14,9 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 70px; /* 145.833% */
+  line-height: 100%;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .ice-contact-title strong {
@@ -24,7 +25,7 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 111%;
   text-transform: capitalize;
 }
 
@@ -40,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 
 }
 
@@ -99,6 +101,11 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
+.ice-contact-form textarea,
+.ice-contact-form input {
+  box-shadow: none !important;
+  outline: none !important;
+}
 .form-field-message textarea {
   height: 170px;
 }

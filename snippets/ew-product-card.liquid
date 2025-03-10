@@ -12,8 +12,16 @@
             {% endif %}
         </div>
         <div class="ew-product-card-info">
-            <h3 class="ew-product-card-title">{{ card_product.title }}</h3>
-            <div class="ew-product-card-description">{{ card_product.metafields.product_info.short_description | truncate: 200 | strip_html }}</div>
+            <div class="ew-product-card-info-upper">
+                <h3 class="ew-product-card-title">{{ card_product.title }}</h3>
+                <div class="ew-product-card-description">
+                {% if card_product.metafields.product_info.short_description != blank %}    
+                    {{ card_product.metafields.product_info.short_description | truncate: 80 | strip_html }}
+                {% else %}
+                    {{ card_product.description | truncate: 80 | strip_html }}
+                {% endif %}
+                </div>
+            </div>
             <div class="ew-product-card-inner-info">
                 <div class="ew-product-card-inner-price">
                     {% render 'price', product: card_product %}

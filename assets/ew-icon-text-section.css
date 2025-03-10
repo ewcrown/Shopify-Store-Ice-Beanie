@@ -5,7 +5,7 @@
 .ice-shipping-wrap span {
   color: #000;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -15,10 +15,6 @@
   display: flex;
   gap: 20px;
   align-items: center;
-}
-
-.ice-shipping-wrap img {
-  width: auto;
 }
 
 .ice-shipping-col {

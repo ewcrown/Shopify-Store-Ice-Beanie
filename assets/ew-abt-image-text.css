@@ -4,7 +4,7 @@
 }
 
 .ice-about-col {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 700px;
   color: #001C43;
   gap: 50px;
   display: grid;
@@ -39,17 +39,17 @@
 }
 
 .ice-about-desc {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .ice-about-desc p {
   color: #001C43;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
-  /* 166.667% */
+  max-width: 930px;
 }
 
 @media (max-width: 768px) {
@@ -71,7 +71,7 @@
     margin-bottom: 20px;
   }
 
-  .ice-about-col.grid {
+  .ice-about-col {
     grid-template-columns: 1fr;
     gap: 20px;
   }

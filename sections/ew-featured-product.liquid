@@ -1,17 +1,35 @@
 {{ 'ew-featured-product.css' | asset_url | stylesheet_tag }}
 {% assign s = section.settings %}
 {% assign products = section.settings.product_list %}
+{% assign first_product = products | first %}
 <section class="ew-featured-product-section ew-featured-product-section-{{ section.id }}" id="ew-featured-product-section">
   <div class="ew-featured-product-row">
     <div class="page-width">
       <div class="ew-featured-product-wrap">
-        
         <div class="ew-featured-product-single-tab">
           <div class="ew-featured-product-image">
-            <img class="ew-img-fluid" src="https://cdn.shopify.com/s/files/1/0254/3170/3629/files/800x800_RENDER_1.png?v=1741283801" loading="lazy"  alt="{{ product.title }}">
+            {%  for product in products %}
+            <img 
+              class="ew-img-fluid {% if forloop.index == 1%}ew-featured-product-show{% endif %}"
+              src="{{ product.images[0] | image_url: width: 1280 }}" 
+              data-index="{{ forloop.index }}"
+              loading="lazy" 
+              srcset="
+                {{ product.images[0] | image_url: width: 620 }} 620w,
+                {{ product.images[0] | image_url: width: 800 }} 800w,
+                {{ product.images[0] | image_url: width: 1100 }} 1100w,
+                {{ product.images[0] | image_url: width: 1280 }} 1280w"
+              sizes="(max-width: 600px) 600px, 100vw"
+              alt="{{ product.title }}">
+            {% endfor %}
           </div>
           <div class="ew-featured-product-content">
-            {% render 'ew-product-content', card_product: product %}
+            {% 
+              render 'ew-product-content', 
+              products: products, 
+              card_product: product,
+              first_product: first_product
+             %}
           </div>
         </div>
 

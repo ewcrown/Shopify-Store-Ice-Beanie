@@ -9,8 +9,12 @@
 }
 
 .ice-header-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
+}
+
+.ice-header-logo img {
+ width: 230px;
 }
 
 .ice-header {
@@ -35,24 +39,35 @@
 }
 
 .ice-nav-links ul li a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: normal;
-  transition: color 0.3s ease;
-  color: #001C43;
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+text-decoration: none;
 }
 
 .ice-nav-links ul li a:hover {
   color: #00aaff;
 }
 
-.order-btn {
-  background-color: #4194E4;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
+.header-order-btn {
+  border-radius: 10px;
+  background: #4194E4;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
   line-height: normal;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
   max-width: 235px;
+  font-family: Poppins;
 }
 
 .ice-header-menu-content {
@@ -61,7 +76,7 @@
   align-items: center;
 }
 
-.order-btn:hover {
+.header-order-btn:hover {
   background-color: #0088cc;
 }
 
@@ -139,7 +154,7 @@
     order: 2;
   }
 
-  .order-btn {
+  .header-order-btn {
     display: none;
     /* padding: 4px 10px;
     font-size: 12px;

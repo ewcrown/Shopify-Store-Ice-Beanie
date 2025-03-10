@@ -5,20 +5,20 @@
   <div class="splide ew-product-gallery-splide--thumbnail" role="region" aria-label="Thumbnail navigation">
     <div class="splide__track">
       <ul class="splide__list">
-        {% for media in product.media %}
+        {% for media in product.images %}
           <li class="splide__slide ew-product-gallery-thumbnail-slide">
+
             <img 
               class="ew-img-fluid" 
-              src="{{ media.preview_image | img_url: '500x500' }}" 
+              src="{{ media.src | img_url: '500x500' }}" 
               loading="lazy"
               srcset="
-                {{ media.preview_image | img_url: '620x620' }} 620w,
-                {{ media.preview_image | img_url: '800x800' }} 800w,
-                {{ media.preview_image | img_url: '1100x1100' }} 1100w,
-                {{ media.preview_image | img_url: '1280x1280' }} 1280w"
+                {{ media.src | img_url: '620x620' }} 620w,
+                {{ media.src | img_url: '800x800' }} 800w,
+                {{ media.src | img_url: '1100x1100' }} 1100w,
+                {{ media.src | img_url: '1280x1280' }} 1280w"
               sizes="(max-width: 600px) 100vw, 600px"
-              alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}"
-            >
+              alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}">
           </li>
         {% endfor %}
       </ul>
@@ -29,17 +29,17 @@
   <div class="splide ew-product-gallery-splide--main" role="region" data-name="Product Gallery">
     <div class="splide__track">
       <ul class="splide__list">
-        {% for media in product.media %}
+        {% for media in product.images %}
           <li class="splide__slide">
             <img 
               class="ew-img-fluid" 
-              src="{{ media.preview_image | img_url: '500x500' }}" 
+              src="{{ media.src | img_url: '500x500' }}" 
               loading="lazy"
               srcset="
-                {{ media.preview_image | img_url: '620x620' }} 620w,
-                {{ media.preview_image | img_url: '800x800' }} 800w,
-                {{ media.preview_image | img_url: '1100x1100' }} 1100w,
-                {{ media.preview_image | img_url: '1280x1280' }} 1280w"
+                {{ media.src | img_url: '620x620' }} 620w,
+                {{ media.src | img_url: '800x800' }} 800w,
+                {{ media.src | img_url: '1100x1100' }} 1100w,
+                {{ media.src | img_url: '1280x1280' }} 1280w"
               sizes="(max-width: 600px) 100vw, 600px"
               alt="{{ product.title | escape }} - Image {{ forloop.index }}"
             >

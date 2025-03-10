@@ -22,7 +22,7 @@
         </div>
         <div class="ew-text-image-right">
           {% if s.image != blank %}
-          <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
+          <img class="ew-img-fluid" src="{{ s.image | image_url: width: 1000 }}" loading="lazy"
             srcset="
                 {{ s.image | image_url: width: 620 }} 620w,
                 {{ s.image | image_url: width: 800 }} 800w,

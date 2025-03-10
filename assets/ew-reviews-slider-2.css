@@ -117,19 +117,24 @@
     transform: unset;
     position: unset;
   }
+
   .ice-splide-container-col .ice-science-review-desc {
     font-size: 24px;
     margin-bottom: 20px;
   }
+
   .ice-splide-container-col .ice-science-review-content-wrap svg {
     margin-bottom: 10px;
   }
+
   .ice-splide-container-col .science-review-name {
     font-size: 20px;
   }
+
   .ice-splide-container-col .science-review-institute {
     font-size: 16px;
   }
+
   .ice-splide-container-col .splide__slide img {
     height: 400px;
     object-fit: cover;

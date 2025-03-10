@@ -48,9 +48,9 @@
 }
 
 .ew-product-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 50px; */
   padding-top: 70px;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .ew-product-wrap {
-  padding-right: 100px;
+  padding-right: 200px;
 }
 
 .ew-product-review {

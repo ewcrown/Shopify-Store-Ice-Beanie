@@ -21,6 +21,9 @@
     {% endstyle %}
   {% else %}
     {% style %} 
+    .ice-nav-links ul li a {
+      color:#000 !important;
+    }
       .ew-white-logo {
         display:none
       }
@@ -66,7 +69,7 @@
                   </nav>
 
                   {% if s.button_link != blank  %}
-                  <a href="{{ s.button_link }}" class="primary-btn order-btn">{{ s.button_text }}</a>
+                  <a href="{{ s.button_link }}" class="primary-btn header-order-btn">{{ s.button_text }}</a>
                   {% endif %}
                   <div class="ice-header-icons">
                       <span class="ice-header-user-icon ice-header-icon"

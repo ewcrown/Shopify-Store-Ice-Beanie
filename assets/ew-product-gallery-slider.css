@@ -15,6 +15,12 @@
 
 .ew-product-gallery-splide--thumbnail .splide__track--ttb>.splide__list {
   transform: none !important;
+  overflow-y: auto;
+}
+
+.ew-product-gallery-thumbnail-slide.is-active {
+  border: 3px solid #000;
+  opacity: 1;
 }
 
 .ew-product-gallery-splide--thumbnail .splide__track {
@@ -40,6 +46,25 @@
   object-fit: cover;
   display: block;
   border-radius: 10px;
+}
+
+.ew-product-gallery-thumbnail-slide {
+  margin-bottom: 10px;
+  /* From .thumbnail-slide */
+  opacity: 0.5;
+  /* From .thumbnail-slide */
+  transition: opacity 0.3s ease;
+  /* From .thumbnail-slide */
+  cursor: pointer;
+  /* From .thumbnail-slide */
+  width: 100% !important;
+  /* Existing */
+  margin: 0 0 20px !important;
+  /* Existing */
+  height: 135px;
+  /* Existing */
+  border-radius: 10px;
+  /* Existing */
 }
 
 /* Thumbnail slider styling */
@@ -75,6 +100,15 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .ew-product-gallery-thumbnail-slide {
+    display: inline-block;
+    width: 80px !important;
+    /* Match .thumbnail-slide */
+    height: 80px;
+    /* Adjust for mobile */
+    margin-right: 10px;
+  }
+
   .gallery-container {
     flex-direction: column;
   }

@@ -6,7 +6,7 @@
   </div>
   
   <h3 class="ew-product-content-title">
-    Migraine Relief Beanie
+    {{  first_product.title }}
   </h3>
 
   <div class="ew-product-content-tags">
@@ -18,69 +18,26 @@
   </div>
 
   <div class="ew-product-content-price">
-      <span>$39.99</span>
-      <s>$59.99</s>
+    {% render 'price', product: first_product %}
   </div>
 
   <div class="ew-product-content-description">
-    Lorem Ipsum is simply dummy text of the printing and
-typesetting has been the industry's
+    {{ first_product.description | truncate: 200 | strip_html }}
   </div>
 
     <div class="ew-product-content-radios">
+      {% for product in products %}
       <div class="ew-product-content-radio-single">
-      <input type="radio" id="ice-1" name="product" value="Ice-1" checked>
-      <label for="ice-1">
-        <span class="ew-product-radio-title">1 IceBeanie</span>
-        <span class="ew-product-radio-price">
-          <span>
-            $59.99
-            </span>
-          <span>
-            $39.99
-            </span>
-        </span>
-      </label>
+        <input type="radio" id="ice-{{ product.id }}" data-index="{{ forloop.index }}" name="product" value="{{ product.title }}" {% if forloop.index == 1 %}checked{% endif %} data-url="{{ product.url }}">
+        <label for="ice-{{ product.id }}">
+          <span class="ew-product-radio-title">{{ product.title }}</span>
+          <span class="ew-product-radio-price">
+            {% render 'price', product: product %}
+          </span>
+        </label>
     </div>
-      
-    <div class="ew-product-content-radio-single">
-      <input type="radio" id="ice-2" name="product" value="Ice-2">
-      <label for="ice-2">
-        <span class="ew-product-radio-title">2 IceBeanies</span>
-        <span class="ew-product-radio-price">
-          <span>
-            $59.99
-            </span>
-        </span>
-      </label>
-      </div>
-      
-      <div class="ew-product-content-radio-single">
-      <input type="radio" id="ice-3" name="product" value="Ice-3">
-      <label for="ice-3">
-        <span class="ew-product-radio-title">2 IceBeanies</span>
-        <span class="ew-product-radio-price">
-          <span>
-            $59.99
-            </span>
-          <span>
-            $39.99
-            </span>
-        </span>
-      </label>
-      </div>
-      
-      <div class="ew-product-content-radio-single">
-      <input type="radio" id="ice-4" name="product" value="Ice-4">
-      <label for="ice-4">
-        <span class="ew-product-radio-title">2 IceBeanies</span>
-        <span class="ew-product-radio-price">
-          <span>
-            $59.99
-            </span>
-        </span>
-      </label>
-      </div>
+    {% endfor %}
+
     </div>
 
     <div class="ew-product-content-color-radios">
@@ -89,16 +46,15 @@ typesetting has been the industry's
         </label>
 
         <div class="ew-product-content-color-radio">    
-          <div class="ew-product-content-color-radio-single ew-product-content-color-radio-single-blue">    
-            <input type="radio" id="blue" name="color" value="Blue" checked>
-            <label for="blue">Blue</label>
+        
+        {% for variant in first_product.variants %}
+          <div class="ew-product-content-color-radio-single ew-product-content-color-radio-single-{{ variant.title | handleize }}">    
+            <input type="radio" data-variant="{{ variant.id }}" id="{{variant.title | handleize}}-{{ variant.id }}" name="color" value="{{ variant.title  }}" {% if forloop.index == 1 %}checked{% endif %}>
+            <label for="{{ variant.title | handleize}}-{{ variant.id }}">{{ variant.title  }}</label>
           </div>
-          <div class="ew-product-content-color-radio-single ew-product-content-color-radio-single-black">    
-            <input type="radio" id="black" name="color" value="Black">
-            <label for="black">Black</label>
-          </div>
+        {% endfor %}
+          
         </div>
     </div>
-
-    <button class="primary-btn" data-featured-add-to-cart>Add To Cart</button>
+    <button class="primary-btn" data-id="{{ first_product.selected_or_first_available_variant.id }}" data-featured-add-to-cart>Add To Cart</button>
 </div>
