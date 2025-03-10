@@ -6,12 +6,15 @@
 
 .ew-featured-product-image img {
   margin: auto;
+  width: 100%;
 }
 
 .ew-featured-product-image {
   border-radius: 10px;
   border: 1px solid #001C43;
   padding: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .ew-featured-product-row {
@@ -48,7 +51,7 @@
   line-height: 78px;
   /* 125.806% */
   text-transform: capitalize;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .ew-product-content-tags ul {
@@ -91,6 +94,7 @@
   font-weight: 400;
   line-height: 70px;
   text-transform: capitalize;
+  margin-left: 10px;
 }
 
 .ew-product-content-price .price__regular {
@@ -156,6 +160,41 @@
   display: none;
 }
 
+.ew-product-radio-price s.price-item.price-item--regular {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 222.222% */
+  text-decoration-line: strikethrough;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.ew-product-radio-price span.price-item.price-item--sale.price-item--last {
+  color: #001C43;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  /* 166.667% */
+  text-transform: capitalize;
+}
+
+.ew-product-radio-price .price__container .price__sale {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ew-product-radio-price div {
+  width: 100%;
+}
+
 .ew-product-radio-price {
   display: flex;
   align-items: center;
@@ -185,7 +224,7 @@
 }
 
 .ew-product-content-color-radios {
-  padding: 30px 0px;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
   gap: 100px;
@@ -220,11 +259,12 @@
   gap: 30px;
 }
 
-.ew-product-content-color-radio-single input:checked + label::before {
-    background: #4194E3;
-    outline: 1px solid #4194E3;
+.ew-product-content-color-radio-single input:checked+label::before {
+  background: #4194E3;
+  outline: 1px solid #4194E3;
 }
-.ew-product-content-color-radio-single input:checked + label{
+
+.ew-product-content-color-radio-single input:checked+label {
   color: #4194E3;
   opacity: 1;
 }
@@ -240,6 +280,7 @@
 .ew-product-content-color-radio-single {
   color: var(--Dark-Blue, #000);
 }
+
 .ew-product-content-color-radio-single label::before {
   background: #000;
   outline: 1px solid #000;

@@ -117,59 +117,47 @@ sliders.forEach(slider => {
       });
     });
   } else if (sliderName == "Product Gallery") {
-    document.addEventListener('DOMContentLoaded', () => {
-      const main = new Splide('.ew-product-gallery-splide--main', {
+    document.addEventListener('DOMContentLoaded', function () {
+      let main = new Splide('#ew-main-slider', {
         type: 'fade',
-        height: '600px',
+        heightRatio: 0.5,
         pagination: false,
         arrows: false,
-        autoplay: true,
-        interval: 5000,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        keyboard: true,
-        mediaQuery: 'min',
-        breakpoints: {
-          768: { height: '600px' },
-          0: { height: '300px' }
-        }
+        cover: true,
       });
-      const thumbnails = new Splide('.ew-product-gallery-splide--thumbnail', {
-        direction: 'ttb',
-        height: '600px',
-        gap: 20,
-        pagination: false,
-        arrows: false,
+
+      let thumbnails = new Splide('#ew-thumbnail-slider', {
+        fixedWidth: 160,
+        fixedHeight: 143,
         isNavigation: true,
-        mediaQuery: 'min',
+        wheel    : true,
+        gap: 10,
+        arrows: false,
+        focus: 'center',
+        pagination: false,
+        cover: true,
+        perPage: 4,
+        direction: 'ttb', // Vertical mode
+        height: 600, // Ensuring it fits inside the container
         breakpoints: {
-          768: { direction: 'ttb', height: '600px' },
-          0: { direction: 'ltr', height: 'auto' }
-        }
+          640: {
+            fixedWidth: 66,
+            fixedHeight: 38,
+          },
+        },
       });
+
       main.sync(thumbnails);
       main.mount();
       thumbnails.mount();
-    });
-    // const thumbnailSlides = document.querySelectorAll('.ew-product-gallery-thumbnail-slide');
-    // thumbnailSlides.forEach((thumbnail, index) => {
-    //   thumbnail.addEventListener('click', () => {
-    //     main.go(index);
-    //   });
-    // });
-    // main.on('move', (newIndex) => {
-    //   thumbnailSlides.forEach((thumbnail, index) => {
-    //     thumbnail.classList.toggle('is-active', index === newIndex);
-    //   });
-    // });
-    // thumbnailSlides[0].classList.add('is-active');
+    })
   } else if (sliderName == "Reviews Slider") {
     new Splide(slider, {
       type: "loop",
       perPage: 1,
       pagination: false,
       arrows: true,
-  }).mount();
+    }).mount();
   } else {
     new Splide(slider, {
       type: 'loop',

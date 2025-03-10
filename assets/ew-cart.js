@@ -102,8 +102,6 @@ const updateProductDetails = async (productInput) => {
     const data = await resp.json();
     const { product: fetchedProduct } = data;
 
-    console.log('Fetched product:', fetchedProduct);
-
     // Update Price 
     const sale_price = document.querySelector('.price-item.price-item--sale.price-item--last')
     const regular_price = document.querySelector('s.price-item.price-item--regular')
