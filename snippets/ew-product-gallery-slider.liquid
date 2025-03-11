@@ -3,45 +3,55 @@
 <div class="slider-wrap">
   <!-- Thumbnail Slider -->
   <section class="splide" id="ew-thumbnail-slider" data-name="Product Gallery">
-      <div class="splide__track">
-          <ul class="splide__list">
-              
-            {% for media in product.images %}
-            <li class="splide__slide">
-                <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for media in product.media %}
+          <li class="splide__slide">
+            {% if media.media_type == 'image' %}
+              <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
                 srcset="
+                  {{ media.src | image_url: width: 620 }} 620w,
+                  {{ media.src | image_url: width: 800 }} 800w,
+                  {{ media.src | image_url: width: 1100 }} 1100w,
+                  {{ media.src | image_url: width: 1280 }} 1280w"
+                sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" 
+                alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}">
+            {% elsif media.media_type == 'video' %}
+              <div class="ew-video-thumbnail">
+                {{ media | video_tag: controls: false, autoplay: false, loop: false, muted: true }}
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <div class="ew-main-slider-wrap">
+    <!-- Main Slider -->
+    <section class="splide" id="ew-main-slider" data-name="Product Gallery">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for media in product.media %}
+            <li class="splide__slide">
+              {% if media.media_type == 'image' %}
+                <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
+                  srcset="
                     {{ media.src | image_url: width: 620 }} 620w,
                     {{ media.src | image_url: width: 800 }} 800w,
                     {{ media.src | image_url: width: 1100 }} 1100w,
                     {{ media.src | image_url: width: 1280 }} 1280w"
-                sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" 
-                alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}"
-                >
-            </li>
-          {% endfor %}              
-          </ul>
-      </div>
-  </section>
-
-  <div class="ew-main-slider-wrap">
-  <section class="splide" id="ew-main-slider" data-name="Product Gallery">
-      <div class="splide__track">
-          <ul class="splide__list">
-          {% for media in product.images %}
-              <li class="splide__slide">
-                  <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
-                  srcset="
-                      {{ media.src | image_url: width: 620 }} 620w,
-                      {{ media.src | image_url: width: 800 }} 800w,
-                      {{ media.src | image_url: width: 1100 }} 1100w,
-                      {{ media.src | image_url: width: 1280 }} 1280w"
                   sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" 
-                  alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}"
-                  >
-              </li>
-            {% endfor %}
-          </ul>
+                  alt="{{ product.title | escape }} - Image {{ forloop.index }}">
+              {% elsif media.media_type == 'video' %}
+                <div class="ew-main-video">
+                  {{ media | video_tag: controls: true, autoplay: false, loop: false, muted: false }}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-  </section>
-</div>
+    </section>
+  </div>
 </div>

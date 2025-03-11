@@ -5,91 +5,98 @@
 <div class="ew-3-section-wrap">
   <section class="ice-cards" id="ice-cards">
     <div class="ice-cards-row">
-        <div class="page-width">
-            <div class="ice-cards-col">
-                <div class="ice-cards-content">
-                    <h2 class="ice-cards-heading">{{ s.heading }}</h2>
-                    <p class="ice-cards-desc">
-                        {{ s.subheading }}
-                    </p>
-                </div>
-                <div class="ice-card-wrapper">
-                  {% for block in section.blocks %}
-                    {% if block.type == 'card-1' %}
-                      {% 
-                        render 'ew-about-card',
-                        icon: block.settings.image,
-                        title: block.settings.heading,
-                        description: block.settings.description
-                      %}
-                    {% endif %}
-                  {% endfor %}
-                </div>
-            </div>
+      <div class="page-width">
+        <div class="ice-cards-col">
+          <div class="ice-cards-content">
+            <h2 class="ice-cards-heading">{{ s.heading }}</h2>
+            <p class="ice-cards-desc">
+              {{ s.subheading }}
+            </p>
+          </div>
+          <div class="ice-card-wrapper">
+            {% for block in section.blocks %}
+              {% if block.type == 'card-1' %}
+                {% render 'ew-about-card',
+                  icon: block.settings.image,
+                  title: block.settings.heading,
+                  description: block.settings.description
+                %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
+      </div>
     </div>
   </section>
   <section class="ice-image-info" id="ice-image-info">
     <div class="ice-image-info-row">
-        <div class="page-width">
-            <div class="ice-image-info-col">
-                <div class="ice-image-info-wrapper">
-                  <img class="ew-img-fluid beanie" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
-                    srcset="
-                        {{ s.image | image_url: width: 620 }} 620w,
-                        {{ s.image | image_url: width: 800 }} 800w,
-                        {{ s.image | image_url: width: 1100 }} 1100w,
-                        {{ s.image | image_url: width: 1280 }} 1280w"
-                    sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Cap Image"
-                  >
-                    {% for block in section.blocks %}
-                      {% if block.type == 'card-2' %}
-                        <div class="ice-icon ice-icon-{% increment 1 %}">
-                          <div class="ice-icon-inner-wrap">
-                          <img class="ew-img-fluid" src="{{ block.settings.image | image_url: width: 500 }}" loading="lazy"
-                            srcset="
-                                {{ block.settings.image | image_url: width: 620 }} 620w,
-                                {{ block.settings.image | image_url: width: 800 }} 800w,
-                                {{ block.settings.image | image_url: width: 1100 }} 1100w,
-                                {{ block.settings.image | image_url: width: 1280 }} 1280w"
-                            sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ block.settings.title }}"
-                          >
-                          </div>
-                          <span>{{ block.settings.title }}</span>
-                        </div>
-                        
-                      {% endif %}  
-                    {% endfor %}
+      <div class="page-width">
+        <div class="ice-image-info-col">
+          <div class="ice-image-info-wrapper">
+            <img
+              class="ew-img-fluid beanie"
+              src="{{ s.image | image_url: width: 500 }}"
+              loading="lazy"
+              srcset="
+                {{ s.image | image_url: width: 620 }} 620w,
+                {{ s.image | image_url: width: 800 }} 800w,
+                {{ s.image | image_url: width: 1100 }} 1100w,
+                {{ s.image | image_url: width: 1280 }} 1280w
+              "
+              sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+              alt="Cap Image"
+            >
+            {% for block in section.blocks %}
+              {% if block.type == 'card-2' %}
+                <div class="ice-icon ice-icon-{% increment 1 %}">
+                  <div class="ice-icon-inner-wrap">
+                    <img
+                      class="ew-img-fluid"
+                      src="{{ block.settings.image | image_url: width: 500 }}"
+                      loading="lazy"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 620 }} 620w,
+                        {{ block.settings.image | image_url: width: 800 }} 800w,
+                        {{ block.settings.image | image_url: width: 1100 }} 1100w,
+                        {{ block.settings.image | image_url: width: 1280 }} 1280w
+                      "
+                      sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+                      alt="{{ block.settings.title }}"
+                    >
+                  </div>
+                  <span>{{ block.settings.title }}</span>
                 </div>
-            </div>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
+      </div>
     </div>
   </section>
   <section class="ice-num-cards" id="ice-num-cards">
     <div class="ice-num-cards-row">
-        <div class="page-width">
-            <div class="ice-cards-col flex">
-                <div class="ice-num-cards-content">
-                  {% if s.heading3 != blank %}
-                    <h2 class="ice-num-cards-heading">
-                        {{ s.heading3 }}
-                    </h2>
-                  {% endif %}
-                </div>
-                <div class="ice-card-wrapper grid">
-                    {%  for block in section.blocks %}
-                      {% if block.type == 'card-3' %}
-                      {% 
-                        render 'ew-steps-card',
-                        card_image: block.settings.image,
-                        card_title: block.settings.title,
-                        card_description: block.settings.description,
-                      %}
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
+      <div class="page-width">
+        <div class="ice-cards-col flex">
+          <div class="ice-num-cards-content">
+            {% if s.heading3 != blank %}
+              <h2 class="ice-num-cards-heading">
+                {{ s.heading3 }}
+              </h2>
+            {% endif %}
+          </div>
+          <div class="ice-card-wrapper grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'card-3' %}
+                {% render 'ew-steps-card',
+                  card_image: block.settings.image,
+                  card_title: block.settings.title,
+                  card_description: block.settings.description
+                %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
+      </div>
     </div>
   </section>
 </div>

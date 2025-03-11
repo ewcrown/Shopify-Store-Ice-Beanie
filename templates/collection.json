@@ -12,7 +12,7 @@
     "ew_collection_banner_JyCymp": {
       "type": "ew-collection-banner",
       "settings": {
-        "image": "shopify://shop_images/photo-collage.png_1.png"
+        "image": "shopify://shop_images/photo-collage.png_1_2.jpg"
       }
     },
     "ew_collection_details_Fpntqj": {
@@ -21,21 +21,21 @@
         "block_D4cFmG": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image_35.png",
+            "icon": "shopify://shop_images/image_35_9e1ad4ec-e17b-4f69-979a-16937516a1aa.png",
             "title": "Compression Cold Therapy"
           }
         },
         "block_FgD4cR": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image.png",
+            "icon": "shopify://shop_images/image_af40bc25-df1b-4a17-b53a-185760a3b6da.png",
             "title": "Form Fitting Design"
           }
         },
         "block_6TQzdi": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image_1.png",
+            "icon": "shopify://shop_images/image_1_9e534cad-1f49-4519-906b-7df367d125c2.png",
             "title": "Full HeadCoverage"
           }
         }

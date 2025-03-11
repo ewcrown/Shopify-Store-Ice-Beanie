@@ -24,10 +24,18 @@
     "ew_about_us_33rHrK": {
       "type": "ew-about-us",
       "blocks": {
+        "card_YD7Kty": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_741c3b36-1b1c-4015-a943-498e78c050ea.png",
+            "heading": "Metabolic System",
+            "description": "The cold slows down oxygen demand which slows down pain signaling"
+          }
+        },
         "card_4RR3Jf": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/image_1_2ef5de88-58bc-46bf-bc19-ac62d3e598c1.png",
+            "image": "shopify://shop_images/image_1_52f075ac-1b0c-4385-8337-5701e744648a.png",
             "heading": "Circulatory System",
             "description": "Restricts blood flow. Less blood to brain vessels prevents painful overextending"
           }
@@ -35,24 +43,16 @@
         "card_QcGmBg": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/image_2.png",
+            "image": "shopify://shop_images/image_2_ec8257d3-72db-4130-9b3c-3bc5bf31efa8.png",
             "heading": "Nervous System",
             "description": "Cold slows down the speed at which nerves travel. So it’s harder for pain signals to reach your brain"
-          }
-        },
-        "card_YD7Kty": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/image_3.png",
-            "heading": "Metabolic System",
-            "description": "The cold slows down oxygen demand which slows down pain signaling"
           }
         }
       },
       "block_order": [
+        "card_YD7Kty",
         "card_4RR3Jf",
-        "card_QcGmBg",
-        "card_YD7Kty"
+        "card_QcGmBg"
       ],
       "settings": {
         "heading": "Compression Cold Therapy Power Revealed",
@@ -105,7 +105,7 @@
         "card_YzeHAU": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_40.png",
+            "icon": "shopify://shop_images/image_40_a01f8531-8d20-4cc6-a808-b6f93a0126c7.png",
             "heading": "Sleep 8-9 Hours",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -113,7 +113,7 @@
         "card_t4m6fm": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_04a3da36-2140-4fed-99d5-5dab1a83828a.png",
+            "icon": "shopify://shop_images/image_2_3bf50bda-d69b-4f8e-8ba9-f48771784fa6.png",
             "heading": "Direct Morning Sunlight",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -121,7 +121,7 @@
         "card_BT4ype": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_1_7629a6b4-9dc3-415e-ac10-73879bd96940.png",
+            "icon": "shopify://shop_images/image_4_f0a17696-0006-4e70-91a4-26e612d115c1.png",
             "heading": "Hydrate",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -129,7 +129,7 @@
         "card_TRKkUK": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_2_bf689230-61b7-4389-a5ad-b3a6d89f7ba7.png",
+            "icon": "shopify://shop_images/image_5_45f19a86-f115-47f2-9ca0-f6b9a208e8d1.png",
             "heading": "Meditation Mindfulness Practice",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -137,7 +137,7 @@
         "card_mcQb9R": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_3_4caae40c-c938-4f18-97c0-15a17fbdeb92.png",
+            "icon": "shopify://shop_images/image_6_444b93a0-fcaa-4ff4-b593-16244f44f069.png",
             "heading": "Grounding",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -145,7 +145,7 @@
         "card_QTUmY7": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_4.png",
+            "icon": "shopify://shop_images/image_7_f2caa8e6-3cba-47f9-98c1-38e8c1b738c0.png",
             "heading": "Get Up and Move!",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -153,7 +153,7 @@
         "card_cW3dKX": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_5_189112be-b55d-40dd-aec7-8e08c275331f.png",
+            "icon": "shopify://shop_images/image_8_ed6a97c3-fdbb-4a53-8876-b48914a42dc5.png",
             "heading": "Eat Organic",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -161,7 +161,7 @@
         "card_XQ9crw": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/image_6_8d0963f6-775e-4b4c-b682-d11138acb05e.png",
+            "icon": "shopify://shop_images/image_9_ca38c6af-95a5-4a2d-80a0-1293adc79536.png",
             "heading": "Massages and Bodywork",
             "description": "<p>You hear this everywhere but it is really is important. A recent 2015 study demonstrated that sleep isn’t just rest… it’s necessary to balance (metaregulate) your entire body. Everything from your awake conscious mind to your molecular processes need sleep to work correctly.</p><p>If you need extra help sleeping you can check this product out. It’s completely natural, has been tested for accuracy, and is guaranteed to work. You can even use WELCOME10 to get 10% off.</p>"
           }
@@ -179,7 +179,7 @@
       ],
       "settings": {
         "title": "What Are Other Non Cold-Therapy Wa To Feel Better",
-        "image": "shopify://shop_images/IceBeanie_r2_04B_2111_1.png"
+        "image": "shopify://shop_images/IceBeanie_r2_04B_2111_1_5d374cec-adeb-45cb-8449-0b840c160ade.png"
       }
     },
     "ew_featured_collection_j6T3Ax": {

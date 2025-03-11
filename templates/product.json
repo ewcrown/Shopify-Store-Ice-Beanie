@@ -15,28 +15,28 @@
         "satisfactors_GU9jbi": {
           "type": "satisfactors",
           "settings": {
-            "icon": "shopify://shop_images/Vector.png",
+            "icon": "shopify://shop_images/la_shipping-fast.png",
             "heading": "Fast Shipping"
           }
         },
         "satisfactors_QpYPGM": {
           "type": "satisfactors",
           "settings": {
-            "icon": "shopify://shop_images/Group.png",
+            "icon": "shopify://shop_images/Group_9796e4f5-122c-43d0-a163-37a5d1b58112.png",
             "heading": "30 Day Satisfaction Guarantee"
           }
         },
         "satisfactors_YT8kFJ": {
           "type": "satisfactors",
           "settings": {
-            "icon": "shopify://shop_images/Screenshot_2025-03-05_at_7.52.58_PM.png",
+            "icon": "shopify://shop_images/Layer_1.png",
             "heading": "24/7 Support"
           }
         },
         "satisfactors_Fp7A8N": {
           "type": "satisfactors",
           "settings": {
-            "icon": "shopify://shop_images/icon-inCA_1.png",
+            "icon": "shopify://shop_images/icon-inCA_1_222d29a2-ceba-456f-a2b6-708e450a5525.png",
             "heading": "Designed inCalifornia USA"
           }
         }
@@ -49,6 +49,7 @@
       ],
       "settings": {
         "reviews_text": "100,000+ Happy Customers",
+        "badge_text": "#1 Best Seller",
         "heading": "Feel Your Migraine Pain Melt Away",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
         "button_link": "",
@@ -76,7 +77,7 @@
     "ew_text_image_section_BeLcm6": {
       "type": "ew-text-image-section",
       "settings": {
-        "image": "shopify://shop_images/Group_2000.png",
+        "image": "shopify://shop_images/IMAGE_1_BLK_1_b895dc00-8799-4098-9b14-5ed9b9c28e7f.png",
         "heading": "Don't Forget, We Sell Bundles!",
         "description": "For the active athlete, the large family, or even for the individual who likes to keep their head cool all day, our bundles make it easy to keep the migraine pain away.",
         "reviews_text": "100,000+ Happy Customers",
@@ -86,7 +87,13 @@
     },
     "ew_reviews_section_LVUp6h": {
       "type": "ew-reviews-section",
-      "settings": {}
+      "settings": {
+        "heading": "Real Reviews From Real Customers",
+        "reviews_text": "5 / 5 1,438 Reviews",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "button_link": "",
+        "button_text": "5-star review"
+      }
     },
     "ew_testimonial_slider_9wyiAe": {
       "type": "ew-testimonial-slider",

@@ -40,6 +40,19 @@
   height: 100%;
 }
 
+.ew-main-video,
+.ew-video-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+.ew-main-video video,
+.ew-video-thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media(max-width:980px) {
   .slider-wrap {
     flex-direction: column-reverse;
