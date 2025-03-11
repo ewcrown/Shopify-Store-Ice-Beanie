@@ -69,27 +69,42 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 160% */
+  line-height: 32px;
+  /* 160% */
   opacity: 0.8;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
+  .ice-testimoinal-desc {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
   .ice-testimoinal-name {
     font-size: 22px;
-    margin-bottom: 10px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 980px) {
+  .ice-testimoinal-name {
+    text-align: center;
   }
 
   .ice-testimoinal-footer {
     margin-top: 10px;
+    justify-content: center;
   }
 
   .ice-testimoinal-wrap {
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
 
   .ice-testimoinal-desc {
-    font-size: 16px;
+    text-align: center;
   }
 }

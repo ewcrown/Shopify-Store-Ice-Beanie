@@ -7,7 +7,6 @@
 }
 
 .ice-reviews-col {
-  grid-template-columns: repeat(2, 1fr);
   gap: 128px;
   display: flex;
 }
@@ -22,8 +21,8 @@
 }
 
 .ice-reviews-content span {
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 36px;
 }
 
@@ -42,7 +41,7 @@
 .ice-reviews-heading-img>h2 {
   color: #001C43;
   font-family: Poppins;
-  font-size: 64px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
@@ -65,9 +64,30 @@
 .ice-reviews-desc-btn a {
   max-width: 350px;
   line-height: 42px;
+  font-size: 24px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
+  .ice-reviews-heading-img>h2 {
+    font-size: 42px;
+    line-height: 120%;
+  }
+
+  .ice-reviews-desc-btn p {
+    font-size: 20px;
+  }
+
+  .ice-reviews-desc-btn,
+  .ice-reviews-heading-img {
+    gap: 20px;
+  }
+
+  .ice-reviews-col {
+    gap: 68px;
+  }
+}
+
+@media screen and (max-width: 980px) {
   .ice-reviews-col {
     flex-direction: column;
     gap: 30px;
@@ -79,11 +99,13 @@
   }
 
   .ice-reviews-content {
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .ice-reviews-desc-btn p {
     font-size: 20px;
+    line-height: 150%;
   }
 
   .ice-reviews-desc-btn,
@@ -95,9 +117,6 @@
     width: 100%;
   }
 
-  .ice-reviews-desc-btn a {
-    max-width: 100%;
-  }
 
   .ice-reviews-heading-img>h2 {
     font-size: 32px;

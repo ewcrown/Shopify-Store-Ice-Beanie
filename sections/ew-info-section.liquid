@@ -34,14 +34,13 @@
         <div class="page-width">
             <div class="ice-image-info-col">
                 <div class="ice-image-info-wrapper">
-                  <img class="ew-img-fluid" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
+                  <img class="ew-img-fluid beanie" src="{{ s.image | image_url: width: 500 }}" loading="lazy"
                     srcset="
                         {{ s.image | image_url: width: 620 }} 620w,
                         {{ s.image | image_url: width: 800 }} 800w,
                         {{ s.image | image_url: width: 1100 }} 1100w,
                         {{ s.image | image_url: width: 1280 }} 1280w"
                     sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="Cap Image"
-                    class="beanie"
                   >
                     {% for block in section.blocks %}
                       {% if block.type == 'card-2' %}

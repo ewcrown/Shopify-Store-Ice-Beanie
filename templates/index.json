@@ -185,7 +185,7 @@
         "card_1_gr8KBF": {
           "type": "card-1",
           "settings": {
-            "image": "shopify://shop_images/image_3.png",
+            "image": "shopify://shop_images/image_741c3b36-1b1c-4015-a943-498e78c050ea.png",
             "heading": "Metabolic System",
             "description": "The cold slows down oxygen demand which slows down pain signaling"
           }
@@ -193,7 +193,7 @@
         "card_1_NbfeE8": {
           "type": "card-1",
           "settings": {
-            "image": "shopify://shop_images/image_1_2ef5de88-58bc-46bf-bc19-ac62d3e598c1.png",
+            "image": "shopify://shop_images/image_1_52f075ac-1b0c-4385-8337-5701e744648a.png",
             "heading": "Circulatory System",
             "description": "Restricts blood flow. Less blood to brain vessels prevents painful overextending"
           }
@@ -201,7 +201,7 @@
         "card_1_8FJUeX": {
           "type": "card-1",
           "settings": {
-            "image": "shopify://shop_images/image_2.png",
+            "image": "shopify://shop_images/image_2_ec8257d3-72db-4130-9b3c-3bc5bf31efa8.png",
             "heading": "Nervous System",
             "description": "Cold slows down the speed at which nerves travel. So it’s harder for pain signals to reach your brain"
           }
@@ -258,7 +258,7 @@
         "card_3_UEqVJi": {
           "type": "card-3",
           "settings": {
-            "image": "shopify://shop_images/ib1_final_1.png",
+            "image": "shopify://shop_images/ib1_final_1_3717b8fb-5f93-48aa-b765-8ab6e898bee4.png",
             "title": "Place In The Freezer",
             "description": "Simply place your IceBeanie in the freezer"
           }
@@ -266,7 +266,7 @@
         "card_3_VXzAkV": {
           "type": "card-3",
           "settings": {
-            "image": "shopify://shop_images/ib2_semifinal-1_1.png",
+            "image": "shopify://shop_images/ib2_semifinal-1_1_2bd61fb6-668e-467c-b17e-7cfa47779a00.png",
             "title": "Remove After 45min",
             "description": "Allow 45-60 minutes in the freezer for the gel to reach the desired temperature. For best results leave in the freezer overnight."
           }
@@ -274,7 +274,7 @@
         "card_3_M99EEa": {
           "type": "card-3",
           "settings": {
-            "image": "shopify://shop_images/ib3_Final_1.png",
+            "image": "shopify://shop_images/ib3_Final_1_bf6ac7c3-a0ad-4c1a-a9ff-cb3ba216bfee.png",
             "title": "Put On The IceBeanie",
             "description": "Place the IceBeanie on your head for instant migraine pain relief"
           }
@@ -319,28 +319,28 @@
         "icon_text_QCJgBp": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/Vector.png",
+            "image": "shopify://shop_images/la_shipping-fast.png",
             "title": "Fast Shipping"
           }
         },
         "icon_text_ixB6Bj": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/Group.png",
+            "image": "shopify://shop_images/Group_9796e4f5-122c-43d0-a163-37a5d1b58112.png",
             "title": "30 Day Satisfaction Guarantee"
           }
         },
         "icon_text_zhMrCW": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-03-05_at_7.52.58_PM.png",
+            "image": "shopify://shop_images/Layer_1.png",
             "title": "24/7 Support"
           }
         },
         "icon_text_tc4dXN": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/icon-inCA_1.png",
+            "image": "shopify://shop_images/icon-inCA_1_222d29a2-ceba-456f-a2b6-708e450a5525.png",
             "title": "Designed in California USA"
           }
         }

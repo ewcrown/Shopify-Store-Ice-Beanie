@@ -17,18 +17,17 @@
 .ew-product-content .ew-product-details-tab h4 {
   color: #001C43;
   font-family: Poppins;
-  font-size: 26px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 38px;
-  /* 146.154% */
+  line-height: normal;
   letter-spacing: -0.26px;
+  margin-bottom: 15px;
 }
 
 .ew-product-content .ew-product-details-tab p {
   color: #001C43;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.26px;
@@ -58,12 +57,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.ew-product-satisfactors {
-  position: absolute;
-  right: 0;
-  width: 200px;
 }
 
 .ew-product-satisfactors ul li span {
@@ -281,12 +274,39 @@
   font-family: Poppins;
   font-size: 28px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
 
-@media(max-width:767px) {
+
+@media(min-width:981px) {
+  .ew-sticky-product-info .ew-product-info {
+    position: sticky;
+    top: 150px;
+  }
+
+  .ew-product-row {
+    position: sticky;
+    top: 0;
+  }
+
+  .ew-product-satisfactors ul {
+    width: 200px;
+    margin-left: auto;
+    position: sticky;
+    top: 150px;
+  }
+
+  .ew-product-satisfactors {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@media(max-width:980px) {
   .ew-product-gallery {
     display: block;
   }

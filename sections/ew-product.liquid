@@ -7,20 +7,24 @@
     <div class="page-width">
       <div class="ew-product-wrap">
         <div class="ew-product-gallery">
-          {% 
-            render 'ew-product-gallery-slider'
-            product: product,
-          %}
-          {% 
-            render 'ew-product-info',
-            product: product,
-            s: section.settings
-          %}
+          <div class="ew-product-gallery-wrap">
+            {% 
+              render 'ew-product-gallery-slider'
+              product: product,
+            %}
+            {% 
+              render 'ew-product-details'
+              product: product
+            %}
+          </div>
+          <div class="ew-sticky-product-info">
+            {% 
+              render 'ew-product-info',
+              product: product,
+              s: section.settings
+            %}
+          </div>
         </div>
-        {% 
-          render 'ew-product-details'
-          product: product
-        %}
       </div>
     </div>
   </div>

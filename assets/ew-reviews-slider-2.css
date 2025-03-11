@@ -1,39 +1,31 @@
-.ice-splide-container-col .splide__slide {
-  transform: translateX(-100%) scale(0.8);
-  transition: all 0.5s ease;
-  position: absolute;
-  cursor: pointer;
-  pointer-events: auto;
+.ice-splide-container-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
 
-.ice-splide-container-col .splide__slide.is-active {
-  opacity: 1;
-  transform: translateX(0%) scale(1);
-  z-index: 2;
-  cursor: default;
-  pointer-events: auto;
+.ice-slide-content {
+  display: none;
+}
+
+.ice-slide-content.active {
+  display: block;
 }
 
 .ice-splide-container-col .splide__slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-}
-
-.ice-slider-pagination-btn .disabled {
-  opacity: .3;
 }
 
 .ice-splide-container-col {
   box-shadow: 5px 6px 16px 12px #75869626;
   border-radius: 10px;
-  padding: 50px 0 30px 0;
+  padding: 50px 50px 30px 0;
   display: flex;
   gap: 65px;
-}
-
-.ice-splide-container-col .splide__track {
-  overflow: visible;
 }
 
 .ice-splide-container-row {
@@ -44,10 +36,6 @@
   width: 50%;
   perspective: 1000px;
   position: relative;
-}
-
-.ice-splide-container-col .splide__arrows {
-  display: none;
 }
 
 .ice-splide-container-col .ice-science-review-content-wrap svg {
@@ -61,7 +49,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  /* 60px */
   margin-bottom: 36px;
 }
 
@@ -89,42 +76,51 @@
   line-height: 150%;
 }
 
-@media (max-width: 767px) {
-  .ice-splide-container-col {
-    padding: 30px;
-    flex-direction: column;
-    gap: 30px;
-  }
+.ice-splide-container-2 .splide__slide img {
+  transition: all .2s ease-in-out;
+}
 
-  .ice-splide-container-col .splide__track {
-    overflow: hidden;
-  }
+.ice-splide-container-2 .splide__slide:not(.is-active) img {
+  transform: scale(0.8);
+}
 
-  .ice-content-container {
-    padding: 0;
-  }
+.ice-splide-container-2 {
+  padding-top: 80px;
+}
 
-  .ice-splide-container-images {
-    width: 100%;
-    padding: 0;
-  }
 
-  .ice-splide-container-col .splide__slide.is-active {
-    transform: unset;
-  }
+.ice-splide-container-2 .ice-slider-navigation {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
 
-  .ice-splide-container-col .splide__slide {
-    transform: unset;
-    position: unset;
-  }
+.ice-splide-container-2 .splide__arrow {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  background: none;
+  position: static;
+  opacity: 1;
+}
 
+.ice-splide-container-2 .ice-science-review-content {
+  margin-bottom: 50px;
+}
+
+@media(max-width:1200px) {
   .ice-splide-container-col .ice-science-review-desc {
     font-size: 24px;
-    margin-bottom: 20px;
   }
 
   .ice-splide-container-col .ice-science-review-content-wrap svg {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .ice-splide-container-col .science-review-name {
@@ -134,26 +130,41 @@
   .ice-splide-container-col .science-review-institute {
     font-size: 16px;
   }
-
-  .ice-splide-container-col .splide__slide img {
-    height: 400px;
-    object-fit: cover;
-  }
 }
 
-@media (min-width: 768px) {
-  .ice-splide-container-col .splide__slide.is-active {
-    width: calc(55% - 0.5rem) !important;
-    padding-left: 40px;
+@media(max-width:980px) {
+
+  .ice-splide-container-2 .ice-slider-navigation {
+    justify-content: center;
   }
 
-  .ice-splide-container-col .splide__slide.is-active img {
-    height: 450px;
-    object-fit: cover;
+  .ice-splide-container-2 .splide__slide:not(.is-active) img {
+    transform: scale(1);
   }
 
-  .ice-splide-container-col .splide__slide:not(.is-active) img {
-    object-fit: cover;
-    height: 400px;
+  .ice-splide-container-col .ice-science-review-desc {
+    font-size: 20px;
+  }
+
+  .ice-splide-container-col {
+    padding: 30px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ice-content-container {
+    padding: 0;
+  }
+
+  .ice-science-review-content-wrap,
+  .science-review-institute,
+  .ice-splide-container-col .science-review-name {
+    text-align: center;
+    display: block;
+  }
+
+  .ice-splide-container-2 {
+    padding-top: 30px;
   }
 }

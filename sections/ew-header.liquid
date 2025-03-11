@@ -72,10 +72,13 @@
                   <a href="{{ s.button_link }}" class="primary-btn header-order-btn">{{ s.button_text }}</a>
                   {% endif %}
                   <div class="ice-header-icons">
-                      <span class="ice-header-user-icon ice-header-icon"
-                        ><a href="/cart"> 
-                        {% render 'ew-icon-bag' %}
-                      </a>
+                      <span class="ice-header-user-icon ice-header-icon">
+                        <a href="/cart"> 
+                          {% render 'ew-icon-bag' %}
+                          <span class="ew-ice-cart-count">
+                            {{ cart.item_count }}
+                          </span>
+                        </a>
                     </span>
                       <span class="ice-header-cart-icon ice-header-icon">
                         <a href="/account"> 

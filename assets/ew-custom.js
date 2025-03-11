@@ -9,6 +9,10 @@ sliders.forEach(slider => {
       pagination: false,
       arrows: false,
       breakpoints: {
+        1600: {
+          padding: "30rem",
+          gap: "1.5rem",
+        },
         1200: {
           padding: "10rem",
           gap: "1.5rem",
@@ -21,85 +25,65 @@ sliders.forEach(slider => {
       },
     }).mount();
   } else if (sliderName == "Reviews Slider 2") {
-    const initialContent = document.querySelector('.ice-slide-content[data-slide="0"]');
-    if (initialContent) {
-      initialContent.classList.add('active');
-      initialContent.querySelector('.ice-prev-slide').classList.add('disabled')
+
+
+    let reviewSlider = new Splide('#ew-review-slider', {
+      type: "loop",
+      perPage: 2,
+      perMove: 1,
+      gap: '30px',
+      focus: '1',
+      pagination: false,
+      arrows: false,
+      breakpoints: {
+        980: {
+          perPage: 1
+        }
+      }
+    }).mount();
+
+    document.querySelector('.ice-slider-navigation .splide__arrow--prev').addEventListener('click', () => reviewSlider.go('<'));
+    document.querySelector('.ice-slider-navigation .splide__arrow--next').addEventListener('click', () => reviewSlider.go('>'));
+  
+    function updateContent(index) {
+      document.querySelectorAll('.ice-slide-content').forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      let activeContent = document.querySelector(`.ice-slide-content[data-content="${index}"]`);
+      if (activeContent) {
+        activeContent.classList.add('active');
+      }
     }
-    const imageSlider = document.querySelector("#image-slider")
 
-    if (imageSlider) {
-      const reviewCustomSlider = new Splide(imageSlider, {
-        type: 'slide',
-        perPage: 2,
-        focus: 'right',
-        direction: 'rtl',
-        gap: '2rem',
-        pagination: false,
-        breakpoints: {
-          767: {
-            perPage: 1
-          }
-        }
-      })
+    reviewSlider.on('moved', function (newIndex) {
+      updateContent(newIndex);
+    });
 
-      reviewCustomSlider.mount();
+    // Set initial content
+    updateContent(0);
 
-      reviewCustomSlider.on('active', function (slide) {
-        document.querySelectorAll('.ice-slide-content').forEach(content => {
-          content.classList.remove('active');
-          content.querySelector('.ice-prev-slide').classList.remove('disabled');
-          content.querySelector('.ice-next-slide').classList.remove('disabled');
-        });
-
-        const currentIndex = slide.index;
-        const currentContent = document.querySelector(`.ice-slide-content[data-slide="${currentIndex}"]`);
-        if (currentContent) {
-          currentContent.classList.add('active');
-        }
-      });
-
-      reviewCustomSlider.on('click', function (slide, event) {
-        const clickedSlide = event.target.closest('#image-slider .splide__slide');
-        if (clickedSlide && !clickedSlide.classList.contains('is-active')) {
-          const slideIndex = slide.index;
-          reviewCustomSlider.go(slideIndex);
-        }
-      });
-
-      reviewCustomSlider.on('mounted', function () {
-        const activeContent = document.querySelector('.ice-slide-content[data-slide="0"]');
-        if (activeContent && !activeContent.classList.contains('active')) {
-          activeContent.classList.add('active');
-          activeContent.querySelector('.ice-prev-slide').classList.add('disabled')
-        }
-      });
-
-      document.querySelectorAll('.ice-prev-slide').forEach(button => {
-        button.addEventListener('click', function () {
-          reviewCustomSlider.go('<');
-        });
-      });
-
-      document.querySelectorAll('.ice-next-slide').forEach(button => {
-        button.addEventListener('click', function () {
-          reviewCustomSlider.go('>');
-        });
-      });
-    }
   } else if (sliderName == "Review Video Slider") {
     new Splide(slider, {
       type: 'loop',
       perPage: 1,
-      padding: "50rem",
       focus: 'center',
-      gap: '10rem',
+      padding: "40rem",
+      gap: '0rem',
       arrows: false,
       pagination: false,
       breakpoints: {
-        767: {
+        1200: {
+          padding: "20rem",
+          gap: '0rem',
+        },
+        980: {
           perPage: 1,
-          padding: "0rem",
+          padding: "10rem",
+        },
+        600: {
+          perPage: 1,
+          padding: "5rem",
         }
       }
     }).mount();
@@ -130,7 +114,7 @@ sliders.forEach(slider => {
         fixedWidth: 160,
         fixedHeight: 143,
         isNavigation: true,
-        wheel    : true,
+        wheel: true,
         gap: 10,
         arrows: false,
         focus: 'center',

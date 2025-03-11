@@ -8,7 +8,6 @@ if (cartButtons.length > 0) {
       e.target.innerHTML = "Adding...";
       await cartAdd(variant_id);
       e.target.innerHTML = "Add To Cart";
-      window.location.href = "/cart";
     });
   });
 
@@ -31,18 +30,14 @@ const cartAdd = async (id, qty = 1) => {
       },
       body: JSON.stringify(formData),
     };
-    const response = await fetch(
-      `${window.Shopify.routes.root}cart/add.js`,
-      options
-    );
+    const response = await fetch(`${window.Shopify.routes.root}cart/add.js`,options);
     if (!response.ok) throw new Error("Failed to add item to the cart.");
     console.log("Cart updated successfully");
+    window.location.href = '/cart'
   } catch (error) {
     console.error("Error in cartAdd:", error);
   }
 };
-
-
 
 // Product Page
 

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-@media(max-width:767px) {
+@media(max-width:980px) {
     .ew-collection-products-wrap {
         grid-template-columns: repeat(1, 1fr);
     }

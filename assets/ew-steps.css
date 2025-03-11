@@ -41,10 +41,10 @@
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 64px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 150%;
   /* 125% */
   text-transform: capitalize;
 }

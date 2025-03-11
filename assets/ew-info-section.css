@@ -10,28 +10,29 @@
   justify-content: center;
   align-items: center;
   padding-top: 28rem;
+  position: relative;
 }
 
 .ice-image-info-wrapper {
-  position: relative;
   text-align: center;
   width: 90%;
   max-width: 600px;
 }
 
 .beanie {
-  max-width: 700px;
+  width: 700px;
 }
 
 .ice-icon-inner-wrap {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   background-color: #fff;
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 39px;
 }
 
 .ice-icon {
@@ -55,52 +56,58 @@
   text-transform: uppercase;
 }
 
-.ice-icon-0 {
-  top: -40%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ice-icon-1 {
-  top: 30%;
-  left: -42%;
-  transform: translateY(-50%);
-}
-
-.ice-icon-2 {
-  top: 30%;
-  right: -42%;
-  transform: translateY(-50%);
-}
-
-.ice-icon-6 {
-  bottom: -5%;
-  right: -70%;
-  transform: translateY(-50%);
-}
-
-.ice-icon-3 {
-  bottom: 13%;
-  left: -55%;
-  transform: translateX(-50%);
-}
-
-.ice-icon-4 {
-  top: -5%;
-  left: 7%;
-  transform: translate(-50%, -50%);
-}
-
-.ice-icon-5 {
-  top: -5%;
-  right: 7%;
-  transform: translate(50%, -50%);
-}
 .ice-image-info-wrapper img {
   margin: auto;
 }
 
-@media(max-width: 767px) {
+.ice-icon-3 {
+  top: 5.56vh;
+  right: 0;
+  left: 0;
+}
+
+.ice-icon-6 {
+  right: 9.9vw;
+  bottom: 26.96vh;
+}
+
+.ice-icon-0 {
+  left: 9.9vw;
+  bottom: 26.96vh;
+}
+
+.ice-icon-1 {
+  left: 16.67vw;
+  top: 32.41vh;
+}
+
+.ice-icon-5 {
+  right: 16.67vw;
+  top: 32.41vh;
+}
+
+.ice-icon-4 {
+  right: 25.52vw;
+  top: 13.89vh;
+}
+
+.ice-icon-2 {
+  left: 25.52vw;
+  top: 13.89vh;
+}
+
+
+@media(max-width:1650px) {
+
+}
+
+@media(min-width:1200px) {
+  .ice-image-info-col {
+    margin-bottom: 60px;
+  }
+}
+
+@media(max-width: 980px) {
 
   .ice-image-info-col {
     padding-top: 0rem;
@@ -126,40 +133,6 @@
     margin-top: 10px;
   }
 
-  .ice-icon-0 {
-    top: -27%;
-  }
-
-  .ice-icon-1 {
-    top: 55%;
-    left: -9%;
-  }
-
-
-  .ice-icon-2 {
-    right: -9%;
-    top: 56%;
-  }
-
-  .ice-icon-3 {
-    bottom: -14%;
-    left: 27%;
-  }
-
-  .ice-icon-4 {
-    top: 5%;
-    left: 5%;
-  }
-
-  .ice-icon-5 {
-    top: 5%;
-    right: 5%;
-  }
-
-  .ice-icon-6 {
-    bottom: -30%;
-    right: 12%;
-  }
 
   .ice-icon-inner-wrap {
     width: 70px;
@@ -170,29 +143,4 @@
     background-size: contain !important;
   }
 
-}
-
-@media(min-width:1200px) {
-
-
-  .ice-icon-0 {
-    top: -75%;
-  }
-
-  .ice-icon-4,
-  .ice-icon-5 {
-    top: -10%;
-  }
-
-  .ice-icon-6 {
-    bottom: -50%;
-  }
-
-  .ice-icon-3 {
-    bottom: -20%;
-  }
-
-  .ice-image-info-col {
-    margin-bottom: 60px;
-  }
 }

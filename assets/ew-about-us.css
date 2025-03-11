@@ -11,21 +11,22 @@
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 64px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+  margin-bottom: 5px;
 }
 
 .ice-cards-desc {
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 36px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 500;
-  line-height: 80px;
+  line-height: 150%;
   text-transform: capitalize;
   opacity: 0.7;
 }
@@ -62,23 +63,51 @@
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 38px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 70px; /* 175% */
+  font-weight: 500;
+  line-height: 150%;
   text-transform: capitalize;
+  margin-top: 20px;
 }
 
 .ice-card-desc {
   color: #001C43;
   text-align: center;
   font-family: Poppins;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 34px; /* 154.545% */
+  font-weight: 300;
+  line-height: 150%;
   text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 0;
   opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .ice-cards-heading {
+    font-size: 42px;
+  }
+
+  .ice-cards-desc {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .ice-card-wrapper {
+    column-gap: 30px;
+    margin-top: 30px;
+  }
+
+  .ice-card-title {
+    font-size: 24px;
+  }
+
+  .ice-card-desc {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 767px) {

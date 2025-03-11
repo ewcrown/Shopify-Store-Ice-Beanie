@@ -21,13 +21,18 @@
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
-  line-height: 44px; /* 169.231% */
+  line-height: 44px;
+  /* 169.231% */
   text-transform: capitalize;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .ice-about-logo-col>p {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 170%;
+  }
+
+  .ice-about-logo-info img {
+    width: 250px;
   }
 }
