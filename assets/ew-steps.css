@@ -49,7 +49,11 @@
   text-transform: capitalize;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 980px) {
+
+  .ice-num-cards-row .ice-card img {
+    width: 200px;
+  }
 
   .ice-num-cards-row .ice-card-wrapper .ice-card:first-child::before,
   .ice-num-cards-row .ice-card-wrapper .ice-card:nth-child(2)::before {
