@@ -11,7 +11,7 @@
             {%  for product in products %}
             <img 
               class="ew-img-fluid {% if forloop.index == 1%}ew-featured-product-show{% endif %}"
-              src="{{ product.images[0] | image_url: width: 1280 }}" 
+              src="{{ product.images[0] | image_url: width: 800 }}" 
               data-index="{{ forloop.index }}"
               loading="lazy" 
               srcset="
