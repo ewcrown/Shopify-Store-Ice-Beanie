@@ -45,7 +45,7 @@
                   alt="{{ product.title | escape }} - Image {{ forloop.index }}">
               {% elsif media.media_type == 'video' %}
                 <div class="ew-main-video">
-                  {{ media | video_tag: controls: true, autoplay: false, loop: false, muted: false }}
+                  {{ media | video_tag: controls: true, autoplay: true, loop: false, muted: true }}
                 </div>
               {% endif %}
             </li>

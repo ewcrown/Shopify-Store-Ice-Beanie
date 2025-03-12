@@ -19,7 +19,7 @@
         "image": "shopify://shop_images/IceBeanieVideo-ezgif.com-video-to-gif-converter_1.png",
         "video": "shopify://files/videos/ice-beanie-video-min-transcode.mp4",
         "mobile_video": "shopify://files/videos/ice-beanie-video-min-transcode.mp4",
-        "button_link": "#",
+        "button_link": "shopify://collections/all",
         "button_text": "Get Relief Now"
       }
     },
@@ -359,7 +359,7 @@
         "heading": "Real Reviews From Real Customers",
         "reviews_text": "5 / 5 1,438 Reviews",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
-        "button_link": "#",
+        "button_link": "shopify://pages/reviews",
         "button_text": "5-star review"
       }
     },

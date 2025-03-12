@@ -1,22 +1,40 @@
 {{ 'ew-collection-products.css' |  asset_url |  stylesheet_tag }}
 {{ 'ew-product-card.css' |  asset_url |  stylesheet_tag }}
+{% assign s = section.settings %}
 <section class="ew-collection-products ew-collection-products-{{ section.id }}" id="ew-collection-products">
   <div class="ew-collection-products-row">
     <div class="ew-collection-products-wrap">
-      {% for product in collection.products limit: 3 %}
-        {% 
-          render 'ew-product-card', 
-          card_product: product,
-          border: false
-         %}
-      {% endfor %}
+      {% if s.product_list != blank %}
+        {% for product in s.product_list %}
+          {% 
+            render 'ew-product-card', 
+            card_product: product,
+            border: false
+           %}
+        {% endfor %}
+      {% else %}
+        {% for product in collection.products limit: 3 %}
+          {% 
+            render 'ew-product-card', 
+            card_product: product,
+            border: false
+           %}
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
 </section>
 {%  schema  %}  
 {
   "name":"<> Collection Products",
-  "settings": [],
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 12
+    }
+  ],
   "presets": [
     {
       "name": "<> Collection Products"

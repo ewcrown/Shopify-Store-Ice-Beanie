@@ -17,7 +17,7 @@
         "header_logo": "shopify://shop_images/IceBeanie_logo_2_1_a68c76f3-943b-42a6-a99d-69e049c411d0.png",
         "white_logo": "shopify://shop_images/icebeanie-logo-white_1_db2df1d1-1f5e-469a-a7bc-3c0cdb8e7650.png",
         "menu": "main-menu",
-        "button_link": "#",
+        "button_link": "shopify://collections/all",
         "button_text": "ORDER NOW"
       }
     }

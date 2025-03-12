@@ -111,7 +111,7 @@ sliders.forEach(slider => {
       });
 
       let thumbnails = new Splide('#ew-thumbnail-slider', {
-        fixedWidth: 160,
+        fixedWidth: 130,
         fixedHeight: 143,
         isNavigation: true,
         wheel: true,

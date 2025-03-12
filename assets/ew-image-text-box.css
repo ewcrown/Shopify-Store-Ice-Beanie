@@ -1,0 +1,136 @@
+.ice-cards-col {
+  padding: 80px 0 40px 0;
+}
+
+.ice-cards-heading {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.ice-cards-desc {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+.ice-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 67px;
+  margin-top: 60px;
+}
+
+.ice-card-title {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+.ice-card-desc {
+  color: #001C43;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.ice-card-img {
+  width: auto;
+}
+
+.ice-cards-col {
+  flex-direction: column;
+  gap: 80px;
+}
+
+
+@media (max-width: 1200px) {
+  .ice-cards-heading {
+    font-size: 42px;
+  }
+
+  .ice-cards-desc {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .ice-card-wrapper {
+    column-gap: 30px;
+    margin-top: 30px;
+  }
+
+  .ice-card-title {
+    font-size: 24px;
+  }
+
+  .ice-card-desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ice-card-title {
+    font-size: 22px;
+    line-height: normal;
+    margin-top: 20px;
+  }
+
+  .ice-card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .ice-cards-desc {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+
+  .ice-cards-col {
+    gap: 40px;
+  }
+
+  .ice-cards-heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .ice-cards-col {
+    padding: 40px 0px;
+  }
+
+  .ice-card img {
+    width: 80px;
+  }
+
+  .ice-card-desc {
+    margin-top: 10px;
+  }
+}

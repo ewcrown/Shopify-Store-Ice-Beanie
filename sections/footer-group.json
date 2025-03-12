@@ -17,64 +17,64 @@
         "social_icon_TFxAaF": {
           "type": "social_icon",
           "settings": {
-            "social_image": "shopify://shop_images/facebook_c9317660-71ea-4e34-9948-cc309c8e03bf.png",
-            "social_link": "#"
+            "social_image": "shopify://shop_images/facebook.svg",
+            "social_link": "https://www.facebook.com/icebeanie/"
           }
         },
         "social_icon_dzzeDC": {
           "type": "social_icon",
           "settings": {
-            "social_image": "shopify://shop_images/X_logo_2023_1.png",
-            "social_link": "#"
+            "social_image": "shopify://shop_images/X_logo_2023_1.svg",
+            "social_link": "https://twitter.com/icebeanie"
           }
         },
         "social_icon_qqfAVB": {
           "type": "social_icon",
           "settings": {
-            "social_image": "shopify://shop_images/demo.png",
-            "social_link": "#"
+            "social_image": "shopify://shop_images/demo.svg",
+            "social_link": "https://www.instagram.com/IceBeanie/"
           }
         },
         "social_icon_deRzmn": {
           "type": "social_icon",
           "settings": {
-            "social_image": "shopify://shop_images/linkedin.png",
+            "social_image": "shopify://shop_images/linkedin.svg",
             "social_link": "#"
           }
         },
         "social_icon_tdmpPm": {
           "type": "social_icon",
           "settings": {
-            "social_image": "shopify://shop_images/line-md_youtube-filled.png",
-            "social_link": "#"
+            "social_image": "shopify://shop_images/line-md_youtube-filled.svg",
+            "social_link": "https://www.youtube.com/channel/UCGrCGH4HZxD-8Du_Cxxhdbw"
           }
         },
         "menu_KEXQPz": {
           "type": "menu",
           "settings": {
             "menu_title": "Our Products",
-            "menu": "customer-account-main-menu"
+            "menu": "our-products"
           }
         },
         "menu_jUBzx8": {
           "type": "menu",
           "settings": {
             "menu_title": "Our Company",
-            "menu": "customer-account-main-menu"
+            "menu": "our-company"
           }
         },
         "menu_YPMjYk": {
           "type": "menu",
           "settings": {
             "menu_title": "Customer Care",
-            "menu": "customer-account-main-menu"
+            "menu": "customer-care-1"
           }
         },
         "menu_7bPWTV": {
           "type": "menu",
           "settings": {
             "menu_title": "Our Policies",
-            "menu": "customer-account-main-menu"
+            "menu": "footer"
           }
         }
       },

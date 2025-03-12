@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "6195106b-4e11-4ac9-a800-d874b06ba057": {
@@ -16,7 +25,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<h5><em>UNLOCK FREE U.S. SHIPPING WHEN YOU BUY 2 OR MORE ICEBEANIE'S<\/em><\/h5>"
+            "text": "<h5><em>UNLOCK FREE U.S. SHIPPING WHEN YOU BUY 2 OR MORE ICEBEANIE'S</em></h5>"
           }
         }
       },
@@ -57,54 +66,47 @@
       ],
       "settings": {}
     },
-    "1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f": {
-      "type": "multicolumn",
+    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053": {
+      "type": "custom-three-columns",
+      "disabled": true,
+      "settings": {}
+    },
+    "ew_steps_Ryacx3": {
+      "type": "ew-steps",
       "blocks": {
-        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-1": {
-          "type": "column",
+        "card_3jD4MP": {
+          "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Route_CarbonNeutral_medium_dark_version.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/ib1_final_1.png",
+            "title": "Place In The Freezer",
+            "description": "Simply place your IceBeanie in the freezer"
           }
         },
-        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-2": {
-          "type": "column",
+        "card_zwfgA7": {
+          "type": "card",
           "settings": {
-            "title": "Carbon-Neutral Shipping",
-            "text": "<h3>Made available with every purchase to promote sustainability in consumption.<\/h3>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/ib2_semifinal-1_1.png",
+            "title": "Remove After 45min",
+            "description": "Allow 45-60 minutes in the freezer for the gel to reach the desired temperature. For best results leave in the freezer overnight."
+          }
+        },
+        "card_Kq7PKz": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ib3_Final_1.png",
+            "title": "Put On The IceBeanie",
+            "description": "Place the IceBeanie on your head for instant migraine pain relief"
           }
         }
       },
       "block_order": [
-        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-1",
-        "template--16804810948841__1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f-column-2"
+        "card_3jD4MP",
+        "card_zwfgA7",
+        "card_Kq7PKz"
       ],
-      "disabled": true,
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Cooling Relief in Just 3 Easy Steps"
       }
-    },
-    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053": {
-      "type": "custom-three-columns",
-      "settings": {}
     }
   },
   "order": [
@@ -112,7 +114,7 @@
     "e912f55e-4226-48ff-8c3f-55c99da5d476",
     "cart-items",
     "cart-footer",
-    "1ec8c1fd-ad20-4db3-9c08-2f70d1c80f9f",
-    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053"
+    "4a6cabf9-a318-4fe6-b438-5f40ef9a7053",
+    "ew_steps_Ryacx3"
   ]
 }

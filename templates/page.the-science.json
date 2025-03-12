@@ -186,7 +186,7 @@
       "type": "ew-featured-collection",
       "settings": {
         "title": "IceBeanie Bundles",
-        "collection": "all"
+        "collection": "bundles"
       }
     },
     "ew_reviews_section_LVUp6h": {
@@ -195,7 +195,7 @@
         "heading": "Real Reviews From Real Customers",
         "reviews_text": "5 / 5 1,438 Reviews",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
-        "button_link": "#",
+        "button_link": "shopify://pages/reviews",
         "button_text": "5-star review"
       }
     },

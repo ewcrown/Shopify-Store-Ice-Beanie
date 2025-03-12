@@ -7,6 +7,10 @@
   padding: 60px 0;
 }
 
+.related-products .grid{
+  gap: 0;
+}
+
 .ew-product-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -230,6 +234,7 @@
   content: '';
   background: #F6F6F6;
   width: 27px;
+  border: 1px solid #000;
   height: 27px;
   border-radius: 50%;
   display: inline-block;
