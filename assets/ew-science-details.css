@@ -44,6 +44,9 @@ details[open] .ice-accordion-icon svg {
   padding-bottom: 30px;
 }
 
+.ice-accordion-content-desc p a {
+  color: #4194E4;
+}
 .ice-accordion-content-desc p {
   color: #001C43;
   font-family: Poppins;

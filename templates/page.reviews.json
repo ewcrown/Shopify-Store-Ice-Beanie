@@ -347,28 +347,14 @@
       "type": "ew-reviews-section",
       "settings": {
         "heading": "Real Reviews From Real Customers",
-        "reviews_text": "5 / 5 1,438 Reviews",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's",
+        "reviews_text": "5 / 51,438 Reviews",
+        "description": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
         "button_link": "",
         "button_text": "5-star review"
       }
     },
     "ew_testimonial_slider_9wyiAe": {
       "type": "ew-testimonial-slider",
-      "blocks": {
-        "testimonial_RPXAaG": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/image_1_d8c81c99-e97f-458a-8bdc-1f0f716c8d52.png",
-            "icon": "shopify://shop_images/amazon-icon_1.png",
-            "author_name": "Hannah P",
-            "description": "I cant believe it has taken me this long to buy something like this! I suffer from frequent migraines. This is great."
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_RPXAaG"
-      ],
       "settings": {}
     },
     "ew_newsletter_ghxbiJ": {
