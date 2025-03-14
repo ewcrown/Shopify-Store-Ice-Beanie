@@ -50,6 +50,15 @@
   object-fit: cover;
 }
 
+@media(max-width:1440px) {
+
+    .ew-product-gallery {
+      gap: 30px;
+    }
+.ew-product-satisfactors ul li {
+    padding: 15px;
+}
+}
 @media(max-width:980px) {
   #ew-main-slider .splide__slide {
     height: 400px !important;

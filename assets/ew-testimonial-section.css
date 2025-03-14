@@ -83,7 +83,7 @@
 }
 
 .ew-testimonial-card:hover .ew-testimonial-content {
-  opacity: 1;
+  opacity: 0;
 }
 
 @media(max-width:980px) {

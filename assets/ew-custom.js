@@ -124,7 +124,7 @@ sliders.forEach(slider => {
         direction: 'ttb', // Vertical mode
         height: 600, // Ensuring it fits inside the container
         breakpoints: {
-          767: {
+          980: {
             fixedWidth: 115,
             fixedHeight: 120,
             direction: 'ltr', // Vertical mode

@@ -18,30 +18,37 @@
             "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
           }
         },
-        "video_card_3HLAU3": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
-          }
-        },
         "video_card_afkWah": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+            "video": "shopify://files/videos/IceBeanie_r1_Cam+A-26.mp4"
           }
         },
         "video_card_JeCcHz": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
+            "video": "shopify://files/videos/IceBeanie2_r1_Cam+A-28.mp4"
+          }
+        },
+        "video_card_3HLAU3": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/116207923_359329938382086_1159735255009451849_n-transcode.mp4"
+          }
+        },
+        "video_card_TpGmh4": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/IceBeanie2_r1_Cam+A-9.mp4"
           }
         }
       },
       "block_order": [
         "video_card_A9a7FJ",
-        "video_card_3HLAU3",
         "video_card_afkWah",
-        "video_card_JeCcHz"
+        "video_card_JeCcHz",
+        "video_card_3HLAU3",
+        "video_card_TpGmh4"
       ],
       "settings": {
         "rating_text": "4.9 Star Rating",
