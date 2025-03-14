@@ -104,7 +104,6 @@ sliders.forEach(slider => {
     document.addEventListener('DOMContentLoaded', function () {
       let main = new Splide('#ew-main-slider', {
         type: 'fade',
-        heightRatio: 0.5,
         pagination: false,
         arrows: false,
         cover: true,
@@ -124,6 +123,10 @@ sliders.forEach(slider => {
         direction: 'ttb', // Vertical mode
         height: 600, // Ensuring it fits inside the container
         breakpoints: {
+          1500: {
+            fixedWidth: 100,
+            fixedHeight: 112,
+          },
           980: {
             fixedWidth: 115,
             fixedHeight: 120,
@@ -179,23 +182,26 @@ document.querySelectorAll('.ice-nav-links a')?.forEach(link => {
 });
 
 // Quantity Selector
-const quantitySelector = document.querySelector('.quantity-selector')
-const minusBtn = document.querySelector('.minus');
-const plusBtn = document.querySelector('.plus');
-const quantityValue = document.querySelector('.quantity-value');
-if (quantitySelector) {
-  let quantity = parseInt(quantityValue.textContent);
-  minusBtn.addEventListener('click', () => {
-    if (quantity > 1) {
-      quantity--;
+const quantitySelector = document.querySelectorAll('.quantity-selector')
+
+quantitySelector?.forEach((single)=>{
+  const minusBtn = single.querySelector('.minus');
+  const plusBtn = single.querySelector('.plus');
+  const quantityValue = single.querySelector('.quantity-value');
+  if (quantitySelector) {
+    let quantity = parseInt(quantityValue.textContent);
+    minusBtn.addEventListener('click', () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityValue.textContent = quantity;
+      }
+      minusBtn.disabled = quantity <= 1;
+    });
+    plusBtn.addEventListener('click', () => {
+      quantity++;
       quantityValue.textContent = quantity;
-    }
+      minusBtn.disabled = false;
+    });
     minusBtn.disabled = quantity <= 1;
-  });
-  plusBtn.addEventListener('click', () => {
-    quantity++;
-    quantityValue.textContent = quantity;
-    minusBtn.disabled = false;
-  });
-  minusBtn.disabled = quantity <= 1;
-}
+  }
+})

@@ -12,17 +12,28 @@
               render 'ew-product-gallery-slider'
               product: product,
             %}
+            <div class="ew-desktop-hide">
+            {% 
+              render 'ew-product-info',
+              product: product,
+              s: section.settings,
+              type:"mobile"
+            %}
+            </div>
             {% 
               render 'ew-product-details'
               product: product
             %}
           </div>
           <div class="ew-sticky-product-info">
-            {% 
-              render 'ew-product-info',
-              product: product,
-              s: section.settings
-            %}
+            <div class="ew-mobile-hide">
+              {% 
+                render 'ew-product-info',
+                product: product,
+                s: section.settings,
+                type:"desktop"
+              %}
+            </div>
           </div>
         </div>
       </div>

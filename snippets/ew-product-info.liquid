@@ -20,20 +20,32 @@
       {{ product.description | truncate: 200 | strip_html }}
     </div>
   
+    <select class="ew-product-variant-select" id="ew-variant-ids">
+      {% for variant in product.variants %}
+      <option 
+        data-id="{{ variant.id }}" 
+        {% for option in variant.options %}
+          data-option{{ forloop.index }}="{{ option.name }}"
+        {% endfor %}
+        value="{{ variant.title }}"
+        {% unless variant.available %}disabled="true"{% endunless %}>{{ variant.title }}</option>
+      {% endfor %}
+    </select>
+
     <div class="ew-product-color-radios">
       <div class="ew-product-color-radio">    
-        {% for option in product.options %}
-          <div class="ew-product-variant ew-product-variant-{{ option | handleize }}">
-            {% for variant in product.variants %}
-              {% if variant.available %}
-                <div class="ew-product-color-radio-single ew-product-color-radio-single-{{ variant.title | handleize }}">    
-                  <input type="radio" data-cart-input id="{{ variant.title | handleize }}" name="{{ option | handleize }}" value="{{ variant.title }}" {% if forloop.index == 1 %}checked{% endif %} data-variant="{{ variant.id }}">
-                  <label for="{{ variant.title | handleize }}">
-                    <span class="active-ball" style="background:var(--{{ variant.title | handleize }})"></span>
-                    {{ variant.title }}
+        {% for option in product.options_with_values %}
+          <div class="ew-product-variant ew-product-variant-{{ option.name | handleize }}">
+            {% for value in option.values %}
+              {% comment %} {% if variant.available %} {% endcomment %}
+                <div class="ew-product-color-radio-single ew-product-color-radio-single-{{ value | handleize }}">    
+                  <input type="radio" data-cart-input id="{{ value | handleize }}-{{ type }}" name="{{ option.name | handleize }}-{{ type }}" value="{{ value }}" {% if forloop.index == 1 %}checked{% endif %}>
+                  <label for="{{ value | handleize }}-{{ type }}">
+                    <span class="active-ball" style="background:var(--{{ value | handleize }})"></span>
+                    {{ value }}
                   </label>
                 </div>
-              {% endif %}
+              {% comment %} {% endif %} {% endcomment %}
             {% endfor %}
           </div>
         {% endfor %}

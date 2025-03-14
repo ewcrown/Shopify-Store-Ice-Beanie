@@ -35,7 +35,7 @@
 }
 
 .primary-btn:hover {
-    background-color: #4cc3e6;
+  background-color: #4cc3e6;
 }
 
 .ew-desktop-hide {
@@ -65,7 +65,7 @@
     flex-direction: column;
   }
 
-  .product-grid > .grid__item {
+  .product-grid>.grid__item {
     width: 100% !important;
     max-width: 100% !important;
   }
