@@ -295,6 +295,8 @@
 
 
 @media(min-width:981px) {
+
+  .ew-sticky-product-info .ew-mobile-hide,
   .ew-sticky-product-info .ew-product-info {
     position: sticky;
     top: 150px;
