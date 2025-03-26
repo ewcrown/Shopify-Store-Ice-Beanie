@@ -10,7 +10,19 @@
   row-gap: 40px;
   display: grid;
 }
-
+.ew-img-fluid.logo__3 {
+  min-width: 300px;
+}
+@media (max-width: 1440px) {
+  .ew-img-fluid.logo__3 {
+    min-width: 260px;
+  } 
+}
+@media (max-width: 1340px) {
+  .ew-img-fluid.logo__3 {
+    min-width: inherit;
+  } 
+}
 @media (max-width: 767px) {
   .ice-logos-col img {
     margin: auto;
@@ -19,6 +31,6 @@
   .ice-logos-col {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
-    row-gap: 20px;
+    row-gap: 30px;
   }
 }

@@ -11,7 +11,7 @@
   position: absolute;
   top: 140px;
   right: -120px;
-  background-image: url('https://cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow.png?v=1741185621');
+  background-image: url("https://cdn.shopify.com/s/files/1/0254/3170/3629/files/arrow.png?v=1741185621");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -31,6 +31,8 @@
 
 .ice-num-cards-row .ice-cards-col {
   display: flex;
+  flex-direction: column;
+  gap: 70px;
 }
 
 .ice-num-cards-row .ice-card-wrapper {
@@ -38,7 +40,7 @@
 }
 
 .ice-num-cards-heading {
-  color: #001C43;
+  color: #001c43;
   text-align: center;
   font-family: Poppins;
   font-size: 56px;
@@ -50,7 +52,6 @@
 }
 
 @media (max-width: 980px) {
-
   .ice-num-cards-row .ice-card img {
     width: 200px;
   }

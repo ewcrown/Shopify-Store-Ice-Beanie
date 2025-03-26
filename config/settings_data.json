@@ -11,9 +11,9 @@
   "current": {
     "logo_width": 70,
     "favicon": "shopify://shop_images/favicon_c5ffcee9-9061-4483-ac55-d4032bc2fb20.png",
-    "type_header_font": "assistant_n4",
+    "type_header_font": "poppins_n7",
     "heading_scale": 100,
-    "type_body_font": "assistant_n4",
+    "type_body_font": "poppins_n4",
     "body_scale": 100,
     "page_width": 1700,
     "spacing_sections": 0,

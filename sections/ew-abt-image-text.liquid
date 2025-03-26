@@ -1,37 +1,69 @@
 {{ 'ew-abt-image-text.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    .ice-about-img {
+      background: url(" {{ section.settings.user_image | image_url }}");
+      background-position: top right ;
+      background-size: contain ;
+      background-repeat: no-repeat ;
+      height: 100%;
+      width: 100%;
+  }
+
+  @media(max-width: 980px){
+      .ice-about-img {
+        background-position: bottom center ;
+    }
+  }
+  @media(min-width: 551px) and (max-width: 980px){
+      .ice-about-img {
+        max-width: 600px;
+         height: 70vh;
+    }
+  }
+  @media(max-width: 550px){
+      .ice-about-img {
+        max-width: 400px;
+        height: 45vh;
+    }
+  }
+{% endstyle %}
+
 {% assign s = section.settings %}
 <section class="ice-about-us-" id="ice-about-us">
   <div class="ice-about-row">
-      <div class="page-width">
-          <div class="ice-about-col">
-              <div class="ice-about-content">
-                  <h2 class="ice-about-title">{{ s.heading }}</h2>
-                  <h4 class="ice-about-subHeading">{{s.sub_heading}}</h4>
-                  <div class="ice-about-desc">
-                    {{ s.description }}
-                  </div>
-              </div>
-
-              {% if s.user_image != blank %}
-              <div class="ice-about-img">
-                <img 
-                  class="ew-img-fluid"
-                  src="{{ s.user_image | image_url: width: 110 }}" 
-                  loading="lazy" 
-                  srcset="
-                      {{ s.user_image | image_url: width: 620 }} 620w,
-                      {{ s.user_image | image_url: width: 800 }} 800w,
-                      {{ s.user_image | image_url: width: 1100 }} 1100w,
-                      {{ s.user_image | image_url: width: 1280 }} 1280w"
-                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
-                  alt="{{ s.title }}">
-              </div>
-            {% endif %}
+    <div class="page-width">
+      <div class="ice-about-col">
+        <div class="ice-about-content">
+          <h2 class="ice-about-title">{{ s.heading }}</h2>
+          <h4 class="ice-about-subHeading">{{ s.sub_heading }}</h4>
+          <div class="ice-about-desc">
+            {{ s.description }}
           </div>
+        </div>
+
+        {% if s.user_image != blank %}
+          <div class="ice-about-img">
+            {% comment %}
+              <img
+                class="ew-img-fluid"
+                src="{{ s.user_image | image_url: width: 110 }}"
+                loading="lazy"
+                srcset="
+                    {{ s.user_image | image_url: width: 620 }} 620w,
+                    {{ s.user_image | image_url: width: 800 }} 800w,
+                    {{ s.user_image | image_url: width: 1100 }} 1100w,
+                    {{ s.user_image | image_url: width: 1280 }} 1280w"
+                sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+                alt="{{ s.title }}">
+            {% endcomment %}
+          </div>
+        {% endif %}
       </div>
+    </div>
   </div>
 </section>
-{%  schema  %}  
+{% schema %}
 {
   "name": "<> About Text Image",
   "settings": [

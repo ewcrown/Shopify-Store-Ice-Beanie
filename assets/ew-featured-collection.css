@@ -70,3 +70,18 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+@media (min-width: 981px) and (max-width: 1300px) {
+  .ew-featured-collection-inner-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+
+

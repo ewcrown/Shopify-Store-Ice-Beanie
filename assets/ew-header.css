@@ -138,7 +138,7 @@
   display: block;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1380px) {
   .ice-nav-links ul li a {
     font-size: 18px;
   }
@@ -205,7 +205,9 @@
   }
 
   .ice-header-menu-content {
-    gap: 10px;
+    gap: 0;
+    width: 71px;
+    justify-content: flex-end;
   }
 
   .ice-header-icons {
@@ -238,6 +240,7 @@
 
   .ice-hamburger {
     display: flex;
+    width: 71px;
   }
 
   .ice-hamburger.active span:nth-child(1) {
@@ -253,7 +256,7 @@
   }
 
   .ice-header-icon {
-    width: 20px;
+    width: 28px;
   }
 
   #ice-header .ice-nav-links ul li a {
@@ -261,7 +264,7 @@
   }
 }
 
-@media (min-width: 980px) and (max-width: 1157px) {
+@media (min-width: 980px) and (max-width: 1158px) {
   .ice-header-logo img {
     width: 150px;
   }

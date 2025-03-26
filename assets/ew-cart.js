@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to check variant availability
     function checkVariantAvailability() {
-      console.log('single==>', single)
       const selectedValues = [...single.querySelectorAll("[data-cart-input]:checked")].map(input => input.value);
       let matchedOption = null;
 
@@ -63,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isMatch) {
           matchedOption = option;
           option.selected = true;
-          console.log(`Matched Option: ${option.value}`);
         } else {
           option.selected = false;
         }
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Handle out-of-stock scenario
       if (matchedOption) {
-        console.log("Final Selected Variant:", matchedOption.value);
         submitButton.dataset.id = matchedOption.dataset.id;
 
         if (matchedOption.disabled) {
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
           submitButton.textContent = "Add to Cart";
         }
       } else {
-        console.log("No matching variant found!");
         submitButton.disabled = true;
         submitButton.textContent = "Select a Variant";
       }
@@ -153,6 +149,9 @@ const updateProductDetails = async (productInput) => {
     // Hide all images
     const imagesBox = document.querySelectorAll('.ew-featured-product-image img');
     imagesBox.forEach((img) => img.classList.remove('ew-featured-product-show'));
+
+    const videosBox = document.querySelectorAll('.ew-featured-product-image video');
+    videosBox.forEach((img) => img.classList.remove('ew-featured-product-show'));
 
     // Show the selected image
     const imageBox = document.querySelector(`.ew-featured-product-image img[data-index="${index}"]`);

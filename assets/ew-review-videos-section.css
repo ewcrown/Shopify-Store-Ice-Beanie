@@ -80,7 +80,7 @@
 }
 
 .ice-review-video-rating svg {
-  width: 130px;
+  width: 160px;
 }
 
 .ice-review-video-rating {
@@ -116,7 +116,7 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-bottom: 150%;
 }
 
 .ice-video-container video {
@@ -125,7 +125,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .play-button {
@@ -136,7 +135,7 @@
   background: transparent;
   border: none;
   border-radius: 50%;
-  width: 191px;
+  width: 100px;
   height: 100px;
   cursor: pointer;
   display: flex;
@@ -188,7 +187,10 @@
   font-size: 40px;
   color: #000;
 }
-
+.review-sideo-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 @media (max-width: 1200px) {
   .ice-review-video-content {
     margin-bottom: 30px;

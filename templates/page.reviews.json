@@ -12,46 +12,67 @@
     "ew_review_videos_section_GeHMLL": {
       "type": "ew-review-videos-section",
       "blocks": {
-        "video_card_A9a7FJ": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/ice-beanie-video-min-transcode.webm"
-          }
-        },
-        "video_card_afkWah": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/IceBeanie_r1_Cam+A-26.mp4"
-          }
-        },
-        "video_card_JeCcHz": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/IceBeanie2_r1_Cam+A-28.mp4"
-          }
-        },
         "video_card_3HLAU3": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/116207923_359329938382086_1159735255009451849_n-transcode.mp4"
+            "video": "shopify://files/videos/IceBeanie.com Reviews ｜ Reviews of the Ice Beanie ｜ Feels and Looks So Good!.mp4"
           }
         },
-        "video_card_TpGmh4": {
+        "video_card_aXJyqc": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/IceBeanie2_r1_Cam+A-9.mp4"
+            "video": "shopify://files/videos/Bottom of funnel 15s (endframe).mp4"
+          }
+        },
+        "video_card_ifTReC": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Mid funnel 15s (endframe).mp4"
+          }
+        },
+        "video_card_afTyaF": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Top of funnel 15s Endframe.mp4"
+          }
+        },
+        "video_card_KRTC6W": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Icebeanie UGC.mp4"
+          }
+        },
+        "video_card_kX4x3h": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/UGC black beanie female video .mp4"
+          }
+        },
+        "video_card_c6YcmQ": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/IceBeanie worn in public video.mp4"
+          }
+        },
+        "video_card_7dymrX": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Female black UGC video .mp4"
           }
         }
       },
       "block_order": [
-        "video_card_A9a7FJ",
-        "video_card_afkWah",
-        "video_card_JeCcHz",
         "video_card_3HLAU3",
-        "video_card_TpGmh4"
+        "video_card_aXJyqc",
+        "video_card_ifTReC",
+        "video_card_afTyaF",
+        "video_card_KRTC6W",
+        "video_card_kX4x3h",
+        "video_card_c6YcmQ",
+        "video_card_7dymrX"
       ],
       "settings": {
-        "rating_text": "4.9 Star Rating",
+        "rating_text": "100,000+ Happy Customers",
         "heading": "Very stylish, very comfortable, and very cooling"
       }
     },
@@ -91,6 +112,7 @@
         "card_YxPXFN",
         "card_a3NXzJ"
       ],
+      "disabled": true,
       "settings": {}
     },
     "reviews-top-section": {
@@ -352,9 +374,10 @@
     },
     "ew_reviews_section_LVUp6h": {
       "type": "ew-reviews-section",
+      "disabled": true,
       "settings": {
         "heading": "Real Reviews From Real Customers",
-        "reviews_text": "5 / 51,438 Reviews",
+        "reviews_text": "1,450 Reviews",
         "description": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
         "button_link": "",
         "button_text": "5-star review"

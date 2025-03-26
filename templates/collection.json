@@ -12,7 +12,7 @@
     "ew_collection_banner_JyCymp": {
       "type": "ew-collection-banner",
       "settings": {
-        "image": "shopify://shop_images/photo-collage.png_1_2.jpg"
+        "image": "shopify://shop_images/photo-collage.png_1-min_d0434066-8912-44eb-81a6-faacfad4ae13.jpg"
       }
     },
     "ew_collection_details_Fpntqj": {
@@ -21,22 +21,22 @@
         "block_D4cFmG": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image_35_9e1ad4ec-e17b-4f69-979a-16937516a1aa.png",
+            "icon": "shopify://shop_images/image_35-min.png",
             "title": "Compression Cold Therapy"
           }
         },
         "block_FgD4cR": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image_af40bc25-df1b-4a17-b53a-185760a3b6da.png",
+            "icon": "shopify://shop_images/image_11_-min.png",
             "title": "Form Fitting Design"
           }
         },
         "block_6TQzdi": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/image_1_9e534cad-1f49-4519-906b-7df367d125c2.png",
-            "title": "Full HeadCoverage"
+            "icon": "shopify://shop_images/image_12_-min.png",
+            "title": "Full Head Coverage"
           }
         }
       },
@@ -100,10 +100,10 @@
       "type": "ew-reviews-section",
       "settings": {
         "heading": "Real Reviews From Real Customers",
-        "reviews_text": "5 / 51,438 Reviews",
+        "reviews_text": "1,450 Reviews",
         "description": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
         "button_link": "shopify://pages/reviews",
-        "button_text": "5-star review"
+        "button_text": "5 Star Reviews"
       }
     },
     "ew_testimonial_slider_9wyiAe": {

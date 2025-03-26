@@ -1,30 +1,157 @@
+{% comment %}
+  <div class="ice-testimoinal-wrap">
+    <img
+      class="ew-img-fluid"
+      src="{{ card_image | image_url: width: 300 }}"
+      loading="lazy"
+      srcset="
+        {{ card_image | image_url: width: 620 }} 620w,
+        {{ card_image | image_url: width: 800 }} 800w,
+        {{ card_image | image_url: width: 1100 }} 1100w,
+        {{ card_image | image_url: width: 1280 }} 1280w
+      "
+      sizes="(max-width: 600px) 600px, 100vw"
+      alt="{{ name }}"
+    >
+    <div class="ice-testimoinal-content justify-content-between">
+      <div class="ice-testimoinal-content-wrap">
+        <h5 class="ice-testimoinal-name">{{ name }}</h5>
+        <p class="ice-testimoinal-desc" data-full-text="{{ paragraph | escape }}">
+          <span class="short-text"></span>
+          <span class="full-text" style="display: none;"></span>
+        </p>
+        <button class="read-more-btn">Read More</button>
+        <button class="read-less-btn" style="display: none;">Read Less</button>
+      </div>
+      <span class="ice-testimoinal-footer">
+        {% if card_icon != blank %}
+          <img
+            class="ew-img-fluid"
+            src="{{ card_icon | image_url: width: 30 }}"
+            alt="{{ name }}"
+          >
+        {% endif %}
+        Amazon Review
+      </span>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".ice-testimoinal-wrap").forEach(function (testimonial) {
+        let descElement = testimonial.querySelector(".ice-testimoinal-desc");
+        if (!descElement) return;
+
+        let fullText = descElement.getAttribute("data-full-text")?.trim() || "";
+        let shortText = fullText.length > 100 ? fullText.substring(0, 100) + "..." : fullText;
+
+        let shortTextElement = descElement.querySelector(".short-text");
+        let fullTextElement = descElement.querySelector(".full-text");
+        let readMoreBtn = testimonial.querySelector(".read-more-btn");
+        let readLessBtn = testimonial.querySelector(".read-less-btn");
+
+        if (!shortTextElement || !fullTextElement || !readMoreBtn || !readLessBtn) return;
+
+        shortTextElement.textContent = shortText;
+        fullTextElement.textContent = fullText;
+
+        readMoreBtn.addEventListener("click", function () {
+          shortTextElement.style.display = "none";
+          fullTextElement.style.display = "inline";
+          readMoreBtn.style.display = "none";
+          readLessBtn.style.display = "inline";
+        });
+
+        readLessBtn.addEventListener("click", function () {
+          shortTextElement.style.display = "inline";
+          fullTextElement.style.display = "none";
+          readMoreBtn.style.display = "inline";
+          readLessBtn.style.display = "none";
+        });
+      });
+    });
+  </script>
+{% endcomment %}
+
 <div class="ice-testimoinal-wrap">
-  <img 
+  <img
     class="ew-img-fluid"
-    src="{{ card_image | image_url: width: 300 }}" 
-    loading="lazy" 
+    src="{{ card_image | image_url: width: 300 }}"
+    loading="lazy"
     srcset="
       {{ card_image | image_url: width: 620 }} 620w,
       {{ card_image | image_url: width: 800 }} 800w,
       {{ card_image | image_url: width: 1100 }} 1100w,
-      {{ card_image | image_url: width: 1280 }} 1280w"
+      {{ card_image | image_url: width: 1280 }} 1280w
+    "
     sizes="(max-width: 600px) 600px, 100vw"
-    alt="{{ name }}">
+    alt="{{ name }}"
+  >
   <div class="ice-testimoinal-content justify-content-between">
-      <div class="ice-testimoinal-content-wrap">
-          <h5 class="ice-testimoinal-name">{{ name }}</h5>
-          <p class="ice-testimoinal-desc">
-              {{ paragraph }}
-          </p>
+    <div class="ice-testimoinal-content-wrap">
+      <h5 class="ice-testimoinal-name">{{ name }}</h5>
+      <div class="ice-testimoinal-reviews">
+        {% render 'ew-star-icon-2' %}
       </div>
-      <span class="ice-testimoinal-footer">
-        {% if card_icon != blank %}
-        <img 
+      <p class="ice-testimoinal-desc" data-full-text="{{ paragraph | escape }}">
+        <span class="short-text"></span>
+        <span class="full-text" style="display: none;"></span>
+      </p>
+      <button class="read-more-btn primary-btn" style="display: none;">Read More</button>
+      <button class="read-less-btn primary-btn" style="display: none;">Read Less</button>
+    </div>
+    <span class="ice-testimoinal-footer">
+      {% if card_icon != blank %}
+        <img
           class="ew-img-fluid"
-          src="{{ card_icon | image_url: width: 30 }}" 
-          alt="{{ name }}" />
-        {% endif %}
-              {{card_icon_text}}
-      </span>
+          src="{{ card_icon | image_url: width: 30 }}"
+          alt="{{ name }}"
+        >
+      {% endif %}
+      Amazon Review
+    </span>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".ice-testimoinal-wrap").forEach(function (testimonial) {
+      let descElement = testimonial.querySelector(".ice-testimoinal-desc");
+      if (!descElement) return;
+
+      let fullText = descElement.getAttribute("data-full-text")?.trim() || "";
+      let shortText = fullText.length > 100 ? fullText.substring(0, 100) + "..." : fullText;
+
+      let shortTextElement = descElement.querySelector(".short-text");
+      let fullTextElement = descElement.querySelector(".full-text");
+      let readMoreBtn = testimonial.querySelector(".read-more-btn");
+      let readLessBtn = testimonial.querySelector(".read-less-btn");
+
+      if (!shortTextElement || !fullTextElement || !readMoreBtn || !readLessBtn) return;
+
+      shortTextElement.textContent = shortText;
+      fullTextElement.textContent = fullText;
+
+      if (fullText.length <= 100) {
+        readMoreBtn.style.display = "none";
+        readLessBtn.style.display = "none";
+      } else {
+        readMoreBtn.style.display = "inline-block";
+      }
+
+      readMoreBtn.addEventListener("click", function () {
+        shortTextElement.style.display = "none";
+        fullTextElement.style.display = "inline";
+        readMoreBtn.style.display = "none";
+        readLessBtn.style.display = "inline-block";
+      });
+
+      readLessBtn.addEventListener("click", function () {
+        shortTextElement.style.display = "inline";
+        fullTextElement.style.display = "none";
+        readMoreBtn.style.display = "inline-block";
+        readLessBtn.style.display = "none";
+      });
+    });
+  });
+</script>

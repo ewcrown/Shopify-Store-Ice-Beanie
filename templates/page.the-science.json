@@ -61,9 +61,7 @@
     },
     "ew_reviews_slider_UC4dDm": {
       "type": "ew-reviews-slider",
-      "settings": {
-        "reviews_heading": "Reviews"
-      }
+      "settings": {}
     },
     "ew_science_details_8W8aTD": {
       "type": "ew-science-details",
@@ -159,10 +157,10 @@
       "type": "ew-reviews-section",
       "settings": {
         "heading": "Real Reviews From Real Customers",
-        "reviews_text": "5 / 51,438 Reviews",
+        "reviews_text": "1,450 Reviews",
         "description": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
         "button_link": "shopify://pages/reviews",
-        "button_text": "5-star review"
+        "button_text": "5 Star Reviews"
       }
     },
     "ew_testimonial_slider_9wyiAe": {

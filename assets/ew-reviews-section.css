@@ -3,7 +3,7 @@
 }
 
 .ice-reviews-col {
-  color: #001C43;
+  color: #001c43;
 }
 
 .ice-reviews-col {
@@ -27,7 +27,7 @@
 }
 
 .ice-reviews-desc-btn p {
-  color: #001C43;
+  color: #001c43;
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -37,8 +37,8 @@
   opacity: 0.8;
 }
 
-.ice-reviews-heading-img>h2 {
-  color: #001C43;
+.ice-reviews-heading-img > h2 {
+  color: #001c43;
   font-family: Poppins;
   font-size: 56px;
   font-style: normal;
@@ -65,9 +65,15 @@
   line-height: 42px;
   font-size: 24px;
 }
-
+@media screen and (max-width: 1440px) {
+  .ice-reviews-desc-btn p {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 1200px) {
-  .ice-reviews-heading-img>h2 {
+  .ice-reviews-heading-img > h2 {
     font-size: 42px;
     line-height: 120%;
   }
@@ -89,7 +95,7 @@
 @media screen and (max-width: 980px) {
   .ice-reviews-col {
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
   }
 
   .ice-reviews-content span {
@@ -102,23 +108,30 @@
     flex-wrap: wrap;
   }
 
+  .ice-reviews-desc-btn a {
+    max-width: 275px;
+  }
+
   .ice-reviews-desc-btn p {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 150%;
   }
 
-  .ice-reviews-desc-btn,
-  .ice-reviews-heading-img {
+  .ice-reviews-desc-btn{
     gap: 15px;
   }
-
+  .ice-reviews-heading-img {
+    gap: 10px;
+  }
   .ice-reviws-desc-btn {
     width: 100%;
   }
 
-
-  .ice-reviews-heading-img>h2 {
+  .ice-reviews-heading-img > h2 {
     font-size: 32px;
-    line-height: normal;
+    line-height: 42px;
+  }
+  .ice-reviews-content svg {
+    width: 150px;
   }
 }

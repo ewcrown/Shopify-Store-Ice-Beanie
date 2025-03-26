@@ -1,4 +1,6 @@
 <div class="ice-science-review-wrap">
+  {% comment %}
+    
   {% if image != blank %}
     <img 
       class="ew-img-fluid"
@@ -11,7 +13,8 @@
         {{ image | image_url: width: 1280 }} 1280w"
       sizes="(max-width: 600px) 600px, 100vw"
       alt="{{ name }}">
-      {% endif %}
+    {% endif %}
+  {% endcomment %}
   <div class="ice-science-review-content">
       <div class="ice-science-review-content-wrap">
         {% render 'ew-quote-icon' %}

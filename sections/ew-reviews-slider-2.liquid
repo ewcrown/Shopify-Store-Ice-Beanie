@@ -4,7 +4,6 @@
 <section class="ice-splide-container ice-splide-container-2" id="ice-splide-container">
   <div class="page-width">
     <div class="ice-splide-container-col">
-      
       <!-- Slider Section -->
       <div class="ice-splide-container-images">
         <div id="ew-review-slider" class="splide" data-name="Reviews Slider 2">
@@ -12,16 +11,19 @@
             <ul class="splide__list">
               {% for block in testimonials %}
                 <li class="splide__slide" data-index="{{ forloop.index0 }}">
-                  <img class="ew-img-fluid beanie"
-                    src="{{ block.author_image | image_url: width: 500 }}" 
+                  <img
+                    class="ew-img-fluid beanie"
+                    src="{{ block.author_image | image_url: width: 500 }}"
                     loading="lazy"
                     srcset="
                       {{ block.author_image | image_url: width: 620 }} 620w,
                       {{ block.author_image | image_url: width: 800 }} 800w,
                       {{ block.author_image | image_url: width: 1100 }} 1100w,
-                      {{ block.author_image | image_url: width: 1280 }} 1280w"
+                      {{ block.author_image | image_url: width: 1280 }} 1280w
+                    "
                     sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
-                    alt="Ice Beanie {{ forloop.index }}">
+                    alt="Ice Beanie {{ forloop.index }}"
+                  >
                 </li>
               {% endfor %}
             </ul>
@@ -49,21 +51,20 @@
           <button class="splide__arrow splide__arrow--prev">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="24" viewBox="0 0 42 24" fill="none">
               <path d="M41.5685 10.9393C42.1543 11.5251 42.1543 12.4749 41.5685 13.0607L32.0225 22.6066C31.4367 23.1924 30.487 23.1924 29.9012 22.6066C29.3154 22.0208 29.3154 21.0711 29.9012 20.4853L38.3865 12L29.9012 3.51472C29.3154 2.92893 29.3154 1.97919 29.9012 1.3934C30.487 0.807614 31.4367 0.807614 32.0225 1.3934L41.5685 10.9393ZM0.507813 10.5L40.5078 10.5L40.5078 13.5L0.507812 13.5L0.507813 10.5Z" fill="black"/>
-              </svg>
+            </svg>
           </button>
           <button class="splide__arrow splide__arrow--next">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="24" viewBox="0 0 42 24" fill="none">
               <path d="M41.5685 10.9393C42.1543 11.5251 42.1543 12.4749 41.5685 13.0607L32.0225 22.6066C31.4367 23.1924 30.487 23.1924 29.9012 22.6066C29.3154 22.0208 29.3154 21.0711 29.9012 20.4853L38.3865 12L29.9012 3.51472C29.3154 2.92893 29.3154 1.97919 29.9012 1.3934C30.487 0.807614 31.4367 0.807614 32.0225 1.3934L41.5685 10.9393ZM0.507813 10.5L40.5078 10.5L40.5078 13.5L0.507812 13.5L0.507813 10.5Z" fill="black"/>
-              </svg>
+            </svg>
           </button>
         </div>
       </div>
-      
     </div>
   </div>
 </section>
 
-{% schema %}  
+{% schema %}
 {
   "name": "Reviews Slider 2",
   "settings": [],

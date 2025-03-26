@@ -14,7 +14,7 @@
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -45%);
   text-align: center;
   color: #fff;
   padding: 20px;
@@ -123,7 +123,7 @@
   }
 
   .ice-banner-row {
-    height: 70vh;
+    height: 95vh;
   }
 
   .ice-banner-subHEading {

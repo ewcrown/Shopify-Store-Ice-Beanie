@@ -71,6 +71,13 @@
       "disabled": true,
       "settings": {}
     },
+    "ew_featured_collection_4XPVB9": {
+      "type": "ew-featured-collection",
+      "settings": {
+        "title": "Related Products",
+        "collection": "bundles"
+      }
+    },
     "ew_steps_Ryacx3": {
       "type": "ew-steps",
       "blocks": {
@@ -104,6 +111,9 @@
         "card_zwfgA7",
         "card_Kq7PKz"
       ],
+      "custom_css": [
+        ".ice-num-cards-row {margin-top: 70px;}"
+      ],
       "settings": {
         "heading": "Cooling Relief in Just 3 Easy Steps"
       }
@@ -115,6 +125,7 @@
     "cart-items",
     "cart-footer",
     "4a6cabf9-a318-4fe6-b438-5f40ef9a7053",
+    "ew_featured_collection_4XPVB9",
     "ew_steps_Ryacx3"
   ]
 }

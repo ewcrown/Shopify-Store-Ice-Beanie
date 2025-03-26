@@ -1,11 +1,11 @@
 .ice-about-row {
-  background: linear-gradient(180deg, #f9f9f9 100%, #fff 40%);
-  padding: 80px 0 0;
+    background: linear-gradient(180deg, #f5f9ff 60%, #fff 65%);
+    padding: 80px 0 0;
 }
 
 .ice-about-col {
-  grid-template-columns: 1fr 700px;
-  color: #001C43;
+  grid-template-columns: 1fr 550px;
+  color: #001c43;
   gap: 50px;
   display: grid;
   align-items: flex-end;
@@ -16,7 +16,7 @@
 }
 
 .ice-about-title {
-  color: var(--Dark-Blue, #4194E3);
+  color: var(--Dark-Blue, #4194e3);
   font-family: Poppins;
   font-size: 48px;
   font-style: normal;
@@ -28,7 +28,7 @@
 }
 
 .ice-about-subHeading {
-  color: #001C43;
+  color: #001c43;
   font-family: Poppins;
   font-size: 32px;
   font-style: normal;
@@ -43,15 +43,26 @@
 }
 
 .ice-about-desc p {
-  color: #001C43;
+  color: #001c43;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;opacity: 0.8;
+  font-weight: 400;
+  opacity: 0.8;
   line-height: 30px;
   max-width: 930px;
 }
-
+@media (max-width: 1440px) {
+  .ice-about-desc p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .ice-about-subHeading {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 15px;
+  }
+}
 @media (max-width: 1200px) {
   .ice-about-col {
     grid-template-columns: 1fr 400px;
@@ -74,7 +85,7 @@
   }
 
   .ice-about-desc p {
-    font-size: 16px;
+    line-height:24px;
   }
 
   .ice-about-subHeading {
@@ -82,7 +93,6 @@
     line-height: 25px;
     margin-bottom: 10px;
   }
-
   .ice-about-desc {
     font-size: 16px;
     line-height: 24px;
@@ -92,6 +102,7 @@
   .ice-about-col {
     grid-template-columns: 1fr;
     gap: 20px;
+    place-items: center;
   }
 
   .ice-about-row {

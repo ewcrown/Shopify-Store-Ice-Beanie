@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <meta name="google-site-verification" content="Dn51MsUvMY9y0nWGvMDeujaeWeXwRlT0L5XvzRzP2u4" />
+    <meta name="google-site-verification" content="Dn51MsUvMY9y0nWGvMDeujaeWeXwRlT0L5XvzRzP2u4">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9X94SBQRQH"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X94SBQRQH"></script>
 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-9X94SBQRQH');
-</script>
+      gtag('config', 'G-9X94SBQRQH');
+    </script>
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
@@ -33,7 +33,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-   
+
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
@@ -44,7 +44,7 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-   
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -254,7 +254,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    
+
     {%- comment -%}--------------      Custom Imports      ---------{%- endcomment -%}
     {{ 'normalize.css' | asset_url | stylesheet_tag }}
     {{ 'components.css' | asset_url | stylesheet_tag }}
@@ -269,8 +269,6 @@
       })(window, document);
     </script>
 
-  
-
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
@@ -279,7 +277,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -288,14 +286,19 @@
     </script>
 
     {%- comment -%}--------------     Custom JS       ---------{%- endcomment -%}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     <script src="{{ 'ice-beanie-custom.js' | asset_url }}" type="text/javascript" defer="defer"></script>
     {{ 'ew-styles.css' | asset_url | stylesheet_tag }}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body
+    class="
+      template-{{ template.name }} product-{{ product.title | replace: " ", "-" | replace: ".", "-" }}
+      gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}
+    "
+  >
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -370,11 +373,11 @@
     </style>
 
     {{ 'render.js' | asset_url | script_tag }}
-    
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
+
     {{ 'ew-cart.js' | asset_url | script_tag }}
     {{ 'ew-custom.js' | asset_url | script_tag }}
   </body>

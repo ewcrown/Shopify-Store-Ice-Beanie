@@ -1,14 +1,16 @@
 .ice-shipping-row {
   padding: 40px 0;
 }
-
+.ice-shipping-wrap .ew-img-fluid {
+  width: 80px;
+}
 .ice-shipping-wrap span {
   color: #000;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 24px;
 }
 
 .ice-shipping-wrap {
@@ -29,5 +31,19 @@
     flex-direction: column;
     gap: 30px;
     align-items: flex-start;
+  }
+  .ice-shipping-wrap span {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+  .ice-shipping-wrap .ew-img-fluid {
+      width: 60px;
+  }
+  .ice-shipping-col {
+      gap: 15px;
+  }
+  .ice-shipping-row {
+    padding: 0 0 0;
   }
 }

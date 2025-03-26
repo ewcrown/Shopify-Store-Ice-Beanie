@@ -4,11 +4,11 @@
 
 .ice-contact-content {
   text-align: center;
-  color: #001C43;
+  color: #001c43;
 }
 
 .ice-contact-title p {
-  color: #001C43;
+  color: #001c43;
   text-align: center;
   font-family: Poppins;
   font-size: 48px;
@@ -20,7 +20,7 @@
 }
 
 .ice-contact-title strong {
-  color: #41BAFF;
+  color: #41baff;
   font-family: Poppins;
   font-size: 48px;
   font-style: normal;
@@ -30,7 +30,7 @@
 }
 
 .ice-contact-desc {
-  color: #001C43;
+  color: #001c43;
   text-align: center;
   font-family: Poppins;
   font-size: 32px;
@@ -42,7 +42,6 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-
 }
 
 .ice-contact-content img {
@@ -50,17 +49,17 @@
 }
 
 .form-input::placeholder {
-  color: #001C43;
+  color: #001c43;
   opacity: 0.8;
 }
 .form-input {
-  border: 1px solid #7F8387;
+  border: 1px solid #7f8387;
   padding: 20px;
   border-radius: 4px;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #001C43;
+  color: #001c43;
 }
 
 .form-field {
@@ -109,13 +108,27 @@
 .form-field-message textarea {
   height: 170px;
 }
-
+.email-us {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #000000;
+}
+.email-us a {
+    color: #000;
+}
+.email-us a:hover {
+    color: #4194e3;
+}
 @media (max-width: 767px) {
   .ice-contact-form-btn .primary-btn {
     width: 100%;
     font-size: 20px;
   }
-
+  .ice-contact-desc {
+    font-size: 18px;
+    line-height: 20px;
+  }
   .ice-contact-desc {
     flex-direction: column;
   }
@@ -144,9 +157,24 @@
     padding: 10px;
   }
 
-  .ice-contact-title p{
+  .ice-contact-title p,
+  .ice-contact-title p strong {
     font-size: 30px;
     line-height: 32px;
     margin-bottom: 10px;
   }
+}
+
+.form__message {
+  font-family: Poppins;
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 4rem;
+  color: #41baff;
+  font-weight: 500;
+}
+.form__message .icon,
+.customer .form__message svg {
+  height: 17px;
+  width: 17px;
 }

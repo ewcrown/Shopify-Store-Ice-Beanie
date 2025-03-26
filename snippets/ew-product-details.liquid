@@ -4,13 +4,17 @@
       <h2>Description</h2>
       {{ product.description }}
     </div>
+    {% if product.metafields.product_info.how_to_use != blank %}
     <div class="ew-product-details-tab ew-product-description">
       <h2>How To Use</h2>
-      {{ product.description }}
+      {{ product.metafields.product_info.how_to_use }}
     </div>
+    {% endif %}
+    {% if product.metafields.product_info.faqs != blank %}
     <div class="ew-product-details-tab ew-product-description">
       <h2>FAQ's</h2>
-      {{ product.description }}
+      {{ product.metafields.product_info.faqs }}
     </div>
+    {% endif %}
   </div>
 </div>

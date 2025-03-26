@@ -1,32 +1,45 @@
 {{ 'ew-product-gallery-slider.css' | asset_url | stylesheet_tag }}
 
-<div class="slider-wrap">
+<div class="slider-wrap" data-color-variants="{%- for media in product.media -%}{%- if media.alt == 'Blue' or media.alt == 'Black' -%}true{%- endif -%}{%- endfor -%}">
+  {% assign image_count = product.media.size %}
+{% if image_count == 1 %}
+    <style>
+      .ew-thumbnail-slider-wrap{
+        display:none;
+      }
+    </style>
+  {% endif %} 
+
+  <div class="ew-product-media">
+    {{ product.media | json }}
+  </div>
+
   <div class="ew-thumbnail-slider-wrap">
-  <!-- Thumbnail Slider -->
-  <section class="splide" id="ew-thumbnail-slider" data-name="Product Gallery">
-    <div class="splide__track">
-      <ul class="splide__list">
-        {% for media in product.media %}
-          <li class="splide__slide">
-            {% if media.media_type == 'image' %}
-              <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
-                srcset="
-                  {{ media.src | image_url: width: 620 }} 620w,
-                  {{ media.src | image_url: width: 800 }} 800w,
-                  {{ media.src | image_url: width: 1100 }} 1100w,
-                  {{ media.src | image_url: width: 1280 }} 1280w"
-                sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" 
-                alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}">
-            {% elsif media.media_type == 'video' %}
-              <div class="ew-video-thumbnail">
-                {{ media | video_tag: controls: false, autoplay: false, loop: false, muted: true }}
-              </div>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
+    <!-- Thumbnail Slider -->
+    <section class="splide" id="ew-thumbnail-slider" data-name="Product Gallery">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for media in product.media %}
+            <li class="splide__slide" data-color="{{ media.alt }}">
+              {% if media.media_type == 'image' %}
+                <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
+                  srcset="
+                    {{ media.src | image_url: width: 620 }} 620w,
+                    {{ media.src | image_url: width: 800 }} 800w,
+                    {{ media.src | image_url: width: 1100 }} 1100w,
+                    {{ media.src | image_url: width: 1280 }} 1280w"
+                  sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" 
+                  alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}">
+              {% elsif media.media_type == 'video' %}
+                <div class="ew-video-thumbnail">
+                  {{ media | video_tag: controls: false, autoplay: false, loop: false, muted: true }}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
   </div>
 
   <div class="ew-main-slider-wrap">
@@ -35,7 +48,7 @@
       <div class="splide__track">
         <ul class="splide__list">
           {% for media in product.media %}
-            <li class="splide__slide">
+            <li class="splide__slide" data-color="{{ media.alt }}">
               {% if media.media_type == 'image' %}
                 <img class="ew-img-fluid" src="{{ media.src | image_url: width: 500 }}" loading="lazy"
                   srcset="

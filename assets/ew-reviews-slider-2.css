@@ -14,10 +14,11 @@
 }
 
 .ice-splide-container-col .splide__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .ice-splide-container-col {

@@ -29,61 +29,61 @@
         "logo_Gd3VLc": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_16.png"
+            "image": "shopify://shop_images/image_16-min.png"
           }
         },
         "logo_NKFQaT": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_17.png"
+            "image": "shopify://shop_images/image_17-min.png"
           }
         },
         "logo_xnB3PJ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_33.png"
+            "image": "shopify://shop_images/image_33-min.png"
           }
         },
         "logo_exCwPW": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_b000803b-d049-4460-b2f9-8a52d7bb7615.png"
+            "image": "shopify://shop_images/image_5_-min.png"
           }
         },
         "logo_anmpNM": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_13.png"
+            "image": "shopify://shop_images/image_13-min.png"
           }
         },
         "logo_6RJXxx": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_14.png"
+            "image": "shopify://shop_images/image_14-min.png"
           }
         },
         "logo_XRcrD3": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_12.png"
+            "image": "shopify://shop_images/image_12-min.png"
           }
         },
         "logo_rxdmqW": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_15.png"
+            "image": "shopify://shop_images/image_15-min.png"
           }
         },
         "logo_iV4PtJ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_19.png"
+            "image": "shopify://shop_images/image_19-min.png"
           }
         },
         "logo_4BLa3m": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/stop-and-shop-logo-B2B4198BEC-seeklogo.com_1.png"
+            "image": "shopify://shop_images/stop-and-shop-logo-B2B4198BEC-seeklogo.com_1-min.png"
           }
         }
       },
@@ -209,50 +209,57 @@
         "card_2_CP6AdH": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_9.png",
+            "image": "shopify://shop_images/image_6_-min.png",
             "title": "Tension"
           }
         },
         "card_2_Lxf7be": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_8.png",
+            "image": "shopify://shop_images/image_7_-min.png",
             "title": "Fever"
           }
         },
         "card_2_n8mWAf": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_21.png",
+            "image": "shopify://shop_images/image_21-min.png",
             "title": "Headaches"
           }
         },
         "card_2_Ab6YDi": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_21.png",
+            "image": "shopify://shop_images/image_21-min.png",
             "title": "Migraines"
           }
         },
         "card_2_DP3d3T": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_7.png",
+            "image": "shopify://shop_images/image_8_-min.png",
             "title": "Concussions"
           }
         },
         "card_2_y7r68t": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_6.png",
+            "image": "shopify://shop_images/image_9_-min.png",
             "title": "Stress"
           }
         },
         "card_2_zCjhyK": {
           "type": "card-2",
           "settings": {
-            "image": "shopify://shop_images/image_5.png",
+            "image": "shopify://shop_images/image_10_-min.png",
             "title": "Injuries"
+          }
+        },
+        "card_2_4xb8eD": {
+          "type": "card-2",
+          "settings": {
+            "image": "shopify://shop_images/hangovers-sk-update.png",
+            "title": "Hangovers"
           }
         },
         "card_3_UEqVJi": {
@@ -291,6 +298,7 @@
         "card_2_DP3d3T",
         "card_2_y7r68t",
         "card_2_zCjhyK",
+        "card_2_4xb8eD",
         "card_3_UEqVJi",
         "card_3_VXzAkV",
         "card_3_M99EEa"
@@ -298,12 +306,70 @@
       "settings": {
         "heading": "The Science is Simple",
         "subheading": "Compression Cold Therapy Effects You In Three Different Ways:",
-        "image": "shopify://shop_images/image_32.png",
+        "image": "shopify://shop_images/image_32_2_-min.png",
         "heading3": "Cooling Relief in Just 3 Easy Steps"
       }
     },
     "ew_featured_product_iTHzR8": {
       "type": "ew-featured-product",
+      "blocks": {
+        "gallery_image_VLHxBT": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/B07V21BT22_360_web_55_1_1.png",
+            "image_black": "shopify://shop_images/black-IMG_0737.png"
+          }
+        },
+        "gallery_image_93NBPx": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/images.jpg",
+            "video": "shopify://files/videos/09c2716ab2bf4cdb8b07caf7b793f56f.mp4",
+            "image_black": "shopify://shop_images/1st_row_2nd.png",
+            "video_black": "shopify://files/videos/5d688a96edb74705ba515bd3efebbd50.mp4"
+          }
+        },
+        "gallery_image_MCeYM6": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/hi_res-f7-IceBeanie_r4_6598-2.jpg",
+            "image_black": "shopify://shop_images/1_row_3rd-ezgif.com-webp-to-jpg-converter_1.jpg"
+          }
+        },
+        "gallery_image_8KjxLX": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/hi_res-30-IceBeanie_r2_6446-2.jpg",
+            "image_black": "shopify://shop_images/1_row_4th_2000x_4eca04c1-6501-4dfa-92d1-b3ae9522fc56.webp"
+          }
+        },
+        "gallery_image_DR7p6h": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2023-08-29_at_4.09.28_PM.png",
+            "video": "shopify://files/videos/4156416887eb46d9903c44a805135510.mp4",
+            "image_black": "shopify://shop_images/Screenshot_2023-08-29_at_4.09.28_PM.png",
+            "video_black": "shopify://files/videos/4156416887eb46d9903c44a805135510.mp4"
+          }
+        },
+        "gallery_image_DUAQJQ": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/IceBeanie_Thumbnail-optimized.png",
+            "video": "shopify://files/videos/933c45efc4a24aa8a82b912d7ed31b38.mp4",
+            "image_black": "shopify://shop_images/icebeanie_2.0_black_thumbnail.png",
+            "video_black": "shopify://files/videos/ece2b8dee2db4fad84bb9541ac7c3d20.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_image_VLHxBT",
+        "gallery_image_93NBPx",
+        "gallery_image_MCeYM6",
+        "gallery_image_8KjxLX",
+        "gallery_image_DR7p6h",
+        "gallery_image_DUAQJQ"
+      ],
       "settings": {
         "product_list": [
           "icebeanie-2-0",
@@ -319,14 +385,14 @@
         "icon_text_QCJgBp": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/la_shipping-fast.png",
+            "image": "shopify://shop_images/la_shipping-fast-min.png",
             "title": "Fast Shipping"
           }
         },
         "icon_text_ixB6Bj": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/Group_9796e4f5-122c-43d0-a163-37a5d1b58112.png",
+            "image": "shopify://shop_images/Frame_2057-min.png",
             "title": "30 Day Satisfaction Guarantee"
           }
         },
@@ -340,7 +406,7 @@
         "icon_text_tc4dXN": {
           "type": "icon-text",
           "settings": {
-            "image": "shopify://shop_images/icon-inCA_1_222d29a2-ceba-456f-a2b6-708e450a5525.png",
+            "image": "shopify://shop_images/Frame_2058-min.png",
             "title": "Designed in California USA"
           }
         }
@@ -357,10 +423,10 @@
       "type": "ew-reviews-section",
       "settings": {
         "heading": "Real Reviews From Real Customers",
-        "reviews_text": "5 / 51,438 Reviews",
+        "reviews_text": "1,450 Reviews",
         "description": "We believe in creating theraputic products that are better for your body. Every product we make is thoughtfully created to bring you fast relief and lasting relief.",
         "button_link": "shopify://pages/reviews",
-        "button_text": "5-star review"
+        "button_text": "5 Star Reviews"
       }
     },
     "ew_testimonial_slider_9wyiAe": {

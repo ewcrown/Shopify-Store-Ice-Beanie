@@ -13,8 +13,9 @@
   display: flex;
   max-width: 824px;
   border-radius: 10px;
-  background: #FFF;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25), 40px 28px 80px 0px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25),
+    40px 28px 80px 0px rgba(0, 0, 0, 0.08);
   margin: auto;
 }
 
@@ -39,9 +40,21 @@
   max-width: 197px;
 }
 
+.ice-newsletter-col .form__message {
+  font-family: "Poppins";
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.ice-newsletter-col .form__message .icon,
+.ice-newsletter-col .customer .form__message svg {
+  height: 20px;
+}
+
 .ice-newsletter-email .primary-btn {
   border-radius: 0px 10px 10px 0px;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Poppins;
   font-size: 20px;
@@ -53,7 +66,7 @@
 }
 
 .ice-newsletter-heading h4 {
-  color: #011C43;
+  color: #011c43;
   text-align: center;
   font-family: Poppins;
   font-size: 36px;

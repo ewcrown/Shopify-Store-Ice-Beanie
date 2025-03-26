@@ -1,35 +1,53 @@
 <div class="ew-product-card {% if border != false %}ew-product-card-box{% endif %}">
-    <a href="{{ card_product.url }}" class="ew-product-card-link">
-        <div class="ew-product-card-featured-image">
-            {% if card_product.featured_image != blank %}
-            <img class="ew-img-fluid" src="{{ card_product.featured_image | image_url: width: 500 }}" loading="lazy"
-                srcset="
-                    {{ card_product.featured_image | image_url: width: 620 }} 620w,
-                    {{ card_product.featured_image | image_url: width: 800 }} 800w,
-                    {{ card_product.featured_image | image_url: width: 1100 }} 1100w,
-                    {{ card_product.featured_image | image_url: width: 1280 }} 1280w"
-                sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ card_product.title }}">
-            {% endif %}
+  <a href="{{ card_product.url }}" class="ew-product-card-link">
+    <div class="ew-product-card-featured-image">
+      {% if card_product.featured_image != blank %}
+        <img
+          class="ew-img-fluid"
+          src="{{ card_product.featured_image | image_url: width: 500 }}"
+          loading="lazy"
+          srcset="
+            {{ card_product.featured_image | image_url: width: 620 }} 620w,
+            {{ card_product.featured_image | image_url: width: 800 }} 800w,
+            {{ card_product.featured_image | image_url: width: 1100 }} 1100w,
+            {{ card_product.featured_image | image_url: width: 1280 }} 1280w
+          "
+          sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw"
+          alt="{{ card_product.title }}"
+        >
+      {% endif %}
+    </div>
+    <div class="ew-product-card-info">
+      <div class="ew-product-card-info-upper">
+        <h3 class="ew-product-card-title">{{ card_product.title }}</h3>
+        {% if card_product.metafields.custom.reviews_text != blank %}
+          <div class="ew-product-card-review">
+            {% render 'ew-star-icon-2' %}
+            <span class="ew-product-card-review-txt">{{ card_product.metafields.custom.reviews_text }}</span>
+          </div>
+        {% endif %}
+        <div class="ew-product-card-description">
+          {% if card_product.metafields.product_info.short_description != blank %}
+              {{ card_product.metafields.product_info.short_description | truncate: 80 | strip_html }}
+          {% else %}
+              {{ card_product.description | truncate: 100 | strip_html }}
+          {% endif %}
         </div>
-        <div class="ew-product-card-info">
-            <div class="ew-product-card-info-upper">
-                <h3 class="ew-product-card-title">{{ card_product.title }}</h3>
-                <div class="ew-product-card-description">
-                {% if card_product.metafields.product_info.short_description != blank %}    
-                    {{ card_product.metafields.product_info.short_description | truncate: 80 | strip_html }}
-                {% else %}
-                    {{ card_product.description | truncate: 80 | strip_html }}
-                {% endif %}
-                </div>
-            </div>
-            <div class="ew-product-card-inner-info">
-                <div class="ew-product-card-inner-price">
-                    {% render 'price', product: card_product %}
-                </div>
-                <div class="ew-product-card-inner-cart-button">
-                    <button class="ew-product-card-button" data-variant="{{ card_product.selected_or_first_available_variant.id }}" data-add-to-cart>Add to Cart</button>
-                </div>
-            </div>
+      </div>
+      <div class="ew-product-card-inner-info">
+        <div class="ew-product-card-inner-price">
+          {% render 'price', product: card_product %}
         </div>
-    </a>
+        <div class="ew-product-card-inner-cart-button">
+          <button
+            class="ew-product-card-button"
+            data-variant="{{ card_product.selected_or_first_available_variant.id }}"
+            data-add-to-cart
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </a>
 </div>

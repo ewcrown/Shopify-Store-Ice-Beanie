@@ -8,20 +8,50 @@
       <div class="ew-featured-product-wrap">
         <div class="ew-featured-product-single-tab">
           <div class="ew-featured-product-image">
-            {%  for product in products %}
-            <img 
-              class="ew-img-fluid {% if forloop.index == 1%}ew-featured-product-show{% endif %}"
-              src="{{ product.images[0] | image_url: width: 800 }}" 
-              data-index="{{ forloop.index }}"
-              loading="lazy" 
-              srcset="
-                {{ product.images[0] | image_url: width: 620 }} 620w,
-                {{ product.images[0] | image_url: width: 800 }} 800w,
-                {{ product.images[0] | image_url: width: 1100 }} 1100w,
-                {{ product.images[0] | image_url: width: 1280 }} 1280w"
-              sizes="(max-width: 600px) 600px, 100vw"
-              alt="{{ product.title }}">
+            <div>
+              {%  for product in products %}
+                <img 
+                  class="ew-img-fluid {% if forloop.index == 1%}ew-featured-product-show{% endif %}"
+                  src="{{ product.images[0] | image_url: width: 800 }}" 
+                  data-index="{{ forloop.index }}"
+                  loading="lazy" 
+                  srcset="
+                    {{ product.images[0] | image_url: width: 620 }} 620w,
+                    {{ product.images[0] | image_url: width: 800 }} 800w,
+                    {{ product.images[0] | image_url: width: 1100 }} 1100w,
+                    {{ product.images[0] | image_url: width: 1280 }} 1280w"
+                  sizes="(max-width: 600px) 600px, 100vw"
+                  alt="{{ product.title }}">
+              {% endfor %}
+            </div>
+
+              
+           <ul class="thumbnails__list">
+            {% for block in section.blocks %}
+              {% assign image_url = block.settings.image | image_url %}
+              {% assign image_extension = block.settings.image.src | split: '.' | last %}
+           
+              <li class="thumbnail__img">
+                {% if block.settings.video != blank %}
+                   <div class="ew-video-thumbnail s-product-thumbnail-image" data-color="Blue">
+                    {% assign poster = block.settings.image | img_url: 'master' %}
+                    {{ block.settings.video | video_tag: controls: false, autoplay: false, loop: false, muted: true, poster: poster }}
+                  </div>
+                {% else %}
+                  <img class="ew-img-fluid s-product-thumbnail-image" src="{{ image_url }}" loading="lazy"
+                    data-color="Blue"
+                    srcset="
+                      {{ block.settings.image | image_url: width: 620 }} 620w,
+                      {{ block.settings.image | image_url: width: 800 }} 800w,
+                      {{ block.settings.image | image_url: width: 1100 }} 1100w,
+                      {{ block.settings.image | image_url: width: 1280 }} 1280w"
+                      sizes="(max-width: 600px) 100vw, (min-width: 601px) 600px, 100vw" alt="{{ product.title | escape }} - Thumbnail {{ forloop.index }}">
+                {% endif %}
+              </li>
             {% endfor %}
+          </ul>
+                 
+            
           </div>
           <div class="ew-featured-product-content">
             {% 
@@ -38,6 +68,57 @@
   </div>
 </section>
 
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const thumbnails = document.querySelectorAll(".s-product-thumbnail-image");
+    const mainImageContainer = document.querySelector(".ew-featured-product-image > div"); // Ensure this exists in your HTML
+
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
+            let newMediaElement;
+
+            // Find the existing media with 'new-thumbnail-append' and remove 'ew-featured-product-show'
+            const currentFeatured = document.querySelector(".ew-featured-product-show");
+            if (currentFeatured) {
+                currentFeatured.classList.remove("ew-featured-product-show");
+                currentFeatured.classList.remove("new-thumbnail-append"); // Remove this so only one exists at a time
+            }
+
+            if (this.tagName === "IMG") {
+                // If it's an image, create an <img> element
+                newMediaElement = document.createElement("img");
+                newMediaElement.src = this.src;
+                newMediaElement.classList.add("ew-featured-product-show", "ew-img-fluid", "new-thumbnail-append");
+                if (this.srcset) {
+                    newMediaElement.srcset = this.srcset;
+                }
+            } else if (this.tagName === "DIV" && this.querySelector("video source")) {
+                // If it's a video, create a <video> element
+                const videoSource = this.querySelector("video source");
+                if (videoSource) {
+                    newMediaElement = document.createElement("video");
+                    newMediaElement.src = videoSource.src;
+                    newMediaElement.controls = true;
+                    newMediaElement.autoplay = true;
+                    newMediaElement.loop = true;
+                    newMediaElement.muted = true;
+                    newMediaElement.classList.add("ew-featured-product-show", "new-thumbnail-append");
+                }
+            }
+
+            // Append new media without clearing the container
+            if (newMediaElement) {
+                mainImageContainer.appendChild(newMediaElement);
+            }
+        });
+    });
+});  
+
+  
+</script>
+
 {%  schema  %}  
 {
   "name":"<> Featured Products",
@@ -50,6 +131,34 @@
         "type": "product_list",
         "id": "product_list",
         "label": "Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image blue"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video blue"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_black",
+          "label": "Image black"
+        },
+        {
+          "type": "video",
+          "id": "video_black",
+          "label": "Video black"
+        }
+      ]
     }
   ],
   "presets": [

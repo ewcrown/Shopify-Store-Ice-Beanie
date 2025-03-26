@@ -5,7 +5,7 @@
           <div class="ice-logos-col">
             {% for block in section.blocks %}
               <img 
-                class="ew-img-fluid"
+                class="ew-img-fluid logo__{{ forloop.index }}"
                 src="{{ block.settings.image | image_url: width: 500 }}" 
                 loading="lazy" 
                 srcset="
